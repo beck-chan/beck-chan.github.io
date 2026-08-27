@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Technical Writing – Portfolio</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/headshot.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-listing/list.min.js"></script>
+<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-38bc326fdf971359cbc3ca36a2806a71.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-b35cba7d99f24517e1755f1e78e08ea7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/timeline-0.1.0/timeline.js"></script>
+<link href="../../site_libs/quarto-contrib/timeline-0.1.0/timeline.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/tachyons-4.12.0/tachyons.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/tachyons-4.12.0/quarto-resets.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-validmind-technical .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-validmind-technical'] = new List('listing-validmind-technical', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-atryum-technical .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-atryum-technical'] = new List('listing-atryum-technical', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-saasquatch-technical .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-saasquatch-technical'] = new List('listing-saasquatch-technical', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed slimcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Portfolio</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../../samples/technical-writing/index.html" aria-current="page"> 
+<span class="menu-text">Technical Writing</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../samples/copywriting/index.html"> 
+<span class="menu-text">Copywriting</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../cv.html"> 
+<span class="menu-text"><em>curriculum vitae</em></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/beck-chan" target="_blank"> 
+<span class="menu-text"><i class="fa-brands fa-github" aria-label="github"></i></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://linkedin.com/in/beck-chan" target="_blank"> 
+<span class="menu-text"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="mailto:rebecca.ht.chan@gmail.com" target="_blank"> 
+<span class="menu-text"><i class="fa-solid fa-envelope" aria-label="envelope"></i></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../poetry/index.html"> 
+<span class="menu-text"><i class="fa-solid fa-feather" aria-label="feather"></i></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../samples/technical-writing/index.html">Technical Writing</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../samples/technical-writing/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Technical Writing</span></a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../samples/technical-writing/validmind/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ValidMind</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../samples/technical-writing/validmind/jupyter-notebooks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Jupyter Notebooks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../samples/technical-writing/validmind/training.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Training</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../samples/technical-writing/validmind/user-guides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">User Guides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../samples/technical-writing/validmind/quickstarts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quickstarts</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../samples/technical-writing/validmind/enablement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Enablement Content</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../samples/technical-writing/atryum/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Atryum</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../samples/technical-writing/atryum/integrations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Integrations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../samples/technical-writing/atryum/user-guides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">User Guides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../samples/technical-writing/atryum/quickstart.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quickstart</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../samples/technical-writing/saasquatch/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SaaSquatch</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../samples/technical-writing/saasquatch/integrations/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Integrations</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Salesforce</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../samples/technical-writing/saasquatch/integrations/sfdc/invocable-methods.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Invocable Methods</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../samples/technical-writing/saasquatch/integrations/sfdc/attribution-lookup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Attribution via Contact</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../samples/technical-writing/saasquatch/integrations/sfdc/user-account-ids.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">User &amp; Account IDs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../samples/technical-writing/saasquatch/integrations/sfdc/integration-guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Integration Guide</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Other</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../samples/technical-writing/saasquatch/integrations/stripe.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Stripe</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../samples/technical-writing/saasquatch/integrations/recurly.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Recurly</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../samples/technical-writing/saasquatch/integrations/tango-card.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tango Card</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../samples/technical-writing/saasquatch/sdk/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">JavaScript SDK</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../samples/technical-writing/saasquatch/sdk/key-sjs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Key <code>squatch.js</code> Scripts</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../samples/technical-writing/saasquatch/sdk/sjs-advanced.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><code>squatch.js</code> Advanced</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../samples/technical-writing/saasquatch/sdk/tracking-cookies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tracking Cookies</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../samples/technical-writing/saasquatch/user-guides/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">User Guides</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../samples/technical-writing/saasquatch/user-guides/sharelinks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Understanding Sharelinks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../samples/technical-writing/saasquatch/user-guides/csv-import.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CSV Import</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#validmind" id="toc-validmind" class="nav-link active" data-scroll-target="#validmind">ValidMind</a>
+  <ul>
+  <li><a href="#atryum" id="toc-atryum" class="nav-link" data-scroll-target="#atryum">Atryum</a></li>
+  </ul></li>
+  <li><a href="#saasquatch" id="toc-saasquatch" class="nav-link" data-scroll-target="#saasquatch">SaaSquatch</a></li>
+  </ul>
+</nav>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(11)</span></div><div class="category" data-category="QWdlbnRpYyUyME9yY2hlc3RyYXRpb24=">Agentic Orchestration <span class="quarto-category-count">(3)</span></div><div class="category" data-category="QWdlbnRz">Agents <span class="quarto-category-count">(3)</span></div><div class="category" data-category="QUklMjBSaXNr">AI Risk <span class="quarto-category-count">(8)</span></div><div class="category" data-category="QXJ0aWZpY2lhbCUyMEludGVsbGlnZW5jZSUyMChBSSk=">Artificial Intelligence (AI) <span class="quarto-category-count">(8)</span></div><div class="category" data-category="QXRyeXVt">Atryum <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Q29udGVudCUyMEVuYWJsZW1lbnQ=">Content Enablement <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q1JNcw==">CRMs <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RGV2ZWxvcGVyJTIwQ29udGVudA==">Developer Content <span class="quarto-category-count">(2)</span></div><div class="category" data-category="ZUNvbW1lcmNl">eCommerce <span class="quarto-category-count">(3)</span></div><div class="category" data-category="RmVhdHVyZSUyMERvY3VtZW50YXRpb24=">Feature Documentation <span class="quarto-category-count">(7)</span></div><div class="category" data-category="SW50ZWdyYXRpb25z">Integrations <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SmF2YVNjcmlwdCUyMFNESw==">JavaScript SDK <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SnVweXRlciUyME5vdGVib29rcw==">Jupyter Notebooks <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscw==">Large Language Models <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWFya2V0aW5nJTIwVGVjaG5vbG9neQ==">Marketing Technology <span class="quarto-category-count">(3)</span></div><div class="category" data-category="TW9kZWwlMjBDb250ZXh0JTIwUHJvdG9jb2wlMjBTZXJ2ZXJz">Model Context Protocol Servers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TW9kZWwlMjBSaXNrJTIwTWFuYWdlbWVudA==">Model Risk Management <span class="quarto-category-count">(5)</span></div><div class="category" data-category="UGF5bWVudCUyMFByb3ZpZGVycw==">Payment Providers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHl0aG9uJTIwTGlicmFyeQ==">Python Library <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UXVpY2tzdGFydA==">Quickstart <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVjdXJseQ==">Recurly <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVmZXJyYWxzJTIwJTI2JTIwQXR0cmlidXRpb25z">Referrals &amp; Attributions <span class="quarto-category-count">(3)</span></div><div class="category" data-category="UmV3YXJkJTIwUHJvdmlkZXJz">Reward Providers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmlzayUyMEdvdmVybmFuY2U=">Risk Governance <span class="quarto-category-count">(8)</span></div><div class="category" data-category="U2FhU3F1YXRjaA==">SaaSquatch <span class="quarto-category-count">(3)</span></div><div class="category" data-category="U2FsZXNmb3JjZQ==">Salesforce <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U29mdHdhcmUlMjBhcyUyMGElMjBTZXJ2aWNl">Software as a Service <span class="quarto-category-count">(11)</span></div><div class="category" data-category="U3RyaXBl">Stripe <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VGFuZ28lMjBDYXJk">Tango Card <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VHJhaW5pbmclMjAlMjYlMjBPbmJvYXJkaW5n">Training &amp; Onboarding <span class="quarto-category-count">(2)</span></div><div class="category" data-category="VXNlJTIwQ2FzZSUyMFR1dG9yaWFscw==">Use Case Tutorials <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VXNlciUyMEd1aWRlcw==">User Guides <span class="quarto-category-count">(9)</span></div><div class="category" data-category="VmFsaWRNaW5k">ValidMind <span class="quarto-category-count">(8)</span></div></div></div>
+<!-- main -->
+<main class="content page-columns page-full column-body" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Technical Writing</h1>
+<p class="subtitle lead">Samples</p>
+</div>
+
+
+
+<div class="quarto-title-meta column-body">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<blockquote class="blockquote">
+<p>Engendering empowered users through effective guidance content.</p>
+<p>Along with a love of gratuitous alliteration, I truly enjoy authoring user guidance content. That’s because I believe that great guidance content empowers users, and empowered users get excited about product.</p>
+</blockquote>
+<section id="validmind" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="validmind">ValidMind</h2>
+<p>I was the sole <strong>Senior Technical Writer</strong> for <a href="validmind.ai" target="_blank">ValidMind</a>, a generative artificial intelligence financial services startup, where I employed docs-as-code methodologies alongside software engineers delivering documentation as part of product in the same development ecosystem, transforming a minimal set of user guide drafts into a fully idealized and comprehensive knowledge base.</p>
+<p>As I authored the bulk of 53% of user content out of many contributors,<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> most of ValidMind’s documentation saw my influence at some point. I’ve selected some of my best work to showcase below:</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;<img src="validmind/beck-contributions.png" class="pics img-fluid" alt="Statistics snapshot from validmind/documentation"><br><br>Citation: <a href="https://github.com/validbeck/validmind-docs/graphs/contributors?from=8%2F24%2F2024&amp;selectedMetric=additions" target="_blank"><i class="fa-brands fa-github" aria-label="github"></i> <code>validmind/documentation</code> statistic archive</a></p></div></div><div id="listing-validmind-technical" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ1VzZSUyMENhc2UlMjBUdXRvcmlhbHMlMkNGZWF0dXJlJTIwRG9jdW1lbnRhdGlvbiUyQ1VzZXIlMjBHdWlkZXMlMkNKdXB5dGVyJTIwTm90ZWJvb2tzJTJDUHl0aG9uJTIwTGlicmFyeSUyQ0FydGlmaWNpYWwlMjBJbnRlbGxpZ2VuY2UlMjAoQUkpJTJDQUklMjBSaXNrJTJDTW9kZWwlMjBSaXNrJTIwTWFuYWdlbWVudCUyQ1Jpc2slMjBHb3Zlcm5hbmNlJTJDU29mdHdhcmUlMjBhcyUyMGElMjBTZXJ2aWNlJTJDVmFsaWRNaW5k" data-listing-file-modified-sort="1787813792803" data-listing-reading-time-sort="1" data-listing-word-count-sort="43">
+<a href="../../samples/technical-writing/validmind/jupyter-notebooks.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+ValidMind Jupyter Notebooks
+</h5>
+<div class="card-subtitle listing-subtitle">
+Developer Content
+</div>
+<div class="card-text listing-description delink">
+Jupyter Notebook use case demonstrations written for ValidMind’s Python library.
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="VXNlciUyMEd1aWRlcyUyQ1RyYWluaW5nJTIwJTI2JTIwT25ib2FyZGluZyUyQ0FydGlmaWNpYWwlMjBJbnRlbGxpZ2VuY2UlMjAoQUkpJTJDQUklMjBSaXNrJTJDTW9kZWwlMjBSaXNrJTIwTWFuYWdlbWVudCUyQ1Jpc2slMjBHb3Zlcm5hbmNlJTJDU29mdHdhcmUlMjBhcyUyMGElMjBTZXJ2aWNlJTJDVmFsaWRNaW5k" data-listing-file-modified-sort="1787813792803" data-listing-reading-time-sort="1" data-listing-word-count-sort="57">
+<a href="../../samples/technical-writing/validmind/training.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+ValidMind Training
+</h5>
+<div class="card-subtitle listing-subtitle">
+Onboarding &amp; Education
+</div>
+<div class="card-text listing-description delink">
+Comprehensive interactive training curriculums developed to onboard users onto ValidMind.
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVzJTJDQXJ0aWZpY2lhbCUyMEludGVsbGlnZW5jZSUyMChBSSklMkNBSSUyMFJpc2slMkNNb2RlbCUyMFJpc2slMjBNYW5hZ2VtZW50JTJDUmlzayUyMEdvdmVybmFuY2UlMkNTb2Z0d2FyZSUyMGFzJTIwYSUyMFNlcnZpY2UlMkNWYWxpZE1pbmQ=" data-listing-file-modified-sort="1787813792803" data-listing-reading-time-sort="1" data-listing-word-count-sort="69">
+<a href="../../samples/technical-writing/validmind/user-guides.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+ValidMind User Guides
+</h5>
+<div class="card-subtitle listing-subtitle">
+Feature Documentation
+</div>
+<div class="card-text listing-description delink">
+User guides produced as documentation and reference for ValidMind’s core features.
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="VXNlciUyMEd1aWRlcyUyQ1RyYWluaW5nJTIwJTI2JTIwT25ib2FyZGluZyUyQ0FydGlmaWNpYWwlMjBJbnRlbGxpZ2VuY2UlMjAoQUkpJTJDQUklMjBSaXNrJTJDTW9kZWwlMjBSaXNrJTIwTWFuYWdlbWVudCUyQ1Jpc2slMjBHb3Zlcm5hbmNlJTJDU29mdHdhcmUlMjBhcyUyMGElMjBTZXJ2aWNlJTJDVmFsaWRNaW5k" data-listing-file-modified-sort="1787813792803" data-listing-reading-time-sort="1" data-listing-word-count-sort="59">
+<a href="../../samples/technical-writing/validmind/quickstarts.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+ValidMind Quickstarts
+</h5>
+<div class="card-subtitle listing-subtitle">
+Tutorials
+</div>
+<div class="card-text listing-description delink">
+Intuitive quickstart guides developed to onboard users onto ValidMind.
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="4" data-categories="Q29udGVudCUyMEVuYWJsZW1lbnQlMkNBcnRpZmljaWFsJTIwSW50ZWxsaWdlbmNlJTIwKEFJKSUyQ0FJJTIwUmlzayUyQ01vZGVsJTIwUmlzayUyME1hbmFnZW1lbnQlMkNSaXNrJTIwR292ZXJuYW5jZSUyQ1NvZnR3YXJlJTIwYXMlMjBhJTIwU2VydmljZSUyQ1ZhbGlkTWluZA==" data-listing-file-modified-sort="1787813792803" data-listing-reading-time-sort="1" data-listing-word-count-sort="49">
+<a href="../../samples/technical-writing/validmind/enablement.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+ValidMind Enablement Content
+</h5>
+<div class="card-subtitle listing-subtitle">
+Content Creation
+</div>
+<div class="card-text listing-description delink">
+Content produced to enable other creators to contribute to ValidMind’s open-source.
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+<section id="atryum" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="atryum">Atryum</h3>
+<p><a href="https://atryum.org/" target="_blank">Atryum</a> is an open-source agentic orchestration tool developed by ValidMind. As ValidMind’s sole <strong>Senior Technical Writer</strong>, I was responsible for almost all of the documentation for Atryum.</p>
+<p>I authored approximately 95% of the content for Atryum,<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> including the samples selected below:</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;Citation: <a href="https://github.com/validbeck/atryum/tree/main/website" target="_blank"><i class="fa-brands fa-github" aria-label="github"></i> <code>validmind/atryum/website</code> (documentation) archive</a></p></div></div><div id="listing-atryum-technical" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVzJTJDSW50ZWdyYXRpb25zJTJDQWdlbnRpYyUyME9yY2hlc3RyYXRpb24lMkNBcnRpZmljaWFsJTIwSW50ZWxsaWdlbmNlJTIwKEFJKSUyQ0FJJTIwUmlzayUyQ0FnZW50cyUyQ0xhcmdlJTIwTGFuZ3VhZ2UlMjBNb2RlbHMlMkNNb2RlbCUyMENvbnRleHQlMjBQcm90b2NvbCUyMFNlcnZlcnMlMkNSaXNrJTIwR292ZXJuYW5jZSUyQ1NvZnR3YXJlJTIwYXMlMjBhJTIwU2VydmljZSUyQ0F0cnl1bSUyQ1ZhbGlkTWluZA==" data-listing-file-modified-sort="1787813792799" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
+<a href="../../samples/technical-writing/atryum/integrations.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Atryum Integrations
+</h5>
+<div class="card-subtitle listing-subtitle">
+Feature Documentation
+</div>
+<div class="card-text listing-description delink">
+<p>User guides written for Atryum integrations.</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVzJTJDQWdlbnRpYyUyME9yY2hlc3RyYXRpb24lMkNBcnRpZmljaWFsJTIwSW50ZWxsaWdlbmNlJTIwKEFJKSUyQ0FJJTIwUmlzayUyQ0FnZW50cyUyQ1Jpc2slMjBHb3Zlcm5hbmNlJTJDU29mdHdhcmUlMjBhcyUyMGElMjBTZXJ2aWNlJTJDQXRyeXVtJTJDVmFsaWRNaW5k" data-listing-file-modified-sort="1787813792799" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
+<a href="../../samples/technical-writing/atryum/user-guides.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Atryum User Guides
+</h5>
+<div class="card-subtitle listing-subtitle">
+Feature Documentation
+</div>
+<div class="card-text listing-description delink">
+<p>User guides written for core Atryum functionality.</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVzJTJDUXVpY2tzdGFydCUyQ0FnZW50aWMlMjBPcmNoZXN0cmF0aW9uJTJDQXJ0aWZpY2lhbCUyMEludGVsbGlnZW5jZSUyMChBSSklMkNBSSUyMFJpc2slMkNBZ2VudHMlMkNSaXNrJTIwR292ZXJuYW5jZSUyQ1NvZnR3YXJlJTIwYXMlMjBhJTIwU2VydmljZSUyQ0F0cnl1bSUyQ1ZhbGlkTWluZA==" data-listing-file-modified-sort="1787813792799" data-listing-reading-time-sort="1" data-listing-word-count-sort="18">
+<a href="../../samples/technical-writing/atryum/quickstart.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Atryum Quickstart
+</h5>
+<div class="card-subtitle listing-subtitle">
+Tutorial
+</div>
+<div class="card-text listing-description delink">
+<p>Quickstart and installation guide for Atryum.</p>
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+<!-- ::: {.callout}
+You can learn more about my involvement with ValidMind, Atryum, and the impact I had on content and content architecture under [Content Engineering](/samples/content-engineering/index.qmd)
+::: -->
+</section>
+</section>
+<section id="saasquatch" class="level2">
+<h2 class="anchored" data-anchor-id="saasquatch">SaaSquatch</h2>
+<p>Before we had any formal technical writers at <a href="https://www.saasquatch.com/" target="_blank">SaaSquatch</a>, a B2B affiliate software startup, I created and maintained company-wide technical process, product and installation documentation. Using Contentful and a bit of cobbled together code, I overhauled our public knowledge base with a focus on accuracy, client accessibility, increased internal ease of upkeep, and future extensibility.</p>
+<p>While the following samples are quite dated before I refined my voice in an official technical writing role, I’ve included them for completion and progression value:</p>
+<div id="listing-saasquatch-technical" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVzJTJDSW50ZWdyYXRpb25zJTJDU2FsZXNmb3JjZSUyQ0NSTXMlMkNTdHJpcGUlMkNSZWN1cmx5JTJDVGFuZ28lMjBDYXJkJTJDUGF5bWVudCUyMFByb3ZpZGVycyUyQ1Jld2FyZCUyMFByb3ZpZGVycyUyQ1JlZmVycmFscyUyMCUyNiUyMEF0dHJpYnV0aW9ucyUyQ2VDb21tZXJjZSUyQ1NvZnR3YXJlJTIwYXMlMjBhJTIwU2VydmljZSUyQ01hcmtldGluZyUyMFRlY2hub2xvZ3klMkNTYWFTcXVhdGNo" data-listing-file-modified-sort="1787813792800" data-listing-reading-time-sort="1" data-listing-word-count-sort="11">
+<a href="../../samples/technical-writing/saasquatch/integrations/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+SaaSquatch Integrations
+</h5>
+<div class="card-subtitle listing-subtitle">
+Feature Documentation
+</div>
+<div class="card-text listing-description delink">
+During my tenure at SaaSquatch, I became the company Subject Matter Expert for many of our custom integrations, including our integration for Salesforce which I helped develop.
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ0phdmFTY3JpcHQlMjBTREslMkNSZWZlcnJhbHMlMjAlMjYlMjBBdHRyaWJ1dGlvbnMlMkNlQ29tbWVyY2UlMkNTb2Z0d2FyZSUyMGFzJTIwYSUyMFNlcnZpY2UlMkNNYXJrZXRpbmclMjBUZWNobm9sb2d5JTJDU2FhU3F1YXRjaA==" data-listing-file-modified-sort="1787813792801" data-listing-reading-time-sort="1" data-listing-word-count-sort="4">
+<a href="../../samples/technical-writing/saasquatch/sdk/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+SaaSquatch JavaScript SDK
+</h5>
+<div class="card-subtitle listing-subtitle">
+Developer Content
+</div>
+<div class="card-text listing-description delink">
+As a <strong>Solutions Architect</strong>, I acted as the primary technical contact for both installations of the SaaSquatch product suite and our many APIs and SDKs, including squatch.JS.
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVzJTJDUmVmZXJyYWxzJTIwJTI2JTIwQXR0cmlidXRpb25zJTJDZUNvbW1lcmNlJTJDU29mdHdhcmUlMjBhcyUyMGElMjBTZXJ2aWNlJTJDTWFya2V0aW5nJTIwVGVjaG5vbG9neSUyQ1NhYVNxdWF0Y2g=" data-listing-file-modified-sort="1787813792802" data-listing-reading-time-sort="1" data-listing-word-count-sort="4">
+<a href="../../samples/technical-writing/saasquatch/user-guides/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+SaaSquatch User Guides
+</h5>
+<div class="card-subtitle listing-subtitle">
+Feature Documentation
+</div>
+<div class="card-text listing-description delink">
+While I served no formal technical writing role while at SaaSquatch, a core facet of my work was my focus on improving user content for both customers and colleagues.
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+
+
+
+</section>
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://github.com/beck-chan/portfolio/releases" target="_blank">
+<p>Releases</p>
+</a>
+  </li>  
+</ul>
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://github.com/beck-chan/portfolio/issues" target="_blank">
+<p><i class="fa-brands fa-github" aria-label="github"></i> Report Issue</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ © 2026 <b>Beck Chan</b>. All rights reserved.
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

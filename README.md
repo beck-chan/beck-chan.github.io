@@ -1,1 +1,0 @@
-# beck-chan.github.io
