@@ -1,0 +1,229 @@
+/* quarto syntax highlight colors */
+:root {
+  --quarto-hl-va-color: #c2a077;
+  --quarto-hl-ot-color: #d0b491;
+  --quarto-hl-dt-color: #ad8d66;
+  --quarto-hl-cn-color: #d0b491;
+  --quarto-hl-co-color: #f4e7e8;
+  --quarto-hl-do-color: #e8d6d7;
+  --quarto-hl-an-color: #c4acae;
+  --quarto-hl-cv-color: #e8d6d7;
+  --quarto-hl-re-color: #c4acae;
+  --quarto-hl-kw-color: #e4bec2;
+  --quarto-hl-im-color: #e4bec2;
+  --quarto-hl-cf-color: #d4a8ac;
+  --quarto-hl-op-color: #cfabaf;
+  --quarto-hl-at-color: #cfabaf;
+  --quarto-hl-ex-color: #d4a8ac;
+  --quarto-hl-pp-color: #ecd0d4;
+  --quarto-hl-fu-color: #c87879;
+  --quarto-hl-bu-color: #b46b6c;
+  --quarto-hl-st-color: #d08e8e;
+  --quarto-hl-vs-color: #d79e9f;
+  --quarto-hl-ss-color: #d79e9f;
+  --quarto-hl-ch-color: #d08e8e;
+  --quarto-hl-sc-color: #d8a68e;
+  --quarto-hl-dv-color: #d4b098;
+  --quarto-hl-fl-color: #d4b098;
+  --quarto-hl-bn-color: #c9a189;
+  --quarto-hl-in-color: #f7ecec;
+  --quarto-hl-wa-color: #d8a68e;
+  --quarto-hl-al-color: #c87879;
+  --quarto-hl-er-color: #c87879;
+}
+
+/* other quarto variables */
+:root {
+  --quarto-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* syntax highlight based on Pandoc's rules */
+pre > code.sourceCode > span {
+  color: #c2a077;
+}
+
+code.sourceCode > span {
+  color: #c2a077;
+}
+
+div.sourceCode,
+div.sourceCode pre.sourceCode {
+  color: #c2a077;
+}
+
+/* Normal */
+code span {
+  color: #c2a077;
+}
+
+/* Alert */
+code span.al {
+  color: #c87879;
+  background-color: #f4e7e8;
+  font-weight: bold;
+}
+
+/* Annotation */
+code span.an {
+  color: #c4acae;
+  font-style: italic;
+}
+
+/* Attribute */
+code span.at {
+  color: #cfabaf;
+}
+
+/* BaseN */
+code span.bn {
+  color: #c9a189;
+}
+
+/* BuiltIn */
+code span.bu {
+  color: #b46b6c;
+  font-style: italic;
+}
+
+/* ControlFlow */
+code span.cf {
+  color: #d4a8ac;
+  font-weight: bold;
+}
+
+/* Char */
+code span.ch {
+  color: #d08e8e;
+}
+
+/* Constant */
+code span.cn {
+  color: #d0b491;
+  font-weight: bold;
+}
+
+/* Comment */
+code span.co {
+  color: #f4e7e8;
+  font-style: italic;
+}
+
+/* CommentVar */
+code span.cv {
+  color: #e8d6d7;
+  font-weight: bold;
+}
+
+/* Documentation */
+code span.do {
+  color: #e8d6d7;
+  font-style: italic;
+}
+
+/* DataType */
+code span.dt {
+  color: #ad8d66;
+  font-weight: bold;
+}
+
+/* DecVal */
+code span.dv {
+  color: #d4b098;
+}
+
+/* Error */
+code span.er {
+  color: #c87879;
+  text-decoration: underline;
+}
+
+/* Extension */
+code span.ex {
+  color: #d4a8ac;
+}
+
+/* Float */
+code span.fl {
+  color: #d4b098;
+}
+
+/* Function */
+code span.fu {
+  color: #c87879;
+  font-weight: bold;
+}
+
+/* Import */
+code span.im {
+  color: #e4bec2;
+  font-weight: bold;
+}
+
+/* Information */
+code span.in {
+  color: #f7ecec;
+}
+
+/* Keyword */
+code span.kw {
+  color: #e4bec2;
+  font-weight: bold;
+}
+
+/* Operator */
+code span.op {
+  color: #cfabaf;
+}
+
+/* Other */
+code span.ot {
+  color: #d0b491;
+}
+
+/* Preprocessor */
+code span.pp {
+  color: #ecd0d4;
+}
+
+/* RegionMarker */
+code span.re {
+  color: #c4acae;
+}
+
+/* SpecialChar */
+code span.sc {
+  color: #d8a68e;
+}
+
+/* SpecialString */
+code span.ss {
+  color: #d79e9f;
+  font-weight: bold;
+}
+
+/* String */
+code span.st {
+  color: #d08e8e;
+}
+
+/* Variable */
+code span.va {
+  color: #c2a077;
+}
+
+/* VerbatimString */
+code span.vs {
+  color: #d79e9f;
+}
+
+/* Warning */
+code span.wa {
+  color: #d8a68e;
+  font-weight: bold;
+}
+
+.prevent-inlining {
+  content: "</";
+}
+
+/*# sourceMappingURL=400dc3cfc78eb6f41cb74c966477ea85.css.map */

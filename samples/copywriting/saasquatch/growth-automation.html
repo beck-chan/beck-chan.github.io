@@ -44,10 +44,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-38bc326fdf971359cbc3ca36a2806a71.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-4d77301e1d1e2befcfe34b1f46e19dd6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-7e3ff10c271a6c3d50da2b713bb1a607.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-4d77301e1d1e2befcfe34b1f46e19dd6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-b35cba7d99f24517e1755f1e78e08ea7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dc9e38115ba8a1b50ccc869720656879.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-c9a9d1d105eb1dbb6d2e1c5750c2cdfd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dc9e38115ba8a1b50ccc869720656879.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/timeline-0.1.0/timeline.js"></script>
 <link href="../../../site_libs/quarto-contrib/timeline-0.1.0/timeline.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/tachyons-4.12.0/tachyons.css" rel="stylesheet">
@@ -70,14 +74,14 @@ ul.task-list li input[type="checkbox"] {
     "s"
   ],
   "language": {
-    "search-no-results-text": "No results",
+    "search-no-results-text": "No Results Found",
     "search-matching-documents-text": "matching documents",
     "search-copy-link-title": "Copy link to search",
     "search-hide-matches-text": "Hide additional matches",
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
+    "search-text-placeholder": "Search Portfolio",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -87,7 +91,169 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar docked nav-fixed quarto-light">
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -127,7 +293,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="mailto:beckchan.250@gmail.com" target="_blank"> 
+    <a class="nav-link" href="mailto:beckchan.tech@gmail.com" target="_blank"> 
 <span class="menu-text"><i class="fa-solid fa-envelope" aria-label="envelope"></i></span></a>
   </li>  
   <li class="nav-item">
@@ -137,6 +303,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle Theme"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -217,7 +384,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">Table of Contents</h2>
    
   <ul>
   <li><a href="#growth-automation-and-referral-marketing" id="toc-growth-automation-and-referral-marketing" class="nav-link active" data-scroll-target="#growth-automation-and-referral-marketing">Growth Automation and Referral Marketing</a></li>
@@ -232,6 +399,7 @@ ul.task-list li input[type="checkbox"] {
     </div>
 <!-- main -->
 <main class="content column-body" id="quarto-document-content">
+
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../samples/copywriting/saasquatch/growth-automation.html">SaaSquatch</a></li><li class="breadcrumb-item"><a href="../../../samples/copywriting/saasquatch/growth-automation.html">Growth Automation</a></li></ol></nav>
 <div class="quarto-title">
@@ -271,12 +439,12 @@ ul.task-list li input[type="checkbox"] {
 <section id="growth-automation-and-referral-marketing" class="level2">
 <h2 class="anchored" data-anchor-id="growth-automation-and-referral-marketing">Growth Automation and Referral Marketing</h2>
 <div class="flex flex-wrap justify-around">
-<div class="w-70-ns pr3">
+<div class="w-100-m w-70-l pr3">
 <p>As a business, customer lifetime value is no doubt among your top goals. SaaSquatch helps you achieve these goals by recognizing the importance of interacting with your users on an individual level and providing consistent but ever-evolving programs that entice customers to remain with you over a lifetime.</p>
 <p>Referral marketing has long been a foundational piece in user engagement and lead generation, but not all customer programs are created equal.</p>
 <p>Our Growth Automation platform will allow you to grow those leads into dynamic and individualized relationships with your customer base.</p>
 </div>
-<div class="w-30-ns tc">
+<div class="w-100-m w-30-l tc">
 <p><a href="program-builder.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="program-builder.png" class="pics img-fluid" style="width:90.0%"></a></p>
 </div>
 </div>
@@ -294,21 +462,21 @@ ul.task-list li input[type="checkbox"] {
 <section id="the-loyalty-lexicon" class="level2">
 <h2 class="anchored" data-anchor-id="the-loyalty-lexicon">The Loyalty Lexicon</h2>
 <div class="flex flex-wrap justify-around">
-<div class="w-70-ns pr3">
+<div class="w-100-m w-70-l pr3">
 <p>Growth Automation is about more than just referrals — it’s about learning the language of your users. While our usual core topics might still be in play depending on the configuration of your program, Growth Automation focuses on the customer, not the process. What does this mean, exactly? Let’s take an in-depth look at one of our template programs: Win Back Program.</p>
 <p>The premise of this program is simple; we want to: re-engage past customers; reduce customer churn; increase customer spending frequency; and promote new services. There’s no referral widget, no share-links or codes involved, just settings you enter once (and adjust at your leisure) to indicate when a user should receive a reward.</p>
 </div>
-<div class="w-30-ns tc">
+<div class="w-100-m w-30-l tc">
 <p><a href="win-back.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="win-back.png" class="pics img-fluid" style="width:90.0%"></a></p>
 </div>
 </div>
 <div class="flex flex-wrap justify-around">
-<div class="w-80-ns pr3">
+<div class="w-100-m w-80-l pr3">
 <p>As you will have been passing user information to SaaSquatch from the beginning, no additional information is required from you. But what about encouraging new customers to sign up and start engaging with your product, so you can first learn more about their ongoing needs?</p>
 <p>Our Profile Completion Reward Program encourages your users to fully integrate themselves with your product or interface after initial signup, providing you an easy and unobtrusive way to collect data to use for any programs you might want to run going forward.</p>
 <p>You’re able to request any fields you want to be mandatory, as well the ability to create any number of custom fields that might not already be provided by us. With just the check of a box, you can reward customers for simply sharing details they may already be entering anyway — it’s a win-win.</p>
 </div>
-<div class="w-20-ns tc">
+<div class="w-100-m w-20-l tc">
 <p><a href="profile-completion.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="profile-completion.png" class="pics img-fluid"></a></p>
 </div>
 </div>
@@ -336,8 +504,211 @@ ul.task-list li input[type="checkbox"] {
 </section>
 
 </main> <!-- /main -->
+<script>
+  // Quarto's layoutMarginEls only separates margin notes from each other.
+  // Seed that same cascade with the TOC/category panel bottom so footnotes
+  // start below #quarto-margin-sidebar instead of overlapping it.
+  // When notes stack taller than the body, pad main.content so the
+  // footer clears the last footnote. Padding the main grid row (not
+  // #quarto-content) also stretches the docked sidebar with it.
+  (() => {
+    const MARGIN_SEL =
+      ".column-margin.column-container > *, .margin-caption, .aside";
+    const GAP_AFTER_SIDEBAR = "0.5rem";
+    const GAP_BEFORE_FOOTER = "1.5rem";
+    const READY_CLASS = "margin-below-toc-ready";
+
+    const remPx = (raw) => {
+      const root = window.getComputedStyle(document.documentElement);
+      const fontSize = parseFloat(root.fontSize) || 16;
+      const value = String(raw).trim();
+      if (value.endsWith("rem")) return (parseFloat(value) || 0) * fontSize;
+      if (value.endsWith("px")) return parseFloat(value) || 0;
+      return parseFloat(value) || 0;
+    };
+
+    const contentHost = () =>
+      document.querySelector("main.content") ||
+      document.getElementById("quarto-document-content");
+
+    const sidebarContentBottom = () => {
+      const sidebar = document.getElementById("quarto-margin-sidebar");
+      if (!sidebar) return 0;
+
+      let bottom = 0;
+      for (const child of sidebar.children) {
+        if (child.classList.contains("quarto-sidebar-toggle")) continue;
+        if (window.getComputedStyle(child).display === "none") continue;
+        const rect = child.getBoundingClientRect();
+        if (rect.height === 0) continue;
+        bottom = Math.max(bottom, rect.bottom + window.scrollY);
+      }
+      return bottom > 0 ? bottom + remPx(GAP_AFTER_SIDEBAR) : 0;
+    };
+
+    // Expand the main column (grid row), not #quarto-content padding —
+    // container padding sits outside the tracks and leaves a gap under
+    // the docked sidebar background.
+    // Theme sets padding-bottom with !important, so we must too.
+    const expandContentForMargins = (lastBottom) => {
+      const host = contentHost();
+      const legacy = document.getElementById("quarto-content");
+      // Clear older pad target if a previous version set it.
+      if (legacy && legacy !== host) {
+        legacy.style.removeProperty("padding-bottom");
+      }
+      if (!host) return;
+
+      if (!(lastBottom > 0)) {
+        host.style.removeProperty("padding-bottom");
+        return;
+      }
+
+      const computedPad =
+        parseFloat(window.getComputedStyle(host).paddingBottom) || 0;
+      const marginBottom =
+        parseFloat(window.getComputedStyle(host).marginBottom) || 0;
+      // Border-box bottom minus padding = content edge; negative
+      // margin-bottom pulls the footer up, so add it back into need.
+      const contentEdge =
+        host.getBoundingClientRect().bottom + window.scrollY - computedPad;
+      const needed = Math.ceil(
+        lastBottom + remPx(GAP_BEFORE_FOOTER) - contentEdge - marginBottom
+      );
+      const themeMin = remPx("2rem");
+      if (needed <= themeMin) {
+        host.style.removeProperty("padding-bottom");
+        return;
+      }
+
+      const next = `${needed}px`;
+      if (host.style.getPropertyValue("padding-bottom") !== next) {
+        host.style.setProperty("padding-bottom", next, "important");
+      }
+    };
+
+    const layoutMarginBelowToc = () => {
+      const marginChildren = document.querySelectorAll(MARGIN_SEL);
+      if (!marginChildren.length) {
+        expandContentForMargins(0);
+        return;
+      }
+
+      let lastBottom = sidebarContentBottom();
+      for (const el of marginChildren) {
+        if (el.offsetParent === null) continue;
+
+        el.style.marginTop = null;
+        const top = el.getBoundingClientRect().top + window.scrollY;
+        if (lastBottom > 0 && top < lastBottom) {
+          const marginBottom =
+            parseFloat(window.getComputedStyle(el).marginBottom) || 0;
+          el.style.marginTop = `${lastBottom - top + marginBottom}px`;
+        }
+
+        const marginTop =
+          parseFloat(window.getComputedStyle(el).marginTop) || 0;
+        const height = el.getBoundingClientRect().height;
+        lastBottom = top + height + marginTop;
+      }
+
+      expandContentForMargins(lastBottom);
+    };
+
+    const reveal = () => {
+      document.documentElement.classList.add(READY_CLASS);
+    };
+
+    const layoutAndReveal = () => {
+      layoutMarginBelowToc();
+      reveal();
+    };
+
+    // Run after Quarto's own throttled layoutMarginEls (50ms).
+    const schedule = () => {
+      clearTimeout(schedule._timer);
+      schedule._timer = setTimeout(layoutAndReveal, 60);
+    };
+
+    window.document.addEventListener("DOMContentLoaded", () => {
+      schedule();
+      // Failsafe: never leave footnotes hidden if layout is delayed.
+      setTimeout(reveal, 1500);
+      window.document.querySelectorAll(".column-margin img").forEach((img) => {
+        if (!img.complete) img.addEventListener("load", schedule, { once: true });
+      });
+      if (window.ResizeObserver) {
+        const ro = new ResizeObserver(schedule);
+        ro.observe(window.document.body);
+        const sidebar = window.document.getElementById("quarto-margin-sidebar");
+        if (sidebar) ro.observe(sidebar);
+        const margin = window.document.querySelector(
+          ".column-margin.column-container"
+        );
+        if (margin) ro.observe(margin);
+      }
+    });
+  })();
+</script>
+<script>
+  // Quarto sticky sidenav still scrolls with the page (min-height:100% + sticky
+  // containing block). Pin it fixed on desktop; lock width from the in-flow
+  // layout first so the grid column and nav stay aligned.
+  (() => {
+    const MQ = "(min-width: 992px)";
+    const CLASS = "is-pinned-sidenav";
+
+    const sidebar = () => document.getElementById("quarto-sidebar");
+
+    const unpin = (el) => {
+      el.classList.remove(CLASS);
+      el.style.removeProperty("width");
+    };
+
+    const pin = () => {
+      const el = sidebar();
+      if (!el) return;
+
+      if (!window.matchMedia(MQ).matches) {
+        unpin(el);
+        return;
+      }
+
+      // Measure while in normal flow so width matches the grid column.
+      unpin(el);
+      const width = el.getBoundingClientRect().width;
+      if (width > 0) el.style.width = `${width}px`;
+      el.classList.add(CLASS);
+    };
+
+    let resizeTimer = 0;
+    const schedule = () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(pin, 50);
+    };
+
+    window.document.addEventListener("DOMContentLoaded", pin);
+    window.addEventListener("resize", schedule);
+    if (window.matchMedia) {
+      window.matchMedia(MQ).addEventListener("change", pin);
+    }
+  })();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
