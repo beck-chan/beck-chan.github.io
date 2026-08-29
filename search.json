@@ -738,6 +738,61 @@
     ]
   },
   {
+    "objectID": "samples/organizations/saasquatch.html",
+    "href": "samples/organizations/saasquatch.html",
+    "title": "SaaSquatch",
+    "section": "",
+    "text": "Before we had any formal technical writers at SaaSquatch, I created and maintained company-wide technical process, product and installation documentation.\nBefore we had any formal technical writers at SaaSquatch, a B2B affiliate software startup, I created and maintained company-wide technical process, product and installation documentation. Using Contentful and a bit of cobbled together code, I overhauled our public knowledge base with a focus on accuracy, client accessibility, increased internal ease of upkeep, and future extensibility.",
+    "crumbs": [
+      "Technical Writing",
+      "SaaSquatch"
+    ]
+  },
+  {
+    "objectID": "samples/organizations/saasquatch.html#copywriting",
+    "href": "samples/organizations/saasquatch.html#copywriting",
+    "title": "SaaSquatch",
+    "section": "Copywriting",
+    "text": "Copywriting\n\nDriving action and building connection through technical insight.\nTo me, software storytelling goes beyond simple feature highlights — culminating in tangible statements of value for users.\n\nBelow is the very first article I wrote for SaaSquatch. While it feels a bit rough now years later, it still showcases my consistent author voice:\n\n\n\n\n\n\n\nSaaSquatch Growth Automation Platform\n\n\nFeature Highlight\n\n\n\n\n\n\n\n\nNo Matches Found",
+    "crumbs": [
+      "Technical Writing",
+      "SaaSquatch"
+    ]
+  },
+  {
+    "objectID": "samples/organizations/atryum.html",
+    "href": "samples/organizations/atryum.html",
+    "title": "Atryum",
+    "section": "",
+    "text": "Atryum is an open-source agentic orchestration tool developed by ValidMind. I was responsible for almost all of the documentation for Atryum and authored approximately 95% of the content.\nAtryum is an open-source agentic orchestration tool developed by ValidMind. As ValidMind’s sole Senior Technical Writer, I was responsible for almost all of the documentation for Atryum.",
+    "crumbs": [
+      "Technical Writing",
+      "Atryum"
+    ]
+  },
+  {
+    "objectID": "samples/organizations/atryum.html#content-engineering",
+    "href": "samples/organizations/atryum.html#content-engineering",
+    "title": "Atryum",
+    "section": "Content Engineering",
+    "text": "Content Engineering",
+    "crumbs": [
+      "Technical Writing",
+      "Atryum"
+    ]
+  },
+  {
+    "objectID": "samples/organizations/atryum.html#technical-writing",
+    "href": "samples/organizations/atryum.html#technical-writing",
+    "title": "Atryum",
+    "section": "Technical Writing",
+    "text": "Technical Writing\n\nEngendering empowered users through effective guidance content.\nAlong with a love of gratuitous alliteration, I truly enjoy authoring user guidance content. That’s because I believe that great guidance content empowers users, and empowered users get excited about product.\n\nI authored approximately 95% of the content for Atryum,1 including the samples selected below:\n1 Citation:  validmind/atryum/website (documentation) archive\n\n\n\n\n\n\nAtryum Integrations\n\n\nFeature Documentation\n\n\nUser guides written for Atryum integrations.\n\n\n\n\n\n\n\n\n\nAtryum User Guides\n\n\nFeature Documentation\n\n\nUser guides written for core Atryum functionality.\n\n\n\n\n\n\n\n\n\nAtryum Quickstart\n\n\nTutorial\n\n\nQuickstart and installation guide for Atryum.\n\n\n\n\n\nNo Matches Found",
+    "crumbs": [
+      "Technical Writing",
+      "Atryum"
+    ]
+  },
+  {
     "objectID": "samples/copywriting/validmind/reduce-culture-risk.html",
     "href": "samples/copywriting/validmind/reduce-culture-risk.html",
     "title": "Reduce Culture Risk with ValidMind",
@@ -879,34 +934,6 @@
     ]
   },
   {
-    "objectID": "poetry/index.html",
-    "href": "poetry/index.html",
-    "title": "Poetry",
-    "section": "",
-    "text": "Congrats! You found the silly little Easter egg.\nI am a human that hates talking about myself, which you wouldn’t believe if you managed to corner me into an interview. The best I can do is some original poetry, some of which may or may not be autobiographical.\nRefresh the page to receive a different one, y’know, in honour of the ephemeral. No, I will not be taking any feedback, thank you very kindly.\n\n\n\n\n\n\nTipI’m ready!\n\n\n\n\n\n\nCrafting…\n\n\nShow me another one."
-  },
-  {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "curriculum vitae",
-    "section": "",
-    "text": "ValidMind, Inc\n\nTook features from design to complete release supported by storytelling alongside software engineers in GitHub.\nImproved documentation and training through quality auditing and comprehensive redesigns using Quarto.\nAuthored 53% of user guidance content, including Jupyter Notebook samples for models and agentic systems.\nBridged gap between product design and user experience, verifying feature functionality and applying bug fixes.\nContributed to CI/CD infrastructure, open-source code libraries and software frontend built on TypeScript.\nDesigned, standardized, and implemented processes built to scale to close gaps and reduce team workload.\nSpearheaded the implementation of an extensible custom Zendesk solution.\n\n\n\n\nSaaSquatch by impact.com\n\nExecuted migration of evolving support processes to Freshdesk, resulting in a team 100% CSAT satisfaction rate.\nPioneered comprehensive reporting solutions, maintaining systematic report history to identify long-term trends.\nCreated exhaustive documentation, feedback metrics, and learning curriculums to onboard and train new agents.\nEmpowered users to understand and maximize the use of products by auditing and overhauling documentation.\n\n\n\n\nSaaSquatch by impact.com\n\nDesigned and led solo migration of support processes to Zendesk built to scale, increasing efficiency by 74%.\nManaged team escalations from complex technical cases, ensuring delivery of solutions to customers.\nProactively identified opportunities for customer growth and product improvements during ticket management.\nProvided advanced technical support for web and mobile SDKs built on JavaScript, REST API, and GraphQL.\n\n\n\n\nSaaSquatch by impact.com\n\nStreamlined workload by 51% through improvement of implementation processes and onboarding strategies.\nProactively created and maintained public documentation, focusing on accuracy, accessibility, and extensibility.\nProduced tangible results for customers by collaborating cross-functionally to deliver custom features.\nDesigned and executed solutions for custom JavaScript, REST API, and GraphQL software installations.\n\n\n\n\nDevelus Systems Inc. for Complia Health\n\nLed creation of a knowledge base to empower team members with extensive training and reference materials.\nCreated a mentorship and feedback program, strengthening team cohesion.\nTriaged, escalated, and owned resolution of product bugs for custom installations using Zendesk.\n\n\n\n\nAbeBooks.com, Amazon subsidiary\n\nExceeded target metric expectations at 160% while providing technical support in a fast-paced call center.\nInitiated improvements to best practices and processes, including documentation for team knowledge base.\n\n\n\n\nHudson’s Bay Optical\n\nMultitasked in a fast-paced sales environment to administer and facilitate the sale of prescription glasses.\nManaged patient charts, sales reports, office inventory and stock orders.\n\n\n\n\nInner Harbour Optometry\n\nManaged confidential medical charts while performing optometric testing and customer support.\nImproved patient re-call system to increase business revenue.\n\n\n\n\nSylvan Learning, Inc.\n\nCoached and assisted students on the classroom floor and in 1-on-1 lessons.\nCreated lesson plans and personalized curriculums tailored to individual student needs.\n\n\n\n\n\n\nTechnical Writing\n\nDocs-as-code engineering\nQuarto publishing\nJupyter Notebooks\nMarkdown\nCI/CD workflows\n\nSoftware Development\n\nGitHub\nCursor Code\nVisual Studio Code\nDocker\nPostman\nHTML\nCSS\nTypeScript\n\nSolutions Architecture & Implementation\n\nREST API\nGraphQL\nJavaScript\nJSONata\nPython\nSQL\nFTP\n\nSupport Engineering & Lifecycle Automation\n\nZendesk\nFreshdesk\nZapier\nSalesforce\nHubSpot\nIntercom\nFront\n\nProject Management\n\nShortcut\nNotion\nJira\nConfluence\nAsana\nGoogle Workspace\nMicrosoft 365\nAdobe Creative Cloud\n\nIntegrations\n\nPayPal\nRecurly\nStripe\nBranch\nAppsFlyer"
-  },
-  {
-    "objectID": "cv.html#work-experience",
-    "href": "cv.html#work-experience",
-    "title": "curriculum vitae",
-    "section": "",
-    "text": "ValidMind, Inc\n\nTook features from design to complete release supported by storytelling alongside software engineers in GitHub.\nImproved documentation and training through quality auditing and comprehensive redesigns using Quarto.\nAuthored 53% of user guidance content, including Jupyter Notebook samples for models and agentic systems.\nBridged gap between product design and user experience, verifying feature functionality and applying bug fixes.\nContributed to CI/CD infrastructure, open-source code libraries and software frontend built on TypeScript.\nDesigned, standardized, and implemented processes built to scale to close gaps and reduce team workload.\nSpearheaded the implementation of an extensible custom Zendesk solution.\n\n\n\n\nSaaSquatch by impact.com\n\nExecuted migration of evolving support processes to Freshdesk, resulting in a team 100% CSAT satisfaction rate.\nPioneered comprehensive reporting solutions, maintaining systematic report history to identify long-term trends.\nCreated exhaustive documentation, feedback metrics, and learning curriculums to onboard and train new agents.\nEmpowered users to understand and maximize the use of products by auditing and overhauling documentation.\n\n\n\n\nSaaSquatch by impact.com\n\nDesigned and led solo migration of support processes to Zendesk built to scale, increasing efficiency by 74%.\nManaged team escalations from complex technical cases, ensuring delivery of solutions to customers.\nProactively identified opportunities for customer growth and product improvements during ticket management.\nProvided advanced technical support for web and mobile SDKs built on JavaScript, REST API, and GraphQL.\n\n\n\n\nSaaSquatch by impact.com\n\nStreamlined workload by 51% through improvement of implementation processes and onboarding strategies.\nProactively created and maintained public documentation, focusing on accuracy, accessibility, and extensibility.\nProduced tangible results for customers by collaborating cross-functionally to deliver custom features.\nDesigned and executed solutions for custom JavaScript, REST API, and GraphQL software installations.\n\n\n\n\nDevelus Systems Inc. for Complia Health\n\nLed creation of a knowledge base to empower team members with extensive training and reference materials.\nCreated a mentorship and feedback program, strengthening team cohesion.\nTriaged, escalated, and owned resolution of product bugs for custom installations using Zendesk.\n\n\n\n\nAbeBooks.com, Amazon subsidiary\n\nExceeded target metric expectations at 160% while providing technical support in a fast-paced call center.\nInitiated improvements to best practices and processes, including documentation for team knowledge base.\n\n\n\n\nHudson’s Bay Optical\n\nMultitasked in a fast-paced sales environment to administer and facilitate the sale of prescription glasses.\nManaged patient charts, sales reports, office inventory and stock orders.\n\n\n\n\nInner Harbour Optometry\n\nManaged confidential medical charts while performing optometric testing and customer support.\nImproved patient re-call system to increase business revenue.\n\n\n\n\nSylvan Learning, Inc.\n\nCoached and assisted students on the classroom floor and in 1-on-1 lessons.\nCreated lesson plans and personalized curriculums tailored to individual student needs.\n\n\n\n\n\n\nTechnical Writing\n\nDocs-as-code engineering\nQuarto publishing\nJupyter Notebooks\nMarkdown\nCI/CD workflows\n\nSoftware Development\n\nGitHub\nCursor Code\nVisual Studio Code\nDocker\nPostman\nHTML\nCSS\nTypeScript\n\nSolutions Architecture & Implementation\n\nREST API\nGraphQL\nJavaScript\nJSONata\nPython\nSQL\nFTP\n\nSupport Engineering & Lifecycle Automation\n\nZendesk\nFreshdesk\nZapier\nSalesforce\nHubSpot\nIntercom\nFront\n\nProject Management\n\nShortcut\nNotion\nJira\nConfluence\nAsana\nGoogle Workspace\nMicrosoft 365\nAdobe Creative Cloud\n\nIntegrations\n\nPayPal\nRecurly\nStripe\nBranch\nAppsFlyer"
-  },
-  {
-    "objectID": "cv.html#education",
-    "href": "cv.html#education",
-    "title": "curriculum vitae",
-    "section": "Education",
-    "text": "Education\n\n\nLighthouse Labs\nIntro to Front-End with JavaScript\n\n\nUniversity of Victoria\ncum laude\nBachelor of Arts, English Literature & Japanese Studies"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Beck Chan",
@@ -926,6 +953,34 @@
     "title": "Beck Chan",
     "section": "Samples by format",
     "text": "Samples by format\n\nDeveloper ContentTrainingUser GuidesQuickstart TutorialsContent EnablementStorytelling\n\n\n\n\n\n\n\n\n\nValidMind Jupyter Notebooks\n\n\nDeveloper Content\n\n\n\n\n\n\n\n\n\nSaaSquatch JavaScript SDK\n\n\nDeveloper Content\n\n\n\n\n\nNo Matches Found\n\n\n\n\n\n\n\n\n\n\nValidMind Training\n\n\nOnboarding & Education\n\n\n\n\n\nNo Matches Found\n\n\n\n\n\n\n\n\n\n\nValidMind User Guides\n\n\nFeature Documentation\n\n\n\n\n\n\n\n\n\nAtryum Integrations\n\n\nFeature Documentation\n\n\n\n\n\n\n\n\n\nAtryum User Guides\n\n\nFeature Documentation\n\n\n\n\n\n\n\n\n\nSaaSquatch User Guides\n\n\nFeature Documentation\n\n\n\n\n\nNo Matches Found\n\n\n\n\n\n\n\n\n\n\nValidMind Quickstarts\n\n\nTutorials\n\n\n\n\n\n\n\n\n\nAtryum Quickstart\n\n\nTutorial\n\n\n\n\n\nNo Matches Found\n\n\n\n\n\n\n\n\n\n\nValidMind Enablement Content\n\n\nContent Creation\n\n\n\n\n\nNo Matches Found\n\n\n\n\n\n\n\n\n\n\nHonor the Human with ValidMind\n\n\nBlog Post\n\n\n\n\n\n\n\n\n\nReduce Culture Risk with ValidMind\n\n\nBlog Post\n\n\n\n\n\n\n\n\n\nTakeaways from Open Source in Finance Forum: Future of Fintech, OSS, and GenAI\n\n\nBlog Post\n\n\n\n\n\n\n\n\n\nSaaSquatch Growth Automation Platform\n\n\nFeature Highlight\n\n\n\n\n\nNo Matches Found"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "curriculum vitae",
+    "section": "",
+    "text": "ValidMind, Inc\n\nTook features from design to complete release supported by storytelling alongside software engineers in GitHub.\nImproved documentation and training through quality auditing and comprehensive redesigns using Quarto.\nAuthored 53% of user guidance content, including Jupyter Notebook samples for models and agentic systems.\nBridged gap between product design and user experience, verifying feature functionality and applying bug fixes.\nContributed to CI/CD infrastructure, open-source code libraries and software frontend built on TypeScript.\nDesigned, standardized, and implemented processes built to scale to close gaps and reduce team workload.\nSpearheaded the implementation of an extensible custom Zendesk solution.\n\n\n\n\nSaaSquatch by impact.com\n\nExecuted migration of evolving support processes to Freshdesk, resulting in a team 100% CSAT satisfaction rate.\nPioneered comprehensive reporting solutions, maintaining systematic report history to identify long-term trends.\nCreated exhaustive documentation, feedback metrics, and learning curriculums to onboard and train new agents.\nEmpowered users to understand and maximize the use of products by auditing and overhauling documentation.\n\n\n\n\nSaaSquatch by impact.com\n\nDesigned and led solo migration of support processes to Zendesk built to scale, increasing efficiency by 74%.\nManaged team escalations from complex technical cases, ensuring delivery of solutions to customers.\nProactively identified opportunities for customer growth and product improvements during ticket management.\nProvided advanced technical support for web and mobile SDKs built on JavaScript, REST API, and GraphQL.\n\n\n\n\nSaaSquatch by impact.com\n\nStreamlined workload by 51% through improvement of implementation processes and onboarding strategies.\nProactively created and maintained public documentation, focusing on accuracy, accessibility, and extensibility.\nProduced tangible results for customers by collaborating cross-functionally to deliver custom features.\nDesigned and executed solutions for custom JavaScript, REST API, and GraphQL software installations.\n\n\n\n\nDevelus Systems Inc. for Complia Health\n\nLed creation of a knowledge base to empower team members with extensive training and reference materials.\nCreated a mentorship and feedback program, strengthening team cohesion.\nTriaged, escalated, and owned resolution of product bugs for custom installations using Zendesk.\n\n\n\n\nAbeBooks.com, Amazon subsidiary\n\nExceeded target metric expectations at 160% while providing technical support in a fast-paced call center.\nInitiated improvements to best practices and processes, including documentation for team knowledge base.\n\n\n\n\nHudson’s Bay Optical\n\nMultitasked in a fast-paced sales environment to administer and facilitate the sale of prescription glasses.\nManaged patient charts, sales reports, office inventory and stock orders.\n\n\n\n\nInner Harbour Optometry\n\nManaged confidential medical charts while performing optometric testing and customer support.\nImproved patient re-call system to increase business revenue.\n\n\n\n\nSylvan Learning, Inc.\n\nCoached and assisted students on the classroom floor and in 1-on-1 lessons.\nCreated lesson plans and personalized curriculums tailored to individual student needs.\n\n\n\n\n\n\nTechnical Writing\n\nDocs-as-code engineering\nQuarto publishing\nJupyter Notebooks\nMarkdown\n\nSoftware Development\n\nCI/CD workflows\nGitHub\nCursor Code\nVisual Studio Code\nDocker\nPostman\n\nSolutions Architecture & Implementation\n\nREST API\nGraphQL\nJavaScript\nJSONata\nPython\nHTML\nCSS\nTypeScript\nSQL\nFTP\n\nAgents\n\nCursor\nClaude\nChatGPT\nGemini\nCopilot\n\nSupport Engineering & Lifecycle Automation\n\nZendesk\nFreshdesk\nZapier\nSalesforce\nHubSpot\nIntercom\nFront\n\nProject Management\n\nConfluence\nJira\nShortcut\nNotion\nAsana\nGoogle Workspace\nMicrosoft 365\nAdobe Creative Cloud\n\nIntegrations\n\nPayPal\nRecurly\nStripe\nBranch\nAppsFlyer"
+  },
+  {
+    "objectID": "cv.html#work-experience",
+    "href": "cv.html#work-experience",
+    "title": "curriculum vitae",
+    "section": "",
+    "text": "ValidMind, Inc\n\nTook features from design to complete release supported by storytelling alongside software engineers in GitHub.\nImproved documentation and training through quality auditing and comprehensive redesigns using Quarto.\nAuthored 53% of user guidance content, including Jupyter Notebook samples for models and agentic systems.\nBridged gap between product design and user experience, verifying feature functionality and applying bug fixes.\nContributed to CI/CD infrastructure, open-source code libraries and software frontend built on TypeScript.\nDesigned, standardized, and implemented processes built to scale to close gaps and reduce team workload.\nSpearheaded the implementation of an extensible custom Zendesk solution.\n\n\n\n\nSaaSquatch by impact.com\n\nExecuted migration of evolving support processes to Freshdesk, resulting in a team 100% CSAT satisfaction rate.\nPioneered comprehensive reporting solutions, maintaining systematic report history to identify long-term trends.\nCreated exhaustive documentation, feedback metrics, and learning curriculums to onboard and train new agents.\nEmpowered users to understand and maximize the use of products by auditing and overhauling documentation.\n\n\n\n\nSaaSquatch by impact.com\n\nDesigned and led solo migration of support processes to Zendesk built to scale, increasing efficiency by 74%.\nManaged team escalations from complex technical cases, ensuring delivery of solutions to customers.\nProactively identified opportunities for customer growth and product improvements during ticket management.\nProvided advanced technical support for web and mobile SDKs built on JavaScript, REST API, and GraphQL.\n\n\n\n\nSaaSquatch by impact.com\n\nStreamlined workload by 51% through improvement of implementation processes and onboarding strategies.\nProactively created and maintained public documentation, focusing on accuracy, accessibility, and extensibility.\nProduced tangible results for customers by collaborating cross-functionally to deliver custom features.\nDesigned and executed solutions for custom JavaScript, REST API, and GraphQL software installations.\n\n\n\n\nDevelus Systems Inc. for Complia Health\n\nLed creation of a knowledge base to empower team members with extensive training and reference materials.\nCreated a mentorship and feedback program, strengthening team cohesion.\nTriaged, escalated, and owned resolution of product bugs for custom installations using Zendesk.\n\n\n\n\nAbeBooks.com, Amazon subsidiary\n\nExceeded target metric expectations at 160% while providing technical support in a fast-paced call center.\nInitiated improvements to best practices and processes, including documentation for team knowledge base.\n\n\n\n\nHudson’s Bay Optical\n\nMultitasked in a fast-paced sales environment to administer and facilitate the sale of prescription glasses.\nManaged patient charts, sales reports, office inventory and stock orders.\n\n\n\n\nInner Harbour Optometry\n\nManaged confidential medical charts while performing optometric testing and customer support.\nImproved patient re-call system to increase business revenue.\n\n\n\n\nSylvan Learning, Inc.\n\nCoached and assisted students on the classroom floor and in 1-on-1 lessons.\nCreated lesson plans and personalized curriculums tailored to individual student needs.\n\n\n\n\n\n\nTechnical Writing\n\nDocs-as-code engineering\nQuarto publishing\nJupyter Notebooks\nMarkdown\n\nSoftware Development\n\nCI/CD workflows\nGitHub\nCursor Code\nVisual Studio Code\nDocker\nPostman\n\nSolutions Architecture & Implementation\n\nREST API\nGraphQL\nJavaScript\nJSONata\nPython\nHTML\nCSS\nTypeScript\nSQL\nFTP\n\nAgents\n\nCursor\nClaude\nChatGPT\nGemini\nCopilot\n\nSupport Engineering & Lifecycle Automation\n\nZendesk\nFreshdesk\nZapier\nSalesforce\nHubSpot\nIntercom\nFront\n\nProject Management\n\nConfluence\nJira\nShortcut\nNotion\nAsana\nGoogle Workspace\nMicrosoft 365\nAdobe Creative Cloud\n\nIntegrations\n\nPayPal\nRecurly\nStripe\nBranch\nAppsFlyer"
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "curriculum vitae",
+    "section": "Education",
+    "text": "Education\n\n\nLighthouse Labs\nIntro to Front-End with JavaScript\n\n\nUniversity of Victoria\ncum laude\nBachelor of Arts, English Literature & Japanese Studies"
+  },
+  {
+    "objectID": "poetry/index.html",
+    "href": "poetry/index.html",
+    "title": "Poetry",
+    "section": "",
+    "text": "Congrats! You found the silly little Easter egg.\nI am a human that hates talking about myself, which you wouldn’t believe if you managed to corner me into an interview. The best I can do is some original poetry, some of which may or may not be autobiographical.\nRefresh the page to receive a different one, y’know, in honour of the ephemeral. No, I will not be taking any feedback, thank you very kindly.\n\n\n\n\n\n\nTipI’m ready!\n\n\n\n\n\n\nCrafting…\n\n\nShow me another one."
   },
   {
     "objectID": "samples/copywriting/saasquatch/growth-automation.html",
@@ -997,6 +1052,61 @@
       "Technical Writing",
       "ValidMind",
       "OSFF Takeaways"
+    ]
+  },
+  {
+    "objectID": "samples/organizations/index.html",
+    "href": "samples/organizations/index.html",
+    "title": "Organizations",
+    "section": "",
+    "text": "Samples of my work, grouped by organization.\n\n\n\n\n\n\n\nValidMind\n\n\nCollated Samples\n\n\n\n\n\n\n\n\n\n\n\n\nAtryum\n\n\nCollated Samples\n\n\n\n\n\n\n\n\n\n\n\n\nSaaSquatch\n\n\nCollated Samples\n\n\n\n\n\n\n\n\nNo Matches Found\n\n\n\n\n\n  \n    \n    Search Portfolio\n    /\n  \n\n\n\n\n beck-chan\n\n\n beck-chan\n\n\n beckchan.tech@gmail.com",
+    "crumbs": [
+      "Technical Writing",
+      "Organizations"
+    ]
+  },
+  {
+    "objectID": "samples/organizations/validmind.html",
+    "href": "samples/organizations/validmind.html",
+    "title": "ValidMind",
+    "section": "",
+    "text": "I was the sole Senior Technical Writer for ValidMind, where I employed docs-as-code methodologies alongside software engineers delivering documentation as part of product in the same development ecosystem.\nI was the sole Senior Technical Writer for ValidMind, a generative artificial intelligence financial services startup, where I employed docs-as-code methodologies alongside software engineers delivering documentation as part of product in the same development ecosystem, transforming a minimal set of user guide drafts into a fully idealized and comprehensive knowledge base.",
+    "crumbs": [
+      "Technical Writing",
+      "ValidMind"
+    ]
+  },
+  {
+    "objectID": "samples/organizations/validmind.html#content-engineering",
+    "href": "samples/organizations/validmind.html#content-engineering",
+    "title": "ValidMind",
+    "section": "Content Engineering",
+    "text": "Content Engineering\n\nAtryum\nAtryum is an open-source agentic orchestration tool developed by ValidMind. As ValidMind’s sole Senior Technical Writer, I was responsible for almost all of the documentation for Atryum.",
+    "crumbs": [
+      "Technical Writing",
+      "ValidMind"
+    ]
+  },
+  {
+    "objectID": "samples/organizations/validmind.html#technical-writing",
+    "href": "samples/organizations/validmind.html#technical-writing",
+    "title": "ValidMind",
+    "section": "Technical Writing",
+    "text": "Technical Writing\n\nEngendering empowered users through effective guidance content.\nAlong with a love of gratuitous alliteration, I truly enjoy authoring user guidance content. That’s because I believe that great guidance content empowers users, and empowered users get excited about product.\n\nAs I authored the bulk of 53% of user content out of many contributors,1 most of ValidMind’s documentation saw my influence at some point. I’ve selected some of my best work to showcase below:\n1 Citation:  validmind/documentation statistic archive\n\n \n\n\n\n\n\n\n\n\nValidMind Jupyter Notebooks\n\n\nDeveloper Content\n\n\n\n\n\n\n\n\n\n\n\n\nValidMind Training\n\n\nOnboarding & Education\n\n\n\n\n\n\n\n\n\n\n\n\nValidMind User Guides\n\n\nFeature Documentation\n\n\n\n\n\n\n\n\n\n\n\n\nValidMind Quickstarts\n\n\nTutorials\n\n\n\n\n\n\n\n\n\n\n\n\nValidMind Enablement Content\n\n\nContent Creation\n\n\n\n\n\n\n\n\nNo Matches Found\n\n\nAtryum\nAtryum is an open-source agentic orchestration tool developed by ValidMind. As ValidMind’s sole Senior Technical Writer, I was responsible for almost all of the documentation for Atryum.\nI authored approximately 95% of the content for Atryum,2 including the samples selected below:\n2 Citation:  validmind/atryum/website (documentation) archive\n\n\n\n\n\n\nAtryum Integrations\n\n\nFeature Documentation\n\n\nUser guides written for Atryum integrations.\n\n\n\n\n\n\n\n\n\nAtryum User Guides\n\n\nFeature Documentation\n\n\nUser guides written for core Atryum functionality.\n\n\n\n\n\n\n\n\n\nAtryum Quickstart\n\n\nTutorial\n\n\nQuickstart and installation guide for Atryum.\n\n\n\n\n\nNo Matches Found",
+    "crumbs": [
+      "Technical Writing",
+      "ValidMind"
+    ]
+  },
+  {
+    "objectID": "samples/organizations/validmind.html#copywriting",
+    "href": "samples/organizations/validmind.html#copywriting",
+    "title": "ValidMind",
+    "section": "Copywriting",
+    "text": "Copywriting\n\nDriving action and building connection through technical insight.\nTo me, software storytelling goes beyond simple feature highlights — culminating in tangible statements of value for users.\n\nCheck out some blog posts I wrote on our product offering and industry that shine some insight into my writing style:\n\n\n\n\n\n\n\nHonor the Human with ValidMind\n\n\nBlog Post\n\n\n\n\n\n\n\n\n\n\n\n\nReduce Culture Risk with ValidMind\n\n\nBlog Post\n\n\n\n\n\n\n\n\n\n\n\n\nTakeaways from Open Source in Finance Forum: Future of Fintech, OSS, and GenAI\n\n\nBlog Post\n\n\n\n\n\n\n\n\nNo Matches Found",
+    "crumbs": [
+      "Technical Writing",
+      "ValidMind"
     ]
   },
   {
