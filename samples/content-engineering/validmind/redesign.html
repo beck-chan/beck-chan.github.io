@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.11.1">
+<meta name="generator" content="quarto-1.11.3">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -36,27 +36,30 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<link href="../../../samples/content-engineering/validmind/atryum.html" rel="next">
+<link href="../../../samples/content-engineering/atryum/index.html" rel="next">
 <link href="../../../samples/content-engineering/validmind/quickstarts.html" rel="prev">
 <link href="../../../assets/headshot.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-listing/list.min.js"></script>
+<script src="../../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-4d77301e1d1e2befcfe34b1f46e19dd6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-7e3ff10c271a6c3d50da2b713bb1a607.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-4d77301e1d1e2befcfe34b1f46e19dd6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-6a5d77c288ae9a328f8b889480dd1f82.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0114024d9f4d5bb209e87a78e65fba1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-6a5d77c288ae9a328f8b889480dd1f82.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-cbeca6f820b0b5b2f9646a02a8d04e38.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-43f18205a5b74f0525a2e41464167e16.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-cbeca6f820b0b5b2f9646a02a8d04e38.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-0062e773160ec7b30614b11e05b439f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-cbdff46b3c532071db5dd428a750ad25.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-0062e773160ec7b30614b11e05b439f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/timeline-0.1.0/timeline.js"></script>
 <link href="../../../site_libs/quarto-contrib/timeline-0.1.0/timeline.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/tachyons-4.12.0/tachyons.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/tachyons-4.12.0/quarto-resets.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/iframe-1.1.0/iframe.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -86,6 +89,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-validmind-overhauls .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-validmind-overhauls'] = new List('listing-validmind-overhauls', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+<script>
     !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}p||((p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",p.onerror=function(){p=null},(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r));var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="al ol ll init Il Rl Tl Ml Ol za El Dl Sl capture getExtension Pl nl Hl calculateEventProperties Bl register register_once register_for_session unregister unregister_for_session Vl Cl zl getFeatureFlag getFeatureFlagPayload getFeatureFlagResult getAllFeatureFlags isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync Gl identify setPersonProperties unsetPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset Zl shutdown setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty Ul ql createPersonProfile setInternalOrTestUser Wl ul hl opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing $l debug Ua Jn getPageViewId captureTraceFeedback captureTraceMetric bl".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
     posthog.init('phc_zqwk6XXUUjTLnofgQxcesCk2hnsCVoF3FCfB6KVg2Vym', {
         api_host: 'https://us.i.posthog.com',
@@ -94,10 +126,39 @@ ul.task-list li input[type="checkbox"] {
     })
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
-<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar docked nav-fixed slimcontent quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -120,6 +181,7 @@ ul.task-list li input[type="checkbox"] {
       for (let i=0; i < toggles.length; i++) {
         const toggle = toggles[i];
         if (toggle) {
+          toggle.setAttribute("aria-checked", alternate ? "true" : "false");
           if (alternate) {
             toggle.classList.add("alternate");
           } else {
@@ -271,11 +333,15 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../../../samples/content-engineering/index.html" aria-current="page"> 
+<span class="menu-text">Content Engineering</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../../samples/technical-writing/index.html"> 
 <span class="menu-text">Technical Writing</span></a>
@@ -284,6 +350,21 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../../../samples/copywriting/index.html"> 
 <span class="menu-text">Copywriting</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-all-samples" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">All Samples</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-all-samples">    
+        <li>
+    <a class="dropdown-item" href="../../../samples/index.html">
+ <span class="dropdown-text">Filter by Criteria</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../samples/organizations/index.html">
+ <span class="dropdown-text">Collated by Organization</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
@@ -292,24 +373,24 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://github.com/beck-chan" target="_blank"> 
-<span class="menu-text"><i class="fa-brands fa-github" aria-label="github"></i></span></a>
+<span class="menu-text"><span title="GitHub / beck-chan"><i class="fa-brands fa-github" aria-label="github"></i></span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://linkedin.com/in/beck-chan" target="_blank"> 
-<span class="menu-text"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></span></a>
+<span class="menu-text"><span title="LinkedIn / beck-chan"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="mailto:beckchan.tech@gmail.com" target="_blank"> 
-<span class="menu-text"><i class="fa-solid fa-envelope" aria-label="envelope"></i></span></a>
+<span class="menu-text"><span title="Email / beckchan.tech@gmail.com"><i class="fa-solid fa-envelope" aria-label="envelope"></i></span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../../poetry/index.html"> 
-<span class="menu-text"><i class="fa-solid fa-feather" aria-label="feather"></i></span></a>
+<span class="menu-text"><span title="Poetry"><i class="fa-solid fa-feather" aria-label="feather"></i></span></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle Theme"><i class="bi"></i></a>
+  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle Theme" aria-label="Toggle Theme"><i class="bi"></i></button>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -319,7 +400,7 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../samples/content-engineering/validmind/index.html">ValidMind</a></li><li class="breadcrumb-item"><a href="../../../samples/content-engineering/validmind/redesign.html">Documentation Redesign</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
@@ -340,12 +421,12 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../../samples/content-engineering/validmind/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ValidMind</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+ <span class="menu-text" id="quarto-sidebar-section-1-label">ValidMind</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section: ValidMind">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../samples/content-engineering/validmind/library.html" class="sidebar-item-text sidebar-link">
@@ -355,7 +436,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../samples/content-engineering/validmind/academy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Training</span></a>
+ <span class="menu-text">Training Academy</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -380,37 +461,75 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../samples/content-engineering/validmind/atryum.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../samples/content-engineering/atryum/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Atryum Documentation</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../samples/content-engineering/personal/portfolio/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text" id="quarto-sidebar-section-2-label">Portfolio</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section: Portfolio">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
+      </div>
+      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../samples/content-engineering/personal/portfolio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Portfolio</span></a>
+  <a href="../../../samples/content-engineering/personal/portfolio/framework.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Framework</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../samples/content-engineering/personal/portfolio/deployment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Deployment</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of Contents</h2>
+   
+  <ul>
+  <li><a href="#situation" id="toc-situation" class="nav-link active" data-scroll-target="#situation">Situation</a></li>
+  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a></li>
+  <li><a href="#comparisons" id="toc-comparisons" class="nav-link" data-scroll-target="#comparisons">Comparisons</a>
+  <ul>
+  <li><a href="#landing-page" id="toc-landing-page" class="nav-link" data-scroll-target="#landing-page">Landing Page</a></li>
+  <li><a href="#user-guides" id="toc-user-guides" class="nav-link" data-scroll-target="#user-guides">User Guides</a></li>
+  <li><a href="#support" id="toc-support" class="nav-link" data-scroll-target="#support">Support</a></li>
+  <li><a href="#faqs" id="toc-faqs" class="nav-link" data-scroll-target="#faqs">FAQs</a></li>
+  </ul></li>
+  <li><a href="#additional-redesigns" id="toc-additional-redesigns" class="nav-link" data-scroll-target="#additional-redesigns">Additional Redesigns</a></li>
+  <li><a href="#citation" id="toc-citation" class="nav-link" data-scroll-target="#citation">Citation</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content page-columns page-full column-body" id="quarto-document-content" tabindex="-1">
 
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../samples/content-engineering/validmind/index.html">ValidMind</a></li><li class="breadcrumb-item"><a href="../../../samples/content-engineering/validmind/redesign.html">Documentation Redesign</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">ValidMind Documentation Redesign</h1>
 <p class="subtitle lead">Content Engineering</p>
-</div>
+  <div class="quarto-categories">
+    <div class="quarto-category">Content Architecture</div>
+    <div class="quarto-category">Quarto</div>
+    <div class="quarto-category">Frontend Development</div>
+  </div>
+  </div>
 
 
 
-<div class="quarto-title-meta column-page-right">
+<div class="quarto-title-meta column-body">
 
     
   
@@ -422,7 +541,297 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="hidden">
+<p>I transformed ValidMind’s documentation from a sparsely populated and poorly organized site with no brand identity to a comprehensive and user-friendly experience with a clean, modern, and mobile-responsive design.</p>
+</div>
+<p>Along with authoring the bulk of ValidMind’s user guidance content, I also led the redesign and reorganization of ValidMind’s documentation, transforming a sparsely populated and poorly organized site with no brand identity to a comprehensive and user-friendly experience with a clean, modern, and mobile-responsive design.</p>
+<p>As a newcomer to ValidMind and the risk management space, I knew I had an advantage others did not — I could approach both our product and user guidance content with curiosity and a fresh perspective, without the baggage of prior assumptions or preconceived notions as to how things should be done and presented.</p>
+<div class="callout callout-style-simple callout-none no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>You may notice many visual similarities between ValidMind’s documentation and this portfolio.
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>That’s because they’re both built on Quarto,<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> and I designed and maintained both!</p>
+</div>
+</div>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;<a href="../../../samples/content-engineering/personal/portfolio/framework.html">Portfolio Framework</a></p></div></div><section id="situation" class="level2">
+<h2 class="anchored" data-anchor-id="situation">Situation</h2>
+<p>Before I joined ValidMind, our documentation site was not only sparse in user guidance content, but any available content was not well organized or presented.</p>
+<p>There were no clear user journeys, information on the same topics was scattered across multiple places in the documentation, and the overall structure was not intuitive. As a new user, using the documentation was a frustrating and confusing experience.</p>
+</section>
+<section id="solution" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="solution">Solution</h2>
+<p>Along with cleaning up internal authoring practices and establishing proper file name conventions, usage of product variables, and other guidance detailed in the company style guide,<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> I overhauled several key landing pages, made content placement more intuitive, and partnered with our frontend team to redesign the site’s theme.</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;<a href="../../../samples/technical-writing/validmind/enablement.html#validmind-style-guide">ValidMind Enablement Content</a></p></div></div><p>I had an influence on nearly every page and section of the documentation. I’ll only cover here changes not detailed under <a href="#additional-redesigns">Additional Redesigns</a>.</p>
+</section>
+<section id="comparisons" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="comparisons">Comparisons</h2>
+<p>Some comparisons of my influence on the documentation site:</p>
+<section id="landing-page" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="landing-page">Landing Page</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset page-columns page-full">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Before</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">After</a></li></ul>
+<div class="tab-content page-columns page-full">
+<div id="tabset-1-1" class="tab-pane active page-columns page-full" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>The old landing page, which was cluttered, had poorly defined user journeys, and suboptimal display on mobile devices:<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><figure class="iframe-embed figure iframe-embed--align-center iframe-embed--valign-center" style="--iframe-zoom: 1.0; --iframe-width: 70%; --iframe-height: 560px;"><sup>3</sup>&nbsp;
+  <div class="iframe-embed__chrome pics">
+    <div class="iframe-embed__frame">
+      <iframe src="https://validbeck.github.io/archive/" title="Previous ValidMind Documentation Landing Page Mobile View" loading="lazy"></iframe>
+    </div>
+  </div>
+  <figcaption>Previous ValidMind Documentation Landing Page Mobile View</figcaption>
+</figure>
+</div></div><figure class="iframe-embed figure iframe-embed--align-center iframe-embed--valign-center iframe-embed--new-window" style="--iframe-zoom: 0.6; --iframe-width: 100%; --iframe-height: 560px;">
+  <div class="iframe-embed__chrome pics">
+    <div class="iframe-embed__frame">
+      <iframe src="https://validbeck.github.io/archive/" title="Previous ValidMind Documentation Landing Page" loading="lazy"></iframe>
+    </div>
+    <a class="iframe-embed__open" href="https://validbeck.github.io/archive/" target="_blank" rel="noopener noreferrer" title="Open Previous ValidMind Documentation Landing Page" aria-label="Open Previous ValidMind Documentation Landing Page">
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+    </a>
+  </div>
+  <figcaption>Previous ValidMind Documentation Landing Page</figcaption>
+</figure>
+</div>
+<div id="tabset-1-2" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>I led the redesign of this landing page, collaborating cross-functionally with our frontend team to ensure the new design was both user-friendly and visually appealing as well as mobile responsive:<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><figure class="iframe-embed figure iframe-embed--align-center iframe-embed--valign-center" style="--iframe-zoom: 1.0; --iframe-width: 70%; --iframe-height: 560px;"><sup>4</sup>&nbsp;
+  <div class="iframe-embed__chrome pics">
+    <div class="iframe-embed__frame">
+      <iframe src="https://validbeck.github.io/docs/" title="New ValidMind Documentation Landing Page Mobile View" loading="lazy"></iframe>
+    </div>
+  </div>
+  <figcaption>New ValidMind Documentation Landing Page Mobile View</figcaption>
+</figure>
+</div></div><figure class="iframe-embed figure iframe-embed--align-center iframe-embed--valign-center iframe-embed--new-window" style="--iframe-zoom: 0.6; --iframe-width: 100%; --iframe-height: 560px;">
+  <div class="iframe-embed__chrome pics">
+    <div class="iframe-embed__frame">
+      <iframe src="https://validbeck.github.io/docs/" title="New ValidMind Documentation Landing Page" loading="lazy"></iframe>
+    </div>
+    <a class="iframe-embed__open" href="https://validbeck.github.io/docs/" target="_blank" rel="noopener noreferrer" title="Open New ValidMind Documentation Landing Page" aria-label="Open New ValidMind Documentation Landing Page">
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+    </a>
+  </div>
+  <figcaption>New ValidMind Documentation Landing Page</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="user-guides" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="user-guides">User Guides</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset page-columns page-full">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Before</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">After</a></li></ul>
+<div class="tab-content page-columns page-full">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>The old user guides portal, which not only had sparse content, buts somehow still felt crowded and cluttered:</p>
+<figure class="iframe-embed figure iframe-embed--align-center iframe-embed--valign-center iframe-embed--new-window" style="--iframe-zoom: 0.6; --iframe-width: 100%; --iframe-height: 560px;">
+  <div class="iframe-embed__chrome pics">
+    <div class="iframe-embed__frame">
+      <iframe src="https://validbeck.github.io/archive/guide/guides.html" title="Previous ValidMind User Guides" loading="lazy"></iframe>
+    </div>
+    <a class="iframe-embed__open" href="https://validbeck.github.io/archive/guide/guides.html" target="_blank" rel="noopener noreferrer" title="Open Previous ValidMind User Guides" aria-label="Open Previous ValidMind User Guides">
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+    </a>
+  </div>
+  <figcaption>Previous ValidMind User Guides</figcaption>
+</figure>
+</div>
+<div id="tabset-2-2" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>The new user guides portal, filled with content I authored, and now featuring a cleaner experience thanks to my new collapsible sidebar Quarto Extension custom designed for this landing:<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;<strong><i class="fa-brands fa-github" aria-label="github"></i> validmind/documentation archive:</strong> <a href="https://github.com/validbeck/validmind-docs/tree/main/site/_extensions/validbeck/sidebar-slim" target="_blank">validbeck/sidebar-slim</a></p></div></div><figure class="iframe-embed figure iframe-embed--align-center iframe-embed--valign-center iframe-embed--new-window" style="--iframe-zoom: 0.6; --iframe-width: 100%; --iframe-height: 560px;">
+  <div class="iframe-embed__chrome pics">
+    <div class="iframe-embed__frame">
+      <iframe src="https://validbeck.github.io/docs/guide/guides.html" title="New ValidMind User Guides" loading="lazy"></iframe>
+    </div>
+    <a class="iframe-embed__open" href="https://validbeck.github.io/docs/guide/guides.html" target="_blank" rel="noopener noreferrer" title="Open New ValidMind User Guides" aria-label="Open New ValidMind User Guides">
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+    </a>
+  </div>
+  <figcaption>New ValidMind User Guides</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="support" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="support">Support</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset page-columns page-full">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Before</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">After</a></li></ul>
+<div class="tab-content page-columns page-full">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<p>The old support portal, which was not very helpful at all:</p>
+<figure class="iframe-embed figure iframe-embed--align-center iframe-embed--valign-center iframe-embed--new-window" style="--iframe-zoom: 0.6; --iframe-width: 100%; --iframe-height: 560px;">
+  <div class="iframe-embed__chrome pics">
+    <div class="iframe-embed__frame">
+      <iframe src="https://validbeck.github.io/archive/guide/support.html" title="Previous ValidMind Support Landing Page" loading="lazy"></iframe>
+    </div>
+    <a class="iframe-embed__open" href="https://validbeck.github.io/archive/guide/support.html" target="_blank" rel="noopener noreferrer" title="Open Previous ValidMind Support Landing Page" aria-label="Open Previous ValidMind Support Landing Page">
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+    </a>
+  </div>
+  <figcaption>Previous ValidMind Support Landing Page</figcaption>
+</figure>
+</div>
+<div id="tabset-3-2" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<p>The new support portal, now with actions users can actually take, including visiting our custom Help Center:<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn6"><div class="callout callout-style-simple callout-none no-icon"><sup>6</sup>&nbsp;
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Alongside owning our user guidance content, I also designed and implemented this exact custom Zendesk Help Center as a solo contributor with by-in and accolades from executive leadership.</p>
+</div>
+</div>
+</div>
+</div></div><figure class="iframe-embed figure iframe-embed--align-center iframe-embed--valign-center iframe-embed--new-window" style="--iframe-zoom: 0.6; --iframe-width: 100%; --iframe-height: 560px;">
+  <div class="iframe-embed__chrome pics">
+    <div class="iframe-embed__frame">
+      <iframe src="https://validbeck.github.io/docs/support/support.html" title="New ValidMind Support Landing Page" loading="lazy"></iframe>
+    </div>
+    <a class="iframe-embed__open" href="https://validbeck.github.io/docs/support/support.html" target="_blank" rel="noopener noreferrer" title="Open New ValidMind Support Landing Page" aria-label="Open New ValidMind Support Landing Page">
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+    </a>
+  </div>
+  <figcaption>New ValidMind Support Landing Page</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="faqs" class="level3">
+<h3 class="anchored" data-anchor-id="faqs">FAQs</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">Before</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">After</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<p>The old FAQs, with outdated questions and answers, and lack of descriptive links to indicate relevant content:</p>
+<figure class="iframe-embed figure iframe-embed--align-center iframe-embed--valign-center iframe-embed--new-window" style="--iframe-zoom: 0.6; --iframe-width: 100%; --iframe-height: 560px;">
+  <div class="iframe-embed__chrome pics">
+    <div class="iframe-embed__frame">
+      <iframe src="https://validbeck.github.io/archive/guide/faq.html" title="Previous ValidMind FAQs" loading="lazy"></iframe>
+    </div>
+    <a class="iframe-embed__open" href="https://validbeck.github.io/archive/guide/faq.html" target="_blank" rel="noopener noreferrer" title="Open Previous ValidMind FAQs" aria-label="Open Previous ValidMind FAQs">
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+    </a>
+  </div>
+  <figcaption>Previous ValidMind FAQs</figcaption>
+</figure>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<p>The new FAQs, with updated and more detailed questions and answers, now featuring descriptive display of links to indicate relevant content:</p>
+<figure class="iframe-embed figure iframe-embed--align-center iframe-embed--valign-center iframe-embed--new-window" style="--iframe-zoom: 0.6; --iframe-width: 100%; --iframe-height: 560px;">
+  <div class="iframe-embed__chrome pics">
+    <div class="iframe-embed__frame">
+      <iframe src="https://validbeck.github.io/docs/faq/faq.html" title="New ValidMind FAQs" loading="lazy"></iframe>
+    </div>
+    <a class="iframe-embed__open" href="https://validbeck.github.io/docs/faq/faq.html" target="_blank" rel="noopener noreferrer" title="Open New ValidMind FAQs" aria-label="Open New ValidMind FAQs">
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+    </a>
+  </div>
+  <figcaption>New ValidMind FAQs</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="additional-redesigns" class="level2">
+<h2 class="anchored" data-anchor-id="additional-redesigns">Additional Redesigns</h2>
+<div id="listing-validmind-overhauls" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-2">
+<div class="g-col-1" data-index="0" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ0ZlYXR1cmUlMjBEb2N1bWVudGF0aW9uJTJDVXNlciUyMEd1aWRlcyUyQ0p1cHl0ZXIlMjBOb3RlYm9va3MlMkNRdWFydG8lMkNGcm9udGVuZCUyMERldmVsb3BtZW50" data-listing-file-modified-sort="1788689161056" data-listing-reading-time-sort="4" data-listing-word-count-sort="691">
+<a href="../../../samples/content-engineering/validmind/library.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+ValidMind Developer Library
+</h5>
+<div class="card-subtitle listing-subtitle">
+Content Engineering
+</div>
+<div class="card-text listing-description delink">
+I transformed our disorganized developer resources into a comprehensive reference with a clean, modern, and mobile-responsive design.
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="SnVweXRlciUyME5vdGVib29rcyUyQ1RyYWluaW5nJTIwJTI2JTIwT25ib2FyZGluZyUyQ0luc3RydWN0aW9uYWwlMjBEZXNpZ24lMkNRdWFydG8lMkNDSSUyRkNEJTIwV29ya2Zsb3dzJTJDRnJvbnRlbmQlMjBEZXZlbG9wbWVudA==" data-listing-file-modified-sort="1788689161055" data-listing-reading-time-sort="11" data-listing-word-count-sort="2121">
+<a href="../../../samples/content-engineering/validmind/academy.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+ValidMind Training Academy
+</h5>
+<div class="card-subtitle listing-subtitle">
+Content Engineering
+</div>
+<div class="card-text listing-description delink">
+I transformed ValidMind’s rudimentary training resources into a comprehensive learning academy to empower users to maximize their use of the product.
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="Q29udGVudCUyMEVuYWJsZW1lbnQlMkNVc2VyJTIwR3VpZGVzJTJDUmVsZWFzZSUyME5vdGVzJTJDQ3Vyc29yJTIwQ29kZSUyQ0FnZW50JTIwU2tpbGxzJTJDTGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscyUyQ0ludGVncmF0aW9ucyUyQ0NJJTJGQ0QlMjBXb3JrZmxvd3M=" data-listing-file-modified-sort="1788689161058" data-listing-reading-time-sort="3" data-listing-word-count-sort="487">
+<a href="../../../samples/content-engineering/validmind/releases.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+ValidMind Release Notes
+</h5>
+<div class="card-subtitle listing-subtitle">
+Content Engineering
+</div>
+<div class="card-text listing-description delink">
+I automated our fragmented and manual release notes process using Python scripts and use of agent skills supported by large language models, reducing writer input time from almost a week to less than a day.
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="VHJhaW5pbmclMjAlMjYlMjBPbmJvYXJkaW5nJTJDSW5zdHJ1Y3Rpb25hbCUyMERlc2lnbiUyQ1F1YXJ0byUyQ0Zyb250ZW5kJTIwRGV2ZWxvcG1lbnQ=" data-listing-file-modified-sort="1788689161056" data-listing-reading-time-sort="3" data-listing-word-count-sort="495">
+<a href="../../../samples/content-engineering/validmind/quickstarts.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+ValidMind Quickstart Guides
+</h5>
+<div class="card-subtitle listing-subtitle">
+Content Engineering
+</div>
+<div class="card-text listing-description delink">
+I transformed ValidMind’s cluttered and ill-defined quickstart experience with gaps in resources to a clean and comprehensive onboarding journey with clear learning outcomes that showcased the value of our product through interaction.
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No Matches Found</div>
+</div>
+</section>
+<section id="citation" class="level2">
+<h2 class="anchored" data-anchor-id="citation">Citation</h2>
+<p><a href="https://github.com/validbeck/validmind-docs/tree/main/site/" class="button" target="_blank"><i class="fa-brands fa-github" aria-label="github"></i> Archive of <code>validmind/documentation</code> by Beck</a></p>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>You can learn more about my involvement with ValidMind’s documentation and the impact I had on user guidance content under <a href="../../../samples/technical-writing/validmind/index.html#validmind-user-guides">Technical Writing</a>.</p>
+</div>
+</div>
+</div>
 
+
+
+</section>
 
 
 </main> <!-- /main -->
@@ -460,6 +869,8 @@ ul.task-list li input[type="checkbox"] {
       let bottom = 0;
       for (const child of sidebar.children) {
         if (child.classList.contains("quarto-sidebar-toggle")) continue;
+        if (child.id === "portfolio-toc-toggle") continue;
+        if (child.id === "portfolio-toc-sentinel") continue;
         if (window.getComputedStyle(child).display === "none") continue;
         const rect = child.getBoundingClientRect();
         if (rect.height === 0) continue;
@@ -509,7 +920,59 @@ ul.task-list li input[type="checkbox"] {
       }
     };
 
+    // Quarto leaves margin footnotes inside tab panes and marks the
+    // tabset with page-columns/page-full, nesting a full page grid in
+    // the body column. Move those notes into the sibling
+    // .tabset-margin-container so the tabset can lay out normally and
+    // Quarto's shown.bs.tab handler can toggle note visibility.
+    const hoistTabsetMargins = () => {
+      document.querySelectorAll(".panel-tabset").forEach((tabset) => {
+        const margins = [
+          ...tabset.querySelectorAll(".column-margin.column-container"),
+        ];
+        if (!margins.length) return;
+
+        let container = tabset.previousElementSibling;
+        if (!container?.classList.contains("tabset-margin-container")) {
+          container = document.createElement("div");
+          container.className = "tabset-margin-container";
+          tabset.parentElement?.insertBefore(container, tabset);
+        }
+
+        // Sit in the parent section's page grid as the margin column.
+        container.classList.add(
+          "column-margin",
+          "column-container",
+          "no-row-height"
+        );
+
+        margins.forEach((margin) => {
+          const pane = margin.closest(".tab-pane");
+          const tabBtnId =
+            pane?.getAttribute("aria-labelledby") ||
+            (pane?.id ? `${pane.id}-tab` : null);
+          const wrap = document.createElement("div");
+          wrap.className = "tabset-margin-content";
+          if (tabBtnId) wrap.classList.add(`${tabBtnId}-margin-content`);
+          if (!pane?.classList.contains("active")) {
+            wrap.classList.add("collapse");
+          }
+          while (margin.firstChild) wrap.appendChild(margin.firstChild);
+          container.appendChild(wrap);
+          margin.remove();
+        });
+
+        const strip = (el) => {
+          el.classList.remove("page-columns", "page-full");
+        };
+        strip(tabset);
+        tabset.querySelectorAll(".page-columns, .page-full").forEach(strip);
+      });
+    };
+
     const layoutMarginBelowToc = () => {
+      hoistTabsetMargins();
+
       const marginChildren = document.querySelectorAll(MARGIN_SEL);
       if (!marginChildren.length) {
         expandContentForMargins(0);
@@ -556,6 +1019,10 @@ ul.task-list li input[type="checkbox"] {
       schedule();
       // Failsafe: never leave footnotes hidden if layout is delayed.
       setTimeout(reveal, 1500);
+      // Re-cascade when Quarto toggles tabset margin note visibility.
+      window.document.querySelectorAll('.panel-tabset a[data-bs-toggle="tab"]').forEach((tab) => {
+        tab.addEventListener("shown.bs.tab", schedule);
+      });
       window.document.querySelectorAll(".column-margin img").forEach((img) => {
         if (!img.complete) img.addEventListener("load", schedule, { once: true });
       });
@@ -570,6 +1037,315 @@ ul.task-list li input[type="checkbox"] {
         if (margin) ro.observe(margin);
       }
     });
+  })();
+</script>
+<script>
+  // Fixed TOC dropdown once the in-flow nav#TOC scrolls under the navbar.
+  // Uses a scrollY threshold captured at page top so detection still works
+  // if the margin sidebar goes sticky, and ignores brief TOC height=0
+  // blips during margin-below-toc footnote layout.
+  (() => {
+    const MQ = "(min-width: 992px)";
+    const TOGGLE_ID = "portfolio-toc-toggle";
+    const NAVBAR_FALLBACK = 75;
+    const ROLLED_CLASS = "portfolio-toc-rolled-up";
+
+    let lastScrollY = 0;
+    let seenToc = false;
+    // scrollY at which the TOC top meets the navbar — captured at rest only.
+    let showAfterY = null;
+
+    const marginSidebar = () =>
+      document.getElementById("quarto-margin-sidebar");
+    const tocNav = () => document.getElementById("TOC");
+    const toggleEl = () => document.getElementById(TOGGLE_ID);
+
+    const desktop = () =>
+      !!(window.matchMedia && window.matchMedia(MQ).matches);
+
+    const navbarOffset = () => {
+      const nav =
+        document.querySelector("#quarto-header nav.navbar") ||
+        document.querySelector("#quarto-header") ||
+        document.querySelector("nav.navbar");
+      if (!nav) return NAVBAR_FALLBACK;
+      const bottom = nav.getBoundingClientRect().bottom;
+      return bottom > 0 ? Math.ceil(bottom) : NAVBAR_FALLBACK;
+    };
+
+    const titleText = () => {
+      const toc = tocNav();
+      const heading = toc?.querySelector("#toc-title, h2, h3");
+      return (heading?.textContent || "Table of Contents").trim();
+    };
+
+    // Only capture near the top so sticky/visual offsets can't corrupt it.
+    const captureThreshold = () => {
+      const toc = tocNav();
+      if (!toc || toc.offsetHeight <= 0) return;
+      if (window.scrollY > 40) return;
+      const docTop = toc.getBoundingClientRect().top + window.scrollY;
+      showAfterY = Math.max(0, docTop - navbarOffset());
+    };
+
+    // true / false / null (layout glitch — keep current visibility)
+    const pastInlineToc = () => {
+      if (!desktop()) return false;
+      const toc = tocNav();
+      if (!toc && !seenToc) return false;
+      if (!toc) return null;
+
+      if (showAfterY != null) {
+        return window.scrollY >= showAfterY;
+      }
+
+      // Threshold not ready yet (footnote layout still settling).
+      if (toc.offsetHeight <= 0) return null;
+      return toc.getBoundingClientRect().top <= navbarOffset();
+    };
+
+    const positionToggle = (el) => {
+      if (!el) return;
+      const sidebar = marginSidebar();
+      const toc = tocNav();
+      // Margin column is the stable anchor (TOC may be rolled up / off-screen).
+      let left = null;
+      let width = null;
+      if (sidebar && sidebar.offsetWidth > 0) {
+        const sb = sidebar.getBoundingClientRect();
+        left = sb.left;
+        width = sb.width;
+      } else if (toc) {
+        const tr = toc.getBoundingClientRect();
+        if (tr.width > 0) {
+          left = tr.left;
+          width = tr.width;
+        }
+      }
+      if (!(width > 0) || left == null) return;
+      el.style.left = `${Math.round(left)}px`;
+      el.style.width = `${Math.round(width)}px`;
+      el.style.top = `${navbarOffset()}px`;
+    };
+
+    const setInlineRolled = (rolled) => {
+      const toc = tocNav();
+      if (!toc) return;
+      toc.classList.toggle(ROLLED_CLASS, rolled);
+    };
+
+    const closeToggle = (el) => {
+      if (!el) return;
+      el.classList.remove("expanded");
+      const contents = el.querySelector(".portfolio-toc-toggle-contents");
+      if (contents) contents.style.height = "0px";
+      el.dataset.open = "false";
+      const btn = el.querySelector(".portfolio-toc-toggle-title");
+      if (btn) btn.setAttribute("aria-expanded", "false");
+    };
+
+    const fillContents = (el) => {
+      const toc = tocNav();
+      const contents = el.querySelector(".portfolio-toc-toggle-contents");
+      if (!toc || !contents) return;
+
+      const clone = toc.cloneNode(true);
+      clone.removeAttribute("id");
+      clone.classList.remove(ROLLED_CLASS);
+      clone.classList.add("portfolio-toc-panel");
+      clone.querySelectorAll("[id]").forEach((node) => {
+        node.removeAttribute("id");
+      });
+
+      const heading = clone.querySelector("h2, h3");
+      if (heading) {
+        heading.classList.add("portfolio-toc-panel-heading");
+        const icon = document.createElement("i");
+        icon.className = "portfolio-toc-toggle-icon bi bi-caret-up-fill";
+        icon.setAttribute("aria-hidden", "true");
+        heading.append(icon);
+        heading.setAttribute("role", "button");
+        heading.setAttribute("tabindex", "0");
+        heading.setAttribute("aria-expanded", "true");
+        const collapse = (event) => {
+          event.preventDefault();
+          closeToggle(el);
+        };
+        heading.addEventListener("click", collapse);
+        heading.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") collapse(event);
+        });
+      }
+
+      contents.replaceChildren(clone);
+      contents.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener("click", () => closeToggle(el));
+      });
+    };
+
+    const openToggle = (el) => {
+      fillContents(el);
+      el.classList.add("expanded");
+      const contents = el.querySelector(".portfolio-toc-toggle-contents");
+      if (contents) {
+        contents.style.height = null;
+        contents.style.maxHeight = `calc(100vh - ${navbarOffset() + 24}px)`;
+      }
+      el.dataset.open = "true";
+      const btn = el.querySelector(".portfolio-toc-toggle-title");
+      if (btn) btn.setAttribute("aria-expanded", "true");
+    };
+
+    const ensureToggle = () => {
+      let el = toggleEl();
+      if (el) return el;
+      if (!tocNav()) return null;
+
+      el = document.createElement("div");
+      el.id = TOGGLE_ID;
+      el.className = "portfolio-toc-toggle zindex-over-content";
+      el.hidden = true;
+      el.dataset.open = "false";
+      el.setAttribute("role", "navigation");
+      el.setAttribute("aria-label", titleText());
+
+      const titleBtn = document.createElement("button");
+      titleBtn.type = "button";
+      titleBtn.className = "portfolio-toc-toggle-title";
+      titleBtn.setAttribute("aria-expanded", "false");
+      titleBtn.setAttribute("aria-controls", `${TOGGLE_ID}-contents`);
+
+      const label = document.createElement("span");
+      label.className = "portfolio-toc-toggle-label";
+      label.textContent = titleText();
+
+      const icon = document.createElement("i");
+      icon.className = "portfolio-toc-toggle-icon bi bi-caret-down-fill";
+      icon.setAttribute("aria-hidden", "true");
+
+      titleBtn.append(label, icon);
+
+      const contents = document.createElement("div");
+      contents.id = `${TOGGLE_ID}-contents`;
+      contents.className = "portfolio-toc-toggle-contents";
+      contents.style.height = "0px";
+
+      el.append(titleBtn, contents);
+      document.body.append(el);
+
+      titleBtn.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        if (el.dataset.open === "true") closeToggle(el);
+        else openToggle(el);
+      });
+
+      return el;
+    };
+
+    const setVisible = (visible) => {
+      const el = ensureToggle();
+      if (!el) return;
+
+      if (!visible) {
+        closeToggle(el);
+        el.hidden = true;
+        setInlineRolled(false);
+        return;
+      }
+
+      el.hidden = false;
+      setInlineRolled(true);
+      positionToggle(el);
+    };
+
+    const sync = () => {
+      const toc = tocNav();
+      if (toc) seenToc = true;
+
+      captureThreshold();
+
+      const el = ensureToggle();
+      if (!el) return;
+
+      if (!desktop() || (!toc && !seenToc)) {
+        setVisible(false);
+        return;
+      }
+
+      if (!toc) return;
+
+      const past = pastInlineToc();
+      if (past === null) {
+        if (!el.hidden) positionToggle(el);
+        return;
+      }
+
+      setVisible(past);
+    };
+
+    let tick = 0;
+    const onScroll = () => {
+      if (tick) return;
+      tick = requestAnimationFrame(() => {
+        tick = 0;
+        const el = toggleEl();
+        const dy = Math.abs(window.scrollY - lastScrollY);
+        lastScrollY = window.scrollY;
+        if (dy > 8 && el?.dataset.open === "true") closeToggle(el);
+        sync();
+      });
+    };
+
+    const boot = () => {
+      if (!tocNav()) return;
+
+      lastScrollY = window.scrollY;
+      ensureToggle();
+      sync();
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", () => {
+        if (window.scrollY <= 40) showAfterY = null;
+        sync();
+      });
+      requestAnimationFrame(sync);
+      window.addEventListener("load", sync, { once: true });
+      // Remeasure after margin-below-toc footnote cascade settles.
+      setTimeout(sync, 100);
+      setTimeout(sync, 400);
+      setTimeout(sync, 1000);
+
+      if (window.IntersectionObserver) {
+        const toc = tocNav();
+        if (toc) {
+          const io = new IntersectionObserver(() => sync(), {
+            root: null,
+            threshold: [0, 0.01, 1],
+          });
+          io.observe(toc);
+        }
+      }
+
+      if (window.ResizeObserver) {
+        const ro = new ResizeObserver(() => {
+          clearTimeout(ro._t);
+          ro._t = setTimeout(sync, 50);
+        });
+        const toc = tocNav();
+        const sidebar = marginSidebar();
+        const main = document.querySelector("main.content");
+        if (toc) ro.observe(toc);
+        if (sidebar) ro.observe(sidebar);
+        if (main) ro.observe(main);
+      }
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", boot);
+    } else {
+      boot();
+    }
   })();
 </script>
 <script>
@@ -616,19 +1392,124 @@ ul.task-list li input[type="checkbox"] {
     }
   })();
 </script>
+<script>
+  // Keep in-page hash targets below the fixed header. Quarto's hashchange
+  // offset looks for header.fixed-top and can fire before native scroll, and
+  // CSS scroll-margin is unreliable on page-columns grid sections.
+  (() => {
+    const OFFSET = 80;
+
+    const targetEl = (hash) => {
+      if (!hash) return null;
+      const id = decodeURIComponent(String(hash).replace(/^#/, ""));
+      if (!id) return null;
+      return (
+        document.getElementById(id) ||
+        document.querySelector(`[data-anchor-id="${CSS.escape(id)}"]`)
+      );
+    };
+
+    const scrollToEl = (el) => {
+      if (!el) return;
+      const top = el.getBoundingClientRect().top + window.scrollY - OFFSET;
+      window.scrollTo({ top: Math.max(0, top), behavior: "auto" });
+    };
+
+    const samePageHash = (link) => {
+      try {
+        const url = new URL(link.href, window.location.href);
+        if (url.pathname !== window.location.pathname) return null;
+        if (url.search !== window.location.search) return null;
+        return url.hash || null;
+      } catch {
+        return null;
+      }
+    };
+
+    document.addEventListener("click", (event) => {
+      const link = event.target.closest("a[href]");
+      if (!link) return;
+      if (link.dataset.bsToggle) return;
+      const hash = samePageHash(link);
+      if (!hash) return;
+      const el = targetEl(hash);
+      if (!el) return;
+      // After native scroll + Quarto's hashchange handler.
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => scrollToEl(el));
+      });
+    });
+
+    const applyHash = () => scrollToEl(targetEl(window.location.hash));
+
+    window.addEventListener("hashchange", () => {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(applyHash);
+      });
+    });
+
+    const onReady = () => {
+      if (!window.location.hash) return;
+      applyHash();
+      setTimeout(applyHash, 250);
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", onReady);
+    } else {
+      onReady();
+    }
+    window.addEventListener("load", onReady);
+  })();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
     if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-      const a = window.document.createElement('a');
-      a.classList.add('top-right');
-      a.classList.add('quarto-color-scheme-toggle');
-      a.href = "";
-      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const toggle = window.document.createElement('button');
+      toggle.type = "button";
+      toggle.setAttribute("role", "switch");
+      toggle.setAttribute("aria-checked", "false");
+      toggle.classList.add('top-right');
+      toggle.classList.add('quarto-color-scheme-toggle');
+      toggle.setAttribute("aria-label", "Toggle Theme");
+      toggle.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
       const i = window.document.createElement("i");
       i.classList.add('bi');
-      a.appendChild(i);
-      window.document.body.appendChild(a);
+      toggle.appendChild(i);
+      // Put the toggle in a landmark of its own, so that landmark navigation
+      // can reach it.
+      //
+      // The container is always a fresh direct child of body, and the toggle is
+      // never moved into page furniture that the theme or the author controls.
+      // The toggle is positioned against the page, so any ancestor that
+      // establishes a containing block captures it: a positioned element or a
+      // grid for position: absolute, and transform, filter, will-change or
+      // contain for position: fixed. A direct child of body has none of these
+      // to inherit, and the shift when one appears is silent and visual.
+      //
+      // ARIA says a document should have at most one banner, and axe reports a
+      // duplicate whether or not the banners carry distinct labels. So use a
+      // header when the page has no banner yet, and a named region otherwise.
+      //
+      // A header is a banner wherever it sits, unless it is inside sectioning
+      // content, so this cannot just look at the children of body: a custom
+      // page layout wraps the title block header in a plain div. An explicit
+      // role="banner" always counts.
+      const sectioning = 'article, aside, main, nav, section, [role="article"], [role="complementary"], [role="main"], [role="navigation"], [role="region"]';
+      const hasBanner = Array.from(
+        window.document.querySelectorAll('header:not([role]), [role="banner"]')
+      ).some(function(el) {
+        return el.hasAttribute("role") || el.closest(sectioning) === null;
+      });
+      const container = window.document.createElement(hasBanner ? "div" : "header");
+      if (hasBanner) {
+        container.setAttribute("role", "region");
+        container.setAttribute("aria-label", "Toggle Theme");
+      }
+      container.classList.add('quarto-color-scheme-toggle-container');
+      container.appendChild(toggle);
+      window.document.body.appendChild(container);
     }
     setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
@@ -1034,14 +1915,14 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
-<nav class="page-navigation column-page-right">
+<nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
       <a href="../../../samples/content-engineering/validmind/quickstarts.html" class="pagination-link" aria-label="Quickstarts">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Quickstarts</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../samples/content-engineering/validmind/atryum.html" class="pagination-link" aria-label="Atryum Documentation">
+      <a href="../../../samples/content-engineering/atryum/index.html" class="pagination-link" aria-label="Atryum Documentation">
         <span class="nav-page-text">Atryum Documentation</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>

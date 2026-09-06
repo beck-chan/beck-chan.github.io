@@ -1,0 +1,2338 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.3">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Portfolio Framework – Portfolio</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<link href="../../../../samples/content-engineering/personal/portfolio/deployment.html" rel="next">
+<link href="../../../../samples/content-engineering/personal/portfolio/index.html" rel="prev">
+<link href="../../../../assets/headshot.png" rel="icon" type="image/png">
+<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-6a5d77c288ae9a328f8b889480dd1f82.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0114024d9f4d5bb209e87a78e65fba1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-6a5d77c288ae9a328f8b889480dd1f82.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-0062e773160ec7b30614b11e05b439f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-dark-cbdff46b3c532071db5dd428a750ad25.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-0062e773160ec7b30614b11e05b439f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../../site_libs/quarto-contrib/timeline-0.1.0/timeline.js"></script>
+<link href="../../../../site_libs/quarto-contrib/timeline-0.1.0/timeline.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-contrib/tachyons-4.12.0/tachyons.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-contrib/tachyons-4.12.0/quarto-resets.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-contrib/iframe-1.1.0/iframe.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
+<script src="../../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No Results Found",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "Search Portfolio",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}p||((p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",p.onerror=function(){p=null},(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r));var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="al ol ll init Il Rl Tl Ml Ol za El Dl Sl capture getExtension Pl nl Hl calculateEventProperties Bl register register_once register_for_session unregister unregister_for_session Vl Cl zl getFeatureFlag getFeatureFlagPayload getFeatureFlagResult getAllFeatureFlags isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync Gl identify setPersonProperties unsetPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset Zl shutdown setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty Ul ql createPersonProfile setInternalOrTestUser Wl ul hl opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing $l debug Ua Jn getPageViewId captureTraceFeedback captureTraceMetric bl".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_zqwk6XXUUjTLnofgQxcesCk2hnsCVoF3FCfB6KVg2Vym', {
+        api_host: 'https://us.i.posthog.com',
+        defaults: '2026-05-30',
+        person_profiles: 'always', // or 'always' to create profiles for anonymous users as well
+    })
+</script>
+
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed slimcontent quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          toggle.setAttribute("aria-checked", alternate ? "true" : "false");
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../../index.html">
+    <span class="navbar-title">Portfolio</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../../../../samples/content-engineering/index.html" aria-current="page"> 
+<span class="menu-text">Content Engineering</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../samples/technical-writing/index.html"> 
+<span class="menu-text">Technical Writing</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../samples/copywriting/index.html"> 
+<span class="menu-text">Copywriting</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-all-samples" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">All Samples</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-all-samples">    
+        <li>
+    <a class="dropdown-item" href="../../../../samples/index.html">
+ <span class="dropdown-text">Filter by Criteria</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../samples/organizations/index.html">
+ <span class="dropdown-text">Collated by Organization</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../cv.html"> 
+<span class="menu-text"><em>curriculum vitae</em></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/beck-chan" target="_blank"> 
+<span class="menu-text"><span title="GitHub / beck-chan"><i class="fa-brands fa-github" aria-label="github"></i></span></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://linkedin.com/in/beck-chan" target="_blank"> 
+<span class="menu-text"><span title="LinkedIn / beck-chan"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></span></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="mailto:beckchan.tech@gmail.com" target="_blank"> 
+<span class="menu-text"><span title="Email / beckchan.tech@gmail.com"><i class="fa-solid fa-envelope" aria-label="envelope"></i></span></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../poetry/index.html"> 
+<span class="menu-text"><span title="Poetry"><i class="fa-solid fa-feather" aria-label="feather"></i></span></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle Theme" aria-label="Toggle Theme"><i class="bi"></i></button>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../../samples/content-engineering/personal/portfolio/index.html">Portfolio</a></li><li class="breadcrumb-item"><a href="../../../../samples/content-engineering/personal/portfolio/framework.html">Framework</a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../samples/content-engineering/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Content Engineering</span></a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../../samples/content-engineering/validmind/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">ValidMind</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section: ValidMind">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../samples/content-engineering/validmind/library.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Developer Library</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../samples/content-engineering/validmind/academy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Training Academy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../samples/content-engineering/validmind/releases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Release Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../samples/content-engineering/validmind/quickstarts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quickstarts</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../samples/content-engineering/validmind/redesign.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Documentation Redesign</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../samples/content-engineering/atryum/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Atryum Documentation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../../samples/content-engineering/personal/portfolio/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text" id="quarto-sidebar-section-2-label">Portfolio</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section: Portfolio">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
+      </div>
+      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../samples/content-engineering/personal/portfolio/framework.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Framework</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../samples/content-engineering/personal/portfolio/deployment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Deployment</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of Contents</h2>
+   
+  <ul>
+  <li><a href="#authoring" id="toc-authoring" class="nav-link active" data-scroll-target="#authoring">Authoring</a>
+  <ul>
+  <li><a href="#content" id="toc-content" class="nav-link" data-scroll-target="#content">Content</a></li>
+  <li><a href="#navigation" id="toc-navigation" class="nav-link" data-scroll-target="#navigation">Navigation</a></li>
+  </ul></li>
+  <li><a href="#styling" id="toc-styling" class="nav-link" data-scroll-target="#styling">Styling</a>
+  <ul>
+  <li><a href="#core-theming" id="toc-core-theming" class="nav-link" data-scroll-target="#core-theming">Core Theming</a></li>
+  <li><a href="#custom-adjustments" id="toc-custom-adjustments" class="nav-link" data-scroll-target="#custom-adjustments">Custom Adjustments</a></li>
+  </ul></li>
+  <li><a href="#extensions" id="toc-extensions" class="nav-link" data-scroll-target="#extensions">Extensions</a></li>
+  <li><a href="#publishing" id="toc-publishing" class="nav-link" data-scroll-target="#publishing">Publishing</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full column-body" id="quarto-document-content" tabindex="-1">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../../samples/content-engineering/personal/portfolio/index.html">Portfolio</a></li><li class="breadcrumb-item"><a href="../../../../samples/content-engineering/personal/portfolio/framework.html">Framework</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Portfolio Framework</h1>
+<p class="subtitle lead">Content Engineering</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Content Architecture</div>
+    <div class="quarto-category">Frontend Development</div>
+    <div class="quarto-category">Quarto</div>
+    <div class="quarto-category">GitHub Pages</div>
+    <div class="quarto-category">Netlify</div>
+    <div class="quarto-category">CI/CD Workflows</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta column-body">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="hidden">
+<p>This static portfolio site is built using Quarto, styled with custom Bootstrap themes, and deployed by GitHub Workflows.</p>
+</div>
+<p>This static portfolio site is built using Quarto,<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> styled with custom Bootstrap themes,<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> and deployed with GitHub Workflows.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;<a href="https://quarto.org/" target="_blank">Quarto</a></p></div><div id="fn2"><p><sup>2</sup>&nbsp;<a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></p></div><div id="fn3"><p><sup>3</sup>&nbsp;<strong>GitHub:</strong><a href="https://docs.github.com/en/actions/concepts/workflows-and-actions/workflows" target="_blank">Workflows</a></p></div></div><section id="authoring" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="authoring">Authoring</h2>
+<p>I choose Quarto because Quarto is extensible, but simple to use.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>What is Quarto?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Quarto is not a traditional Content Management System (CMS), but an open-source publication framework.</p>
+<p>From your variety of source files, Quarto can build file formats such as <code>.html</code> or <code>.pdf</code>, and can natively run code within your content in languages such as Python or R to include live outputs.</p>
+</div>
+</div>
+</div>
+<section id="content" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="content">Content</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset page-columns page-full">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Independent Pages</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Single-Sourced Content</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Searching Content</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Mobile View</a></li></ul>
+<div class="tab-content page-columns page-full">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Portfolio content is written in <code>.qmd</code> files, Quarto’s version of Markdown where you specify metadata in a YAML frontmatter block.</p>
+<p>For example:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Portfolio"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Content Engineering"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> ["Content Architecture", "Quarto", "GitHub Pages", "Netlify", "CI/CD Workflows", "Frontend Development"]</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>How <span class="co">[</span><span class="ot">https://beck-chan.github.io/</span><span class="co">](https://beck-chan.github.io/)</span> is built and maintained.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-1-2" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>Content that is repeated can be single-sourced from Quarto Includes<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> <code>_*.qmd</code> files, allowing for updates to shared content across multiple pages without having to manually update each page.</p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;<strong>Quarto:</strong> <a href="https://quarto.org/docs/authoring/includes.html" target="_blank">Includes</a></p></div></div><p>For example, my introduction for one of the organizations I’ve worked with, ValidMind …</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>{{&lt; include /samples/single-source/validmind/_validmind.qmd &gt;}}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>… renders as the below snippet everywhere it’s embedded:</p>
+<blockquote class="blockquote">
+<p>I was the sole <strong>Senior Technical Writer</strong> for <a href="validmind.ai" target="_blank">ValidMind</a>, a generative artificial intelligence financial services startup, where I employed docs-as-code methodologies alongside software engineers delivering documentation as part of product in the same development ecosystem, transforming a minimal set of user guide drafts into a fully idealized and comprehensive knowledge base.</p>
+</blockquote>
+</div>
+<div id="tabset-1-3" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>Quarto offers built-in indexing and searching capabilities,<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> placed in the top navigation via an independent top-level frontmatter file called <code>_quarto.yml</code>:</p>
+<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;<strong>Quarto:</strong> <a href="https://quarto.org/docs/websites/website-search.html" target="_blank">Website Search</a></p></div></div><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">search</span><span class="kw">:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">location</span><span class="kw">:</span><span class="at"> navbar</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>I’ve also written a quick script to embed the same search within a page’s content itself for ease of access:<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;<strong><i class="fa-brands fa-github" aria-label="github"></i> beck-chan/portfolio/assets: </strong><a href="https://github.com/beck-chan/portfolio/blob/main/assets/search.html" target="_blank">search.html</a></p></div></div><div class="tc">
+<div class="inline-quarto-search">
+<button type="button" class="inline-quarto-search__trigger" id="open-quarto-search" aria-haspopup="dialog" aria-controls="quarto-search">
+    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+    <span class="inline-quarto-search__label">Search Portfolio</span>
+    <kbd class="inline-quarto-search__hint">/</kbd>
+</button>
+</div>
+<script>
+(() => {
+    const openQuartoSearch = () => {
+    const detached = document.querySelector(
+        "#quarto-search .aa-DetachedSearchButton"
+    );
+    if (detached) {
+        detached.click();
+        return;
+    }
+    document.querySelector("#quarto-search input.aa-Input")?.focus();
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+    document
+        .getElementById("open-quarto-search")
+        ?.addEventListener("click", openQuartoSearch);
+    });
+})();
+</script>
+</div>
+</div>
+<div id="tabset-1-4" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<p>I implemented better support for viewing the portfolio on mobile devices by using Tachyons flex<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> classes for columns, and adjusting parts of the theme to be more mobile-friendly:<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn7"><p><sup>7</sup>&nbsp;<strong>Tachyons:</strong> <a href="https://tachyons.io/docs/layout/flexbox/" target="_blank">Flexbox</a></p></div><div id="fn8"><p><sup>8</sup>&nbsp;<a href="#styling">Styling</a></p></div></div><figure class="iframe-embed figure iframe-embed--align-center iframe-embed--valign-center" style="--iframe-zoom: 1.0; --iframe-width: 50%; --iframe-height: 560px;">
+  <div class="iframe-embed__chrome pics">
+    <div class="iframe-embed__frame">
+      <iframe src="https://beck-chan.github.io" title="Portfolio in Mobile View" loading="lazy"></iframe>
+    </div>
+  </div>
+  <figcaption>Portfolio in Mobile View</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="navigation" class="level3">
+<h3 class="anchored" data-anchor-id="navigation">Navigation</h3>
+<p>Filepaths are defined by directory structure, and then link display specified in the top or side navigation bars via <code>_*.yml</code> files.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Top Navigation</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Sidebars</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Footer</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>The consistent top navigation bar is defined in the root directory with our top-level <code>_quarto.yml</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" data-shortcodes="false"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Include the independent directory _sidebar.yaml files to display the correct sidenavs </span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">metadata-files</span><span class="kw">:</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> samples/content-engineering/_sidebar.yaml</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> samples/technical-writing/_sidebar.yaml</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> samples/copywriting/_sidebar.yaml</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the top navigation bar</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Portfolio"</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">favicon</span><span class="kw">:</span><span class="at"> assets/headshot.png</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">page-navigation</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">left</span><span class="kw">:</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> samples/content-engineering/index.qmd</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> samples/technical-writing/index.qmd</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> samples/copywriting/index.qmd</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">right</span><span class="kw">:</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> cv.qmd</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">'[{{&lt; fa brands github &gt;}}]{title="GitHub / beck-chan"}'</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">target</span><span class="kw">:</span><span class="at"> _blank</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://github.com/beck-chan</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">aria-label</span><span class="kw">:</span><span class="at"> GitHub</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">'[{{&lt; fa brands linkedin &gt;}}]{title="LinkedIn / beck-chan"}'</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">target</span><span class="kw">:</span><span class="at"> _blank</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://linkedin.com/in/beck-chan</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">aria-label</span><span class="kw">:</span><span class="at"> LinkedIn</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">'[{{&lt; fa envelope &gt;}}]{title="Email / beckchan.tech@gmail.com"}'</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> mailto:beckchan.tech@gmail.com</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">target</span><span class="kw">:</span><span class="at"> _blank</span></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">aria-label</span><span class="kw">:</span><span class="at"> Email</span></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">'[{{&lt; fa feather &gt;}}]{title="Poetry"}'</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> poetry/index.qmd</span></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">aria-label</span><span class="kw">:</span><span class="at"> Poetry</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>Each external facing directory has its own <code>_sidebar.yml</code> and <code>_metadata.yml</code> files that defines the sidebar navigation for that directory.</p>
+<p>For the <code>content-engineering/</code> directory, the contents of those two files are:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># _sidebar.yaml</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">sidebar</span><span class="kw">:</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">id</span><span class="kw">:</span><span class="at"> content</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Content Engineering"</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Content Engineering"</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">file</span><span class="kw">:</span><span class="at"> samples/content-engineering/index.qmd</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"---"</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"ValidMind"</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">href</span><span class="kw">:</span><span class="at"> samples/content-engineering/validmind/index.qmd</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Developer Library"</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="at">              </span><span class="fu">file</span><span class="kw">:</span><span class="at"> samples/content-engineering/validmind/library.qmd</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Training"</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="at">              </span><span class="fu">file</span><span class="kw">:</span><span class="at"> samples/content-engineering/validmind/academy.qmd</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Release Notes"</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="at">              </span><span class="fu">file</span><span class="kw">:</span><span class="at"> samples/content-engineering/validmind/releases.qmd</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Quickstarts"</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="at">              </span><span class="fu">file</span><span class="kw">:</span><span class="at"> samples/content-engineering/validmind/quickstarts.qmd</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Documentation Redesign"</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="at">              </span><span class="fu">file</span><span class="kw">:</span><span class="at"> samples/content-engineering/validmind/redesign.qmd</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="co">        #  And all the rest...</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># _metadata.yml</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">sidebar</span><span class="kw">:</span><span class="at"> content</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p>Similarly, the footer is also defined in <code>_quarto.yml</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-shortcodes="false"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">page-footer</span><span class="kw">:</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">left</span><span class="kw">:</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Releases"</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://github.com/beck-chan/portfolio/releases</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">target</span><span class="kw">:</span><span class="at"> _blank</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">center</span><span class="kw">:</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"{{&lt; fa brands github &gt;}} Report Issue"</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://github.com/beck-chan/portfolio/issues</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">target</span><span class="kw">:</span><span class="at"> _blank</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">right</span><span class="kw">:</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"&amp;#169; 2026 &lt;b&gt;Beck Chan&lt;/b&gt;. All rights reserved."</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="styling" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="styling">Styling</h2>
+<p>Quarto offers a few built-in themes, but I chose define custom themes using Bootstrap (<code>.scss</code>).</p>
+<section id="core-theming" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="core-theming">Core Theming</h3>
+<p>Themes are defined in the root directory with our top-level <code>_quarto.yml</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co">    # default theme</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">light</span><span class="kw">:</span><span class="at"> assets/themes/default/styles.scss</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co">    # monochrome theme</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">dark</span><span class="kw">:</span><span class="at"> assets/themes/minimal/styles.scss</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">syntax-highlighting</span><span class="kw">:</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co">    # default theme</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">light</span><span class="kw">:</span><span class="at"> assets/themes/default/code.theme</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co">    # muted theme</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">dark</span><span class="kw">:</span><span class="at"> assets/themes/minimal/code.theme</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>For reference, this is how the portfolio looks without my custom themes applied:<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn9"><p><sup>9</sup>&nbsp;<a href="https://beckchan-folio.netlify.app/" class="button" target="_blank">View Unstyled Portfolio</a></p></div></div><figure class="iframe-embed figure iframe-embed--align-center iframe-embed--valign-center iframe-embed--new-window" style="--iframe-zoom: 0.6; --iframe-width: 90%; --iframe-height: 660px;">
+  <div class="iframe-embed__chrome pics">
+    <div class="iframe-embed__frame">
+      <iframe src="https://beckchan-folio.netlify.app/" title="Unstyled Portfolio" loading="lazy"></iframe>
+    </div>
+    <a class="iframe-embed__open" href="https://beckchan-folio.netlify.app/" target="_blank" rel="noopener noreferrer" title="Open Unstyled Portfolio" aria-label="Open Unstyled Portfolio">
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+    </a>
+  </div>
+  <figcaption>Unstyled Portfolio</figcaption>
+</figure>
+<div class="tabset-margin-container"></div><div class="panel-tabset page-columns page-full">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Full Colour Theme</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Monochrome Theme</a></li></ul>
+<div class="tab-content page-columns page-full">
+<div id="tabset-3-1" class="tab-pane active page-columns page-full" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<p>Default theme users see when they load the portfolio. Defined in <code>assets/themes/default/styles.scss</code>:<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn10"><p><sup>10</sup>&nbsp;<strong><i class="fa-brands fa-github" aria-label="github"></i> beck-chan/portfolio/assets:</strong> <a href="https://github.com/beck-chan/portfolio/blob/main/assets/themes/default/styles.scss" target="_blank">styles.scss</a></p></div></div><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*-- scss:defaults --*/</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">// Foundations</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="va">$body-bg</span>: <span class="cn">#fff8f9</span><span class="op">;</span> <span class="co">// Page colour</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="va">$body-color</span>: <span class="cn">#0b2a12</span><span class="op">;</span> <span class="co">// Font colour</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="va">$navbar-bg</span>: <span class="cn">#0b2a12</span><span class="op">;</span> <span class="co">// Top nav bg colour</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="va">$sidebar-bg</span>: <span class="cn">#fee3e5</span><span class="op">;</span> <span class="co">// Side nav bg colour</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="va">$navbar-padding-y</span>: <span class="dv">1</span><span class="dt">rem</span><span class="op">;</span> <span class="co">// Top nav padding</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="va">$sidebar-padding-y</span>: <span class="dv">1</span><span class="dt">rem</span><span class="op">;</span> <span class="co">// Top nav padding</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="va">$footer-bg</span>: <span class="cn">#df9a49</span><span class="op">;</span> <span class="co">// Footer bg</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co">// And so on</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="co">/*-- scss:rules --*/</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="co">/* Import modular SCSS files */</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="im">@import</span> <span class="st">'_styles/links'</span><span class="op">;</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="im">@import</span> <span class="st">'_styles/nav'</span><span class="op">;</span></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="im">@import</span> <span class="st">'_styles/content'</span><span class="op">;</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="im">@import</span> <span class="st">'_styles/margin'</span><span class="op">;</span></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="im">@import</span> <span class="st">'_styles/mobile'</span><span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>And code styling is defined in <code>assets/themes/default/code.theme</code>:<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn11"><p><sup>11</sup>&nbsp;<strong><i class="fa-brands fa-github" aria-label="github"></i> beck-chan/portfolio/assets:</strong> <a href="https://github.com/beck-chan/portfolio/blob/main/assets/themes/default/code.theme" target="_blank">code.theme</a></p></div></div><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"text-color"</span><span class="fu">:</span> <span class="st">"#df9a49"</span><span class="fu">,</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"background-color"</span><span class="fu">:</span> <span class="st">"#0b2a12"</span><span class="fu">,</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"line-number-color"</span><span class="fu">:</span> <span class="st">"#4a5d4e"</span><span class="fu">,</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"text-styles"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"Normal"</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">"text-color"</span><span class="fu">:</span> <span class="st">"#df9a49"</span> <span class="fu">},</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"Variable"</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">"text-color"</span><span class="fu">:</span> <span class="st">"#df9a49"</span> <span class="fu">},</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"Other"</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">"text-color"</span><span class="fu">:</span> <span class="st">"#e8b06a"</span> <span class="fu">},</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">And</span> <span class="er">so</span> <span class="er">on</span> <span class="er">...</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-3-2" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<p>You can toggle this theme in the top navigation bar by clicking <strong><i class="fa-solid fa-toggle-on" aria-label="toggle-on"></i></strong>. Defined in <code>assets/themes/minimal/styles.scss</code>:<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn12"><p><sup>12</sup>&nbsp;<strong><i class="fa-brands fa-github" aria-label="github"></i> beck-chan/portfolio/assets: </strong><a href="https://github.com/beck-chan/portfolio/blob/main/assets/themes/minimal/styles.scss" target="_blank">styles.scss</a></p></div></div><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*-- scss:defaults --*/</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co">// Foundations</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="va">$body-bg</span>: <span class="cn">#FFFFFF</span><span class="op">;</span> <span class="co">// Page colour</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="va">$body-color</span>: <span class="cn">#212121</span><span class="op">;</span> <span class="co">// Font colour</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="va">$navbar-bg</span>: <span class="cn">#000000</span><span class="op">;</span> <span class="co">// Top nav bg colour</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="va">$sidebar-bg</span>: <span class="cn">#e9e9e9</span><span class="op">;</span> <span class="co">// Side nav bg colour</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="va">$navbar-padding-y</span>: <span class="dv">1</span><span class="dt">rem</span><span class="op">;</span> <span class="co">// Top nav padding</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="va">$sidebar-padding-y</span>: <span class="dv">1</span><span class="dt">rem</span><span class="op">;</span> <span class="co">// Top nav padding</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="co">// And so on</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="co">/*-- scss:rules --*/</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="co">/* Import modular SCSS files */</span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="im">@import</span> <span class="st">'_styles/links-min'</span><span class="op">;</span></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="im">@import</span> <span class="st">'_styles/nav-min'</span><span class="op">;</span></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a><span class="im">@import</span> <span class="st">'_styles/content-min'</span><span class="op">;</span></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a><span class="im">@import</span> <span class="st">'_styles/margin-min'</span><span class="op">;</span></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="im">@import</span> <span class="st">'_styles/mobile-min'</span><span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>And code styling is defined in <code>assets/themes/minimal/code.theme</code>:<a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn13"><p><sup>13</sup>&nbsp;<strong><i class="fa-brands fa-github" aria-label="github"></i> beck-chan/portfolio/assets:</strong> <a href="https://github.com/beck-chan/portfolio/blob/main/assets/themes/minimal/code.theme" target="_blank">code.theme</a></p></div></div><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"text-color"</span><span class="fu">:</span> <span class="st">"#c2a077"</span><span class="fu">,</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"background-color"</span><span class="fu">:</span> <span class="st">"#212121"</span><span class="fu">,</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"line-number-color"</span><span class="fu">:</span> <span class="st">"#505952"</span><span class="fu">,</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"text-styles"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"Normal"</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">"text-color"</span><span class="fu">:</span> <span class="st">"#c2a077"</span> <span class="fu">},</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"Variable"</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">"text-color"</span><span class="fu">:</span> <span class="st">"#c2a077"</span> <span class="fu">},</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"Other"</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">"text-color"</span><span class="fu">:</span> <span class="st">"#d0b491"</span> <span class="fu">},</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">And</span> <span class="er">so</span> <span class="er">on</span> <span class="er">...</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</section>
+<section id="custom-adjustments" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="custom-adjustments">Custom Adjustments</h3>
+<p>There’s a limit to what you can adjust with CSS due to Quarto’s quirks, so I have some additional custom script adjustments set in <code>_quarto.yml</code> under <code>include-after-body</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">include-after-body</span><span class="kw">:</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> assets/margin-below-toc.html</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> assets/sticky-toc-toggle.html</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> assets/pin-sidenav.html</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> assets/anchor-offset.html</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="tabset-margin-container"></div><div class="panel-tabset page-columns page-full">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">Pinned Sidenav</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">Margin Below ToC</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false" href="">Sticky ToC Drop-Down</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-4" role="tab" aria-controls="tabset-4-4" aria-selected="false" href="">Anchor Link Offset</a></li></ul>
+<div class="tab-content page-columns page-full">
+<div id="tabset-4-1" class="tab-pane active page-columns page-full" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<p><code>assets/pin-sidenav.html</code>:<a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a> Patch for Quarto’s left sidebar scrolling vertically with the page instead of staying fixed, since CSS alone can’t pin the sidebar reliably without breaking the page layout.</p>
+<div class="no-row-height column-margin column-container"><div id="fn14"><p><sup>14</sup>&nbsp;<strong><i class="fa-brands fa-github" aria-label="github"></i> beck-chan/portfolio/assets:</strong> <a href="https://github.com/beck-chan/portfolio/blob/main/assets/pin-sidenav.html" target="_blank">pin-sidenav.html</a></p></div></div><div class="flex flex-wrap justify-around">
+<div class="w-50 pa2">
+<p><strong>Before</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="sidebar-before.png" class="lightbox" data-gallery="sidebar" title="Sidebar Scrolling Up"><img src="sidebar-before.png" class="pics img-fluid figure-img" alt="Sidebar Scrolling Up"></a></p>
+<figcaption>Sidebar Scrolling Up</figcaption>
+</figure>
+</div>
+</div>
+<div class="w-50 pa2">
+<p><strong>After</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="sidebar-after.png" class="lightbox" data-gallery="sidebar" title="Sidebar Stays Fixed"><img src="sidebar-after.png" class="pics img-fluid figure-img" alt="Sidebar Stays Fixed"></a></p>
+<figcaption>Sidebar Stays Fixed</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-4-2" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<p>Footnotes are positioned in the right margin as a matter of personal preference, which means that they can overlap with the table of contents, any category filtering options, and the footer when the margin stacks tall, as well as break tabset containment.</p>
+<p><code>assets/margin-below-toc.html</code>:<a href="#fn15" class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a> Cascades notes below the table of contents and category filters, pads the main content area when margin outgrows the body so it doesn’t collide with the footer, and hoists footnotes attached to tabset content into a sibling container.</p>
+<div class="no-row-height column-margin column-container"><div id="fn15"><p><sup>15</sup>&nbsp;<strong><i class="fa-brands fa-github" aria-label="github"></i> beck-chan/portfolio/assets:</strong> <a href="https://github.com/beck-chan/portfolio/blob/main/assets/margin-below-toc.html" target="_blank">margin-below-toc.html</a></p></div></div><div class="flex flex-wrap justify-around">
+<div class="w-50 pa2">
+<p><strong>Before</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="margin-before.png" class="lightbox" data-gallery="margin" title="Table of Contents &amp; Category Filters Overlap"><img src="margin-before.png" class="pics img-fluid figure-img" alt="Table of Contents &amp; Category Filters Overlap"></a></p>
+<figcaption>Table of Contents &amp; Category Filters Overlap</figcaption>
+</figure>
+</div>
+</div>
+<div class="w-50 pa2">
+<p><strong>After</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="margin-after.png" class="lightbox" data-gallery="margin" title="Table of Contents &amp; Category Filters Don’t Overlap"><img src="margin-after.png" class="pics img-fluid figure-img" alt="Table of Contents &amp; Category Filters Don’t Overlap"></a></p>
+<figcaption>Table of Contents &amp; Category Filters Don’t Overlap</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-4-3" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-4-3-tab">
+<p><code>assets/sticky-toc-toggle.html</code>:<a href="#fn16" class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a> Shows a fixed table of contents dropdown when the page scrolls past the inline table of contents, allowing access to the table of contents anywhere on the page.</p>
+<div class="no-row-height column-margin column-container"><div id="fn16"><p><sup>16</sup>&nbsp;<strong><i class="fa-brands fa-github" aria-label="github"></i> beck-chan/portfolio/assets:</strong> <a href="https://github.com/beck-chan/portfolio/blob/main/assets/sticky-toc-toggle.html" target="_blank">sticky-toc-toggle.html</a></p></div></div><div class="flex flex-wrap justify-around">
+<div class="w-50 pa2">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="toc-inline.png" class="lightbox" data-gallery="toc" title="Table of Contents Inline"><img src="toc-inline.png" class="pics img-fluid figure-img" alt="Table of Contents Inline"></a></p>
+<figcaption>Table of Contents Inline</figcaption>
+</figure>
+</div>
+</div>
+<div class="w-50 pa2">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="toc-dropdown.png" class="lightbox" data-gallery="toc" title="Table of Contents Drop-Down"><img src="toc-dropdown.png" class="pics img-fluid figure-img" alt="Table of Contents Drop-Down"></a></p>
+<figcaption>Table of Contents Drop-Down</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-4-4" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-4-4-tab">
+<p>With CSS I applied a fixed top navigation bar, causing anchor links to scroll to their targets under the heading hiding information. CSS <code>scroll-margin</code> on headings is unreliable because Quarto lays pages out as a CSS grid, and Quarto’s own hash handler fires before the browser has finished scrolling.</p>
+<p><code>assets/anchor-offset.html</code>:<a href="#fn17" class="footnote-ref" id="fnref17" role="doc-noteref"><sup>17</sup></a> Waits for the native scroll to finish, then nudges the page so the target sits <code>80px</code> below the <code>75px</code> height of the header.</p>
+<div class="no-row-height column-margin column-container"><div id="fn17"><p><sup>17</sup>&nbsp;<strong><i class="fa-brands fa-github" aria-label="github"></i> beck-chan/portfolio/assets:</strong> <a href="https://github.com/beck-chan/portfolio/blob/main/assets/anchor-offset.html" target="_blank">anchor-offset.html</a></p></div></div><div class="flex flex-wrap justify-around">
+<div class="w-50 pa2">
+<p><strong>Before</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="anchor-before.png" class="lightbox" data-gallery="anchor" title="Heading Hidden by Header"><img src="anchor-before.png" class="pics img-fluid figure-img" alt="Heading Hidden by Header"></a></p>
+<figcaption>Heading Hidden by Header</figcaption>
+</figure>
+</div>
+</div>
+<div class="w-50 pa2">
+<p><strong>After</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="anchor-after.png" class="lightbox" data-gallery="anchor" title="Heading Offset Below Header"><img src="anchor-after.png" class="pics img-fluid figure-img" alt="Heading Offset Below Header"></a></p>
+<figcaption>Heading Offset Below Header</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="extensions" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="extensions">Extensions</h2>
+<p>I’ve also written a few Quarto Extensions<a href="#fn18" class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a> in Lua for custom functionality I found myself reusing and wanted to simplify the implementation of.</p>
+<div class="no-row-height column-margin column-container"><div id="fn18"><p><sup>18</sup>&nbsp;<strong>Quarto:</strong> <a href="https://quarto.org/docs/extensions/" target="_blank">Extensions</a></p></div></div><div class="tabset-margin-container"></div><div class="panel-tabset page-columns page-full">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true" href="">Code Folding</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false" href="">Embedded Iframes</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-3" role="tab" aria-controls="tabset-5-3" aria-selected="false" href="">Mobile Category Filter</a></li></ul>
+<div class="tab-content page-columns page-full">
+<div id="tabset-5-1" class="tab-pane active page-columns page-full" role="tabpanel" aria-labelledby="tabset-5-1-tab">
+<p>Quarto’s build-in option for folding code<a href="#fn19" class="footnote-ref" id="fnref19" role="doc-noteref"><sup>19</sup></a> only covers executable cell output. This extension allows non-executable fenced code blocks to be wrapped in a <code>&lt;details&gt;</code> toggle used below:<a href="#fn20" class="footnote-ref" id="fnref20" role="doc-noteref"><sup>20</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn19"><p><sup>19</sup>&nbsp;<strong>Quarto:</strong> <a href="https://quarto.org/docs/output-formats/html-code.html#folding-code" target="_blank">HTML Code Blocks</a></p></div><div id="fn20"><p><sup>20</sup>&nbsp;<strong><i class="fa-brands fa-github" aria-label="github"></i> beck-chan/portfolio/:</strong> <a href="https://github.com/beck-chan/portfolio/blob/main/_extensions/beck-chan/fold-code/fold-code.lua" target="_blank"><code>fold-code.lua</code></a></p></div></div><div class="code-fold-wrap">
+<details class="code-fold"><summary>view code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> <span class="kw">function</span> is_html<span class="op">()</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="va">quarto</span><span class="op">.</span><span class="va">doc</span><span class="op">.</span>is_format<span class="op">(</span><span class="st">"html:js"</span><span class="op">)</span> <span class="kw">or</span> <span class="va">quarto</span><span class="op">.</span><span class="va">doc</span><span class="op">.</span>is_format<span class="op">(</span><span class="st">"html"</span><span class="op">)</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> <span class="kw">function</span> escape_html<span class="op">(</span><span class="va">text</span><span class="op">)</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="va">text</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">:</span><span class="fu">gsub</span><span class="op">(</span><span class="st">"&amp;"</span><span class="op">,</span> <span class="st">"&amp;amp;"</span><span class="op">)</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">:</span><span class="fu">gsub</span><span class="op">(</span><span class="st">"&lt;"</span><span class="op">,</span> <span class="st">"&amp;lt;"</span><span class="op">)</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">:</span><span class="fu">gsub</span><span class="op">(</span><span class="st">"&gt;"</span><span class="op">,</span> <span class="st">"&amp;gt;"</span><span class="op">)</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">:</span><span class="fu">gsub</span><span class="op">(</span><span class="st">'"'</span><span class="op">,</span> <span class="st">"&amp;quot;"</span><span class="op">)</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> <span class="kw">function</span> normalize_fold<span class="op">(</span><span class="va">value</span><span class="op">)</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="va">value</span> <span class="op">==</span> <span class="kw">nil</span> <span class="cf">then</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">nil</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">local</span> <span class="va">fold</span> <span class="op">=</span> <span class="va">pandoc</span><span class="op">.</span><span class="va">utils</span><span class="op">.</span>stringify<span class="op">(</span><span class="va">value</span><span class="op">):</span><span class="fu">lower</span><span class="op">()</span></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="va">fold</span> <span class="op">==</span> <span class="st">"true"</span> <span class="cf">then</span></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"true"</span></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>  <span class="cf">elseif</span> <span class="va">fold</span> <span class="op">==</span> <span class="st">"false"</span> <span class="cf">then</span></span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"false"</span></span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="kw">nil</span></span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> CodeBlock<span class="op">(</span><span class="va">block</span><span class="op">)</span></span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="kw">not</span> is_html<span class="op">()</span> <span class="cf">then</span></span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">nil</span></span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>  <span class="kw">local</span> <span class="va">fold</span> <span class="op">=</span> normalize_fold<span class="op">(</span><span class="va">block</span><span class="op">.</span><span class="va">attributes</span><span class="op">[</span><span class="st">"fold"</span><span class="op">])</span></span>
+<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="va">fold</span> <span class="op">==</span> <span class="kw">nil</span> <span class="kw">and</span> <span class="va">block</span><span class="op">.</span><span class="va">classes</span><span class="op">:</span>includes<span class="op">(</span><span class="st">"fold"</span><span class="op">)</span> <span class="cf">then</span></span>
+<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a>    <span class="va">fold</span> <span class="op">=</span> <span class="st">"true"</span></span>
+<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
+<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="va">fold</span> <span class="op">==</span> <span class="kw">nil</span> <span class="cf">then</span></span>
+<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">nil</span></span>
+<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
+<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a>  <span class="kw">local</span> <span class="va">summary</span> <span class="op">=</span> <span class="va">block</span><span class="op">.</span><span class="va">attributes</span><span class="op">[</span><span class="st">"summary"</span><span class="op">]</span> <span class="kw">or</span> <span class="st">"show code"</span></span>
+<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a>  <span class="va">summary</span> <span class="op">=</span> escape_html<span class="op">(</span><span class="va">pandoc</span><span class="op">.</span><span class="va">utils</span><span class="op">.</span>stringify<span class="op">(</span><span class="va">summary</span><span class="op">))</span></span>
+<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a>  <span class="va">block</span><span class="op">.</span><span class="va">attributes</span><span class="op">[</span><span class="st">"fold"</span><span class="op">]</span> <span class="op">=</span> <span class="kw">nil</span></span>
+<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a>  <span class="va">block</span><span class="op">.</span><span class="va">attributes</span><span class="op">[</span><span class="st">"summary"</span><span class="op">]</span> <span class="op">=</span> <span class="kw">nil</span></span>
+<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a>  <span class="va">block</span><span class="op">.</span><span class="va">classes</span> <span class="op">=</span> <span class="va">block</span><span class="op">.</span><span class="va">classes</span><span class="op">:</span>filter<span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="va">class</span><span class="op">)</span></span>
+<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">class</span> <span class="op">~=</span> <span class="st">"fold"</span></span>
+<span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a>  <span class="kw">end</span><span class="op">)</span></span>
+<span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-48"><a href="#cb14-48" aria-hidden="true" tabindex="-1"></a>  <span class="kw">local</span> <span class="va">open</span> <span class="op">=</span> <span class="va">fold</span> <span class="op">==</span> <span class="st">"false"</span> <span class="kw">and</span> <span class="st">" open"</span> <span class="kw">or</span> <span class="st">""</span></span>
+<span id="cb14-49"><a href="#cb14-49" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="va">pandoc</span><span class="op">.</span>Div<span class="op">({</span></span>
+<span id="cb14-50"><a href="#cb14-50" aria-hidden="true" tabindex="-1"></a>    <span class="va">pandoc</span><span class="op">.</span>RawBlock<span class="op">(</span></span>
+<span id="cb14-51"><a href="#cb14-51" aria-hidden="true" tabindex="-1"></a>      <span class="st">"html"</span><span class="op">,</span></span>
+<span id="cb14-52"><a href="#cb14-52" aria-hidden="true" tabindex="-1"></a>      <span class="st">"&lt;details class=</span><span class="sc">\"</span><span class="st">code-fold</span><span class="sc">\"</span><span class="st">"</span> <span class="op">..</span> <span class="va">open</span> <span class="op">..</span> <span class="st">"&gt;&lt;summary&gt;"</span> <span class="op">..</span> <span class="va">summary</span> <span class="op">..</span> <span class="st">"&lt;/summary&gt;"</span></span>
+<span id="cb14-53"><a href="#cb14-53" aria-hidden="true" tabindex="-1"></a>    <span class="op">),</span></span>
+<span id="cb14-54"><a href="#cb14-54" aria-hidden="true" tabindex="-1"></a>    <span class="va">block</span><span class="op">,</span></span>
+<span id="cb14-55"><a href="#cb14-55" aria-hidden="true" tabindex="-1"></a>    <span class="va">pandoc</span><span class="op">.</span>RawBlock<span class="op">(</span><span class="st">"html"</span><span class="op">,</span> <span class="st">"&lt;/details&gt;"</span><span class="op">)</span></span>
+<span id="cb14-56"><a href="#cb14-56" aria-hidden="true" tabindex="-1"></a>  <span class="op">},</span> <span class="va">pandoc</span><span class="op">.</span>Attr<span class="op">(</span><span class="st">""</span><span class="op">,</span> <span class="op">{</span> <span class="st">"code-fold-wrap"</span> <span class="op">}))</span></span>
+<span id="cb14-57"><a href="#cb14-57" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</div>
+<div id="tabset-5-2" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-5-2-tab">
+<p>Embeds an iframe with a fenced div with options to include a caption under the iframe, as well as adjust zoom, sizing, and loading configurations:<a href="#fn21" class="footnote-ref" id="fnref21" role="doc-noteref"><sup>21</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn21"><p><sup>21</sup>&nbsp;<strong><i class="fa-brands fa-github" aria-label="github"></i> beck-chan/portfolio/:</strong> <a href="https://github.com/beck-chan/portfolio/blob/main/_extensions/beck-chan/iframe/iframe.lua" target="_blank"><code>iframe.lua</code></a></p></div></div><figure class="iframe-embed figure iframe-embed--align-center iframe-embed--valign-center iframe-embed--new-window" style="--iframe-zoom: 0.6; --iframe-width: 100%; --iframe-height: 560px;">
+  <div class="iframe-embed__chrome pics">
+    <div class="iframe-embed__frame">
+      <iframe src="https://beck-chan.github.io/" title="Embedded Portfolio in Iframe" loading="lazy"></iframe>
+    </div>
+    <a class="iframe-embed__open" href="https://beck-chan.github.io/" target="_blank" rel="noopener noreferrer" title="Open Embedded Portfolio in Iframe" aria-label="Open Embedded Portfolio in Iframe">
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+    </a>
+  </div>
+  <figcaption>Embedded Portfolio in Iframe</figcaption>
+</figure>
+</div>
+<div id="tabset-5-3" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-5-3-tab">
+<p>When enabled, Quarto’s category page filters display in the right margin on desktop,<a href="#fn22" class="footnote-ref" id="fnref22" role="doc-noteref"><sup>22</sup></a> but are hidden by default on mobile. To solve this, I embedded a category filter as an inline drop-down for mobile view:<a href="#fn23" class="footnote-ref" id="fnref23" role="doc-noteref"><sup>23</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn22"><p><sup>22</sup>&nbsp;<strong>Quarto:</strong> <a href="https://quarto.org/docs/websites/website-listings.html#categories" target="_blank">Document Listings</a></p></div><div id="fn23"><p><sup>23</sup>&nbsp;<strong><i class="fa-brands fa-github" aria-label="github"></i> beck-chan/portfolio/:</strong> <a href="https://github.com/beck-chan/portfolio/blob/main/_extensions/beck-chan/category-filter/category-filter.lua" target="_blank"><code>category-filter.lua</code></a></p></div></div><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="category-dropdown.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Inline Category Filter on Mobile"><img src="category-dropdown.png" class="pics img-fluid figure-img" alt="Inline Category Filter on Mobile"></a></p>
+<figcaption>Inline Category Filter on Mobile</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="publishing" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="publishing">Publishing</h2>
+<p>I’ve chosen to automate the publishing process in the spirit of Continuous Integration and Continuous Delivery and Deployment (CI/CD), letting GitHub Workflows handle both generating (via <code>quarto render</code>) the website files from the source <code>.qmd</code> files, and deploying the completed site to GitHub Pages and Netlify where my production and staging portfolios are respectively hosted.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset page-columns page-full">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true" href="">Output</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false" href="">Pull Requests (PRs)</a></li></ul>
+<div class="tab-content page-columns page-full">
+<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
+<p>The first thing I did was define the output directory and and how and what files should be rendered in <code>_quarto.yml</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">output-dir</span><span class="kw">:</span><span class="at"> _output</span><span class="co"> # The default is _site</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">render</span><span class="kw">:</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"**/*.qmd"</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">"**/*.ipynb"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>In my <code>.gitignore</code>, I’ve added the <code>_output</code> directory to avoid committing website files to the repository whenever they are generated locally by previewing or testing as I want rendering to actually be done on the fly via GitHub Actions.</p>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>This prevents me from ever accidentally forgetting to render the updated output files before calling it done, and as a result having outdated files displaying on the live portfolio site.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-6-2" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-6-2-tab">
+<p>Since the content for this portfolio lives in my GitHub repository,<a href="#fn24" class="footnote-ref" id="fnref24" role="doc-noteref"><sup>24</sup></a> I’ve also decided to use pull requests to merge major changes into my <code>main</code> branch as part of good version control practices even if I’m the only one working on any changes.</p>
+<div class="no-row-height column-margin column-container"><div id="fn24"><p><sup>24</sup>&nbsp;<a href="https://github.com/beck-chan/portfolio" target="_blank"><i class="fa-brands fa-github" aria-label="github"></i> beck-chan/portfolio</a></p></div><div id="fn25"><p><sup>25</sup>&nbsp;<strong><i class="fa-brands fa-github" aria-label="github"></i> beck-chan/portfolio/.github/:</strong> <a href="https://raw.githubusercontent.com/beck-chan/portfolio/refs/heads/main/.github/pull_request_template.md" target="_blank">pull_request_template.md</a></p></div></div><p>Each PR top-level comment is autopopulated with content from a PR template,<a href="#fn25" class="footnote-ref" id="fnref25" role="doc-noteref"><sup>25</sup></a> that includes information on how to trigger automated release notes:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Any internal notes go here --&gt;</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="fu">## Release notes</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- </span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="co">Tag the PR with one of the following labels so that releases.yaml can automatically generate a GitHub release bump:</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co">1. `major` (example: 1.0.0)</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="co">2. `minor` (example: 1.1.0)</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="co">3. `patch` (example: 1.1.1)</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="co">Tagging with more than one label will give precedence in the order as numbered.</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="co">Include any release notes you want displayed under this section.</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Leave below untouched --&gt;</span></span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>**Browse the updated portfolio at: [https://beck-chan.github.io/](https://beck-chan.github.io/)**</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Utilizing pull requests allows me to streamline a few additional things with GitHub Workflows and automate (more on the last three in <a href="../../../../samples/content-engineering/personal/portfolio/deployment.html">Portfolio Deployment</a>):</p>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">Spellchecking relevant files as part of PR checks.</label></li>
+<li><label><input type="checkbox" checked="">Rendering and deploying the rendered files to Netlify for an open PR to my staging site.</label></li>
+<li><label><input type="checkbox" checked="">Generating release notes from PRs tagged with specific labels.</label></li>
+<li><label><input type="checkbox" checked="">Rendering and deploying the rendered files to GitHub Pages production site when the PR is merged into <code>main</code>.</label></li>
+</ul>
+<section id="spellcheck" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="spellcheck">Spellcheck</h4>
+<p><code>.github/workflows/spellcheck.yaml</code><a href="#fn26" class="footnote-ref" id="fnref26" role="doc-noteref"><sup>26</sup></a> runs when a PR is opened, or when a commit is sent up to a branch connected to a PR, checking for spelling errors in relevant <code>*.qmd</code> files and adding a comment with the results when complete:<a href="#fn27" class="footnote-ref" id="fnref27" role="doc-noteref"><sup>27</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn26"><p><sup>26</sup>&nbsp;<strong><i class="fa-brands fa-github" aria-label="github"></i> beck-chan/portfolio/.github/workflows:</strong> <a href="https://github.com/beck-chan/portfolio/blob/main/.github/workflows/spellcheck.yaml" target="_blank">spellcheck.yaml</a></p></div><div id="fn27"><p><sup>27</sup>&nbsp;<strong>Spellcheck Comment</strong>:</p>
+<div class="code-fold-wrap">
+<details class="code-fold"><summary>view example</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">### Spelling errors found</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>poetry/random/24-guests.qmd<span class="sc">:11:</span>10 - Unknown word (wolfberries)</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>poetry/random/derelict-dog-star.qmd<span class="sc">:11:</span>2 - Unknown word (emsp)</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>poetry/random/derelict-dog-star.qmd<span class="sc">:19:</span>17 - Unknown word (Laika)</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>poetry/random/persimmons.qmd<span class="sc">:50:</span>40 - Unknown word (cinnabarite)</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>poetry/random/persimmons.qmd<span class="sc">:51:</span>18 - Unknown word (vermillion) fix: (vermilion)</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>poetry/random/taken.qmd<span class="sc">:12:</span>16 - Unknown word (Wheelock's)</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>poetry/random/taken.qmd<span class="sc">:15:</span>8 - Unknown word (rapio)</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>poetry/random/taken.qmd<span class="sc">:15:</span>15 - Unknown word (rapere)</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>poetry/random/taken.qmd<span class="sc">:15:</span>23 - Unknown word (rapui)</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>poetry/random/taken.qmd<span class="sc">:15:</span>30 - Unknown word (raptum)</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>poetry/random/taken.qmd<span class="sc">:23:</span>7 - Unknown word (ingly)</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>poetry/random/taken.qmd<span class="sc">:25:</span>9 - Unknown word (rapior)</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>poetry/random/taken.qmd<span class="sc">:28:</span>19 - Unknown word (suffereth)</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>poetry/random/taken.qmd<span class="sc">:29:</span>11 - Unknown word (violenti)</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>poetry/random/taken.qmd<span class="sc">:29:</span>20 - Unknown word (rapiunt)</span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>poetry/random/taken.qmd<span class="sc">:29:</span>28 - Unknown word (illa)</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>poetry/random/taken.qmd<span class="sc">:32:</span>7 - Unknown word (iful)</span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>poetry/random/taken.qmd<span class="sc">:36:</span>32 - Unknown word (Oothoon)</span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>poetry/random/taken.qmd<span class="sc">:39:</span>8 - Unknown word (impeity)</span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>poetry/random/to-dc.qmd<span class="sc">:14:</span>1 - Unknown word (Aegeas)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</div></div><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">        # Set up steps ...</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Run spell checker</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">id</span><span class="kw">:</span><span class="at"> spellcheck</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="fu">        run</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>          set +e</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>          npx --yes cspell "**/*.qmd" --exclude "_output" --exclude ".quarto" --exclude "poetry/random/*" &gt; cspell-output.txt</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>          status=$?</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>          set -e</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>          cat cspell-output.txt</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>          echo "exit_code=$status" &gt;&gt; "$GITHUB_OUTPUT"</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Comment on PR</span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/github-script@v7</span></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a><span class="fu">          script</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>            const fs = require('fs');</span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>            const marker = '&lt;!-- cspell-pr-comment --&gt;';</span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a>            const failed = '${{ steps.spellcheck.outputs.exit_code }}' !== '0';</span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a>            let output = fs.readFileSync('cspell-output.txt', 'utf8').trim();</span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a>            const max = 60000;</span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a>            if (output.length &gt; max) {</span>
+<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a>              output = output.slice(0, max) + '\n\n…truncated';</span>
+<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb18-25"><a href="#cb18-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a>            const body = failed</span>
+<span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a>              ? `${marker}\n## Spelling errors found\n\n\`\`\`text\n${output}\n\`\`\``</span>
+<span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a>              : `${marker}\n## No spelling errors found`;</span>
+<span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a>            const comments = await github.paginate(github.rest.issues.listComments, {</span>
+<span id="cb18-31"><a href="#cb18-31" aria-hidden="true" tabindex="-1"></a>              owner: context.repo.owner,</span>
+<span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a>              repo: context.repo.repo,</span>
+<span id="cb18-33"><a href="#cb18-33" aria-hidden="true" tabindex="-1"></a>              issue_number: context.issue.number,</span>
+<span id="cb18-34"><a href="#cb18-34" aria-hidden="true" tabindex="-1"></a>            });</span>
+<span id="cb18-35"><a href="#cb18-35" aria-hidden="true" tabindex="-1"></a>            const existing = comments.find((c) =&gt; c.body?.includes(marker));</span>
+<span id="cb18-36"><a href="#cb18-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-37"><a href="#cb18-37" aria-hidden="true" tabindex="-1"></a>            if (existing) {</span>
+<span id="cb18-38"><a href="#cb18-38" aria-hidden="true" tabindex="-1"></a>              await github.rest.issues.updateComment({</span>
+<span id="cb18-39"><a href="#cb18-39" aria-hidden="true" tabindex="-1"></a>                owner: context.repo.owner,</span>
+<span id="cb18-40"><a href="#cb18-40" aria-hidden="true" tabindex="-1"></a>                repo: context.repo.repo,</span>
+<span id="cb18-41"><a href="#cb18-41" aria-hidden="true" tabindex="-1"></a>                comment_id: existing.id,</span>
+<span id="cb18-42"><a href="#cb18-42" aria-hidden="true" tabindex="-1"></a>                body,</span>
+<span id="cb18-43"><a href="#cb18-43" aria-hidden="true" tabindex="-1"></a>              });</span>
+<span id="cb18-44"><a href="#cb18-44" aria-hidden="true" tabindex="-1"></a>            } else {</span>
+<span id="cb18-45"><a href="#cb18-45" aria-hidden="true" tabindex="-1"></a>              await github.rest.issues.createComment({</span>
+<span id="cb18-46"><a href="#cb18-46" aria-hidden="true" tabindex="-1"></a>                owner: context.repo.owner,</span>
+<span id="cb18-47"><a href="#cb18-47" aria-hidden="true" tabindex="-1"></a>                repo: context.repo.repo,</span>
+<span id="cb18-48"><a href="#cb18-48" aria-hidden="true" tabindex="-1"></a>                issue_number: context.issue.number,</span>
+<span id="cb18-49"><a href="#cb18-49" aria-hidden="true" tabindex="-1"></a>                body,</span>
+<span id="cb18-50"><a href="#cb18-50" aria-hidden="true" tabindex="-1"></a>              });</span>
+<span id="cb18-51"><a href="#cb18-51" aria-hidden="true" tabindex="-1"></a>            }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Words to be ignored are defined in <code>cspell.json</code>.<a href="#fn28" class="footnote-ref" id="fnref28" role="doc-noteref"><sup>28</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn28"><p><sup>28</sup>&nbsp;<strong><i class="fa-brands fa-github" aria-label="github"></i> beck-chan/portfolio/cspell.json:</strong> <a href="https://github.com/beck-chan/portfolio/blob/main/cspell.json" target="_blank">cspell.json</a></p></div></div></section>
+</div>
+</div>
+</div>
+
+
+</section>
+
+
+</main> <!-- /main -->
+<script>
+  // Quarto's layoutMarginEls only separates margin notes from each other.
+  // Seed that same cascade with the TOC/category panel bottom so footnotes
+  // start below #quarto-margin-sidebar instead of overlapping it.
+  // When notes stack taller than the body, pad main.content so the
+  // footer clears the last footnote. Padding the main grid row (not
+  // #quarto-content) also stretches the docked sidebar with it.
+  (() => {
+    const MARGIN_SEL =
+      ".column-margin.column-container > *, .margin-caption, .aside";
+    const GAP_AFTER_SIDEBAR = "0.5rem";
+    const GAP_BEFORE_FOOTER = "1.5rem";
+    const READY_CLASS = "margin-below-toc-ready";
+
+    const remPx = (raw) => {
+      const root = window.getComputedStyle(document.documentElement);
+      const fontSize = parseFloat(root.fontSize) || 16;
+      const value = String(raw).trim();
+      if (value.endsWith("rem")) return (parseFloat(value) || 0) * fontSize;
+      if (value.endsWith("px")) return parseFloat(value) || 0;
+      return parseFloat(value) || 0;
+    };
+
+    const contentHost = () =>
+      document.querySelector("main.content") ||
+      document.getElementById("quarto-document-content");
+
+    const sidebarContentBottom = () => {
+      const sidebar = document.getElementById("quarto-margin-sidebar");
+      if (!sidebar) return 0;
+
+      let bottom = 0;
+      for (const child of sidebar.children) {
+        if (child.classList.contains("quarto-sidebar-toggle")) continue;
+        if (child.id === "portfolio-toc-toggle") continue;
+        if (child.id === "portfolio-toc-sentinel") continue;
+        if (window.getComputedStyle(child).display === "none") continue;
+        const rect = child.getBoundingClientRect();
+        if (rect.height === 0) continue;
+        bottom = Math.max(bottom, rect.bottom + window.scrollY);
+      }
+      return bottom > 0 ? bottom + remPx(GAP_AFTER_SIDEBAR) : 0;
+    };
+
+    // Expand the main column (grid row), not #quarto-content padding —
+    // container padding sits outside the tracks and leaves a gap under
+    // the docked sidebar background.
+    // Theme sets padding-bottom with !important, so we must too.
+    const expandContentForMargins = (lastBottom) => {
+      const host = contentHost();
+      const legacy = document.getElementById("quarto-content");
+      // Clear older pad target if a previous version set it.
+      if (legacy && legacy !== host) {
+        legacy.style.removeProperty("padding-bottom");
+      }
+      if (!host) return;
+
+      if (!(lastBottom > 0)) {
+        host.style.removeProperty("padding-bottom");
+        return;
+      }
+
+      const computedPad =
+        parseFloat(window.getComputedStyle(host).paddingBottom) || 0;
+      const marginBottom =
+        parseFloat(window.getComputedStyle(host).marginBottom) || 0;
+      // Border-box bottom minus padding = content edge; negative
+      // margin-bottom pulls the footer up, so add it back into need.
+      const contentEdge =
+        host.getBoundingClientRect().bottom + window.scrollY - computedPad;
+      const needed = Math.ceil(
+        lastBottom + remPx(GAP_BEFORE_FOOTER) - contentEdge - marginBottom
+      );
+      const themeMin = remPx("2rem");
+      if (needed <= themeMin) {
+        host.style.removeProperty("padding-bottom");
+        return;
+      }
+
+      const next = `${needed}px`;
+      if (host.style.getPropertyValue("padding-bottom") !== next) {
+        host.style.setProperty("padding-bottom", next, "important");
+      }
+    };
+
+    // Quarto leaves margin footnotes inside tab panes and marks the
+    // tabset with page-columns/page-full, nesting a full page grid in
+    // the body column. Move those notes into the sibling
+    // .tabset-margin-container so the tabset can lay out normally and
+    // Quarto's shown.bs.tab handler can toggle note visibility.
+    const hoistTabsetMargins = () => {
+      document.querySelectorAll(".panel-tabset").forEach((tabset) => {
+        const margins = [
+          ...tabset.querySelectorAll(".column-margin.column-container"),
+        ];
+        if (!margins.length) return;
+
+        let container = tabset.previousElementSibling;
+        if (!container?.classList.contains("tabset-margin-container")) {
+          container = document.createElement("div");
+          container.className = "tabset-margin-container";
+          tabset.parentElement?.insertBefore(container, tabset);
+        }
+
+        // Sit in the parent section's page grid as the margin column.
+        container.classList.add(
+          "column-margin",
+          "column-container",
+          "no-row-height"
+        );
+
+        margins.forEach((margin) => {
+          const pane = margin.closest(".tab-pane");
+          const tabBtnId =
+            pane?.getAttribute("aria-labelledby") ||
+            (pane?.id ? `${pane.id}-tab` : null);
+          const wrap = document.createElement("div");
+          wrap.className = "tabset-margin-content";
+          if (tabBtnId) wrap.classList.add(`${tabBtnId}-margin-content`);
+          if (!pane?.classList.contains("active")) {
+            wrap.classList.add("collapse");
+          }
+          while (margin.firstChild) wrap.appendChild(margin.firstChild);
+          container.appendChild(wrap);
+          margin.remove();
+        });
+
+        const strip = (el) => {
+          el.classList.remove("page-columns", "page-full");
+        };
+        strip(tabset);
+        tabset.querySelectorAll(".page-columns, .page-full").forEach(strip);
+      });
+    };
+
+    const layoutMarginBelowToc = () => {
+      hoistTabsetMargins();
+
+      const marginChildren = document.querySelectorAll(MARGIN_SEL);
+      if (!marginChildren.length) {
+        expandContentForMargins(0);
+        return;
+      }
+
+      let lastBottom = sidebarContentBottom();
+      for (const el of marginChildren) {
+        if (el.offsetParent === null) continue;
+
+        el.style.marginTop = null;
+        const top = el.getBoundingClientRect().top + window.scrollY;
+        if (lastBottom > 0 && top < lastBottom) {
+          const marginBottom =
+            parseFloat(window.getComputedStyle(el).marginBottom) || 0;
+          el.style.marginTop = `${lastBottom - top + marginBottom}px`;
+        }
+
+        const marginTop =
+          parseFloat(window.getComputedStyle(el).marginTop) || 0;
+        const height = el.getBoundingClientRect().height;
+        lastBottom = top + height + marginTop;
+      }
+
+      expandContentForMargins(lastBottom);
+    };
+
+    const reveal = () => {
+      document.documentElement.classList.add(READY_CLASS);
+    };
+
+    const layoutAndReveal = () => {
+      layoutMarginBelowToc();
+      reveal();
+    };
+
+    // Run after Quarto's own throttled layoutMarginEls (50ms).
+    const schedule = () => {
+      clearTimeout(schedule._timer);
+      schedule._timer = setTimeout(layoutAndReveal, 60);
+    };
+
+    window.document.addEventListener("DOMContentLoaded", () => {
+      schedule();
+      // Failsafe: never leave footnotes hidden if layout is delayed.
+      setTimeout(reveal, 1500);
+      // Re-cascade when Quarto toggles tabset margin note visibility.
+      window.document.querySelectorAll('.panel-tabset a[data-bs-toggle="tab"]').forEach((tab) => {
+        tab.addEventListener("shown.bs.tab", schedule);
+      });
+      window.document.querySelectorAll(".column-margin img").forEach((img) => {
+        if (!img.complete) img.addEventListener("load", schedule, { once: true });
+      });
+      if (window.ResizeObserver) {
+        const ro = new ResizeObserver(schedule);
+        ro.observe(window.document.body);
+        const sidebar = window.document.getElementById("quarto-margin-sidebar");
+        if (sidebar) ro.observe(sidebar);
+        const margin = window.document.querySelector(
+          ".column-margin.column-container"
+        );
+        if (margin) ro.observe(margin);
+      }
+    });
+  })();
+</script>
+<script>
+  // Fixed TOC dropdown once the in-flow nav#TOC scrolls under the navbar.
+  // Uses a scrollY threshold captured at page top so detection still works
+  // if the margin sidebar goes sticky, and ignores brief TOC height=0
+  // blips during margin-below-toc footnote layout.
+  (() => {
+    const MQ = "(min-width: 992px)";
+    const TOGGLE_ID = "portfolio-toc-toggle";
+    const NAVBAR_FALLBACK = 75;
+    const ROLLED_CLASS = "portfolio-toc-rolled-up";
+
+    let lastScrollY = 0;
+    let seenToc = false;
+    // scrollY at which the TOC top meets the navbar — captured at rest only.
+    let showAfterY = null;
+
+    const marginSidebar = () =>
+      document.getElementById("quarto-margin-sidebar");
+    const tocNav = () => document.getElementById("TOC");
+    const toggleEl = () => document.getElementById(TOGGLE_ID);
+
+    const desktop = () =>
+      !!(window.matchMedia && window.matchMedia(MQ).matches);
+
+    const navbarOffset = () => {
+      const nav =
+        document.querySelector("#quarto-header nav.navbar") ||
+        document.querySelector("#quarto-header") ||
+        document.querySelector("nav.navbar");
+      if (!nav) return NAVBAR_FALLBACK;
+      const bottom = nav.getBoundingClientRect().bottom;
+      return bottom > 0 ? Math.ceil(bottom) : NAVBAR_FALLBACK;
+    };
+
+    const titleText = () => {
+      const toc = tocNav();
+      const heading = toc?.querySelector("#toc-title, h2, h3");
+      return (heading?.textContent || "Table of Contents").trim();
+    };
+
+    // Only capture near the top so sticky/visual offsets can't corrupt it.
+    const captureThreshold = () => {
+      const toc = tocNav();
+      if (!toc || toc.offsetHeight <= 0) return;
+      if (window.scrollY > 40) return;
+      const docTop = toc.getBoundingClientRect().top + window.scrollY;
+      showAfterY = Math.max(0, docTop - navbarOffset());
+    };
+
+    // true / false / null (layout glitch — keep current visibility)
+    const pastInlineToc = () => {
+      if (!desktop()) return false;
+      const toc = tocNav();
+      if (!toc && !seenToc) return false;
+      if (!toc) return null;
+
+      if (showAfterY != null) {
+        return window.scrollY >= showAfterY;
+      }
+
+      // Threshold not ready yet (footnote layout still settling).
+      if (toc.offsetHeight <= 0) return null;
+      return toc.getBoundingClientRect().top <= navbarOffset();
+    };
+
+    const positionToggle = (el) => {
+      if (!el) return;
+      const sidebar = marginSidebar();
+      const toc = tocNav();
+      // Margin column is the stable anchor (TOC may be rolled up / off-screen).
+      let left = null;
+      let width = null;
+      if (sidebar && sidebar.offsetWidth > 0) {
+        const sb = sidebar.getBoundingClientRect();
+        left = sb.left;
+        width = sb.width;
+      } else if (toc) {
+        const tr = toc.getBoundingClientRect();
+        if (tr.width > 0) {
+          left = tr.left;
+          width = tr.width;
+        }
+      }
+      if (!(width > 0) || left == null) return;
+      el.style.left = `${Math.round(left)}px`;
+      el.style.width = `${Math.round(width)}px`;
+      el.style.top = `${navbarOffset()}px`;
+    };
+
+    const setInlineRolled = (rolled) => {
+      const toc = tocNav();
+      if (!toc) return;
+      toc.classList.toggle(ROLLED_CLASS, rolled);
+    };
+
+    const closeToggle = (el) => {
+      if (!el) return;
+      el.classList.remove("expanded");
+      const contents = el.querySelector(".portfolio-toc-toggle-contents");
+      if (contents) contents.style.height = "0px";
+      el.dataset.open = "false";
+      const btn = el.querySelector(".portfolio-toc-toggle-title");
+      if (btn) btn.setAttribute("aria-expanded", "false");
+    };
+
+    const fillContents = (el) => {
+      const toc = tocNav();
+      const contents = el.querySelector(".portfolio-toc-toggle-contents");
+      if (!toc || !contents) return;
+
+      const clone = toc.cloneNode(true);
+      clone.removeAttribute("id");
+      clone.classList.remove(ROLLED_CLASS);
+      clone.classList.add("portfolio-toc-panel");
+      clone.querySelectorAll("[id]").forEach((node) => {
+        node.removeAttribute("id");
+      });
+
+      const heading = clone.querySelector("h2, h3");
+      if (heading) {
+        heading.classList.add("portfolio-toc-panel-heading");
+        const icon = document.createElement("i");
+        icon.className = "portfolio-toc-toggle-icon bi bi-caret-up-fill";
+        icon.setAttribute("aria-hidden", "true");
+        heading.append(icon);
+        heading.setAttribute("role", "button");
+        heading.setAttribute("tabindex", "0");
+        heading.setAttribute("aria-expanded", "true");
+        const collapse = (event) => {
+          event.preventDefault();
+          closeToggle(el);
+        };
+        heading.addEventListener("click", collapse);
+        heading.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") collapse(event);
+        });
+      }
+
+      contents.replaceChildren(clone);
+      contents.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener("click", () => closeToggle(el));
+      });
+    };
+
+    const openToggle = (el) => {
+      fillContents(el);
+      el.classList.add("expanded");
+      const contents = el.querySelector(".portfolio-toc-toggle-contents");
+      if (contents) {
+        contents.style.height = null;
+        contents.style.maxHeight = `calc(100vh - ${navbarOffset() + 24}px)`;
+      }
+      el.dataset.open = "true";
+      const btn = el.querySelector(".portfolio-toc-toggle-title");
+      if (btn) btn.setAttribute("aria-expanded", "true");
+    };
+
+    const ensureToggle = () => {
+      let el = toggleEl();
+      if (el) return el;
+      if (!tocNav()) return null;
+
+      el = document.createElement("div");
+      el.id = TOGGLE_ID;
+      el.className = "portfolio-toc-toggle zindex-over-content";
+      el.hidden = true;
+      el.dataset.open = "false";
+      el.setAttribute("role", "navigation");
+      el.setAttribute("aria-label", titleText());
+
+      const titleBtn = document.createElement("button");
+      titleBtn.type = "button";
+      titleBtn.className = "portfolio-toc-toggle-title";
+      titleBtn.setAttribute("aria-expanded", "false");
+      titleBtn.setAttribute("aria-controls", `${TOGGLE_ID}-contents`);
+
+      const label = document.createElement("span");
+      label.className = "portfolio-toc-toggle-label";
+      label.textContent = titleText();
+
+      const icon = document.createElement("i");
+      icon.className = "portfolio-toc-toggle-icon bi bi-caret-down-fill";
+      icon.setAttribute("aria-hidden", "true");
+
+      titleBtn.append(label, icon);
+
+      const contents = document.createElement("div");
+      contents.id = `${TOGGLE_ID}-contents`;
+      contents.className = "portfolio-toc-toggle-contents";
+      contents.style.height = "0px";
+
+      el.append(titleBtn, contents);
+      document.body.append(el);
+
+      titleBtn.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        if (el.dataset.open === "true") closeToggle(el);
+        else openToggle(el);
+      });
+
+      return el;
+    };
+
+    const setVisible = (visible) => {
+      const el = ensureToggle();
+      if (!el) return;
+
+      if (!visible) {
+        closeToggle(el);
+        el.hidden = true;
+        setInlineRolled(false);
+        return;
+      }
+
+      el.hidden = false;
+      setInlineRolled(true);
+      positionToggle(el);
+    };
+
+    const sync = () => {
+      const toc = tocNav();
+      if (toc) seenToc = true;
+
+      captureThreshold();
+
+      const el = ensureToggle();
+      if (!el) return;
+
+      if (!desktop() || (!toc && !seenToc)) {
+        setVisible(false);
+        return;
+      }
+
+      if (!toc) return;
+
+      const past = pastInlineToc();
+      if (past === null) {
+        if (!el.hidden) positionToggle(el);
+        return;
+      }
+
+      setVisible(past);
+    };
+
+    let tick = 0;
+    const onScroll = () => {
+      if (tick) return;
+      tick = requestAnimationFrame(() => {
+        tick = 0;
+        const el = toggleEl();
+        const dy = Math.abs(window.scrollY - lastScrollY);
+        lastScrollY = window.scrollY;
+        if (dy > 8 && el?.dataset.open === "true") closeToggle(el);
+        sync();
+      });
+    };
+
+    const boot = () => {
+      if (!tocNav()) return;
+
+      lastScrollY = window.scrollY;
+      ensureToggle();
+      sync();
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", () => {
+        if (window.scrollY <= 40) showAfterY = null;
+        sync();
+      });
+      requestAnimationFrame(sync);
+      window.addEventListener("load", sync, { once: true });
+      // Remeasure after margin-below-toc footnote cascade settles.
+      setTimeout(sync, 100);
+      setTimeout(sync, 400);
+      setTimeout(sync, 1000);
+
+      if (window.IntersectionObserver) {
+        const toc = tocNav();
+        if (toc) {
+          const io = new IntersectionObserver(() => sync(), {
+            root: null,
+            threshold: [0, 0.01, 1],
+          });
+          io.observe(toc);
+        }
+      }
+
+      if (window.ResizeObserver) {
+        const ro = new ResizeObserver(() => {
+          clearTimeout(ro._t);
+          ro._t = setTimeout(sync, 50);
+        });
+        const toc = tocNav();
+        const sidebar = marginSidebar();
+        const main = document.querySelector("main.content");
+        if (toc) ro.observe(toc);
+        if (sidebar) ro.observe(sidebar);
+        if (main) ro.observe(main);
+      }
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", boot);
+    } else {
+      boot();
+    }
+  })();
+</script>
+<script>
+  // Quarto sticky sidenav still scrolls with the page (min-height:100% + sticky
+  // containing block). Pin it fixed on desktop; lock width from the in-flow
+  // layout first so the grid column and nav stay aligned.
+  (() => {
+    const MQ = "(min-width: 992px)";
+    const CLASS = "is-pinned-sidenav";
+
+    const sidebar = () => document.getElementById("quarto-sidebar");
+
+    const unpin = (el) => {
+      el.classList.remove(CLASS);
+      el.style.removeProperty("width");
+    };
+
+    const pin = () => {
+      const el = sidebar();
+      if (!el) return;
+
+      if (!window.matchMedia(MQ).matches) {
+        unpin(el);
+        return;
+      }
+
+      // Measure while in normal flow so width matches the grid column.
+      unpin(el);
+      const width = el.getBoundingClientRect().width;
+      if (width > 0) el.style.width = `${width}px`;
+      el.classList.add(CLASS);
+    };
+
+    let resizeTimer = 0;
+    const schedule = () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(pin, 50);
+    };
+
+    window.document.addEventListener("DOMContentLoaded", pin);
+    window.addEventListener("resize", schedule);
+    if (window.matchMedia) {
+      window.matchMedia(MQ).addEventListener("change", pin);
+    }
+  })();
+</script>
+<script>
+  // Keep in-page hash targets below the fixed header. Quarto's hashchange
+  // offset looks for header.fixed-top and can fire before native scroll, and
+  // CSS scroll-margin is unreliable on page-columns grid sections.
+  (() => {
+    const OFFSET = 80;
+
+    const targetEl = (hash) => {
+      if (!hash) return null;
+      const id = decodeURIComponent(String(hash).replace(/^#/, ""));
+      if (!id) return null;
+      return (
+        document.getElementById(id) ||
+        document.querySelector(`[data-anchor-id="${CSS.escape(id)}"]`)
+      );
+    };
+
+    const scrollToEl = (el) => {
+      if (!el) return;
+      const top = el.getBoundingClientRect().top + window.scrollY - OFFSET;
+      window.scrollTo({ top: Math.max(0, top), behavior: "auto" });
+    };
+
+    const samePageHash = (link) => {
+      try {
+        const url = new URL(link.href, window.location.href);
+        if (url.pathname !== window.location.pathname) return null;
+        if (url.search !== window.location.search) return null;
+        return url.hash || null;
+      } catch {
+        return null;
+      }
+    };
+
+    document.addEventListener("click", (event) => {
+      const link = event.target.closest("a[href]");
+      if (!link) return;
+      if (link.dataset.bsToggle) return;
+      const hash = samePageHash(link);
+      if (!hash) return;
+      const el = targetEl(hash);
+      if (!el) return;
+      // After native scroll + Quarto's hashchange handler.
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => scrollToEl(el));
+      });
+    });
+
+    const applyHash = () => scrollToEl(targetEl(window.location.hash));
+
+    window.addEventListener("hashchange", () => {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(applyHash);
+      });
+    });
+
+    const onReady = () => {
+      if (!window.location.hash) return;
+      applyHash();
+      setTimeout(applyHash, 250);
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", onReady);
+    } else {
+      onReady();
+    }
+    window.addEventListener("load", onReady);
+  })();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const toggle = window.document.createElement('button');
+      toggle.type = "button";
+      toggle.setAttribute("role", "switch");
+      toggle.setAttribute("aria-checked", "false");
+      toggle.classList.add('top-right');
+      toggle.classList.add('quarto-color-scheme-toggle');
+      toggle.setAttribute("aria-label", "Toggle Theme");
+      toggle.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      toggle.appendChild(i);
+      // Put the toggle in a landmark of its own, so that landmark navigation
+      // can reach it.
+      //
+      // The container is always a fresh direct child of body, and the toggle is
+      // never moved into page furniture that the theme or the author controls.
+      // The toggle is positioned against the page, so any ancestor that
+      // establishes a containing block captures it: a positioned element or a
+      // grid for position: absolute, and transform, filter, will-change or
+      // contain for position: fixed. A direct child of body has none of these
+      // to inherit, and the shift when one appears is silent and visual.
+      //
+      // ARIA says a document should have at most one banner, and axe reports a
+      // duplicate whether or not the banners carry distinct labels. So use a
+      // header when the page has no banner yet, and a named region otherwise.
+      //
+      // A header is a banner wherever it sits, unless it is inside sectioning
+      // content, so this cannot just look at the children of body: a custom
+      // page layout wraps the title block header in a plain div. An explicit
+      // role="banner" always counts.
+      const sectioning = 'article, aside, main, nav, section, [role="article"], [role="complementary"], [role="main"], [role="navigation"], [role="region"]';
+      const hasBanner = Array.from(
+        window.document.querySelectorAll('header:not([role]), [role="banner"]')
+      ).some(function(el) {
+        return el.hasAttribute("role") || el.closest(sectioning) === null;
+      });
+      const container = window.document.createElement(hasBanner ? "div" : "header");
+      if (hasBanner) {
+        container.setAttribute("role", "region");
+        container.setAttribute("aria-label", "Toggle Theme");
+      }
+      container.classList.add('quarto-color-scheme-toggle-container');
+      container.appendChild(toggle);
+      window.document.body.appendChild(container);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation column-body">
+  <div class="nav-page nav-page-previous">
+      <a href="../../../../samples/content-engineering/personal/portfolio/index.html" class="pagination-link" aria-label="Portfolio">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Portfolio</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../../../samples/content-engineering/personal/portfolio/deployment.html" class="pagination-link" aria-label="Deployment">
+        <span class="nav-page-text">Deployment</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://github.com/beck-chan/portfolio/releases" target="_blank">
+<p>Releases</p>
+</a>
+  </li>  
+</ul>
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://github.com/beck-chan/portfolio/issues" target="_blank">
+<p><i class="fa-brands fa-github" aria-label="github"></i> Report Issue</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ © 2026 <b>Beck Chan</b>. All rights reserved.
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

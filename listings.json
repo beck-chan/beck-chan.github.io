@@ -20,14 +20,19 @@
     ]
   },
   {
-    "listing": "/samples/technical-writing/saasquatch/integrations/index.html",
+    "listing": "/samples/technical-writing/saasquatch/index.html",
     "items": [
       "/samples/technical-writing/saasquatch/integrations/sfdc/invocable-methods.html",
       "/samples/technical-writing/saasquatch/integrations/sfdc/attribution-lookup.html",
       "/samples/technical-writing/saasquatch/integrations/sfdc/user-account-ids.html",
       "/samples/technical-writing/saasquatch/integrations/stripe.html",
       "/samples/technical-writing/saasquatch/integrations/recurly.html",
-      "/samples/technical-writing/saasquatch/integrations/tango-card.html"
+      "/samples/technical-writing/saasquatch/integrations/tango-card.html",
+      "/samples/technical-writing/saasquatch/sdk/key-sjs.html",
+      "/samples/technical-writing/saasquatch/sdk/sjs-advanced.html",
+      "/samples/technical-writing/saasquatch/sdk/tracking-cookies.html",
+      "/samples/technical-writing/saasquatch/user-guides/sharelinks.html",
+      "/samples/technical-writing/saasquatch/user-guides/csv-import.html"
     ]
   },
   {
@@ -64,20 +69,38 @@
     ]
   },
   {
-    "listing": "/samples/organizations/atryum.html",
+    "listing": "/samples/organizations/index.html",
     "items": [
-      "/samples/technical-writing/atryum/integrations.html",
-      "/samples/technical-writing/atryum/user-guides.html",
-      "/samples/technical-writing/atryum/quickstart.html"
+      "/samples/organizations/validmind.html",
+      "/samples/organizations/atryum.html",
+      "/samples/organizations/saasquatch.html"
     ]
   },
   {
-    "listing": "/samples/developer-advocacy/index.html",
+    "listing": "/samples/index.html",
     "items": [
-      "/samples/developer-advocacy/supabase/index.html",
-      "/samples/developer-advocacy/posthog/index.html",
-      "/samples/developer-advocacy/quarto/index.html",
-      "/samples/developer-advocacy/google-sheets/index.html"
+      "/samples/technical-writing/validmind/jupyter-notebooks.html",
+      "/samples/technical-writing/validmind/training.html",
+      "/samples/technical-writing/validmind/user-guides.html",
+      "/samples/technical-writing/validmind/quickstarts.html",
+      "/samples/technical-writing/validmind/enablement.html",
+      "/samples/content-engineering/validmind/quickstarts.html",
+      "/samples/content-engineering/validmind/library.html",
+      "/samples/content-engineering/validmind/academy.html",
+      "/samples/content-engineering/validmind/releases.html",
+      "/samples/content-engineering/validmind/redesign.html",
+      "/samples/technical-writing/atryum/integrations.html",
+      "/samples/technical-writing/atryum/user-guides.html",
+      "/samples/technical-writing/atryum/quickstart.html",
+      "/samples/content-engineering/atryum/index.html",
+      "/samples/copywriting/validmind/honor-the-human.html",
+      "/samples/copywriting/validmind/reduce-culture-risk.html",
+      "/samples/copywriting/validmind/osff-takeaways.html",
+      "/samples/copywriting/saasquatch/growth-automation.html",
+      "/samples/technical-writing/saasquatch/integrations/index.html",
+      "/samples/technical-writing/saasquatch/sdk/index.html",
+      "/samples/technical-writing/saasquatch/user-guides/index.html",
+      "/samples/content-engineering/personal/portfolio/index.html"
     ]
   },
   {
@@ -90,24 +113,41 @@
     ]
   },
   {
+    "listing": "/samples/content-engineering/validmind/quickstarts.html",
+    "items": [
+      "/samples/technical-writing/validmind/jupyter-notebooks.html"
+    ]
+  },
+  {
+    "listing": "/samples/content-engineering/validmind/index.html",
+    "items": [
+      "/samples/content-engineering/validmind/quickstarts.html",
+      "/samples/content-engineering/validmind/library.html",
+      "/samples/content-engineering/validmind/academy.html",
+      "/samples/content-engineering/validmind/releases.html",
+      "/samples/content-engineering/validmind/redesign.html",
+      "/samples/technical-writing/validmind/index.html"
+    ]
+  },
+  {
+    "listing": "/samples/content-engineering/personal/portfolio/index.html",
+    "items": [
+      "/samples/content-engineering/personal/portfolio/framework.html",
+      "/samples/content-engineering/personal/portfolio/deployment.html"
+    ]
+  },
+  {
+    "listing": "/samples/content-engineering/atryum/index.html",
+    "items": [
+      "/samples/technical-writing/atryum/index.html"
+    ]
+  },
+  {
     "listing": "/index.html",
     "items": [
+      "/samples/content-engineering/index.html",
       "/samples/technical-writing/index.html",
-      "/samples/copywriting/index.html",
-      "/samples/technical-writing/validmind/jupyter-notebooks.html",
-      "/samples/technical-writing/saasquatch/sdk/index.html",
-      "/samples/technical-writing/validmind/training.html",
-      "/samples/technical-writing/validmind/user-guides.html",
-      "/samples/technical-writing/atryum/integrations.html",
-      "/samples/technical-writing/atryum/user-guides.html",
-      "/samples/technical-writing/saasquatch/user-guides/index.html",
-      "/samples/technical-writing/validmind/quickstarts.html",
-      "/samples/technical-writing/atryum/quickstart.html",
-      "/samples/technical-writing/validmind/enablement.html",
-      "/samples/copywriting/validmind/honor-the-human.html",
-      "/samples/copywriting/validmind/reduce-culture-risk.html",
-      "/samples/copywriting/validmind/osff-takeaways.html",
-      "/samples/copywriting/saasquatch/growth-automation.html"
+      "/samples/copywriting/index.html"
     ]
   },
   {
@@ -117,25 +157,68 @@
       "/samples/content-engineering/validmind/releases.html",
       "/samples/content-engineering/validmind/academy.html",
       "/samples/content-engineering/validmind/quickstarts.html",
-      "/samples/content-engineering/validmind/atryum.html",
-      "/samples/content-engineering/personal/portfolio.html"
+      "/samples/content-engineering/validmind/redesign.html",
+      "/samples/content-engineering/atryum/index.html",
+      "/samples/content-engineering/personal/portfolio/index.html"
     ]
   },
   {
-    "listing": "/samples/content-engineering/validmind/index.html",
+    "listing": "/samples/content-engineering/personal/index.html",
     "items": [
-      "/samples/content-engineering/validmind/quickstarts.html",
+      "/samples/content-engineering/personal/portfolio/index.html",
+      "/samples/content-engineering/personal/guestbook/index.html"
+    ]
+  },
+  {
+    "listing": "/samples/content-engineering/validmind/academy.html",
+    "items": [
+      "/samples/technical-writing/validmind/jupyter-notebooks.html"
+    ]
+  },
+  {
+    "listing": "/samples/content-engineering/validmind/library.html",
+    "items": [
+      "/samples/technical-writing/validmind/jupyter-notebooks.html"
+    ]
+  },
+  {
+    "listing": "/samples/content-engineering/validmind/redesign.html",
+    "items": [
       "/samples/content-engineering/validmind/library.html",
       "/samples/content-engineering/validmind/academy.html",
-      "/samples/content-engineering/validmind/releases.html"
+      "/samples/content-engineering/validmind/releases.html",
+      "/samples/content-engineering/validmind/quickstarts.html"
     ]
   },
   {
-    "listing": "/samples/organizations/index.html",
+    "listing": "/samples/content-engineering/validmind/release-notes/index.html",
     "items": [
-      "/samples/organizations/validmind.html",
-      "/samples/organizations/atryum.html",
-      "/samples/organizations/saasquatch.html"
+      "/samples/content-engineering/validmind/release-notes/patch/automation.html",
+      "/samples/content-engineering/validmind/release-notes/patch/generation.html",
+      "/samples/content-engineering/validmind/release-notes/library/automation.html",
+      "/samples/content-engineering/validmind/release-notes/library/generation.html",
+      "/samples/content-engineering/validmind/release-notes/library/highlights.html",
+      "/samples/content-engineering/validmind/release-notes/monthly/automation.html",
+      "/samples/content-engineering/validmind/release-notes/monthly/generation.html",
+      "/samples/content-engineering/validmind/release-notes/monthly/highlights.html",
+      "/samples/content-engineering/validmind/release-notes/trigger-workflows.html"
+    ]
+  },
+  {
+    "listing": "/samples/organizations/atryum.html",
+    "items": [
+      "/samples/technical-writing/atryum/integrations.html",
+      "/samples/technical-writing/atryum/user-guides.html",
+      "/samples/technical-writing/atryum/quickstart.html",
+      "/samples/content-engineering/atryum/index.html"
+    ]
+  },
+  {
+    "listing": "/samples/organizations/personal.html",
+    "items": [
+      "/samples/content-engineering/personal/portfolio/index.html",
+      "/samples/content-engineering/personal/guestbook/index.html",
+      "/samples/technical-writing/personal/guestbook/index.html"
     ]
   },
   {
@@ -146,9 +229,15 @@
       "/samples/technical-writing/validmind/user-guides.html",
       "/samples/technical-writing/validmind/quickstarts.html",
       "/samples/technical-writing/validmind/enablement.html",
+      "/samples/content-engineering/validmind/quickstarts.html",
+      "/samples/content-engineering/validmind/library.html",
+      "/samples/content-engineering/validmind/academy.html",
+      "/samples/content-engineering/validmind/releases.html",
+      "/samples/content-engineering/validmind/redesign.html",
       "/samples/technical-writing/atryum/integrations.html",
       "/samples/technical-writing/atryum/user-guides.html",
       "/samples/technical-writing/atryum/quickstart.html",
+      "/samples/content-engineering/atryum/index.html",
       "/samples/copywriting/validmind/honor-the-human.html",
       "/samples/copywriting/validmind/reduce-culture-risk.html",
       "/samples/copywriting/validmind/osff-takeaways.html"
@@ -163,19 +252,14 @@
     "items": []
   },
   {
-    "listing": "/samples/technical-writing/saasquatch/index.html",
+    "listing": "/samples/technical-writing/saasquatch/integrations/index.html",
     "items": [
       "/samples/technical-writing/saasquatch/integrations/sfdc/invocable-methods.html",
       "/samples/technical-writing/saasquatch/integrations/sfdc/attribution-lookup.html",
       "/samples/technical-writing/saasquatch/integrations/sfdc/user-account-ids.html",
       "/samples/technical-writing/saasquatch/integrations/stripe.html",
       "/samples/technical-writing/saasquatch/integrations/recurly.html",
-      "/samples/technical-writing/saasquatch/integrations/tango-card.html",
-      "/samples/technical-writing/saasquatch/sdk/key-sjs.html",
-      "/samples/technical-writing/saasquatch/sdk/sjs-advanced.html",
-      "/samples/technical-writing/saasquatch/sdk/tracking-cookies.html",
-      "/samples/technical-writing/saasquatch/user-guides/sharelinks.html",
-      "/samples/technical-writing/saasquatch/user-guides/csv-import.html"
+      "/samples/technical-writing/saasquatch/integrations/tango-card.html"
     ]
   },
   {

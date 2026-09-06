@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.11.1">
+<meta name="generator" content="quarto-1.11.3">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -98,6 +98,8 @@ ul.task-list li input[type="checkbox"] {
       let bottom = 0;
       for (const child of sidebar.children) {
         if (child.classList.contains("quarto-sidebar-toggle")) continue;
+        if (child.id === "portfolio-toc-toggle") continue;
+        if (child.id === "portfolio-toc-sentinel") continue;
         if (window.getComputedStyle(child).display === "none") continue;
         const rect = child.getBoundingClientRect();
         if (rect.height === 0) continue;
@@ -147,7 +149,59 @@ ul.task-list li input[type="checkbox"] {
       }
     };
 
+    // Quarto leaves margin footnotes inside tab panes and marks the
+    // tabset with page-columns/page-full, nesting a full page grid in
+    // the body column. Move those notes into the sibling
+    // .tabset-margin-container so the tabset can lay out normally and
+    // Quarto's shown.bs.tab handler can toggle note visibility.
+    const hoistTabsetMargins = () => {
+      document.querySelectorAll(".panel-tabset").forEach((tabset) => {
+        const margins = [
+          ...tabset.querySelectorAll(".column-margin.column-container"),
+        ];
+        if (!margins.length) return;
+
+        let container = tabset.previousElementSibling;
+        if (!container?.classList.contains("tabset-margin-container")) {
+          container = document.createElement("div");
+          container.className = "tabset-margin-container";
+          tabset.parentElement?.insertBefore(container, tabset);
+        }
+
+        // Sit in the parent section's page grid as the margin column.
+        container.classList.add(
+          "column-margin",
+          "column-container",
+          "no-row-height"
+        );
+
+        margins.forEach((margin) => {
+          const pane = margin.closest(".tab-pane");
+          const tabBtnId =
+            pane?.getAttribute("aria-labelledby") ||
+            (pane?.id ? `${pane.id}-tab` : null);
+          const wrap = document.createElement("div");
+          wrap.className = "tabset-margin-content";
+          if (tabBtnId) wrap.classList.add(`${tabBtnId}-margin-content`);
+          if (!pane?.classList.contains("active")) {
+            wrap.classList.add("collapse");
+          }
+          while (margin.firstChild) wrap.appendChild(margin.firstChild);
+          container.appendChild(wrap);
+          margin.remove();
+        });
+
+        const strip = (el) => {
+          el.classList.remove("page-columns", "page-full");
+        };
+        strip(tabset);
+        tabset.querySelectorAll(".page-columns, .page-full").forEach(strip);
+      });
+    };
+
     const layoutMarginBelowToc = () => {
+      hoistTabsetMargins();
+
       const marginChildren = document.querySelectorAll(MARGIN_SEL);
       if (!marginChildren.length) {
         expandContentForMargins(0);
@@ -194,6 +248,10 @@ ul.task-list li input[type="checkbox"] {
       schedule();
       // Failsafe: never leave footnotes hidden if layout is delayed.
       setTimeout(reveal, 1500);
+      // Re-cascade when Quarto toggles tabset margin note visibility.
+      window.document.querySelectorAll('.panel-tabset a[data-bs-toggle="tab"]').forEach((tab) => {
+        tab.addEventListener("shown.bs.tab", schedule);
+      });
       window.document.querySelectorAll(".column-margin img").forEach((img) => {
         if (!img.complete) img.addEventListener("load", schedule, { once: true });
       });
@@ -208,6 +266,315 @@ ul.task-list li input[type="checkbox"] {
         if (margin) ro.observe(margin);
       }
     });
+  })();
+</script>
+<script>
+  // Fixed TOC dropdown once the in-flow nav#TOC scrolls under the navbar.
+  // Uses a scrollY threshold captured at page top so detection still works
+  // if the margin sidebar goes sticky, and ignores brief TOC height=0
+  // blips during margin-below-toc footnote layout.
+  (() => {
+    const MQ = "(min-width: 992px)";
+    const TOGGLE_ID = "portfolio-toc-toggle";
+    const NAVBAR_FALLBACK = 75;
+    const ROLLED_CLASS = "portfolio-toc-rolled-up";
+
+    let lastScrollY = 0;
+    let seenToc = false;
+    // scrollY at which the TOC top meets the navbar — captured at rest only.
+    let showAfterY = null;
+
+    const marginSidebar = () =>
+      document.getElementById("quarto-margin-sidebar");
+    const tocNav = () => document.getElementById("TOC");
+    const toggleEl = () => document.getElementById(TOGGLE_ID);
+
+    const desktop = () =>
+      !!(window.matchMedia && window.matchMedia(MQ).matches);
+
+    const navbarOffset = () => {
+      const nav =
+        document.querySelector("#quarto-header nav.navbar") ||
+        document.querySelector("#quarto-header") ||
+        document.querySelector("nav.navbar");
+      if (!nav) return NAVBAR_FALLBACK;
+      const bottom = nav.getBoundingClientRect().bottom;
+      return bottom > 0 ? Math.ceil(bottom) : NAVBAR_FALLBACK;
+    };
+
+    const titleText = () => {
+      const toc = tocNav();
+      const heading = toc?.querySelector("#toc-title, h2, h3");
+      return (heading?.textContent || "Table of Contents").trim();
+    };
+
+    // Only capture near the top so sticky/visual offsets can't corrupt it.
+    const captureThreshold = () => {
+      const toc = tocNav();
+      if (!toc || toc.offsetHeight <= 0) return;
+      if (window.scrollY > 40) return;
+      const docTop = toc.getBoundingClientRect().top + window.scrollY;
+      showAfterY = Math.max(0, docTop - navbarOffset());
+    };
+
+    // true / false / null (layout glitch — keep current visibility)
+    const pastInlineToc = () => {
+      if (!desktop()) return false;
+      const toc = tocNav();
+      if (!toc && !seenToc) return false;
+      if (!toc) return null;
+
+      if (showAfterY != null) {
+        return window.scrollY >= showAfterY;
+      }
+
+      // Threshold not ready yet (footnote layout still settling).
+      if (toc.offsetHeight <= 0) return null;
+      return toc.getBoundingClientRect().top <= navbarOffset();
+    };
+
+    const positionToggle = (el) => {
+      if (!el) return;
+      const sidebar = marginSidebar();
+      const toc = tocNav();
+      // Margin column is the stable anchor (TOC may be rolled up / off-screen).
+      let left = null;
+      let width = null;
+      if (sidebar && sidebar.offsetWidth > 0) {
+        const sb = sidebar.getBoundingClientRect();
+        left = sb.left;
+        width = sb.width;
+      } else if (toc) {
+        const tr = toc.getBoundingClientRect();
+        if (tr.width > 0) {
+          left = tr.left;
+          width = tr.width;
+        }
+      }
+      if (!(width > 0) || left == null) return;
+      el.style.left = `${Math.round(left)}px`;
+      el.style.width = `${Math.round(width)}px`;
+      el.style.top = `${navbarOffset()}px`;
+    };
+
+    const setInlineRolled = (rolled) => {
+      const toc = tocNav();
+      if (!toc) return;
+      toc.classList.toggle(ROLLED_CLASS, rolled);
+    };
+
+    const closeToggle = (el) => {
+      if (!el) return;
+      el.classList.remove("expanded");
+      const contents = el.querySelector(".portfolio-toc-toggle-contents");
+      if (contents) contents.style.height = "0px";
+      el.dataset.open = "false";
+      const btn = el.querySelector(".portfolio-toc-toggle-title");
+      if (btn) btn.setAttribute("aria-expanded", "false");
+    };
+
+    const fillContents = (el) => {
+      const toc = tocNav();
+      const contents = el.querySelector(".portfolio-toc-toggle-contents");
+      if (!toc || !contents) return;
+
+      const clone = toc.cloneNode(true);
+      clone.removeAttribute("id");
+      clone.classList.remove(ROLLED_CLASS);
+      clone.classList.add("portfolio-toc-panel");
+      clone.querySelectorAll("[id]").forEach((node) => {
+        node.removeAttribute("id");
+      });
+
+      const heading = clone.querySelector("h2, h3");
+      if (heading) {
+        heading.classList.add("portfolio-toc-panel-heading");
+        const icon = document.createElement("i");
+        icon.className = "portfolio-toc-toggle-icon bi bi-caret-up-fill";
+        icon.setAttribute("aria-hidden", "true");
+        heading.append(icon);
+        heading.setAttribute("role", "button");
+        heading.setAttribute("tabindex", "0");
+        heading.setAttribute("aria-expanded", "true");
+        const collapse = (event) => {
+          event.preventDefault();
+          closeToggle(el);
+        };
+        heading.addEventListener("click", collapse);
+        heading.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") collapse(event);
+        });
+      }
+
+      contents.replaceChildren(clone);
+      contents.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener("click", () => closeToggle(el));
+      });
+    };
+
+    const openToggle = (el) => {
+      fillContents(el);
+      el.classList.add("expanded");
+      const contents = el.querySelector(".portfolio-toc-toggle-contents");
+      if (contents) {
+        contents.style.height = null;
+        contents.style.maxHeight = `calc(100vh - ${navbarOffset() + 24}px)`;
+      }
+      el.dataset.open = "true";
+      const btn = el.querySelector(".portfolio-toc-toggle-title");
+      if (btn) btn.setAttribute("aria-expanded", "true");
+    };
+
+    const ensureToggle = () => {
+      let el = toggleEl();
+      if (el) return el;
+      if (!tocNav()) return null;
+
+      el = document.createElement("div");
+      el.id = TOGGLE_ID;
+      el.className = "portfolio-toc-toggle zindex-over-content";
+      el.hidden = true;
+      el.dataset.open = "false";
+      el.setAttribute("role", "navigation");
+      el.setAttribute("aria-label", titleText());
+
+      const titleBtn = document.createElement("button");
+      titleBtn.type = "button";
+      titleBtn.className = "portfolio-toc-toggle-title";
+      titleBtn.setAttribute("aria-expanded", "false");
+      titleBtn.setAttribute("aria-controls", `${TOGGLE_ID}-contents`);
+
+      const label = document.createElement("span");
+      label.className = "portfolio-toc-toggle-label";
+      label.textContent = titleText();
+
+      const icon = document.createElement("i");
+      icon.className = "portfolio-toc-toggle-icon bi bi-caret-down-fill";
+      icon.setAttribute("aria-hidden", "true");
+
+      titleBtn.append(label, icon);
+
+      const contents = document.createElement("div");
+      contents.id = `${TOGGLE_ID}-contents`;
+      contents.className = "portfolio-toc-toggle-contents";
+      contents.style.height = "0px";
+
+      el.append(titleBtn, contents);
+      document.body.append(el);
+
+      titleBtn.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        if (el.dataset.open === "true") closeToggle(el);
+        else openToggle(el);
+      });
+
+      return el;
+    };
+
+    const setVisible = (visible) => {
+      const el = ensureToggle();
+      if (!el) return;
+
+      if (!visible) {
+        closeToggle(el);
+        el.hidden = true;
+        setInlineRolled(false);
+        return;
+      }
+
+      el.hidden = false;
+      setInlineRolled(true);
+      positionToggle(el);
+    };
+
+    const sync = () => {
+      const toc = tocNav();
+      if (toc) seenToc = true;
+
+      captureThreshold();
+
+      const el = ensureToggle();
+      if (!el) return;
+
+      if (!desktop() || (!toc && !seenToc)) {
+        setVisible(false);
+        return;
+      }
+
+      if (!toc) return;
+
+      const past = pastInlineToc();
+      if (past === null) {
+        if (!el.hidden) positionToggle(el);
+        return;
+      }
+
+      setVisible(past);
+    };
+
+    let tick = 0;
+    const onScroll = () => {
+      if (tick) return;
+      tick = requestAnimationFrame(() => {
+        tick = 0;
+        const el = toggleEl();
+        const dy = Math.abs(window.scrollY - lastScrollY);
+        lastScrollY = window.scrollY;
+        if (dy > 8 && el?.dataset.open === "true") closeToggle(el);
+        sync();
+      });
+    };
+
+    const boot = () => {
+      if (!tocNav()) return;
+
+      lastScrollY = window.scrollY;
+      ensureToggle();
+      sync();
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", () => {
+        if (window.scrollY <= 40) showAfterY = null;
+        sync();
+      });
+      requestAnimationFrame(sync);
+      window.addEventListener("load", sync, { once: true });
+      // Remeasure after margin-below-toc footnote cascade settles.
+      setTimeout(sync, 100);
+      setTimeout(sync, 400);
+      setTimeout(sync, 1000);
+
+      if (window.IntersectionObserver) {
+        const toc = tocNav();
+        if (toc) {
+          const io = new IntersectionObserver(() => sync(), {
+            root: null,
+            threshold: [0, 0.01, 1],
+          });
+          io.observe(toc);
+        }
+      }
+
+      if (window.ResizeObserver) {
+        const ro = new ResizeObserver(() => {
+          clearTimeout(ro._t);
+          ro._t = setTimeout(sync, 50);
+        });
+        const toc = tocNav();
+        const sidebar = marginSidebar();
+        const main = document.querySelector("main.content");
+        if (toc) ro.observe(toc);
+        if (sidebar) ro.observe(sidebar);
+        if (main) ro.observe(main);
+      }
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", boot);
+    } else {
+      boot();
+    }
   })();
 </script>
 <script>
@@ -252,6 +619,76 @@ ul.task-list li input[type="checkbox"] {
     if (window.matchMedia) {
       window.matchMedia(MQ).addEventListener("change", pin);
     }
+  })();
+</script>
+<script>
+  // Keep in-page hash targets below the fixed header. Quarto's hashchange
+  // offset looks for header.fixed-top and can fire before native scroll, and
+  // CSS scroll-margin is unreliable on page-columns grid sections.
+  (() => {
+    const OFFSET = 80;
+
+    const targetEl = (hash) => {
+      if (!hash) return null;
+      const id = decodeURIComponent(String(hash).replace(/^#/, ""));
+      if (!id) return null;
+      return (
+        document.getElementById(id) ||
+        document.querySelector(`[data-anchor-id="${CSS.escape(id)}"]`)
+      );
+    };
+
+    const scrollToEl = (el) => {
+      if (!el) return;
+      const top = el.getBoundingClientRect().top + window.scrollY - OFFSET;
+      window.scrollTo({ top: Math.max(0, top), behavior: "auto" });
+    };
+
+    const samePageHash = (link) => {
+      try {
+        const url = new URL(link.href, window.location.href);
+        if (url.pathname !== window.location.pathname) return null;
+        if (url.search !== window.location.search) return null;
+        return url.hash || null;
+      } catch {
+        return null;
+      }
+    };
+
+    document.addEventListener("click", (event) => {
+      const link = event.target.closest("a[href]");
+      if (!link) return;
+      if (link.dataset.bsToggle) return;
+      const hash = samePageHash(link);
+      if (!hash) return;
+      const el = targetEl(hash);
+      if (!el) return;
+      // After native scroll + Quarto's hashchange handler.
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => scrollToEl(el));
+      });
+    });
+
+    const applyHash = () => scrollToEl(targetEl(window.location.hash));
+
+    window.addEventListener("hashchange", () => {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(applyHash);
+      });
+    });
+
+    const onReady = () => {
+      if (!window.location.hash) return;
+      applyHash();
+      setTimeout(applyHash, 250);
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", onReady);
+    } else {
+      onReady();
+    }
+    window.addEventListener("load", onReady);
   })();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">

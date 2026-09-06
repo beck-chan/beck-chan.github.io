@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.11.1">
+<meta name="generator" content="quarto-1.11.3">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -45,14 +45,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-4d77301e1d1e2befcfe34b1f46e19dd6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-7e3ff10c271a6c3d50da2b713bb1a607.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-4d77301e1d1e2befcfe34b1f46e19dd6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-6a5d77c288ae9a328f8b889480dd1f82.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0114024d9f4d5bb209e87a78e65fba1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-6a5d77c288ae9a328f8b889480dd1f82.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-cbeca6f820b0b5b2f9646a02a8d04e38.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-43f18205a5b74f0525a2e41464167e16.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-cbeca6f820b0b5b2f9646a02a8d04e38.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-0062e773160ec7b30614b11e05b439f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-cbdff46b3c532071db5dd428a750ad25.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-0062e773160ec7b30614b11e05b439f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/timeline-0.1.0/timeline.js"></script>
 <link href="../../site_libs/quarto-contrib/timeline-0.1.0/timeline.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/tachyons-4.12.0/tachyons.css" rel="stylesheet">
@@ -211,7 +211,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar docked nav-fixed slimcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar docked nav-fixed slimcontent quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -234,6 +234,7 @@ window.Quarto = {
       for (let i=0; i < toggles.length; i++) {
         const toggle = toggles[i];
         if (toggle) {
+          toggle.setAttribute("aria-checked", alternate ? "true" : "false");
           if (alternate) {
             toggle.classList.add("alternate");
           } else {
@@ -385,11 +386,15 @@ window.Quarto = {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../samples/content-engineering/index.html"> 
+<span class="menu-text">Content Engineering</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link active" href="../../samples/technical-writing/index.html" aria-current="page"> 
 <span class="menu-text">Technical Writing</span></a>
@@ -398,6 +403,21 @@ window.Quarto = {
     <a class="nav-link" href="../../samples/copywriting/index.html"> 
 <span class="menu-text">Copywriting</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-all-samples" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">All Samples</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-all-samples">    
+        <li>
+    <a class="dropdown-item" href="../../samples/index.html">
+ <span class="dropdown-text">Filter by Criteria</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../samples/organizations/index.html">
+ <span class="dropdown-text">Collated by Organization</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
@@ -406,24 +426,24 @@ window.Quarto = {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://github.com/beck-chan" target="_blank"> 
-<span class="menu-text"><i class="fa-brands fa-github" aria-label="github"></i></span></a>
+<span class="menu-text"><span title="GitHub / beck-chan"><i class="fa-brands fa-github" aria-label="github"></i></span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://linkedin.com/in/beck-chan" target="_blank"> 
-<span class="menu-text"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></span></a>
+<span class="menu-text"><span title="LinkedIn / beck-chan"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="mailto:beckchan.tech@gmail.com" target="_blank"> 
-<span class="menu-text"><i class="fa-solid fa-envelope" aria-label="envelope"></i></span></a>
+<span class="menu-text"><span title="Email / beckchan.tech@gmail.com"><i class="fa-solid fa-envelope" aria-label="envelope"></i></span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../poetry/index.html"> 
-<span class="menu-text"><i class="fa-solid fa-feather" aria-label="feather"></i></span></a>
+<span class="menu-text"><span title="Poetry"><i class="fa-solid fa-feather" aria-label="feather"></i></span></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle Theme"><i class="bi"></i></a>
+  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle Theme" aria-label="Toggle Theme"><i class="bi"></i></button>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -433,7 +453,7 @@ window.Quarto = {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../samples/technical-writing/index.html">Technical Writing</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
@@ -454,12 +474,12 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../samples/technical-writing/validmind/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ValidMind</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+ <span class="menu-text" id="quarto-sidebar-section-1-label">ValidMind</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section: ValidMind">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../samples/technical-writing/validmind/jupyter-notebooks.html" class="sidebar-item-text sidebar-link">
@@ -495,12 +515,12 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../samples/technical-writing/atryum/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Atryum</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+ <span class="menu-text" id="quarto-sidebar-section-2-label">Atryum</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section: Atryum">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../samples/technical-writing/atryum/integrations.html" class="sidebar-item-text sidebar-link">
@@ -524,30 +544,27 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../samples/technical-writing/saasquatch/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">SaaSquatch</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+ <span class="menu-text" id="quarto-sidebar-section-3-label">SaaSquatch</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section: SaaSquatch">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../samples/technical-writing/saasquatch/integrations/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Integrations</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+ <span class="menu-text" id="quarto-sidebar-section-4-label">Integrations</span></a>
+            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-controls="quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section: Integrations">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-4" aria-labelledby="quarto-sidebar-section-4-label" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
- <span class="menu-text">Salesforce</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-controls="quarto-sidebar-section-5" aria-expanded="false">
+ <span class="menu-text" id="quarto-sidebar-section-5-label">Salesforce</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth3 ">  
+      <ul id="quarto-sidebar-section-5" aria-labelledby="quarto-sidebar-section-5-label" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../samples/technical-writing/saasquatch/integrations/sfdc/invocable-methods.html" class="sidebar-item-text sidebar-link">
@@ -566,23 +583,14 @@ window.Quarto = {
  <span class="menu-text">User &amp; Account IDs</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../samples/technical-writing/saasquatch/integrations/sfdc/integration-guide.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Integration Guide</span></a>
-  </div>
-</li>
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
- <span class="menu-text">Other</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-controls="quarto-sidebar-section-6" aria-expanded="false">
+ <span class="menu-text" id="quarto-sidebar-section-6-label">Other</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth3 ">  
+      <ul id="quarto-sidebar-section-6" aria-labelledby="quarto-sidebar-section-6-label" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../samples/technical-writing/saasquatch/integrations/stripe.html" class="sidebar-item-text sidebar-link">
@@ -608,12 +616,12 @@ window.Quarto = {
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../samples/technical-writing/saasquatch/sdk/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">JavaScript SDK</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+ <span class="menu-text" id="quarto-sidebar-section-7-label">JavaScript SDK</span></a>
+            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-controls="quarto-sidebar-section-7" aria-expanded="false" aria-label="Toggle section: JavaScript SDK">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-7" aria-labelledby="quarto-sidebar-section-7-label" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../samples/technical-writing/saasquatch/sdk/key-sjs.html" class="sidebar-item-text sidebar-link">
@@ -637,12 +645,12 @@ window.Quarto = {
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../samples/technical-writing/saasquatch/user-guides/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">User Guides</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+ <span class="menu-text" id="quarto-sidebar-section-8-label">User Guides</span></a>
+            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-controls="quarto-sidebar-section-8" aria-expanded="false" aria-label="Toggle section: User Guides">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-8" aria-labelledby="quarto-sidebar-section-8-label" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../samples/technical-writing/saasquatch/user-guides/sharelinks.html" class="sidebar-item-text sidebar-link">
@@ -676,9 +684,9 @@ window.Quarto = {
   <li><a href="#saasquatch" id="toc-saasquatch" class="nav-link" data-scroll-target="#saasquatch">SaaSquatch</a></li>
   </ul>
 </nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(11)</span></div><div class="category" data-category="QWdlbnRpYyUyME9yY2hlc3RyYXRpb24=">Agentic Orchestration <span class="quarto-category-count">(3)</span></div><div class="category" data-category="QWdlbnRz">Agents <span class="quarto-category-count">(3)</span></div><div class="category" data-category="QUklMjBSaXNr">AI Risk <span class="quarto-category-count">(8)</span></div><div class="category" data-category="QXJ0aWZpY2lhbCUyMEludGVsbGlnZW5jZSUyMChBSSk=">Artificial Intelligence (AI) <span class="quarto-category-count">(8)</span></div><div class="category" data-category="QXRyeXVt">Atryum <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Q29udGVudCUyMEVuYWJsZW1lbnQ=">Content Enablement <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q1JNcw==">CRMs <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RGV2ZWxvcGVyJTIwQ29udGVudA==">Developer Content <span class="quarto-category-count">(2)</span></div><div class="category" data-category="ZUNvbW1lcmNl">eCommerce <span class="quarto-category-count">(3)</span></div><div class="category" data-category="RmVhdHVyZSUyMERvY3VtZW50YXRpb24=">Feature Documentation <span class="quarto-category-count">(7)</span></div><div class="category" data-category="SW50ZWdyYXRpb25z">Integrations <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SmF2YVNjcmlwdCUyMFNESw==">JavaScript SDK <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SnVweXRlciUyME5vdGVib29rcw==">Jupyter Notebooks <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscw==">Large Language Models <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWFya2V0aW5nJTIwVGVjaG5vbG9neQ==">Marketing Technology <span class="quarto-category-count">(3)</span></div><div class="category" data-category="TW9kZWwlMjBDb250ZXh0JTIwUHJvdG9jb2wlMjBTZXJ2ZXJz">Model Context Protocol Servers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TW9kZWwlMjBSaXNrJTIwTWFuYWdlbWVudA==">Model Risk Management <span class="quarto-category-count">(5)</span></div><div class="category" data-category="UGF5bWVudCUyMFByb3ZpZGVycw==">Payment Providers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHl0aG9uJTIwTGlicmFyeQ==">Python Library <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UXVpY2tzdGFydA==">Quickstart <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVjdXJseQ==">Recurly <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVmZXJyYWxzJTIwJTI2JTIwQXR0cmlidXRpb25z">Referrals &amp; Attributions <span class="quarto-category-count">(3)</span></div><div class="category" data-category="UmV3YXJkJTIwUHJvdmlkZXJz">Reward Providers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmlzayUyMEdvdmVybmFuY2U=">Risk Governance <span class="quarto-category-count">(8)</span></div><div class="category" data-category="U2FhU3F1YXRjaA==">SaaSquatch <span class="quarto-category-count">(3)</span></div><div class="category" data-category="U2FsZXNmb3JjZQ==">Salesforce <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U29mdHdhcmUlMjBhcyUyMGElMjBTZXJ2aWNl">Software as a Service <span class="quarto-category-count">(11)</span></div><div class="category" data-category="U3RyaXBl">Stripe <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VGFuZ28lMjBDYXJk">Tango Card <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VHJhaW5pbmclMjAlMjYlMjBPbmJvYXJkaW5n">Training &amp; Onboarding <span class="quarto-category-count">(2)</span></div><div class="category" data-category="VXNlJTIwQ2FzZSUyMFR1dG9yaWFscw==">Use Case Tutorials <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VXNlciUyMEd1aWRlcw==">User Guides <span class="quarto-category-count">(9)</span></div><div class="category" data-category="VmFsaWRNaW5k">ValidMind <span class="quarto-category-count">(8)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(11)</span></div><div class="category" data-category="QWdlbnQlMjBTa2lsbHM=">Agent Skills <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q0klMkZDRCUyMFdvcmtmbG93cw==">CI/CD Workflows <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29udGVudCUyMEVuYWJsZW1lbnQ=">Content Enablement <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q3Vyc29yJTIwQ29kZQ==">Cursor Code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RGV2ZWxvcGVyJTIwQ29udGVudA==">Developer Content <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZUNvbW1lcmNl">eCommerce <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RmVhdHVyZSUyMERvY3VtZW50YXRpb24=">Feature Documentation <span class="quarto-category-count">(3)</span></div><div class="category" data-category="SW50ZWdyYXRpb25z">Integrations <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SnVweXRlciUyME5vdGVib29rcw==">Jupyter Notebooks <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscw==">Large Language Models <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TWFya2V0aW5nJTIwVGVjaG5vbG9neQ==">Marketing Technology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TW9kZWwlMjBDb250ZXh0JTIwUHJvdG9jb2wlMjBTZXJ2ZXJz">Model Context Protocol Servers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UGF5bWVudCUyMFByb3ZpZGVycw==">Payment Providers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHl0aG9uJTIwTGlicmFyeQ==">Python Library <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UmVjdXJseQ==">Recurly <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVmZXJyYWxzJTIwJTI2JTIwQXR0cmlidXRpb25z">Referrals &amp; Attributions <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVsZWFzZSUyME5vdGVz">Release Notes <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmV3YXJkJTIwUHJvdmlkZXJz">Reward Providers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U2FhU3F1YXRjaA==">SaaSquatch <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U29mdHdhcmUlMjBhcyUyMGElMjBTZXJ2aWNl">Software as a Service <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U3RyaXBl">Stripe <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VGFuZ28lMjBDYXJk">Tango Card <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VHJhaW5pbmclMjAlMjYlMjBPbmJvYXJkaW5n">Training &amp; Onboarding <span class="quarto-category-count">(3)</span></div><div class="category" data-category="VXNlJTIwQ2FzZSUyMFR1dG9yaWFscw==">Use Case Tutorials <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VXNlciUyMEd1aWRlcw==">User Guides <span class="quarto-category-count">(5)</span></div></div></div>
 <!-- main -->
-<main class="content page-columns page-full column-body" id="quarto-document-content">
+<main class="content page-columns page-full column-body" id="quarto-document-content" tabindex="-1">
 
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -724,7 +732,7 @@ window.Quarto = {
 </div>
 </div></div><div id="listing-validmind-technical" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ1VzZSUyMENhc2UlMjBUdXRvcmlhbHMlMkNGZWF0dXJlJTIwRG9jdW1lbnRhdGlvbiUyQ1VzZXIlMjBHdWlkZXMlMkNKdXB5dGVyJTIwTm90ZWJvb2tzJTJDUHl0aG9uJTIwTGlicmFyeSUyQ0FydGlmaWNpYWwlMjBJbnRlbGxpZ2VuY2UlMjAoQUkpJTJDQUklMjBSaXNrJTJDTW9kZWwlMjBSaXNrJTIwTWFuYWdlbWVudCUyQ1Jpc2slMjBHb3Zlcm5hbmNlJTJDU29mdHdhcmUlMjBhcyUyMGElMjBTZXJ2aWNlJTJDVmFsaWRNaW5k" data-listing-file-modified-sort="1787978198156" data-listing-reading-time-sort="1" data-listing-word-count-sort="43">
+<div class="g-col-1" data-index="0" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ1VzZSUyMENhc2UlMjBUdXRvcmlhbHMlMkNGZWF0dXJlJTIwRG9jdW1lbnRhdGlvbiUyQ1VzZXIlMjBHdWlkZXMlMkNKdXB5dGVyJTIwTm90ZWJvb2tzJTJDUHl0aG9uJTIwTGlicmFyeQ==" data-listing-file-modified-sort="1788689161067" data-listing-reading-time-sort="1" data-listing-word-count-sort="43">
 <a href="../../samples/technical-writing/validmind/jupyter-notebooks.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -740,7 +748,7 @@ Jupyter Notebook use case demonstrations written for ValidMind’s Python librar
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="VXNlciUyMEd1aWRlcyUyQ1RyYWluaW5nJTIwJTI2JTIwT25ib2FyZGluZyUyQ0FydGlmaWNpYWwlMjBJbnRlbGxpZ2VuY2UlMjAoQUkpJTJDQUklMjBSaXNrJTJDTW9kZWwlMjBSaXNrJTIwTWFuYWdlbWVudCUyQ1Jpc2slMjBHb3Zlcm5hbmNlJTJDU29mdHdhcmUlMjBhcyUyMGElMjBTZXJ2aWNlJTJDVmFsaWRNaW5k" data-listing-file-modified-sort="1787978198156" data-listing-reading-time-sort="1" data-listing-word-count-sort="57">
+<div class="g-col-1" data-index="1" data-categories="VXNlciUyMEd1aWRlcyUyQ1RyYWluaW5nJTIwJTI2JTIwT25ib2FyZGluZw==" data-listing-file-modified-sort="1788689161067" data-listing-reading-time-sort="1" data-listing-word-count-sort="55">
 <a href="../../samples/technical-writing/validmind/training.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -756,7 +764,7 @@ Comprehensive interactive training curriculums developed to onboard users onto V
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVzJTJDQXJ0aWZpY2lhbCUyMEludGVsbGlnZW5jZSUyMChBSSklMkNBSSUyMFJpc2slMkNNb2RlbCUyMFJpc2slMjBNYW5hZ2VtZW50JTJDUmlzayUyMEdvdmVybmFuY2UlMkNTb2Z0d2FyZSUyMGFzJTIwYSUyMFNlcnZpY2UlMkNWYWxpZE1pbmQ=" data-listing-file-modified-sort="1787978198156" data-listing-reading-time-sort="1" data-listing-word-count-sort="56">
+<div class="g-col-1" data-index="2" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVz" data-listing-file-modified-sort="1788689161067" data-listing-reading-time-sort="1" data-listing-word-count-sort="58">
 <a href="../../samples/technical-writing/validmind/user-guides.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -772,7 +780,7 @@ User guides produced as documentation and reference for ValidMind’s core featu
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="VXNlciUyMEd1aWRlcyUyQ1RyYWluaW5nJTIwJTI2JTIwT25ib2FyZGluZyUyQ0FydGlmaWNpYWwlMjBJbnRlbGxpZ2VuY2UlMjAoQUkpJTJDQUklMjBSaXNrJTJDTW9kZWwlMjBSaXNrJTIwTWFuYWdlbWVudCUyQ1Jpc2slMjBHb3Zlcm5hbmNlJTJDU29mdHdhcmUlMjBhcyUyMGElMjBTZXJ2aWNlJTJDVmFsaWRNaW5k" data-listing-file-modified-sort="1787978198156" data-listing-reading-time-sort="1" data-listing-word-count-sort="59">
+<div class="g-col-1" data-index="3" data-categories="VXNlciUyMEd1aWRlcyUyQ1RyYWluaW5nJTIwJTI2JTIwT25ib2FyZGluZw==" data-listing-file-modified-sort="1788689161067" data-listing-reading-time-sort="1" data-listing-word-count-sort="57">
 <a href="../../samples/technical-writing/validmind/quickstarts.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -788,7 +796,7 @@ Intuitive quickstart guides developed to onboard users onto ValidMind.
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="Q29udGVudCUyMEVuYWJsZW1lbnQlMkNBcnRpZmljaWFsJTIwSW50ZWxsaWdlbmNlJTIwKEFJKSUyQ0FJJTIwUmlzayUyQ01vZGVsJTIwUmlzayUyME1hbmFnZW1lbnQlMkNSaXNrJTIwR292ZXJuYW5jZSUyQ1NvZnR3YXJlJTIwYXMlMjBhJTIwU2VydmljZSUyQ1ZhbGlkTWluZA==" data-listing-file-modified-sort="1787978198156" data-listing-reading-time-sort="1" data-listing-word-count-sort="36">
+<div class="g-col-1" data-index="4" data-categories="UHl0aG9uJTIwTGlicmFyeSUyQ0NvbnRlbnQlMjBFbmFibGVtZW50JTJDUmVsZWFzZSUyME5vdGVzJTJDQ3Vyc29yJTIwQ29kZSUyQ0FnZW50JTIwU2tpbGxzJTJDTGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscyUyQ0NJJTJGQ0QlMjBXb3JrZmxvd3M=" data-listing-file-modified-sort="1788689161067" data-listing-reading-time-sort="1" data-listing-word-count-sort="70">
 <a href="../../samples/technical-writing/validmind/enablement.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -809,11 +817,11 @@ Content produced to enable other creators to contribute to ValidMind’s open-so
 </div>
 <section id="atryum" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="atryum">Atryum</h3>
-<p><a href="https://atryum.org/" target="_blank">Atryum</a> is an open-source agentic orchestration tool developed by ValidMind. As ValidMind’s sole <strong>Senior Technical Writer</strong>, I was responsible for almost all of the documentation for Atryum.</p>
+<p>Atryum is an open-source agentic orchestration tool developed by ValidMind. As ValidMind’s sole <strong>Senior Technical Writer</strong>, I was responsible for almost all of the documentation for Atryum.</p>
 <p>I authored approximately 95% of the content for Atryum,<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> including the samples selected below:</p>
-<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;Citation: <a href="https://github.com/validbeck/atryum/tree/main/website" target="_blank"><i class="fa-brands fa-github" aria-label="github"></i> <code>validmind/atryum/website</code> (documentation) archive</a></p></div></div><div id="listing-atryum-technical" class="quarto-listing quarto-listing-container-grid">
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;Citation: <a href="https://github.com/validbeck/atryum/tree/main/website" target="_blank"><i class="fa-brands fa-github" aria-label="github"></i> Archive of <code>validmind/atryum/website</code> (documentation)</a></p></div></div><div id="listing-atryum-technical" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVzJTJDSW50ZWdyYXRpb25zJTJDQWdlbnRpYyUyME9yY2hlc3RyYXRpb24lMkNBcnRpZmljaWFsJTIwSW50ZWxsaWdlbmNlJTIwKEFJKSUyQ0FJJTIwUmlzayUyQ0FnZW50cyUyQ0xhcmdlJTIwTGFuZ3VhZ2UlMjBNb2RlbHMlMkNNb2RlbCUyMENvbnRleHQlMjBQcm90b2NvbCUyMFNlcnZlcnMlMkNSaXNrJTIwR292ZXJuYW5jZSUyQ1NvZnR3YXJlJTIwYXMlMjBhJTIwU2VydmljZSUyQ0F0cnl1bSUyQ1ZhbGlkTWluZA==" data-listing-file-modified-sort="1787978198151" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
+<div class="g-col-1" data-index="0" data-categories="SW50ZWdyYXRpb25zJTJDTGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscyUyQ01vZGVsJTIwQ29udGV4dCUyMFByb3RvY29sJTIwU2VydmVycw==" data-listing-file-modified-sort="1788689161062" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
 <a href="../../samples/technical-writing/atryum/integrations.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -829,7 +837,7 @@ Feature Documentation
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVzJTJDQWdlbnRpYyUyME9yY2hlc3RyYXRpb24lMkNBcnRpZmljaWFsJTIwSW50ZWxsaWdlbmNlJTIwKEFJKSUyQ0FJJTIwUmlzayUyQ0FnZW50cyUyQ1Jpc2slMjBHb3Zlcm5hbmNlJTJDU29mdHdhcmUlMjBhcyUyMGElMjBTZXJ2aWNlJTJDQXRyeXVtJTJDVmFsaWRNaW5k" data-listing-file-modified-sort="1787978198151" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1788689161062" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
 <a href="../../samples/technical-writing/atryum/user-guides.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -845,7 +853,7 @@ Feature Documentation
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVzJTJDUXVpY2tzdGFydCUyQ0FnZW50aWMlMjBPcmNoZXN0cmF0aW9uJTJDQXJ0aWZpY2lhbCUyMEludGVsbGlnZW5jZSUyMChBSSklMkNBSSUyMFJpc2slMkNBZ2VudHMlMkNSaXNrJTIwR292ZXJuYW5jZSUyQ1NvZnR3YXJlJTIwYXMlMjBhJTIwU2VydmljZSUyQ0F0cnl1bSUyQ1ZhbGlkTWluZA==" data-listing-file-modified-sort="1787978198151" data-listing-reading-time-sort="1" data-listing-word-count-sort="18">
+<div class="g-col-1" data-index="2" data-categories="VHJhaW5pbmclMjAlMjYlMjBPbmJvYXJkaW5n" data-listing-file-modified-sort="1788689161062" data-listing-reading-time-sort="1" data-listing-word-count-sort="18">
 <a href="../../samples/technical-writing/atryum/quickstart.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -864,8 +872,21 @@ Tutorial
 </div>
 <div class="listing-no-matching d-none">No Matches Found</div>
 </div>
-<!-- ::: {.callout}
-You can learn more about my involvement with ValidMind, Atryum, and the impact I had on content and content architecture under [Content Engineering](/samples/content-engineering/index.qmd)
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>You can learn more about my involvement with ValidMind, Atryum, and the impact I had on content and content architecture under <a href="../../samples/content-engineering/index.html">Content Engineering</a>.</p>
+</div>
+</div>
+</div>
+<!-- ## Personal
+
+wip
+
+:::{#personal-technical}
 ::: -->
 </section>
 </section>
@@ -875,7 +896,7 @@ You can learn more about my involvement with ValidMind, Atryum, and the impact I
 <p>While the following samples are quite dated before I refined my voice in an official technical writing role, I’ve included them for completion and progression value:</p>
 <div id="listing-saasquatch-technical" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVzJTJDSW50ZWdyYXRpb25zJTJDU2FsZXNmb3JjZSUyQ0NSTXMlMkNTdHJpcGUlMkNSZWN1cmx5JTJDVGFuZ28lMjBDYXJkJTJDUGF5bWVudCUyMFByb3ZpZGVycyUyQ1Jld2FyZCUyMFByb3ZpZGVycyUyQ1JlZmVycmFscyUyMCUyNiUyMEF0dHJpYnV0aW9ucyUyQ2VDb21tZXJjZSUyQ1NvZnR3YXJlJTIwYXMlMjBhJTIwU2VydmljZSUyQ01hcmtldGluZyUyMFRlY2hub2xvZ3klMkNTYWFTcXVhdGNo" data-listing-file-modified-sort="1787978198152" data-listing-reading-time-sort="1" data-listing-word-count-sort="11">
+<div class="g-col-1" data-index="0" data-categories="U3RyaXBlJTJDUmVjdXJseSUyQ1RhbmdvJTIwQ2FyZCUyQ1BheW1lbnQlMjBQcm92aWRlcnMlMkNSZXdhcmQlMjBQcm92aWRlcnM=" data-listing-file-modified-sort="1788689161062" data-listing-reading-time-sort="1" data-listing-word-count-sort="11">
 <a href="../../samples/technical-writing/saasquatch/integrations/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -891,7 +912,7 @@ During my tenure at SaaSquatch, I became the company Subject Matter Expert for m
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ0phdmFTY3JpcHQlMjBTREslMkNSZWZlcnJhbHMlMjAlMjYlMjBBdHRyaWJ1dGlvbnMlMkNlQ29tbWVyY2UlMkNTb2Z0d2FyZSUyMGFzJTIwYSUyMFNlcnZpY2UlMkNNYXJrZXRpbmclMjBUZWNobm9sb2d5JTJDU2FhU3F1YXRjaA==" data-listing-file-modified-sort="1787978198153" data-listing-reading-time-sort="1" data-listing-word-count-sort="4">
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1788689161065" data-listing-reading-time-sort="1" data-listing-word-count-sort="4">
 <a href="../../samples/technical-writing/saasquatch/sdk/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -907,7 +928,7 @@ As a <strong>Solutions Architect</strong>, I acted as the primary technical cont
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVzJTJDUmVmZXJyYWxzJTIwJTI2JTIwQXR0cmlidXRpb25zJTJDZUNvbW1lcmNlJTJDU29mdHdhcmUlMjBhcyUyMGElMjBTZXJ2aWNlJTJDTWFya2V0aW5nJTIwVGVjaG5vbG9neSUyQ1NhYVNxdWF0Y2g=" data-listing-file-modified-sort="1787978198155" data-listing-reading-time-sort="1" data-listing-word-count-sort="4">
+<div class="g-col-1" data-index="2" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVzJTJDUmVmZXJyYWxzJTIwJTI2JTIwQXR0cmlidXRpb25zJTJDZUNvbW1lcmNlJTJDU29mdHdhcmUlMjBhcyUyMGElMjBTZXJ2aWNlJTJDTWFya2V0aW5nJTIwVGVjaG5vbG9neSUyQ1NhYVNxdWF0Y2g=" data-listing-file-modified-sort="1788689161066" data-listing-reading-time-sort="1" data-listing-word-count-sort="4">
 <a href="../../samples/technical-writing/saasquatch/user-guides/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -967,6 +988,8 @@ While I served no formal technical writing role while at SaaSquatch, a core face
       let bottom = 0;
       for (const child of sidebar.children) {
         if (child.classList.contains("quarto-sidebar-toggle")) continue;
+        if (child.id === "portfolio-toc-toggle") continue;
+        if (child.id === "portfolio-toc-sentinel") continue;
         if (window.getComputedStyle(child).display === "none") continue;
         const rect = child.getBoundingClientRect();
         if (rect.height === 0) continue;
@@ -1016,7 +1039,59 @@ While I served no formal technical writing role while at SaaSquatch, a core face
       }
     };
 
+    // Quarto leaves margin footnotes inside tab panes and marks the
+    // tabset with page-columns/page-full, nesting a full page grid in
+    // the body column. Move those notes into the sibling
+    // .tabset-margin-container so the tabset can lay out normally and
+    // Quarto's shown.bs.tab handler can toggle note visibility.
+    const hoistTabsetMargins = () => {
+      document.querySelectorAll(".panel-tabset").forEach((tabset) => {
+        const margins = [
+          ...tabset.querySelectorAll(".column-margin.column-container"),
+        ];
+        if (!margins.length) return;
+
+        let container = tabset.previousElementSibling;
+        if (!container?.classList.contains("tabset-margin-container")) {
+          container = document.createElement("div");
+          container.className = "tabset-margin-container";
+          tabset.parentElement?.insertBefore(container, tabset);
+        }
+
+        // Sit in the parent section's page grid as the margin column.
+        container.classList.add(
+          "column-margin",
+          "column-container",
+          "no-row-height"
+        );
+
+        margins.forEach((margin) => {
+          const pane = margin.closest(".tab-pane");
+          const tabBtnId =
+            pane?.getAttribute("aria-labelledby") ||
+            (pane?.id ? `${pane.id}-tab` : null);
+          const wrap = document.createElement("div");
+          wrap.className = "tabset-margin-content";
+          if (tabBtnId) wrap.classList.add(`${tabBtnId}-margin-content`);
+          if (!pane?.classList.contains("active")) {
+            wrap.classList.add("collapse");
+          }
+          while (margin.firstChild) wrap.appendChild(margin.firstChild);
+          container.appendChild(wrap);
+          margin.remove();
+        });
+
+        const strip = (el) => {
+          el.classList.remove("page-columns", "page-full");
+        };
+        strip(tabset);
+        tabset.querySelectorAll(".page-columns, .page-full").forEach(strip);
+      });
+    };
+
     const layoutMarginBelowToc = () => {
+      hoistTabsetMargins();
+
       const marginChildren = document.querySelectorAll(MARGIN_SEL);
       if (!marginChildren.length) {
         expandContentForMargins(0);
@@ -1063,6 +1138,10 @@ While I served no formal technical writing role while at SaaSquatch, a core face
       schedule();
       // Failsafe: never leave footnotes hidden if layout is delayed.
       setTimeout(reveal, 1500);
+      // Re-cascade when Quarto toggles tabset margin note visibility.
+      window.document.querySelectorAll('.panel-tabset a[data-bs-toggle="tab"]').forEach((tab) => {
+        tab.addEventListener("shown.bs.tab", schedule);
+      });
       window.document.querySelectorAll(".column-margin img").forEach((img) => {
         if (!img.complete) img.addEventListener("load", schedule, { once: true });
       });
@@ -1077,6 +1156,315 @@ While I served no formal technical writing role while at SaaSquatch, a core face
         if (margin) ro.observe(margin);
       }
     });
+  })();
+</script>
+<script>
+  // Fixed TOC dropdown once the in-flow nav#TOC scrolls under the navbar.
+  // Uses a scrollY threshold captured at page top so detection still works
+  // if the margin sidebar goes sticky, and ignores brief TOC height=0
+  // blips during margin-below-toc footnote layout.
+  (() => {
+    const MQ = "(min-width: 992px)";
+    const TOGGLE_ID = "portfolio-toc-toggle";
+    const NAVBAR_FALLBACK = 75;
+    const ROLLED_CLASS = "portfolio-toc-rolled-up";
+
+    let lastScrollY = 0;
+    let seenToc = false;
+    // scrollY at which the TOC top meets the navbar — captured at rest only.
+    let showAfterY = null;
+
+    const marginSidebar = () =>
+      document.getElementById("quarto-margin-sidebar");
+    const tocNav = () => document.getElementById("TOC");
+    const toggleEl = () => document.getElementById(TOGGLE_ID);
+
+    const desktop = () =>
+      !!(window.matchMedia && window.matchMedia(MQ).matches);
+
+    const navbarOffset = () => {
+      const nav =
+        document.querySelector("#quarto-header nav.navbar") ||
+        document.querySelector("#quarto-header") ||
+        document.querySelector("nav.navbar");
+      if (!nav) return NAVBAR_FALLBACK;
+      const bottom = nav.getBoundingClientRect().bottom;
+      return bottom > 0 ? Math.ceil(bottom) : NAVBAR_FALLBACK;
+    };
+
+    const titleText = () => {
+      const toc = tocNav();
+      const heading = toc?.querySelector("#toc-title, h2, h3");
+      return (heading?.textContent || "Table of Contents").trim();
+    };
+
+    // Only capture near the top so sticky/visual offsets can't corrupt it.
+    const captureThreshold = () => {
+      const toc = tocNav();
+      if (!toc || toc.offsetHeight <= 0) return;
+      if (window.scrollY > 40) return;
+      const docTop = toc.getBoundingClientRect().top + window.scrollY;
+      showAfterY = Math.max(0, docTop - navbarOffset());
+    };
+
+    // true / false / null (layout glitch — keep current visibility)
+    const pastInlineToc = () => {
+      if (!desktop()) return false;
+      const toc = tocNav();
+      if (!toc && !seenToc) return false;
+      if (!toc) return null;
+
+      if (showAfterY != null) {
+        return window.scrollY >= showAfterY;
+      }
+
+      // Threshold not ready yet (footnote layout still settling).
+      if (toc.offsetHeight <= 0) return null;
+      return toc.getBoundingClientRect().top <= navbarOffset();
+    };
+
+    const positionToggle = (el) => {
+      if (!el) return;
+      const sidebar = marginSidebar();
+      const toc = tocNav();
+      // Margin column is the stable anchor (TOC may be rolled up / off-screen).
+      let left = null;
+      let width = null;
+      if (sidebar && sidebar.offsetWidth > 0) {
+        const sb = sidebar.getBoundingClientRect();
+        left = sb.left;
+        width = sb.width;
+      } else if (toc) {
+        const tr = toc.getBoundingClientRect();
+        if (tr.width > 0) {
+          left = tr.left;
+          width = tr.width;
+        }
+      }
+      if (!(width > 0) || left == null) return;
+      el.style.left = `${Math.round(left)}px`;
+      el.style.width = `${Math.round(width)}px`;
+      el.style.top = `${navbarOffset()}px`;
+    };
+
+    const setInlineRolled = (rolled) => {
+      const toc = tocNav();
+      if (!toc) return;
+      toc.classList.toggle(ROLLED_CLASS, rolled);
+    };
+
+    const closeToggle = (el) => {
+      if (!el) return;
+      el.classList.remove("expanded");
+      const contents = el.querySelector(".portfolio-toc-toggle-contents");
+      if (contents) contents.style.height = "0px";
+      el.dataset.open = "false";
+      const btn = el.querySelector(".portfolio-toc-toggle-title");
+      if (btn) btn.setAttribute("aria-expanded", "false");
+    };
+
+    const fillContents = (el) => {
+      const toc = tocNav();
+      const contents = el.querySelector(".portfolio-toc-toggle-contents");
+      if (!toc || !contents) return;
+
+      const clone = toc.cloneNode(true);
+      clone.removeAttribute("id");
+      clone.classList.remove(ROLLED_CLASS);
+      clone.classList.add("portfolio-toc-panel");
+      clone.querySelectorAll("[id]").forEach((node) => {
+        node.removeAttribute("id");
+      });
+
+      const heading = clone.querySelector("h2, h3");
+      if (heading) {
+        heading.classList.add("portfolio-toc-panel-heading");
+        const icon = document.createElement("i");
+        icon.className = "portfolio-toc-toggle-icon bi bi-caret-up-fill";
+        icon.setAttribute("aria-hidden", "true");
+        heading.append(icon);
+        heading.setAttribute("role", "button");
+        heading.setAttribute("tabindex", "0");
+        heading.setAttribute("aria-expanded", "true");
+        const collapse = (event) => {
+          event.preventDefault();
+          closeToggle(el);
+        };
+        heading.addEventListener("click", collapse);
+        heading.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") collapse(event);
+        });
+      }
+
+      contents.replaceChildren(clone);
+      contents.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener("click", () => closeToggle(el));
+      });
+    };
+
+    const openToggle = (el) => {
+      fillContents(el);
+      el.classList.add("expanded");
+      const contents = el.querySelector(".portfolio-toc-toggle-contents");
+      if (contents) {
+        contents.style.height = null;
+        contents.style.maxHeight = `calc(100vh - ${navbarOffset() + 24}px)`;
+      }
+      el.dataset.open = "true";
+      const btn = el.querySelector(".portfolio-toc-toggle-title");
+      if (btn) btn.setAttribute("aria-expanded", "true");
+    };
+
+    const ensureToggle = () => {
+      let el = toggleEl();
+      if (el) return el;
+      if (!tocNav()) return null;
+
+      el = document.createElement("div");
+      el.id = TOGGLE_ID;
+      el.className = "portfolio-toc-toggle zindex-over-content";
+      el.hidden = true;
+      el.dataset.open = "false";
+      el.setAttribute("role", "navigation");
+      el.setAttribute("aria-label", titleText());
+
+      const titleBtn = document.createElement("button");
+      titleBtn.type = "button";
+      titleBtn.className = "portfolio-toc-toggle-title";
+      titleBtn.setAttribute("aria-expanded", "false");
+      titleBtn.setAttribute("aria-controls", `${TOGGLE_ID}-contents`);
+
+      const label = document.createElement("span");
+      label.className = "portfolio-toc-toggle-label";
+      label.textContent = titleText();
+
+      const icon = document.createElement("i");
+      icon.className = "portfolio-toc-toggle-icon bi bi-caret-down-fill";
+      icon.setAttribute("aria-hidden", "true");
+
+      titleBtn.append(label, icon);
+
+      const contents = document.createElement("div");
+      contents.id = `${TOGGLE_ID}-contents`;
+      contents.className = "portfolio-toc-toggle-contents";
+      contents.style.height = "0px";
+
+      el.append(titleBtn, contents);
+      document.body.append(el);
+
+      titleBtn.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        if (el.dataset.open === "true") closeToggle(el);
+        else openToggle(el);
+      });
+
+      return el;
+    };
+
+    const setVisible = (visible) => {
+      const el = ensureToggle();
+      if (!el) return;
+
+      if (!visible) {
+        closeToggle(el);
+        el.hidden = true;
+        setInlineRolled(false);
+        return;
+      }
+
+      el.hidden = false;
+      setInlineRolled(true);
+      positionToggle(el);
+    };
+
+    const sync = () => {
+      const toc = tocNav();
+      if (toc) seenToc = true;
+
+      captureThreshold();
+
+      const el = ensureToggle();
+      if (!el) return;
+
+      if (!desktop() || (!toc && !seenToc)) {
+        setVisible(false);
+        return;
+      }
+
+      if (!toc) return;
+
+      const past = pastInlineToc();
+      if (past === null) {
+        if (!el.hidden) positionToggle(el);
+        return;
+      }
+
+      setVisible(past);
+    };
+
+    let tick = 0;
+    const onScroll = () => {
+      if (tick) return;
+      tick = requestAnimationFrame(() => {
+        tick = 0;
+        const el = toggleEl();
+        const dy = Math.abs(window.scrollY - lastScrollY);
+        lastScrollY = window.scrollY;
+        if (dy > 8 && el?.dataset.open === "true") closeToggle(el);
+        sync();
+      });
+    };
+
+    const boot = () => {
+      if (!tocNav()) return;
+
+      lastScrollY = window.scrollY;
+      ensureToggle();
+      sync();
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", () => {
+        if (window.scrollY <= 40) showAfterY = null;
+        sync();
+      });
+      requestAnimationFrame(sync);
+      window.addEventListener("load", sync, { once: true });
+      // Remeasure after margin-below-toc footnote cascade settles.
+      setTimeout(sync, 100);
+      setTimeout(sync, 400);
+      setTimeout(sync, 1000);
+
+      if (window.IntersectionObserver) {
+        const toc = tocNav();
+        if (toc) {
+          const io = new IntersectionObserver(() => sync(), {
+            root: null,
+            threshold: [0, 0.01, 1],
+          });
+          io.observe(toc);
+        }
+      }
+
+      if (window.ResizeObserver) {
+        const ro = new ResizeObserver(() => {
+          clearTimeout(ro._t);
+          ro._t = setTimeout(sync, 50);
+        });
+        const toc = tocNav();
+        const sidebar = marginSidebar();
+        const main = document.querySelector("main.content");
+        if (toc) ro.observe(toc);
+        if (sidebar) ro.observe(sidebar);
+        if (main) ro.observe(main);
+      }
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", boot);
+    } else {
+      boot();
+    }
   })();
 </script>
 <script>
@@ -1123,19 +1511,124 @@ While I served no formal technical writing role while at SaaSquatch, a core face
     }
   })();
 </script>
+<script>
+  // Keep in-page hash targets below the fixed header. Quarto's hashchange
+  // offset looks for header.fixed-top and can fire before native scroll, and
+  // CSS scroll-margin is unreliable on page-columns grid sections.
+  (() => {
+    const OFFSET = 80;
+
+    const targetEl = (hash) => {
+      if (!hash) return null;
+      const id = decodeURIComponent(String(hash).replace(/^#/, ""));
+      if (!id) return null;
+      return (
+        document.getElementById(id) ||
+        document.querySelector(`[data-anchor-id="${CSS.escape(id)}"]`)
+      );
+    };
+
+    const scrollToEl = (el) => {
+      if (!el) return;
+      const top = el.getBoundingClientRect().top + window.scrollY - OFFSET;
+      window.scrollTo({ top: Math.max(0, top), behavior: "auto" });
+    };
+
+    const samePageHash = (link) => {
+      try {
+        const url = new URL(link.href, window.location.href);
+        if (url.pathname !== window.location.pathname) return null;
+        if (url.search !== window.location.search) return null;
+        return url.hash || null;
+      } catch {
+        return null;
+      }
+    };
+
+    document.addEventListener("click", (event) => {
+      const link = event.target.closest("a[href]");
+      if (!link) return;
+      if (link.dataset.bsToggle) return;
+      const hash = samePageHash(link);
+      if (!hash) return;
+      const el = targetEl(hash);
+      if (!el) return;
+      // After native scroll + Quarto's hashchange handler.
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => scrollToEl(el));
+      });
+    });
+
+    const applyHash = () => scrollToEl(targetEl(window.location.hash));
+
+    window.addEventListener("hashchange", () => {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(applyHash);
+      });
+    });
+
+    const onReady = () => {
+      if (!window.location.hash) return;
+      applyHash();
+      setTimeout(applyHash, 250);
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", onReady);
+    } else {
+      onReady();
+    }
+    window.addEventListener("load", onReady);
+  })();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
     if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-      const a = window.document.createElement('a');
-      a.classList.add('top-right');
-      a.classList.add('quarto-color-scheme-toggle');
-      a.href = "";
-      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const toggle = window.document.createElement('button');
+      toggle.type = "button";
+      toggle.setAttribute("role", "switch");
+      toggle.setAttribute("aria-checked", "false");
+      toggle.classList.add('top-right');
+      toggle.classList.add('quarto-color-scheme-toggle');
+      toggle.setAttribute("aria-label", "Toggle Theme");
+      toggle.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
       const i = window.document.createElement("i");
       i.classList.add('bi');
-      a.appendChild(i);
-      window.document.body.appendChild(a);
+      toggle.appendChild(i);
+      // Put the toggle in a landmark of its own, so that landmark navigation
+      // can reach it.
+      //
+      // The container is always a fresh direct child of body, and the toggle is
+      // never moved into page furniture that the theme or the author controls.
+      // The toggle is positioned against the page, so any ancestor that
+      // establishes a containing block captures it: a positioned element or a
+      // grid for position: absolute, and transform, filter, will-change or
+      // contain for position: fixed. A direct child of body has none of these
+      // to inherit, and the shift when one appears is silent and visual.
+      //
+      // ARIA says a document should have at most one banner, and axe reports a
+      // duplicate whether or not the banners carry distinct labels. So use a
+      // header when the page has no banner yet, and a named region otherwise.
+      //
+      // A header is a banner wherever it sits, unless it is inside sectioning
+      // content, so this cannot just look at the children of body: a custom
+      // page layout wraps the title block header in a plain div. An explicit
+      // role="banner" always counts.
+      const sectioning = 'article, aside, main, nav, section, [role="article"], [role="complementary"], [role="main"], [role="navigation"], [role="region"]';
+      const hasBanner = Array.from(
+        window.document.querySelectorAll('header:not([role]), [role="banner"]')
+      ).some(function(el) {
+        return el.hasAttribute("role") || el.closest(sectioning) === null;
+      });
+      const container = window.document.createElement(hasBanner ? "div" : "header");
+      if (hasBanner) {
+        container.setAttribute("role", "region");
+        container.setAttribute("aria-label", "Toggle Theme");
+      }
+      container.classList.add('quarto-color-scheme-toggle-container');
+      container.appendChild(toggle);
+      window.document.body.appendChild(container);
     }
     setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";

@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.3">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Manual monthly releases generation – Portfolio</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../../">
+<link href="../../../../../samples/content-engineering/validmind/release-notes/monthly/highlights.html" rel="next">
+<link href="../../../../../samples/content-engineering/validmind/release-notes/monthly/automation.html" rel="prev">
+<link href="../../../../../assets/headshot.png" rel="icon" type="image/png">
+<script src="../../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-d0114024d9f4d5bb209e87a78e65fba1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../../site_libs/bootstrap/bootstrap-e2fe54d18dda9285c2bb2d5a201405be.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../../../site_libs/quarto-contrib/timeline-0.1.0/timeline.js"></script>
+<link href="../../../../../site_libs/quarto-contrib/timeline-0.1.0/timeline.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-contrib/tachyons-4.12.0/tachyons.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-contrib/tachyons-4.12.0/quarto-resets.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No Results Found",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "Search Portfolio",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}p||((p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",p.onerror=function(){p=null},(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r));var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="al ol ll init Il Rl Tl Ml Ol za El Dl Sl capture getExtension Pl nl Hl calculateEventProperties Bl register register_once register_for_session unregister unregister_for_session Vl Cl zl getFeatureFlag getFeatureFlagPayload getFeatureFlagResult getAllFeatureFlags isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync Gl identify setPersonProperties unsetPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset Zl shutdown setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty Ul ql createPersonProfile setInternalOrTestUser Wl ul hl opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing $l debug Ua Jn getPageViewId captureTraceFeedback captureTraceMetric bl".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_zqwk6XXUUjTLnofgQxcesCk2hnsCVoF3FCfB6KVg2Vym', {
+        api_host: 'https://us.i.posthog.com',
+        defaults: '2026-05-30',
+        person_profiles: 'always', // or 'always' to create profiles for anonymous users as well
+    })
+</script>
+
+
+<link rel="stylesheet" href="../no-top-nav.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../../../samples/content-engineering/validmind/release-notes/monthly/generation.html">Manual monthly releases generation</a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../../../../">ValidMind release notes</a> 
+    </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../samples/content-engineering/validmind/release-notes/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ValidMind release notes</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../samples/content-engineering/validmind/release-notes/access-requirements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Access requirements</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../samples/content-engineering/validmind/release-notes/trigger-workflows.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Trigger release notes workflows manually</span></a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
+ <span class="menu-text">CMVM patch</span>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../samples/content-engineering/validmind/release-notes/patch/automation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Patch release automation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../samples/content-engineering/validmind/release-notes/patch/generation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Manual patch releases generation</span></a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
+ <span class="menu-text">Library</span>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../samples/content-engineering/validmind/release-notes/library/automation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Library release automation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../samples/content-engineering/validmind/release-notes/library/generation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Manual library releases generation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../samples/content-engineering/validmind/release-notes/library/highlights.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Library feature highlights</span></a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
+ <span class="menu-text">Monthly / full</span>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../samples/content-engineering/validmind/release-notes/monthly/automation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Monthly release automation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../samples/content-engineering/validmind/release-notes/monthly/generation.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Manual monthly releases generation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../samples/content-engineering/validmind/release-notes/monthly/highlights.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Monthly feature highlights</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of Contents</h2>
+   
+  <ul>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link active" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#batch-vs-individual-monthly-release-generation" id="toc-batch-vs-individual-monthly-release-generation" class="nav-link" data-scroll-target="#batch-vs-individual-monthly-release-generation">Batch vs individual monthly release generation</a></li>
+  <li><a href="#generating-batch-monthlies-locally" id="toc-generating-batch-monthlies-locally" class="nav-link" data-scroll-target="#generating-batch-monthlies-locally">Generating batch monthlies locally</a>
+  <ul>
+  <li><a href="#generate-batch-monthly-releases" id="toc-generate-batch-monthly-releases" class="nav-link" data-scroll-target="#generate-batch-monthly-releases">Generate batch monthly releases</a>
+  <ul>
+  <li><a href="#release-delta-discovery" id="toc-release-delta-discovery" class="nav-link" data-scroll-target="#release-delta-discovery">1. Release delta discovery</a></li>
+  <li><a href="#generate-monthly-batches" id="toc-generate-monthly-batches" class="nav-link" data-scroll-target="#generate-monthly-batches">2. Generate monthly batches</a></li>
+  <li><a href="#human-follow-up" id="toc-human-follow-up" class="nav-link" data-scroll-target="#human-follow-up">3. Human follow-up</a></li>
+  </ul></li>
+  <li><a href="#regenerate-batch-monthly-releases" id="toc-regenerate-batch-monthly-releases" class="nav-link" data-scroll-target="#regenerate-batch-monthly-releases">Regenerate batch monthly releases</a>
+  <ul>
+  <li><a href="#release-delta-discovery-1" id="toc-release-delta-discovery-1" class="nav-link" data-scroll-target="#release-delta-discovery-1">1. Release delta discovery</a></li>
+  <li><a href="#regenerate-monthly-batches" id="toc-regenerate-monthly-batches" class="nav-link" data-scroll-target="#regenerate-monthly-batches">2. Regenerate monthly batches</a></li>
+  <li><a href="#human-follow-up-1" id="toc-human-follow-up-1" class="nav-link" data-scroll-target="#human-follow-up-1">3. Human follow-up</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#generating-individual-monthly-releases-locally" id="toc-generating-individual-monthly-releases-locally" class="nav-link" data-scroll-target="#generating-individual-monthly-releases-locally">Generating individual monthly releases locally</a>
+  <ul>
+  <li><a href="#generate-individual-monthly-releases" id="toc-generate-individual-monthly-releases" class="nav-link" data-scroll-target="#generate-individual-monthly-releases">Generate individual monthly releases</a>
+  <ul>
+  <li><a href="#create-branch-or-worktree" id="toc-create-branch-or-worktree" class="nav-link" data-scroll-target="#create-branch-or-worktree">1. Create branch or worktree</a></li>
+  <li><a href="#release-delta-discovery-2" id="toc-release-delta-discovery-2" class="nav-link" data-scroll-target="#release-delta-discovery-2">2. Release delta discovery</a></li>
+  <li><a href="#generate-monthly-release-notes" id="toc-generate-monthly-release-notes" class="nav-link" data-scroll-target="#generate-monthly-release-notes">3. Generate monthly release notes</a></li>
+  <li><a href="#human-follow-up-2" id="toc-human-follow-up-2" class="nav-link" data-scroll-target="#human-follow-up-2">4. Human follow-up</a></li>
+  </ul></li>
+  <li><a href="#regenerate-individual-monthly-releases" id="toc-regenerate-individual-monthly-releases" class="nav-link" data-scroll-target="#regenerate-individual-monthly-releases">Regenerate individual monthly releases</a>
+  <ul>
+  <li><a href="#switch-to-release-branch-or-worktree" id="toc-switch-to-release-branch-or-worktree" class="nav-link" data-scroll-target="#switch-to-release-branch-or-worktree">1. Switch to release branch or worktree</a></li>
+  <li><a href="#release-delta-discovery-3" id="toc-release-delta-discovery-3" class="nav-link" data-scroll-target="#release-delta-discovery-3">2. Release delta discovery</a></li>
+  <li><a href="#regenerate-monthly-release-notes" id="toc-regenerate-monthly-release-notes" class="nav-link" data-scroll-target="#regenerate-monthly-release-notes">3. Regenerate monthly release notes</a></li>
+  <li><a href="#human-follow-up-3" id="toc-human-follow-up-3" class="nav-link" data-scroll-target="#human-follow-up-3">4. Human follow-up</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Manual monthly releases generation</h1>
+<p class="subtitle lead">ValidMind release notes guides</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Content Architecture</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta column-body">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Locally generate monthly (full, feature) release notes (<code>YY.MM</code>, stable tag <code>cmvm/YY.MM.01</code>).</p>
+<section id="prerequisites" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" checked=""><strong><a href="../../../../../samples/content-engineering/validmind/release-notes/access-requirements.html">Access requirements</a></strong> — <code>.env</code> setup, GitHub authentication, Poetry, <code>VM_RELEASE_DELTA</code>, Zendesk &amp; Shortcut tokens</label></li>
+<li><label><input type="checkbox" checked=""><strong>Stable CMVM monthly tag (<code>-rc</code> tags are rejected) for discovery</strong> — For example: <code>cmvm/26.07.01</code></label></li>
+<li><label><input type="checkbox" checked="">You’re on the <code>release-notes</code> repo and are up-to-date with <code>main</code></label></li>
+</ul>
+</section>
+<section id="batch-vs-individual-monthly-release-generation" class="level2">
+<h2 class="anchored" data-anchor-id="batch-vs-individual-monthly-release-generation">Batch vs individual monthly release generation</h2>
+<ul>
+<li>Use <em>batch</em> when you need the full automation workflow (PRs, Shortcut, Slack).</li>
+<li>Use <em>individual</em> when you only need the generator to write <code>.qmd</code> files on your local branch or worktree.</li>
+<li><em>Scope</em> — How many monthly versions are generated during a run — comes from discovery for batch paths (<code>targets[]</code> in <code>discovery.json</code>) or from the single <code>--version</code> you pass for individual paths.</li>
+</ul>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Path</th>
+<th>What it does</th>
+<th>Scope</th>
+<th>When to use</th>
+<th>Section</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Batch — generate</strong></td>
+<td>Discovery plus <code>generate_monthly_batch.py</code>: drafts release notes, opens automation PRs (release-notes and docs preview), creates a Shortcut Story, sends Slack</td>
+<td>Every entry in <code>targets[]</code> — Refer to <a href="#discovery-scope">Discovery scope</a></td>
+<td>Net-new monthly not yet on <code>main</code>; you want the full PR workflow locally</td>
+<td><a href="#generate-batch-monthly-releases">Generate batch</a></td>
+</tr>
+<tr class="even">
+<td><strong>Batch — regenerate</strong></td>
+<td>Same as batch generate with <code>--refresh-in-place</code> discovery and <code>--preserve-human-edits</code></td>
+<td>Same as batch generate (discovered delta drives scope)</td>
+<td>Open automation PR needs a refresh; human edits on branch/worktree must be kept</td>
+<td><a href="#regenerate-batch-monthly-releases">Regenerate batch</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Individual — generate</strong></td>
+<td><code>generate_monthly_release_notes.py</code> only — writes <code>.qmd</code> with explicit <code>--release-label</code>; no PRs or Shortcut Stories automatically created or Slack notifications sent</td>
+<td>Exactly one version from <code>--version</code> / <code>--start-tag</code> / <code>--end-tag</code></td>
+<td>Single edge case monthly version tag</td>
+<td><a href="#generate-individual-monthly-releases">Generate individual</a></td>
+</tr>
+<tr class="even">
+<td><strong>Individual — regenerate</strong></td>
+<td>Same as individual generate with <code>--preserve-human-edits</code> on an existing file</td>
+<td>Same single version</td>
+<td>Refresh one release monthly tag in place without opening or updating automation PRs</td>
+<td><a href="#regenerate-individual-monthly-releases">Regenerate individual</a></td>
+</tr>
+</tbody>
+</table>
+<div id="discovery-scope" class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Discovery scope
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><code>discover_undocumented_cmvm_monthlies.py</code> builds <code>targets[]</code>; <code>generate_monthly_batch.py</code> runs the full workflow once per target.</li>
+<li>Per-target <code>start_tag</code> and <code>gap_start_tag</code> are the <strong>previous monthly stable</strong> tag (<code>cmvm/YY.MM.01</code>), not the last patch in the prior month. Fetch, generate, and cross-check all use this monthly-to-monthly window — same rules as <a href="../../../../../samples/content-engineering/validmind/release-notes/monthly/automation.html#1-discovery">Monthly release automation</a>. <a href="../../../../../samples/content-engineering/validmind/release-notes/access-requirements.html#repository-variables"><code>VM_RELEASE_DELTA</code></a> is discovery-only and does not widen per-target fetch windows.</li>
+</ul>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Flag</th>
+<th>Scope</th>
+<th>When to use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>--tag cmvm/26.07.01</code></td>
+<td><strong>Ceiling/trigger tag</strong> — matches <a href="../../../../../samples/content-engineering/validmind/release-notes/monthly/automation.html">Monthly release automation</a> (GitHub workflow always passes <code>--tag</code>). Discovers undocumented monthlies up to and including <code>26.07</code>. Usually one target when the triggered tag is the newest and earlier monthlies are on <code>main</code>; can return several if gaps exist below the ceiling.</td>
+<td><strong>Normal release</strong> — net-new monthly from a stable tag trigger.</td>
+</tr>
+<tr class="even">
+<td><code>--catch-up</code></td>
+<td><strong>Local/manual only</strong> — full backfill of all undocumented stable monthlies with <strong>no upper bound</strong>. Not available through <a href="../../../../../samples/content-engineering/validmind/release-notes/monthly/automation.html">Monthly release automation</a>.</td>
+<td><strong>Backfill</strong> — document every missing monthly when catching up across multiple versions locally.</td>
+</tr>
+<tr class="odd">
+<td><code>--refresh-in-place 26.07</code></td>
+<td>Force a refresh target when the file is not on <code>main</code>. Required for <code>--catch-up</code> or when the triggered <code>--tag</code> does not match; redundant when re-running the same <code>--tag</code> with an open automation PR (auto-detected).</td>
+<td><strong>Regenerate</strong> — refresh an open automation draft in place.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="generating-batch-monthlies-locally" class="level2">
+<h2 class="anchored" data-anchor-id="generating-batch-monthlies-locally">Generating batch monthlies locally</h2>
+<section id="generate-batch-monthly-releases" class="level3">
+<h3 class="anchored" data-anchor-id="generate-batch-monthly-releases">Generate batch monthly releases</h3>
+<section id="release-delta-discovery" class="level4">
+<h4 class="anchored" data-anchor-id="release-delta-discovery">1. Release delta discovery</h4>
+<p>Discover the scope of undocumented monthly releases within the delta. See <a href="#discovery-scope">Discovery scope</a> for <code>--tag</code>, <code>--catch-up</code>, and other flag options.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Local backfill alternative: --catch-up (no --tag); see Discovery scope above</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">poetry</span> run python scripts/discover_undocumented_cmvm_monthlies.py <span class="dt">\</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">--tag</span> cmvm/26.07.01 <span class="at">--json</span> <span class="kw">|</span> <span class="fu">tee</span> discovery.json  <span class="co"># Example — replace with your stable monthly tag</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">jq</span> <span class="st">'.targets[] | {version, start_tag, end_tag, release_label}'</span> discovery.json</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="generate-monthly-batches" class="level4">
+<h4 class="anchored" data-anchor-id="generate-monthly-batches">2. Generate monthly batches</h4>
+<p>Run the monthly batch generation script (<strong>omit <code>--edit</code> for structural/raw draft</strong> — LLM polish is done at materialize during <a href="../../../../../samples/content-engineering/validmind/release-notes/monthly/highlights.html">Monthly highlights</a> curation to reduce token spend):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">poetry</span> run python scripts/generate_monthly_batch.py <span class="at">--discovery</span> discovery.json</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="human-follow-up" class="level4">
+<h4 class="anchored" data-anchor-id="human-follow-up">3. Human follow-up</h4>
+<p>Review the automatically generated draft <code>release-notes</code> and <code>documentation</code> PRs (resolve <strong>What needs special review?</strong>, such as Zendesk cross-check gaps), run <a href="../../../../../samples/content-engineering/validmind/release-notes/monthly/highlights.html">Monthly highlights</a> process, polish customer-facing prose, then merge PRs in sequence.</p>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Refer to <a href="../../../../../samples/content-engineering/validmind/release-notes/monthly/automation.html#what-happens-when-monthly-drafts-are-automatically-generated">What happens when monthly drafts are automatically generated?</a> for full instructions.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="regenerate-batch-monthly-releases" class="level3">
+<h3 class="anchored" data-anchor-id="regenerate-batch-monthly-releases">Regenerate batch monthly releases</h3>
+<section id="release-delta-discovery-1" class="level4">
+<h4 class="anchored" data-anchor-id="release-delta-discovery-1">1. Release delta discovery</h4>
+<p>Rediscover delta scope when an open automation PR on <code>automated/monthly-{version}</code> needs a fresh fetch/generate pass and you must keep existing human edits on your branch/worktree. See <a href="#discovery-scope">Discovery scope</a> for <code>--tag</code>, <code>--catch-up</code>, and <code>--refresh-in-place</code>; add <code>--refresh-in-place</code> when discovery would otherwise skip an in-flight version:</p>
+<ul>
+<li>Re-running the <em>same</em> <code>--tag</code> while the monthly is not on <code>main</code> and an automation PR is open auto-sets <code>refresh_in_place</code>.</li>
+<li>With <code>--catch-up</code> or a different <code>--tag</code>, discovery skips in-flight versions — pass <code>--refresh-in-place {version}</code> (<code>YY.MM</code>) to force a refresh target (<code>refresh_in_place: true</code> in <code>targets[]</code>).</li>
+<li>Batch generation checks out the existing <code>automated/monthly-{version}</code> branch, re-fetches Shortcut/Zendesk/GitHub data, regenerates <code>release-notes.qmd</code>, commits, and pushes — updating the open PR, not opening a new one. It reuses the existing Shortcut story and PR bodies, and sets up the human-edit protection baseline.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Local backfill alternative: --catch-up (no --tag); add --refresh-in-place {version} for in-flight targets — see Discovery scope above</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">poetry</span> run python scripts/discover_undocumented_cmvm_monthlies.py <span class="dt">\</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">--tag</span> cmvm/26.07.01 <span class="at">--refresh-in-place</span> 26.07 <span class="at">--json</span> <span class="kw">|</span> <span class="fu">tee</span> discovery.json  <span class="co"># Example — replace with your stable monthly tag and version</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">jq</span> <span class="st">'.targets[] | {version, start_tag, end_tag, release_label}'</span> discovery.json</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="regenerate-monthly-batches" class="level4">
+<h4 class="anchored" data-anchor-id="regenerate-monthly-batches">2. Regenerate monthly batches</h4>
+<ul>
+<li>Run the monthly batch generation script (omit <code>--edit</code> for structural/raw draft).</li>
+<li>Pass <code>--preserve-human-edits</code> so git-diff protection skips blocks you changed <em>since the automation baseline commit</em>, keeping your edits intact.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">poetry</span> run python scripts/generate_monthly_batch.py <span class="dt">\</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">--discovery</span> discovery.json <span class="at">--preserve-human-edits</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="human-follow-up-1" class="level4">
+<h4 class="anchored" data-anchor-id="human-follow-up-1">3. Human follow-up</h4>
+<p>Review the automatically refreshed draft <code>release-notes</code> and <code>documentation</code> PRs (resolve <strong>What needs special review?</strong>, such as Zendesk cross-check gaps), rerun the <a href="../../../../../samples/content-engineering/validmind/release-notes/monthly/highlights.html">Monthly highlights</a> process when refreshed generated partials need rematch or rematerialize, polish customer-facing prose, then merge PRs in sequence.</p>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Refer to <a href="../../../../../samples/content-engineering/validmind/release-notes/monthly/automation.html#what-happens-when-monthly-drafts-are-automatically-generated">What happens when monthly drafts are automatically generated?</a> for full instructions.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="generating-individual-monthly-releases-locally" class="level2">
+<h2 class="anchored" data-anchor-id="generating-individual-monthly-releases-locally">Generating individual monthly releases locally</h2>
+<p>The individual path is draft generation only — it writes <code>.qmd</code> files on your current branch with no PR automation, no Shortcut Story created, and no Slack notifications, and no <code>automated/monthly-{version}</code> branch is created for you.</p>
+<section id="generate-individual-monthly-releases" class="level3">
+<h3 class="anchored" data-anchor-id="generate-individual-monthly-releases">Generate individual monthly releases</h3>
+<section id="create-branch-or-worktree" class="level4">
+<h4 class="anchored" data-anchor-id="create-branch-or-worktree">1. Create branch or worktree</h4>
+<ul>
+<li>Create a branch from up-to-date <code>main</code> before running the generator.</li>
+<li>If you use <code>git worktree add</code>, copy the repo-root <code>.env</code> from your main checkout into the worktree — worktrees do not share <code>.env</code> automatically.</li>
+</ul>
+</section>
+<section id="release-delta-discovery-2" class="level4">
+<h4 class="anchored" data-anchor-id="release-delta-discovery-2">2. Release delta discovery</h4>
+<ul>
+<li>Discovery resolves <code>version</code>, <code>start_tag</code>, <code>end_tag</code>, and <code>release_label</code> for one provided monthly.</li>
+<li><code>generate_monthly_release_notes.py</code> does not read <code>discovery.json</code> — copy those values into your generation step, or skip discover if you already know the tag range.</li>
+<li><strong>Tag range:</strong> Set only one <code>--start-tag</code> at a time (previous monthly stable tag, <code>cmvm/YY.MM.01</code>). To document multiple monthlies, use <a href="#generate-batch-monthly-releases">batch discovery</a> with <code>--catch-up</code> — do not widen <code>--start-tag</code> on individual runs.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">poetry</span> run python scripts/discover_undocumented_cmvm_monthlies.py <span class="dt">\</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">--tag</span> cmvm/26.07.01 <span class="at">--json</span> <span class="kw">|</span> <span class="fu">tee</span> discovery.json  <span class="co"># Example — replace with your stable monthly tag</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">jq</span> <span class="st">'.targets[] | {version, start_tag, end_tag, release_label}'</span> discovery.json</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy jq output into step 3, for example:</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># ONLY SET ONE TAG AT A TIME — widening --start-tag skips monthlies that batch discovery would document in separate per-target windows.</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># To generate several monthlies at once, use the batch generation instructions instead.</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># --start-tag sets the GitHub compare baseline for PR fetch, note generation, and Zendesk cross-check merge window.</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># --start-tag sets discovery metadata; fetch/cross-check use --gap-start-tag (defaults to --start-tag).</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Optional --gap-start-tag when stale discovery.json or fetch baseline must differ from metadata start_tag.</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co"># --start-tag is the previous monthly stable tag (cmvm/YY.MM.01).</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># poetry run python scripts/generate_monthly_release_notes.py \</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co">#   --version 26.07 \</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co">#   --start-tag cmvm/26.06.01 \   # compare baseline (PRs, notes, Zendesk)</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co">#   --end-tag cmvm/26.07.01 \     # target release tag being generated</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co">#   --release-label "Release 26.07"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="generate-monthly-release-notes" class="level4">
+<h4 class="anchored" data-anchor-id="generate-monthly-release-notes">3. Generate monthly release notes</h4>
+<p>Run the individual monthly release notes generator for the monthly you want (<strong>omit <code>--edit</code> for structural/raw draft</strong> — LLM polish is done at materialize during <a href="../../../../../samples/content-engineering/validmind/release-notes/monthly/highlights.html">Monthly highlights</a> curation to reduce token spend):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ONLY SET ONE TAG AT A TIME — widening --start-tag skips monthlies that batch discovery would document in separate per-target windows.</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># To generate several monthlies at once, use the batch generation instructions instead.</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># --start-tag sets the GitHub compare baseline for PR fetch, note generation, and Zendesk cross-check merge window.</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># --start-tag sets discovery metadata; fetch/cross-check use --gap-start-tag (defaults to --start-tag).</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Optional --gap-start-tag when stale discovery.json or fetch baseline must differ from metadata start_tag.</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># --start-tag is the previous monthly stable tag (cmvm/YY.MM.01).</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="ex">poetry</span> run python scripts/generate_monthly_release_notes.py <span class="dt">\</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">--version</span> 26.07 <span class="dt">\</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">--start-tag</span> cmvm/26.06.01 <span class="dt">\ </span>  <span class="co"># compare baseline (PRs, notes, Zendesk)</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="ex">--end-tag</span> cmvm/26.07.01 <span class="dt">\ </span>    <span class="co"># target release tag being generated</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="ex">--release-label</span> <span class="st">"Release 26.07"</span>  <span class="co"># Example — replace with your monthly version, tag range, and label</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="human-follow-up-2" class="level4">
+<h4 class="anchored" data-anchor-id="human-follow-up-2">4. Human follow-up</h4>
+<p>Review and edit <code>releases/cmvm/{version}/release-notes.qmd</code> on your branch/worktree (complete manual human tasks such as <strong>Zendesk cross-check gaps</strong> — refer to <code>releases-data/{version}/cross_check_{version}.json</code> (dots in <code>{version}</code> become underscores in the filename, e.g.&nbsp;<code>26.07</code> → <code>cross_check_26_07.json</code>) or Zendesk cross-check review, run the <a href="../../../../../samples/content-engineering/validmind/release-notes/monthly/highlights.html">Monthly highlights</a> process, polish customer-facing prose, then open PRs manually if you are shipping through the normal workflow.</p>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Refer to <a href="../../../../../samples/content-engineering/validmind/release-notes/monthly/automation.html#what-happens-when-monthly-drafts-are-automatically-generated">What happens when monthly drafts are automatically generated?</a> for full instructions.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="regenerate-individual-monthly-releases" class="level3">
+<h3 class="anchored" data-anchor-id="regenerate-individual-monthly-releases">Regenerate individual monthly releases</h3>
+<section id="switch-to-release-branch-or-worktree" class="level4">
+<h4 class="anchored" data-anchor-id="switch-to-release-branch-or-worktree">1. Switch to release branch or worktree</h4>
+<ul>
+<li>Check out the branch or worktree that already holds the release notes file when you need a fresh fetch/generate pass and must keep existing human edits on your branch/worktree.</li>
+<li>Use your manual branch/worktree or an open automation branch — the individual path writes <code>.qmd</code> files on your current branch, unlike batch runs that check out <code>automated/monthly-{version}</code>.</li>
+</ul>
+</section>
+<section id="release-delta-discovery-3" class="level4">
+<h4 class="anchored" data-anchor-id="release-delta-discovery-3">2. Release delta discovery</h4>
+<ul>
+<li>Discovery resolves <code>version</code>, <code>start_tag</code>, <code>end_tag</code>, and <code>release_label</code> for one provided monthly.</li>
+<li><code>generate_monthly_release_notes.py</code> does not read <code>discovery.json</code> — copy those values into your generation step, or skip discover if you already know the tag range.</li>
+<li><strong>Tag range:</strong> Set only one <code>--start-tag</code> at a time (previous monthly stable tag, <code>cmvm/YY.MM.01</code>). To document multiple monthlies, use <a href="#generate-batch-monthly-releases">batch discovery</a> with <code>--catch-up</code> — do not widen <code>--start-tag</code> on individual runs.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">poetry</span> run python scripts/discover_undocumented_cmvm_monthlies.py <span class="dt">\</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">--tag</span> cmvm/26.07.01 <span class="at">--json</span> <span class="kw">|</span> <span class="fu">tee</span> discovery.json  <span class="co"># Example — replace with your stable monthly tag</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">jq</span> <span class="st">'.targets[] | {version, start_tag, end_tag, release_label}'</span> discovery.json</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy jq output into step 3, for example:</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># ONLY SET ONE TAG AT A TIME — widening --start-tag skips monthlies that batch discovery would document in separate per-target windows.</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># To generate several monthlies at once, use the batch generation instructions instead.</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># --start-tag sets the GitHub compare baseline for PR fetch, note generation, and Zendesk cross-check merge window.</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co"># --start-tag sets discovery metadata; fetch/cross-check use --gap-start-tag (defaults to --start-tag).</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Optional --gap-start-tag when stale discovery.json or fetch baseline must differ from metadata start_tag.</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co"># --start-tag is the previous monthly stable tag (cmvm/YY.MM.01).</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co"># poetry run python scripts/generate_monthly_release_notes.py \</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co">#   --version 26.07 \</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="co">#   --start-tag cmvm/26.06.01 \   # compare baseline (PRs, notes, Zendesk)</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="co">#   --end-tag cmvm/26.07.01 \     # target release tag being generated</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="co">#   --release-label "Release 26.07"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>When an open automation PR exists and you need to refresh that version in place:</p>
+<ul>
+<li>Re-running discovery with the <em>same</em> <code>--tag</code> auto-sets <code>refresh_in_place</code> when the monthly release is not on <code>main</code> and an automation PR is open.</li>
+<li>With <code>--catch-up</code> or when discovery would otherwise skip the version as in-flight, pass <code>--refresh-in-place {version}</code> (<code>YY.MM</code>).</li>
+<li>Individual regeneration writes <code>.qmd</code> files on your current branch or worktree; you do not check out <code>automated/monthly-{version}</code>, but discovery still needs <code>--refresh-in-place</code> when the triggered <code>--tag</code> does not match.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">poetry</span> run python scripts/discover_undocumented_cmvm_monthlies.py <span class="dt">\</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">--tag</span> cmvm/26.07.01 <span class="at">--refresh-in-place</span> 26.07 <span class="at">--json</span> <span class="kw">|</span> <span class="fu">tee</span> discovery.json  <span class="co"># Example — replace with your stable monthly tag and version</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ex">jq</span> <span class="st">'.targets[] | {version, start_tag, end_tag, release_label}'</span> discovery.json</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="regenerate-monthly-release-notes" class="level4">
+<h4 class="anchored" data-anchor-id="regenerate-monthly-release-notes">3. Regenerate monthly release notes</h4>
+<ul>
+<li>Run the individual monthly release notes generator (omit <code>--edit</code> for structural/raw draft).</li>
+<li>If you skipped discover, pass explicit <code>--version</code>, <code>--start-tag</code>, <code>--end-tag</code>, and <code>--release-label</code>.</li>
+<li>Pass <code>--preserve-human-edits</code> so git-diff protection skips blocks you changed <em>since the automation baseline commit</em>, keeping your edits intact.</li>
+<li>When refreshing on <code>automated/monthly-{version}</code>, also pass <code>--refresh-in-place</code> so human-edit protection requires the automation baseline commit.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ONLY SET ONE TAG AT A TIME — widening --start-tag skips monthlies that batch discovery would document in separate per-target windows.</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># To generate several monthlies at once, use the batch generation instructions instead.</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># --start-tag sets the GitHub compare baseline for PR fetch, note generation, and Zendesk cross-check merge window.</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># --start-tag sets discovery metadata; fetch/cross-check use --gap-start-tag (defaults to --start-tag).</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Optional --gap-start-tag when stale discovery.json or fetch baseline must differ from metadata start_tag.</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co"># --start-tag is the previous monthly stable tag (cmvm/YY.MM.01).</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Example — replace with your monthly versions, tag ranges, and label</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="ex">poetry</span> run python scripts/generate_monthly_release_notes.py <span class="dt">\</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">--version</span> 26.07 <span class="dt">\</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">--start-tag</span> cmvm/26.06.01 <span class="dt">\ </span>  <span class="co"># compare baseline (PRs, notes, Zendesk)</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="ex">--end-tag</span> cmvm/26.07.01 <span class="dt">\ </span>    <span class="co"># target release tag being generated</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="ex">--release-label</span> <span class="st">"Release 26.07"</span> <span class="dt">\</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">--preserve-human-edits</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Add --refresh-in-place when checked out on automated/monthly-{version} (requires automation baseline commit)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="human-follow-up-3" class="level4">
+<h4 class="anchored" data-anchor-id="human-follow-up-3">4. Human follow-up</h4>
+<p>Review the refreshed <code>.qmd</code> with human edits preserved (complete manual human tasks such as <strong>Zendesk cross-check gaps</strong> — refer to <code>releases-data/{version}/cross_check_{version}.json</code> (dots in <code>{version}</code> become underscores in the filename, e.g.&nbsp;<code>26.07</code> → <code>cross_check_26_07.json</code>) or Zendesk cross-check review, rerun the <a href="../../../../../samples/content-engineering/validmind/release-notes/monthly/highlights.html">Monthly highlights</a> process when refreshed partials need rematch or rematerialize, polish customer-facing prose, then open PRs manually if you are shipping through the normal workflow.</p>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Refer to <a href="../../../../../samples/content-engineering/validmind/release-notes/monthly/automation.html#what-happens-when-monthly-drafts-are-automatically-generated">What happens when monthly drafts are automatically generated?</a> for full instructions.</p>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script>
+  // Quarto's layoutMarginEls only separates margin notes from each other.
+  // Seed that same cascade with the TOC/category panel bottom so footnotes
+  // start below #quarto-margin-sidebar instead of overlapping it.
+  // When notes stack taller than the body, pad main.content so the
+  // footer clears the last footnote. Padding the main grid row (not
+  // #quarto-content) also stretches the docked sidebar with it.
+  (() => {
+    const MARGIN_SEL =
+      ".column-margin.column-container > *, .margin-caption, .aside";
+    const GAP_AFTER_SIDEBAR = "0.5rem";
+    const GAP_BEFORE_FOOTER = "1.5rem";
+    const READY_CLASS = "margin-below-toc-ready";
+
+    const remPx = (raw) => {
+      const root = window.getComputedStyle(document.documentElement);
+      const fontSize = parseFloat(root.fontSize) || 16;
+      const value = String(raw).trim();
+      if (value.endsWith("rem")) return (parseFloat(value) || 0) * fontSize;
+      if (value.endsWith("px")) return parseFloat(value) || 0;
+      return parseFloat(value) || 0;
+    };
+
+    const contentHost = () =>
+      document.querySelector("main.content") ||
+      document.getElementById("quarto-document-content");
+
+    const sidebarContentBottom = () => {
+      const sidebar = document.getElementById("quarto-margin-sidebar");
+      if (!sidebar) return 0;
+
+      let bottom = 0;
+      for (const child of sidebar.children) {
+        if (child.classList.contains("quarto-sidebar-toggle")) continue;
+        if (child.id === "portfolio-toc-toggle") continue;
+        if (child.id === "portfolio-toc-sentinel") continue;
+        if (window.getComputedStyle(child).display === "none") continue;
+        const rect = child.getBoundingClientRect();
+        if (rect.height === 0) continue;
+        bottom = Math.max(bottom, rect.bottom + window.scrollY);
+      }
+      return bottom > 0 ? bottom + remPx(GAP_AFTER_SIDEBAR) : 0;
+    };
+
+    // Expand the main column (grid row), not #quarto-content padding —
+    // container padding sits outside the tracks and leaves a gap under
+    // the docked sidebar background.
+    // Theme sets padding-bottom with !important, so we must too.
+    const expandContentForMargins = (lastBottom) => {
+      const host = contentHost();
+      const legacy = document.getElementById("quarto-content");
+      // Clear older pad target if a previous version set it.
+      if (legacy && legacy !== host) {
+        legacy.style.removeProperty("padding-bottom");
+      }
+      if (!host) return;
+
+      if (!(lastBottom > 0)) {
+        host.style.removeProperty("padding-bottom");
+        return;
+      }
+
+      const computedPad =
+        parseFloat(window.getComputedStyle(host).paddingBottom) || 0;
+      const marginBottom =
+        parseFloat(window.getComputedStyle(host).marginBottom) || 0;
+      // Border-box bottom minus padding = content edge; negative
+      // margin-bottom pulls the footer up, so add it back into need.
+      const contentEdge =
+        host.getBoundingClientRect().bottom + window.scrollY - computedPad;
+      const needed = Math.ceil(
+        lastBottom + remPx(GAP_BEFORE_FOOTER) - contentEdge - marginBottom
+      );
+      const themeMin = remPx("2rem");
+      if (needed <= themeMin) {
+        host.style.removeProperty("padding-bottom");
+        return;
+      }
+
+      const next = `${needed}px`;
+      if (host.style.getPropertyValue("padding-bottom") !== next) {
+        host.style.setProperty("padding-bottom", next, "important");
+      }
+    };
+
+    // Quarto leaves margin footnotes inside tab panes and marks the
+    // tabset with page-columns/page-full, nesting a full page grid in
+    // the body column. Move those notes into the sibling
+    // .tabset-margin-container so the tabset can lay out normally and
+    // Quarto's shown.bs.tab handler can toggle note visibility.
+    const hoistTabsetMargins = () => {
+      document.querySelectorAll(".panel-tabset").forEach((tabset) => {
+        const margins = [
+          ...tabset.querySelectorAll(".column-margin.column-container"),
+        ];
+        if (!margins.length) return;
+
+        let container = tabset.previousElementSibling;
+        if (!container?.classList.contains("tabset-margin-container")) {
+          container = document.createElement("div");
+          container.className = "tabset-margin-container";
+          tabset.parentElement?.insertBefore(container, tabset);
+        }
+
+        // Sit in the parent section's page grid as the margin column.
+        container.classList.add(
+          "column-margin",
+          "column-container",
+          "no-row-height"
+        );
+
+        margins.forEach((margin) => {
+          const pane = margin.closest(".tab-pane");
+          const tabBtnId =
+            pane?.getAttribute("aria-labelledby") ||
+            (pane?.id ? `${pane.id}-tab` : null);
+          const wrap = document.createElement("div");
+          wrap.className = "tabset-margin-content";
+          if (tabBtnId) wrap.classList.add(`${tabBtnId}-margin-content`);
+          if (!pane?.classList.contains("active")) {
+            wrap.classList.add("collapse");
+          }
+          while (margin.firstChild) wrap.appendChild(margin.firstChild);
+          container.appendChild(wrap);
+          margin.remove();
+        });
+
+        const strip = (el) => {
+          el.classList.remove("page-columns", "page-full");
+        };
+        strip(tabset);
+        tabset.querySelectorAll(".page-columns, .page-full").forEach(strip);
+      });
+    };
+
+    const layoutMarginBelowToc = () => {
+      hoistTabsetMargins();
+
+      const marginChildren = document.querySelectorAll(MARGIN_SEL);
+      if (!marginChildren.length) {
+        expandContentForMargins(0);
+        return;
+      }
+
+      let lastBottom = sidebarContentBottom();
+      for (const el of marginChildren) {
+        if (el.offsetParent === null) continue;
+
+        el.style.marginTop = null;
+        const top = el.getBoundingClientRect().top + window.scrollY;
+        if (lastBottom > 0 && top < lastBottom) {
+          const marginBottom =
+            parseFloat(window.getComputedStyle(el).marginBottom) || 0;
+          el.style.marginTop = `${lastBottom - top + marginBottom}px`;
+        }
+
+        const marginTop =
+          parseFloat(window.getComputedStyle(el).marginTop) || 0;
+        const height = el.getBoundingClientRect().height;
+        lastBottom = top + height + marginTop;
+      }
+
+      expandContentForMargins(lastBottom);
+    };
+
+    const reveal = () => {
+      document.documentElement.classList.add(READY_CLASS);
+    };
+
+    const layoutAndReveal = () => {
+      layoutMarginBelowToc();
+      reveal();
+    };
+
+    // Run after Quarto's own throttled layoutMarginEls (50ms).
+    const schedule = () => {
+      clearTimeout(schedule._timer);
+      schedule._timer = setTimeout(layoutAndReveal, 60);
+    };
+
+    window.document.addEventListener("DOMContentLoaded", () => {
+      schedule();
+      // Failsafe: never leave footnotes hidden if layout is delayed.
+      setTimeout(reveal, 1500);
+      // Re-cascade when Quarto toggles tabset margin note visibility.
+      window.document.querySelectorAll('.panel-tabset a[data-bs-toggle="tab"]').forEach((tab) => {
+        tab.addEventListener("shown.bs.tab", schedule);
+      });
+      window.document.querySelectorAll(".column-margin img").forEach((img) => {
+        if (!img.complete) img.addEventListener("load", schedule, { once: true });
+      });
+      if (window.ResizeObserver) {
+        const ro = new ResizeObserver(schedule);
+        ro.observe(window.document.body);
+        const sidebar = window.document.getElementById("quarto-margin-sidebar");
+        if (sidebar) ro.observe(sidebar);
+        const margin = window.document.querySelector(
+          ".column-margin.column-container"
+        );
+        if (margin) ro.observe(margin);
+      }
+    });
+  })();
+</script>
+<script>
+  // Fixed TOC dropdown once the in-flow nav#TOC scrolls under the navbar.
+  // Uses a scrollY threshold captured at page top so detection still works
+  // if the margin sidebar goes sticky, and ignores brief TOC height=0
+  // blips during margin-below-toc footnote layout.
+  (() => {
+    const MQ = "(min-width: 992px)";
+    const TOGGLE_ID = "portfolio-toc-toggle";
+    const NAVBAR_FALLBACK = 75;
+    const ROLLED_CLASS = "portfolio-toc-rolled-up";
+
+    let lastScrollY = 0;
+    let seenToc = false;
+    // scrollY at which the TOC top meets the navbar — captured at rest only.
+    let showAfterY = null;
+
+    const marginSidebar = () =>
+      document.getElementById("quarto-margin-sidebar");
+    const tocNav = () => document.getElementById("TOC");
+    const toggleEl = () => document.getElementById(TOGGLE_ID);
+
+    const desktop = () =>
+      !!(window.matchMedia && window.matchMedia(MQ).matches);
+
+    const navbarOffset = () => {
+      const nav =
+        document.querySelector("#quarto-header nav.navbar") ||
+        document.querySelector("#quarto-header") ||
+        document.querySelector("nav.navbar");
+      if (!nav) return NAVBAR_FALLBACK;
+      const bottom = nav.getBoundingClientRect().bottom;
+      return bottom > 0 ? Math.ceil(bottom) : NAVBAR_FALLBACK;
+    };
+
+    const titleText = () => {
+      const toc = tocNav();
+      const heading = toc?.querySelector("#toc-title, h2, h3");
+      return (heading?.textContent || "Table of Contents").trim();
+    };
+
+    // Only capture near the top so sticky/visual offsets can't corrupt it.
+    const captureThreshold = () => {
+      const toc = tocNav();
+      if (!toc || toc.offsetHeight <= 0) return;
+      if (window.scrollY > 40) return;
+      const docTop = toc.getBoundingClientRect().top + window.scrollY;
+      showAfterY = Math.max(0, docTop - navbarOffset());
+    };
+
+    // true / false / null (layout glitch — keep current visibility)
+    const pastInlineToc = () => {
+      if (!desktop()) return false;
+      const toc = tocNav();
+      if (!toc && !seenToc) return false;
+      if (!toc) return null;
+
+      if (showAfterY != null) {
+        return window.scrollY >= showAfterY;
+      }
+
+      // Threshold not ready yet (footnote layout still settling).
+      if (toc.offsetHeight <= 0) return null;
+      return toc.getBoundingClientRect().top <= navbarOffset();
+    };
+
+    const positionToggle = (el) => {
+      if (!el) return;
+      const sidebar = marginSidebar();
+      const toc = tocNav();
+      // Margin column is the stable anchor (TOC may be rolled up / off-screen).
+      let left = null;
+      let width = null;
+      if (sidebar && sidebar.offsetWidth > 0) {
+        const sb = sidebar.getBoundingClientRect();
+        left = sb.left;
+        width = sb.width;
+      } else if (toc) {
+        const tr = toc.getBoundingClientRect();
+        if (tr.width > 0) {
+          left = tr.left;
+          width = tr.width;
+        }
+      }
+      if (!(width > 0) || left == null) return;
+      el.style.left = `${Math.round(left)}px`;
+      el.style.width = `${Math.round(width)}px`;
+      el.style.top = `${navbarOffset()}px`;
+    };
+
+    const setInlineRolled = (rolled) => {
+      const toc = tocNav();
+      if (!toc) return;
+      toc.classList.toggle(ROLLED_CLASS, rolled);
+    };
+
+    const closeToggle = (el) => {
+      if (!el) return;
+      el.classList.remove("expanded");
+      const contents = el.querySelector(".portfolio-toc-toggle-contents");
+      if (contents) contents.style.height = "0px";
+      el.dataset.open = "false";
+      const btn = el.querySelector(".portfolio-toc-toggle-title");
+      if (btn) btn.setAttribute("aria-expanded", "false");
+    };
+
+    const fillContents = (el) => {
+      const toc = tocNav();
+      const contents = el.querySelector(".portfolio-toc-toggle-contents");
+      if (!toc || !contents) return;
+
+      const clone = toc.cloneNode(true);
+      clone.removeAttribute("id");
+      clone.classList.remove(ROLLED_CLASS);
+      clone.classList.add("portfolio-toc-panel");
+      clone.querySelectorAll("[id]").forEach((node) => {
+        node.removeAttribute("id");
+      });
+
+      const heading = clone.querySelector("h2, h3");
+      if (heading) {
+        heading.classList.add("portfolio-toc-panel-heading");
+        const icon = document.createElement("i");
+        icon.className = "portfolio-toc-toggle-icon bi bi-caret-up-fill";
+        icon.setAttribute("aria-hidden", "true");
+        heading.append(icon);
+        heading.setAttribute("role", "button");
+        heading.setAttribute("tabindex", "0");
+        heading.setAttribute("aria-expanded", "true");
+        const collapse = (event) => {
+          event.preventDefault();
+          closeToggle(el);
+        };
+        heading.addEventListener("click", collapse);
+        heading.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") collapse(event);
+        });
+      }
+
+      contents.replaceChildren(clone);
+      contents.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener("click", () => closeToggle(el));
+      });
+    };
+
+    const openToggle = (el) => {
+      fillContents(el);
+      el.classList.add("expanded");
+      const contents = el.querySelector(".portfolio-toc-toggle-contents");
+      if (contents) {
+        contents.style.height = null;
+        contents.style.maxHeight = `calc(100vh - ${navbarOffset() + 24}px)`;
+      }
+      el.dataset.open = "true";
+      const btn = el.querySelector(".portfolio-toc-toggle-title");
+      if (btn) btn.setAttribute("aria-expanded", "true");
+    };
+
+    const ensureToggle = () => {
+      let el = toggleEl();
+      if (el) return el;
+      if (!tocNav()) return null;
+
+      el = document.createElement("div");
+      el.id = TOGGLE_ID;
+      el.className = "portfolio-toc-toggle zindex-over-content";
+      el.hidden = true;
+      el.dataset.open = "false";
+      el.setAttribute("role", "navigation");
+      el.setAttribute("aria-label", titleText());
+
+      const titleBtn = document.createElement("button");
+      titleBtn.type = "button";
+      titleBtn.className = "portfolio-toc-toggle-title";
+      titleBtn.setAttribute("aria-expanded", "false");
+      titleBtn.setAttribute("aria-controls", `${TOGGLE_ID}-contents`);
+
+      const label = document.createElement("span");
+      label.className = "portfolio-toc-toggle-label";
+      label.textContent = titleText();
+
+      const icon = document.createElement("i");
+      icon.className = "portfolio-toc-toggle-icon bi bi-caret-down-fill";
+      icon.setAttribute("aria-hidden", "true");
+
+      titleBtn.append(label, icon);
+
+      const contents = document.createElement("div");
+      contents.id = `${TOGGLE_ID}-contents`;
+      contents.className = "portfolio-toc-toggle-contents";
+      contents.style.height = "0px";
+
+      el.append(titleBtn, contents);
+      document.body.append(el);
+
+      titleBtn.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        if (el.dataset.open === "true") closeToggle(el);
+        else openToggle(el);
+      });
+
+      return el;
+    };
+
+    const setVisible = (visible) => {
+      const el = ensureToggle();
+      if (!el) return;
+
+      if (!visible) {
+        closeToggle(el);
+        el.hidden = true;
+        setInlineRolled(false);
+        return;
+      }
+
+      el.hidden = false;
+      setInlineRolled(true);
+      positionToggle(el);
+    };
+
+    const sync = () => {
+      const toc = tocNav();
+      if (toc) seenToc = true;
+
+      captureThreshold();
+
+      const el = ensureToggle();
+      if (!el) return;
+
+      if (!desktop() || (!toc && !seenToc)) {
+        setVisible(false);
+        return;
+      }
+
+      if (!toc) return;
+
+      const past = pastInlineToc();
+      if (past === null) {
+        if (!el.hidden) positionToggle(el);
+        return;
+      }
+
+      setVisible(past);
+    };
+
+    let tick = 0;
+    const onScroll = () => {
+      if (tick) return;
+      tick = requestAnimationFrame(() => {
+        tick = 0;
+        const el = toggleEl();
+        const dy = Math.abs(window.scrollY - lastScrollY);
+        lastScrollY = window.scrollY;
+        if (dy > 8 && el?.dataset.open === "true") closeToggle(el);
+        sync();
+      });
+    };
+
+    const boot = () => {
+      if (!tocNav()) return;
+
+      lastScrollY = window.scrollY;
+      ensureToggle();
+      sync();
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", () => {
+        if (window.scrollY <= 40) showAfterY = null;
+        sync();
+      });
+      requestAnimationFrame(sync);
+      window.addEventListener("load", sync, { once: true });
+      // Remeasure after margin-below-toc footnote cascade settles.
+      setTimeout(sync, 100);
+      setTimeout(sync, 400);
+      setTimeout(sync, 1000);
+
+      if (window.IntersectionObserver) {
+        const toc = tocNav();
+        if (toc) {
+          const io = new IntersectionObserver(() => sync(), {
+            root: null,
+            threshold: [0, 0.01, 1],
+          });
+          io.observe(toc);
+        }
+      }
+
+      if (window.ResizeObserver) {
+        const ro = new ResizeObserver(() => {
+          clearTimeout(ro._t);
+          ro._t = setTimeout(sync, 50);
+        });
+        const toc = tocNav();
+        const sidebar = marginSidebar();
+        const main = document.querySelector("main.content");
+        if (toc) ro.observe(toc);
+        if (sidebar) ro.observe(sidebar);
+        if (main) ro.observe(main);
+      }
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", boot);
+    } else {
+      boot();
+    }
+  })();
+</script>
+<script>
+  // Quarto sticky sidenav still scrolls with the page (min-height:100% + sticky
+  // containing block). Pin it fixed on desktop; lock width from the in-flow
+  // layout first so the grid column and nav stay aligned.
+  (() => {
+    const MQ = "(min-width: 992px)";
+    const CLASS = "is-pinned-sidenav";
+
+    const sidebar = () => document.getElementById("quarto-sidebar");
+
+    const unpin = (el) => {
+      el.classList.remove(CLASS);
+      el.style.removeProperty("width");
+    };
+
+    const pin = () => {
+      const el = sidebar();
+      if (!el) return;
+
+      if (!window.matchMedia(MQ).matches) {
+        unpin(el);
+        return;
+      }
+
+      // Measure while in normal flow so width matches the grid column.
+      unpin(el);
+      const width = el.getBoundingClientRect().width;
+      if (width > 0) el.style.width = `${width}px`;
+      el.classList.add(CLASS);
+    };
+
+    let resizeTimer = 0;
+    const schedule = () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(pin, 50);
+    };
+
+    window.document.addEventListener("DOMContentLoaded", pin);
+    window.addEventListener("resize", schedule);
+    if (window.matchMedia) {
+      window.matchMedia(MQ).addEventListener("change", pin);
+    }
+  })();
+</script>
+<script>
+  // Keep in-page hash targets below the fixed header. Quarto's hashchange
+  // offset looks for header.fixed-top and can fire before native scroll, and
+  // CSS scroll-margin is unreliable on page-columns grid sections.
+  (() => {
+    const OFFSET = 80;
+
+    const targetEl = (hash) => {
+      if (!hash) return null;
+      const id = decodeURIComponent(String(hash).replace(/^#/, ""));
+      if (!id) return null;
+      return (
+        document.getElementById(id) ||
+        document.querySelector(`[data-anchor-id="${CSS.escape(id)}"]`)
+      );
+    };
+
+    const scrollToEl = (el) => {
+      if (!el) return;
+      const top = el.getBoundingClientRect().top + window.scrollY - OFFSET;
+      window.scrollTo({ top: Math.max(0, top), behavior: "auto" });
+    };
+
+    const samePageHash = (link) => {
+      try {
+        const url = new URL(link.href, window.location.href);
+        if (url.pathname !== window.location.pathname) return null;
+        if (url.search !== window.location.search) return null;
+        return url.hash || null;
+      } catch {
+        return null;
+      }
+    };
+
+    document.addEventListener("click", (event) => {
+      const link = event.target.closest("a[href]");
+      if (!link) return;
+      if (link.dataset.bsToggle) return;
+      const hash = samePageHash(link);
+      if (!hash) return;
+      const el = targetEl(hash);
+      if (!el) return;
+      // After native scroll + Quarto's hashchange handler.
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => scrollToEl(el));
+      });
+    });
+
+    const applyHash = () => scrollToEl(targetEl(window.location.hash));
+
+    window.addEventListener("hashchange", () => {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(applyHash);
+      });
+    });
+
+    const onReady = () => {
+      if (!window.location.hash) return;
+      applyHash();
+      setTimeout(applyHash, 250);
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", onReady);
+    } else {
+      onReady();
+    }
+    window.addEventListener("load", onReady);
+  })();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation column-body">
+  <div class="nav-page nav-page-previous">
+      <a href="../../../../../samples/content-engineering/validmind/release-notes/monthly/automation.html" class="pagination-link" aria-label="Monthly release automation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Monthly release automation</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../../../../samples/content-engineering/validmind/release-notes/monthly/highlights.html" class="pagination-link" aria-label="Monthly feature highlights">
+        <span class="nav-page-text">Monthly feature highlights</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://github.com/beck-chan/portfolio/releases" target="_blank">
+<p>Releases</p>
+</a>
+  </li>  
+</ul>
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://github.com/beck-chan/portfolio/issues" target="_blank">
+<p><i class="fa-brands fa-github" aria-label="github"></i> Report Issue</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ © 2026 <b>Beck Chan</b>. All rights reserved.
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

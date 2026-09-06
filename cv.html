@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.11.1">
+<meta name="generator" content="quarto-1.11.3">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -43,14 +43,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-4d77301e1d1e2befcfe34b1f46e19dd6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-7e3ff10c271a6c3d50da2b713bb1a607.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-4d77301e1d1e2befcfe34b1f46e19dd6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-6a5d77c288ae9a328f8b889480dd1f82.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d0114024d9f4d5bb209e87a78e65fba1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-6a5d77c288ae9a328f8b889480dd1f82.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-cbeca6f820b0b5b2f9646a02a8d04e38.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-43f18205a5b74f0525a2e41464167e16.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-cbeca6f820b0b5b2f9646a02a8d04e38.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-0062e773160ec7b30614b11e05b439f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-cbdff46b3c532071db5dd428a750ad25.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-0062e773160ec7b30614b11e05b439f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/timeline-0.1.0/timeline.js"></script>
 <link href="site_libs/quarto-contrib/timeline-0.1.0/timeline.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/tachyons-4.12.0/tachyons.css" rel="stylesheet">
@@ -95,7 +95,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -118,6 +118,7 @@ ul.task-list li input[type="checkbox"] {
       for (let i=0; i < toggles.length; i++) {
         const toggle = toggles[i];
         if (toggle) {
+          toggle.setAttribute("aria-checked", alternate ? "true" : "false");
           if (alternate) {
             toggle.classList.add("alternate");
           } else {
@@ -269,11 +270,15 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./samples/content-engineering/index.html"> 
+<span class="menu-text">Content Engineering</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="./samples/technical-writing/index.html"> 
 <span class="menu-text">Technical Writing</span></a>
@@ -282,6 +287,21 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./samples/copywriting/index.html"> 
 <span class="menu-text">Copywriting</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-all-samples" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">All Samples</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-all-samples">    
+        <li>
+    <a class="dropdown-item" href="./samples/index.html">
+ <span class="dropdown-text">Filter by Criteria</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./samples/organizations/index.html">
+ <span class="dropdown-text">Collated by Organization</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
@@ -290,24 +310,24 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://github.com/beck-chan" target="_blank"> 
-<span class="menu-text"><i class="fa-brands fa-github" aria-label="github"></i></span></a>
+<span class="menu-text"><span title="GitHub / beck-chan"><i class="fa-brands fa-github" aria-label="github"></i></span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://linkedin.com/in/beck-chan" target="_blank"> 
-<span class="menu-text"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></span></a>
+<span class="menu-text"><span title="LinkedIn / beck-chan"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="mailto:beckchan.tech@gmail.com" target="_blank"> 
-<span class="menu-text"><i class="fa-solid fa-envelope" aria-label="envelope"></i></span></a>
+<span class="menu-text"><span title="Email / beckchan.tech@gmail.com"><i class="fa-solid fa-envelope" aria-label="envelope"></i></span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./poetry/index.html"> 
-<span class="menu-text"><i class="fa-solid fa-feather" aria-label="feather"></i></span></a>
+<span class="menu-text"><span title="Poetry"><i class="fa-solid fa-feather" aria-label="feather"></i></span></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle Theme"><i class="bi"></i></a>
+  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle Theme" aria-label="Toggle Theme"><i class="bi"></i></button>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -326,11 +346,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#technical-skills" id="toc-technical-skills" class="nav-link" data-scroll-target="#technical-skills">Technical Skills</a></li>
   </ul></li>
   <li><a href="#education" id="toc-education" class="nav-link" data-scroll-target="#education">Education</a></li>
+  <li><a href="#projects" id="toc-projects" class="nav-link" data-scroll-target="#projects">Projects</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full column-page-left" id="quarto-document-content">
+<main class="content page-columns page-full column-page-left" id="quarto-document-content" tabindex="-1">
 
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -356,11 +377,11 @@ ul.task-list li input[type="checkbox"] {
 <section id="work-experience" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="work-experience">Work Experience</h2>
 <div class="timeline tl-diamond tl-label-banner vertical">
-<section id="senior-technical-writer" class="level3 event" data-label="March 2024 – July 2026" style="--tl-color-label: #de267e; --tl-color-dot: #de267e;">
+<section id="senior-technical-writer" class="level3 event tl-card" data-label="March 2024 – July 2026" style="--tl-color-label: #de267e; --tl-color-dot: #de267e;">
 <h3 class="anchored" data-anchor-id="senior-technical-writer">Senior Technical Writer</h3>
 <p><strong>ValidMind, Inc</strong></p>
 <ul>
-<li>Took features from design to complete release supported by storytelling alongside software engineers in GitHub.</li>
+<li>Owned Agile feature development from design to release supported by storytelling alongside SWEs in GitHub.</li>
 <li>Improved documentation and training through quality auditing and comprehensive redesigns using Quarto.</li>
 <li>Authored 53% of user guidance content, including Jupyter Notebook samples for models and agentic systems.</li>
 <li>Bridged gap between product design and user experience, verifying feature functionality and applying bug fixes.</li>
@@ -369,7 +390,9 @@ ul.task-list li input[type="checkbox"] {
 <li>Spearheaded the implementation of an extensible custom Zendesk solution.</li>
 </ul>
 </section>
-<section id="senior-customer-solutions-specialist" class="level3 event" data-label="April 2023 – January 2024" style="--tl-color-label: #06926d; --tl-color-dot: #06926d;">
+<div class="event tl-card" data-label="October 2018 – January 2024" style="--tl-color-label: #06926d; --tl-color-dot: #06926d;">
+<div class="timeline tl-label-badge vertical sq-line">
+<section id="senior-customer-solutions-specialist" class="level3 event sq" data-label="April 2023 – January 2024" style="--tl-color-label: #06926d; --tl-color-dot: #06926d;" data-dot="3">
 <h3 class="anchored" data-anchor-id="senior-customer-solutions-specialist">Senior Customer Solutions Specialist</h3>
 <p><strong>SaaSquatch by impact.com</strong></p>
 <ul>
@@ -379,7 +402,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Empowered users to understand and maximize the use of products by auditing and overhauling documentation.</li>
 </ul>
 </section>
-<section id="senior-technical-specialist" class="level3 event" data-label="October 2022 – March 2023" style="--tl-color-label: #06926d; --tl-color-dot: #06926d;">
+<section id="senior-technical-specialist" class="level3 event sq" data-label="October 2022 – March 2023" style="--tl-color-label: #06926d; --tl-color-dot: #06926d;" data-dot="2">
 <h3 class="anchored" data-anchor-id="senior-technical-specialist">Senior Technical Specialist</h3>
 <p><strong>SaaSquatch by impact.com</strong></p>
 <ul>
@@ -389,7 +412,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Provided advanced technical support for web and mobile SDKs built on JavaScript, REST API, and GraphQL.</li>
 </ul>
 </section>
-<section id="solutions-architect" class="level3 event" data-label="October 2018 – September 2022" style="--tl-color-label: #06926d; --tl-color-dot: #06926d;">
+<section id="solutions-architect" class="level3 event sq" data-label="October 2018 – September 2022" style="--tl-color-label: #06926d; --tl-color-dot: #06926d;" data-dot="1">
 <h3 class="anchored" data-anchor-id="solutions-architect">Solutions Architect</h3>
 <p><strong>SaaSquatch by impact.com</strong></p>
 <ul>
@@ -399,7 +422,9 @@ ul.task-list li input[type="checkbox"] {
 <li>Designed and executed solutions for custom JavaScript, REST API, and GraphQL software installations.</li>
 </ul>
 </section>
-<section id="customer-support-analyst" class="level3 event" data-label="October 2017 – August 2018" style="--tl-color-label: #f26b29; --tl-color-dot: #f26b29;">
+</div>
+</div>
+<section id="customer-support-analyst" class="level3 event tl-card" data-label="October 2017 – August 2018" style="--tl-color-label: #f26b29; --tl-color-dot: #f26b29;">
 <h3 class="anchored" data-anchor-id="customer-support-analyst">Customer Support Analyst</h3>
 <p><strong>Develus Systems Inc.&nbsp;for Complia Health</strong></p>
 <ul>
@@ -408,7 +433,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Triaged, escalated, and owned resolution of product bugs for custom installations using Zendesk.</li>
 </ul>
 </section>
-<section id="customer-support-representative" class="level3 event" data-label="July 2016 – September 2017" style="--tl-color-label: #cd1727; --tl-color-dot: #cd1727;">
+<section id="customer-support-representative" class="level3 event tl-card" data-label="July 2016 – September 2017" style="--tl-color-label: #cd1727; --tl-color-dot: #cd1727;">
 <h3 class="anchored" data-anchor-id="customer-support-representative">Customer Support Representative</h3>
 <p>AbeBooks.com, Amazon subsidiary</p>
 <ul>
@@ -416,7 +441,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Initiated improvements to best practices and processes, including documentation for team knowledge base.</li>
 </ul>
 </section>
-<section id="optical-technician-medical-office-assistant" class="level3 event" data-label="January 2014 – July 2016" style="--tl-color-label: #f3be60; --tl-color-dot: #f3be60;">
+<section id="optical-technician-medical-office-assistant" class="level3 event tl-card" data-label="January 2014 – July 2016" style="--tl-color-label: #f3be60; --tl-color-dot: #f3be60;">
 <h3 class="anchored" data-anchor-id="optical-technician-medical-office-assistant">Optical Technician &amp; Medical Office Assistant</h3>
 <p><strong>Hudson’s Bay Optical</strong></p>
 <ul>
@@ -424,7 +449,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Managed patient charts, sales reports, office inventory and stock orders.</li>
 </ul>
 </section>
-<section id="medical-office-assistant-receptionist" class="level3 event" data-label="July 2013 – December 2013" style="--tl-color-label: #0272be; --tl-color-dot: #0272be;">
+<section id="medical-office-assistant-receptionist" class="level3 event tl-card" data-label="July 2013 – December 2013" style="--tl-color-label: #0272be; --tl-color-dot: #0272be;">
 <h3 class="anchored" data-anchor-id="medical-office-assistant-receptionist">Medical Office Assistant / Receptionist</h3>
 <p><strong>Inner Harbour Optometry</strong></p>
 <ul>
@@ -432,7 +457,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Improved patient re-call system to increase business revenue.</li>
 </ul>
 </section>
-<section id="administrative-teaching-assistant" class="level3 event" data-label="July 2010 – July 2013" style="--tl-color-label: #222e84; --tl-color-dot: #222e84;">
+<section id="administrative-teaching-assistant" class="level3 event tl-card" data-label="July 2010 – July 2013" style="--tl-color-label: #222e84; --tl-color-dot: #222e84;">
 <h3 class="anchored" data-anchor-id="administrative-teaching-assistant">Administrative &amp; Teaching Assistant</h3>
 <p><strong>Sylvan Learning, Inc.</strong></p>
 <ul>
@@ -448,7 +473,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Docs-as-code engineering</li>
 <li>Quarto publishing</li>
-<li>Jupyter Notebooks</li>
+<li>Jupyter Notebooks <!-- - MDX --></li>
 <li>Markdown</li>
 </ul>
 <p><strong>Software Development</strong></p>
@@ -456,18 +481,21 @@ ul.task-list li input[type="checkbox"] {
 <li>CI/CD workflows</li>
 <li>GitHub</li>
 <li>Cursor Code</li>
-<li>Visual Studio Code</li>
+<li>Visual Studio Code <!-- - Supabase --></li>
 <li>Docker</li>
 <li>Postman</li>
+<li>Netlify <!-- - Vercel --></li>
 </ul>
 <p><strong>Solutions Architecture &amp; Implementation</strong></p>
 <ul>
 <li>REST API</li>
 <li>GraphQL</li>
 <li>JavaScript</li>
+<li>Next.js</li>
 <li>JSONata</li>
 <li>Python</li>
-<li>HTML</li>
+<li>Rust</li>
+<li>HTML <!-- - Tailwind CSS --></li>
 <li>CSS</li>
 <li>TypeScript</li>
 <li>SQL</li>
@@ -513,15 +541,39 @@ ul.task-list li input[type="checkbox"] {
 </section></div></section>
 <section id="education" class="level2">
 <h2 class="anchored" data-anchor-id="education">Education</h2>
-<div class="timeline tl-diamond tl-label-badge vertical">
-<section id="lighthouse-labs" class="level3 event" data-label="Completed 2019" style="--tl-color-label: #ff6068; --tl-color-dot: #ff6068;">
+<div class="timeline tl-diamond tl-label-badge vertical-right">
+<section id="lighthouse-labs" class="level3 event tl-card" data-label="Completed 2019" style="--tl-color-label: #ff6068; --tl-color-dot: #ff6068;">
 <h3 class="anchored" data-anchor-id="lighthouse-labs">Lighthouse Labs</h3>
 <p>Intro to Front-End with JavaScript</p>
 </section>
-<section id="university-of-victoria" class="level3 event" data-label="Graduated 2013" style="--tl-color-label: #0272be; --tl-color-dot: #0272be;">
+<section id="university-of-victoria" class="level3 event tl-card" data-label="Graduated 2013" style="--tl-color-label: #0272be; --tl-color-dot: #0272be;">
 <h3 class="anchored" data-anchor-id="university-of-victoria">University of Victoria</h3>
 <p><strong><em>cum laude</em></strong></p>
 <p>Bachelor of Arts, English Literature &amp; Japanese Studies</p>
+</section>
+</div>
+</section>
+<section id="projects" class="level2">
+<h2 class="anchored" data-anchor-id="projects">Projects</h2>
+<div class="timeline tl-diamond tl-label-badge vertical">
+<!-- ::: {.event data-label="Launched October 2026" style="--tl-color-label: #ffb3ba; --tl-color-dot: #ffb3ba;" .tl-card}
+### y2k Guestbook
+*[https://beck-chan.vercel.app](https://beck-chan.vercel.app){target="_blank"}*
+
+- Mobile-responsive frontend built on Next.js, backend powered by Supabase. Custom styling with Tailwind CSS. 
+- Built-in rate limiting and profanity filtering. Admin functionality for comment management and customization.
+- Documentation including API reference written in MDX. Admin authentication handled by Google Cloud Platform.
+ -->
+<!-- 
+::: -->
+<section id="personal-portfolio" class="level3 event tl-card" data-label="Launched August 2026" style="--tl-color-label: #0b2a12; --tl-color-dot: #0b2a12;">
+<h3 class="anchored" data-anchor-id="personal-portfolio">Personal Portfolio</h3>
+<p><em><a href="https://beck-chan.github.io">https://beck-chan.github.io</a></em></p>
+<ul>
+<li>Mobile-responsive build using Quarto, deployed to GitHub Pages and Netlify via GitHub CI/CD Workflows.</li>
+<li>Custom themes and styling using Bootstrap. Custom functionality added with JavaScript and Lua.</li>
+<li>Local deployment fallbacks via Justfile in Rust.</li>
+</ul>
 </section>
 </div>
 
@@ -563,6 +615,8 @@ ul.task-list li input[type="checkbox"] {
       let bottom = 0;
       for (const child of sidebar.children) {
         if (child.classList.contains("quarto-sidebar-toggle")) continue;
+        if (child.id === "portfolio-toc-toggle") continue;
+        if (child.id === "portfolio-toc-sentinel") continue;
         if (window.getComputedStyle(child).display === "none") continue;
         const rect = child.getBoundingClientRect();
         if (rect.height === 0) continue;
@@ -612,7 +666,59 @@ ul.task-list li input[type="checkbox"] {
       }
     };
 
+    // Quarto leaves margin footnotes inside tab panes and marks the
+    // tabset with page-columns/page-full, nesting a full page grid in
+    // the body column. Move those notes into the sibling
+    // .tabset-margin-container so the tabset can lay out normally and
+    // Quarto's shown.bs.tab handler can toggle note visibility.
+    const hoistTabsetMargins = () => {
+      document.querySelectorAll(".panel-tabset").forEach((tabset) => {
+        const margins = [
+          ...tabset.querySelectorAll(".column-margin.column-container"),
+        ];
+        if (!margins.length) return;
+
+        let container = tabset.previousElementSibling;
+        if (!container?.classList.contains("tabset-margin-container")) {
+          container = document.createElement("div");
+          container.className = "tabset-margin-container";
+          tabset.parentElement?.insertBefore(container, tabset);
+        }
+
+        // Sit in the parent section's page grid as the margin column.
+        container.classList.add(
+          "column-margin",
+          "column-container",
+          "no-row-height"
+        );
+
+        margins.forEach((margin) => {
+          const pane = margin.closest(".tab-pane");
+          const tabBtnId =
+            pane?.getAttribute("aria-labelledby") ||
+            (pane?.id ? `${pane.id}-tab` : null);
+          const wrap = document.createElement("div");
+          wrap.className = "tabset-margin-content";
+          if (tabBtnId) wrap.classList.add(`${tabBtnId}-margin-content`);
+          if (!pane?.classList.contains("active")) {
+            wrap.classList.add("collapse");
+          }
+          while (margin.firstChild) wrap.appendChild(margin.firstChild);
+          container.appendChild(wrap);
+          margin.remove();
+        });
+
+        const strip = (el) => {
+          el.classList.remove("page-columns", "page-full");
+        };
+        strip(tabset);
+        tabset.querySelectorAll(".page-columns, .page-full").forEach(strip);
+      });
+    };
+
     const layoutMarginBelowToc = () => {
+      hoistTabsetMargins();
+
       const marginChildren = document.querySelectorAll(MARGIN_SEL);
       if (!marginChildren.length) {
         expandContentForMargins(0);
@@ -659,6 +765,10 @@ ul.task-list li input[type="checkbox"] {
       schedule();
       // Failsafe: never leave footnotes hidden if layout is delayed.
       setTimeout(reveal, 1500);
+      // Re-cascade when Quarto toggles tabset margin note visibility.
+      window.document.querySelectorAll('.panel-tabset a[data-bs-toggle="tab"]').forEach((tab) => {
+        tab.addEventListener("shown.bs.tab", schedule);
+      });
       window.document.querySelectorAll(".column-margin img").forEach((img) => {
         if (!img.complete) img.addEventListener("load", schedule, { once: true });
       });
@@ -673,6 +783,315 @@ ul.task-list li input[type="checkbox"] {
         if (margin) ro.observe(margin);
       }
     });
+  })();
+</script>
+<script>
+  // Fixed TOC dropdown once the in-flow nav#TOC scrolls under the navbar.
+  // Uses a scrollY threshold captured at page top so detection still works
+  // if the margin sidebar goes sticky, and ignores brief TOC height=0
+  // blips during margin-below-toc footnote layout.
+  (() => {
+    const MQ = "(min-width: 992px)";
+    const TOGGLE_ID = "portfolio-toc-toggle";
+    const NAVBAR_FALLBACK = 75;
+    const ROLLED_CLASS = "portfolio-toc-rolled-up";
+
+    let lastScrollY = 0;
+    let seenToc = false;
+    // scrollY at which the TOC top meets the navbar — captured at rest only.
+    let showAfterY = null;
+
+    const marginSidebar = () =>
+      document.getElementById("quarto-margin-sidebar");
+    const tocNav = () => document.getElementById("TOC");
+    const toggleEl = () => document.getElementById(TOGGLE_ID);
+
+    const desktop = () =>
+      !!(window.matchMedia && window.matchMedia(MQ).matches);
+
+    const navbarOffset = () => {
+      const nav =
+        document.querySelector("#quarto-header nav.navbar") ||
+        document.querySelector("#quarto-header") ||
+        document.querySelector("nav.navbar");
+      if (!nav) return NAVBAR_FALLBACK;
+      const bottom = nav.getBoundingClientRect().bottom;
+      return bottom > 0 ? Math.ceil(bottom) : NAVBAR_FALLBACK;
+    };
+
+    const titleText = () => {
+      const toc = tocNav();
+      const heading = toc?.querySelector("#toc-title, h2, h3");
+      return (heading?.textContent || "Table of Contents").trim();
+    };
+
+    // Only capture near the top so sticky/visual offsets can't corrupt it.
+    const captureThreshold = () => {
+      const toc = tocNav();
+      if (!toc || toc.offsetHeight <= 0) return;
+      if (window.scrollY > 40) return;
+      const docTop = toc.getBoundingClientRect().top + window.scrollY;
+      showAfterY = Math.max(0, docTop - navbarOffset());
+    };
+
+    // true / false / null (layout glitch — keep current visibility)
+    const pastInlineToc = () => {
+      if (!desktop()) return false;
+      const toc = tocNav();
+      if (!toc && !seenToc) return false;
+      if (!toc) return null;
+
+      if (showAfterY != null) {
+        return window.scrollY >= showAfterY;
+      }
+
+      // Threshold not ready yet (footnote layout still settling).
+      if (toc.offsetHeight <= 0) return null;
+      return toc.getBoundingClientRect().top <= navbarOffset();
+    };
+
+    const positionToggle = (el) => {
+      if (!el) return;
+      const sidebar = marginSidebar();
+      const toc = tocNav();
+      // Margin column is the stable anchor (TOC may be rolled up / off-screen).
+      let left = null;
+      let width = null;
+      if (sidebar && sidebar.offsetWidth > 0) {
+        const sb = sidebar.getBoundingClientRect();
+        left = sb.left;
+        width = sb.width;
+      } else if (toc) {
+        const tr = toc.getBoundingClientRect();
+        if (tr.width > 0) {
+          left = tr.left;
+          width = tr.width;
+        }
+      }
+      if (!(width > 0) || left == null) return;
+      el.style.left = `${Math.round(left)}px`;
+      el.style.width = `${Math.round(width)}px`;
+      el.style.top = `${navbarOffset()}px`;
+    };
+
+    const setInlineRolled = (rolled) => {
+      const toc = tocNav();
+      if (!toc) return;
+      toc.classList.toggle(ROLLED_CLASS, rolled);
+    };
+
+    const closeToggle = (el) => {
+      if (!el) return;
+      el.classList.remove("expanded");
+      const contents = el.querySelector(".portfolio-toc-toggle-contents");
+      if (contents) contents.style.height = "0px";
+      el.dataset.open = "false";
+      const btn = el.querySelector(".portfolio-toc-toggle-title");
+      if (btn) btn.setAttribute("aria-expanded", "false");
+    };
+
+    const fillContents = (el) => {
+      const toc = tocNav();
+      const contents = el.querySelector(".portfolio-toc-toggle-contents");
+      if (!toc || !contents) return;
+
+      const clone = toc.cloneNode(true);
+      clone.removeAttribute("id");
+      clone.classList.remove(ROLLED_CLASS);
+      clone.classList.add("portfolio-toc-panel");
+      clone.querySelectorAll("[id]").forEach((node) => {
+        node.removeAttribute("id");
+      });
+
+      const heading = clone.querySelector("h2, h3");
+      if (heading) {
+        heading.classList.add("portfolio-toc-panel-heading");
+        const icon = document.createElement("i");
+        icon.className = "portfolio-toc-toggle-icon bi bi-caret-up-fill";
+        icon.setAttribute("aria-hidden", "true");
+        heading.append(icon);
+        heading.setAttribute("role", "button");
+        heading.setAttribute("tabindex", "0");
+        heading.setAttribute("aria-expanded", "true");
+        const collapse = (event) => {
+          event.preventDefault();
+          closeToggle(el);
+        };
+        heading.addEventListener("click", collapse);
+        heading.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") collapse(event);
+        });
+      }
+
+      contents.replaceChildren(clone);
+      contents.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener("click", () => closeToggle(el));
+      });
+    };
+
+    const openToggle = (el) => {
+      fillContents(el);
+      el.classList.add("expanded");
+      const contents = el.querySelector(".portfolio-toc-toggle-contents");
+      if (contents) {
+        contents.style.height = null;
+        contents.style.maxHeight = `calc(100vh - ${navbarOffset() + 24}px)`;
+      }
+      el.dataset.open = "true";
+      const btn = el.querySelector(".portfolio-toc-toggle-title");
+      if (btn) btn.setAttribute("aria-expanded", "true");
+    };
+
+    const ensureToggle = () => {
+      let el = toggleEl();
+      if (el) return el;
+      if (!tocNav()) return null;
+
+      el = document.createElement("div");
+      el.id = TOGGLE_ID;
+      el.className = "portfolio-toc-toggle zindex-over-content";
+      el.hidden = true;
+      el.dataset.open = "false";
+      el.setAttribute("role", "navigation");
+      el.setAttribute("aria-label", titleText());
+
+      const titleBtn = document.createElement("button");
+      titleBtn.type = "button";
+      titleBtn.className = "portfolio-toc-toggle-title";
+      titleBtn.setAttribute("aria-expanded", "false");
+      titleBtn.setAttribute("aria-controls", `${TOGGLE_ID}-contents`);
+
+      const label = document.createElement("span");
+      label.className = "portfolio-toc-toggle-label";
+      label.textContent = titleText();
+
+      const icon = document.createElement("i");
+      icon.className = "portfolio-toc-toggle-icon bi bi-caret-down-fill";
+      icon.setAttribute("aria-hidden", "true");
+
+      titleBtn.append(label, icon);
+
+      const contents = document.createElement("div");
+      contents.id = `${TOGGLE_ID}-contents`;
+      contents.className = "portfolio-toc-toggle-contents";
+      contents.style.height = "0px";
+
+      el.append(titleBtn, contents);
+      document.body.append(el);
+
+      titleBtn.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        if (el.dataset.open === "true") closeToggle(el);
+        else openToggle(el);
+      });
+
+      return el;
+    };
+
+    const setVisible = (visible) => {
+      const el = ensureToggle();
+      if (!el) return;
+
+      if (!visible) {
+        closeToggle(el);
+        el.hidden = true;
+        setInlineRolled(false);
+        return;
+      }
+
+      el.hidden = false;
+      setInlineRolled(true);
+      positionToggle(el);
+    };
+
+    const sync = () => {
+      const toc = tocNav();
+      if (toc) seenToc = true;
+
+      captureThreshold();
+
+      const el = ensureToggle();
+      if (!el) return;
+
+      if (!desktop() || (!toc && !seenToc)) {
+        setVisible(false);
+        return;
+      }
+
+      if (!toc) return;
+
+      const past = pastInlineToc();
+      if (past === null) {
+        if (!el.hidden) positionToggle(el);
+        return;
+      }
+
+      setVisible(past);
+    };
+
+    let tick = 0;
+    const onScroll = () => {
+      if (tick) return;
+      tick = requestAnimationFrame(() => {
+        tick = 0;
+        const el = toggleEl();
+        const dy = Math.abs(window.scrollY - lastScrollY);
+        lastScrollY = window.scrollY;
+        if (dy > 8 && el?.dataset.open === "true") closeToggle(el);
+        sync();
+      });
+    };
+
+    const boot = () => {
+      if (!tocNav()) return;
+
+      lastScrollY = window.scrollY;
+      ensureToggle();
+      sync();
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", () => {
+        if (window.scrollY <= 40) showAfterY = null;
+        sync();
+      });
+      requestAnimationFrame(sync);
+      window.addEventListener("load", sync, { once: true });
+      // Remeasure after margin-below-toc footnote cascade settles.
+      setTimeout(sync, 100);
+      setTimeout(sync, 400);
+      setTimeout(sync, 1000);
+
+      if (window.IntersectionObserver) {
+        const toc = tocNav();
+        if (toc) {
+          const io = new IntersectionObserver(() => sync(), {
+            root: null,
+            threshold: [0, 0.01, 1],
+          });
+          io.observe(toc);
+        }
+      }
+
+      if (window.ResizeObserver) {
+        const ro = new ResizeObserver(() => {
+          clearTimeout(ro._t);
+          ro._t = setTimeout(sync, 50);
+        });
+        const toc = tocNav();
+        const sidebar = marginSidebar();
+        const main = document.querySelector("main.content");
+        if (toc) ro.observe(toc);
+        if (sidebar) ro.observe(sidebar);
+        if (main) ro.observe(main);
+      }
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", boot);
+    } else {
+      boot();
+    }
   })();
 </script>
 <script>
@@ -719,19 +1138,124 @@ ul.task-list li input[type="checkbox"] {
     }
   })();
 </script>
+<script>
+  // Keep in-page hash targets below the fixed header. Quarto's hashchange
+  // offset looks for header.fixed-top and can fire before native scroll, and
+  // CSS scroll-margin is unreliable on page-columns grid sections.
+  (() => {
+    const OFFSET = 80;
+
+    const targetEl = (hash) => {
+      if (!hash) return null;
+      const id = decodeURIComponent(String(hash).replace(/^#/, ""));
+      if (!id) return null;
+      return (
+        document.getElementById(id) ||
+        document.querySelector(`[data-anchor-id="${CSS.escape(id)}"]`)
+      );
+    };
+
+    const scrollToEl = (el) => {
+      if (!el) return;
+      const top = el.getBoundingClientRect().top + window.scrollY - OFFSET;
+      window.scrollTo({ top: Math.max(0, top), behavior: "auto" });
+    };
+
+    const samePageHash = (link) => {
+      try {
+        const url = new URL(link.href, window.location.href);
+        if (url.pathname !== window.location.pathname) return null;
+        if (url.search !== window.location.search) return null;
+        return url.hash || null;
+      } catch {
+        return null;
+      }
+    };
+
+    document.addEventListener("click", (event) => {
+      const link = event.target.closest("a[href]");
+      if (!link) return;
+      if (link.dataset.bsToggle) return;
+      const hash = samePageHash(link);
+      if (!hash) return;
+      const el = targetEl(hash);
+      if (!el) return;
+      // After native scroll + Quarto's hashchange handler.
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => scrollToEl(el));
+      });
+    });
+
+    const applyHash = () => scrollToEl(targetEl(window.location.hash));
+
+    window.addEventListener("hashchange", () => {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(applyHash);
+      });
+    });
+
+    const onReady = () => {
+      if (!window.location.hash) return;
+      applyHash();
+      setTimeout(applyHash, 250);
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", onReady);
+    } else {
+      onReady();
+    }
+    window.addEventListener("load", onReady);
+  })();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
     if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-      const a = window.document.createElement('a');
-      a.classList.add('top-right');
-      a.classList.add('quarto-color-scheme-toggle');
-      a.href = "";
-      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const toggle = window.document.createElement('button');
+      toggle.type = "button";
+      toggle.setAttribute("role", "switch");
+      toggle.setAttribute("aria-checked", "false");
+      toggle.classList.add('top-right');
+      toggle.classList.add('quarto-color-scheme-toggle');
+      toggle.setAttribute("aria-label", "Toggle Theme");
+      toggle.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
       const i = window.document.createElement("i");
       i.classList.add('bi');
-      a.appendChild(i);
-      window.document.body.appendChild(a);
+      toggle.appendChild(i);
+      // Put the toggle in a landmark of its own, so that landmark navigation
+      // can reach it.
+      //
+      // The container is always a fresh direct child of body, and the toggle is
+      // never moved into page furniture that the theme or the author controls.
+      // The toggle is positioned against the page, so any ancestor that
+      // establishes a containing block captures it: a positioned element or a
+      // grid for position: absolute, and transform, filter, will-change or
+      // contain for position: fixed. A direct child of body has none of these
+      // to inherit, and the shift when one appears is silent and visual.
+      //
+      // ARIA says a document should have at most one banner, and axe reports a
+      // duplicate whether or not the banners carry distinct labels. So use a
+      // header when the page has no banner yet, and a named region otherwise.
+      //
+      // A header is a banner wherever it sits, unless it is inside sectioning
+      // content, so this cannot just look at the children of body: a custom
+      // page layout wraps the title block header in a plain div. An explicit
+      // role="banner" always counts.
+      const sectioning = 'article, aside, main, nav, section, [role="article"], [role="complementary"], [role="main"], [role="navigation"], [role="region"]';
+      const hasBanner = Array.from(
+        window.document.querySelectorAll('header:not([role]), [role="banner"]')
+      ).some(function(el) {
+        return el.hasAttribute("role") || el.closest(sectioning) === null;
+      });
+      const container = window.document.createElement(hasBanner ? "div" : "header");
+      if (hasBanner) {
+        container.setAttribute("role", "region");
+        container.setAttribute("aria-label", "Toggle Theme");
+      }
+      container.classList.add('quarto-color-scheme-toggle-container');
+      container.appendChild(toggle);
+      window.document.body.appendChild(container);
     }
     setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";

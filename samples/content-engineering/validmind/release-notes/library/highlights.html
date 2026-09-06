@@ -1,0 +1,1829 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.3">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Library feature highlights – Portfolio</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../../">
+<link href="../../../../../samples/content-engineering/validmind/release-notes/library/generation.html" rel="prev">
+<link href="../../../../../assets/headshot.png" rel="icon" type="image/png">
+<script src="../../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-d0114024d9f4d5bb209e87a78e65fba1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../../site_libs/bootstrap/bootstrap-e2fe54d18dda9285c2bb2d5a201405be.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../../../site_libs/quarto-contrib/timeline-0.1.0/timeline.js"></script>
+<link href="../../../../../site_libs/quarto-contrib/timeline-0.1.0/timeline.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-contrib/tachyons-4.12.0/tachyons.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-contrib/tachyons-4.12.0/quarto-resets.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No Results Found",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "Search Portfolio",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}p||((p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",p.onerror=function(){p=null},(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r));var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="al ol ll init Il Rl Tl Ml Ol za El Dl Sl capture getExtension Pl nl Hl calculateEventProperties Bl register register_once register_for_session unregister unregister_for_session Vl Cl zl getFeatureFlag getFeatureFlagPayload getFeatureFlagResult getAllFeatureFlags isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync Gl identify setPersonProperties unsetPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset Zl shutdown setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty Ul ql createPersonProfile setInternalOrTestUser Wl ul hl opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing $l debug Ua Jn getPageViewId captureTraceFeedback captureTraceMetric bl".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_zqwk6XXUUjTLnofgQxcesCk2hnsCVoF3FCfB6KVg2Vym', {
+        api_host: 'https://us.i.posthog.com',
+        defaults: '2026-05-30',
+        person_profiles: 'always', // or 'always' to create profiles for anonymous users as well
+    })
+</script>
+
+
+<link rel="stylesheet" href="../no-top-nav.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../../../samples/content-engineering/validmind/release-notes/library/highlights.html">Library feature highlights</a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../../../../">ValidMind release notes</a> 
+    </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../samples/content-engineering/validmind/release-notes/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ValidMind release notes</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../samples/content-engineering/validmind/release-notes/access-requirements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Access requirements</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../samples/content-engineering/validmind/release-notes/trigger-workflows.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Trigger release notes workflows manually</span></a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
+ <span class="menu-text">CMVM patch</span>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../samples/content-engineering/validmind/release-notes/patch/automation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Patch release automation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../samples/content-engineering/validmind/release-notes/patch/generation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Manual patch releases generation</span></a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
+ <span class="menu-text">Library</span>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../samples/content-engineering/validmind/release-notes/library/automation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Library release automation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../samples/content-engineering/validmind/release-notes/library/generation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Manual library releases generation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../samples/content-engineering/validmind/release-notes/library/highlights.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Library feature highlights</span></a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
+ <span class="menu-text">Monthly / full</span>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../samples/content-engineering/validmind/release-notes/monthly/automation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Monthly release automation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../samples/content-engineering/validmind/release-notes/monthly/generation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Manual monthly releases generation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../../samples/content-engineering/validmind/release-notes/monthly/highlights.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Monthly feature highlights</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of Contents</h2>
+   
+  <ul>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link active" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#why-do-we-generate-library-feature-highlights" id="toc-why-do-we-generate-library-feature-highlights" class="nav-link" data-scroll-target="#why-do-we-generate-library-feature-highlights">Why do we generate library feature highlights?</a></li>
+  <li><a href="#when-should-i-generate-library-feature-highlights" id="toc-when-should-i-generate-library-feature-highlights" class="nav-link" data-scroll-target="#when-should-i-generate-library-feature-highlights">When should I generate library feature highlights?</a></li>
+  <li><a href="#how-should-i-generate-library-feature-highlights" id="toc-how-should-i-generate-library-feature-highlights" class="nav-link" data-scroll-target="#how-should-i-generate-library-feature-highlights">How should I generate library feature highlights?</a>
+  <ul>
+  <li><a href="#curate-library-highlight-topics" id="toc-curate-library-highlight-topics" class="nav-link" data-scroll-target="#curate-library-highlight-topics">1. Curate library highlight topics</a></li>
+  <li><a href="#review-orphan-prs" id="toc-review-orphan-prs" class="nav-link" data-scroll-target="#review-orphan-prs">2. Review orphan PRs</a></li>
+  <li><a href="#materialize-library-highlights" id="toc-materialize-library-highlights" class="nav-link" data-scroll-target="#materialize-library-highlights">3. Materialize library highlights</a></li>
+  </ul></li>
+  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">Appendix</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Library feature highlights</h1>
+<p class="subtitle lead">ValidMind release notes guides</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Content Architecture</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta column-body">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Human-driven authoring process for <code>validmind-library</code> feature release notes (<code>vX.Y.Z</code>) highlights.</p>
+<section id="prerequisites" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" checked=""><strong><a href="../../../../../samples/content-engineering/validmind/release-notes/access-requirements.html">Access requirements</a></strong> — <code>.env</code> setup, GitHub authentication, Poetry, <code>LIBRARY_RELEASE_DELTA</code>, Zendesk &amp; Shortcut tokens, <code>OPENAI_API_KEY</code> for LLM edits</label></li>
+<li><label><input type="checkbox" checked=""><strong>Stable library release draft has been generated</strong> (<code>-rc#</code> tags are rejected) — For example: <code>v2.14.0</code></label></li>
+</ul>
+</section>
+<section id="why-do-we-generate-library-feature-highlights" class="level2">
+<h2 class="anchored" data-anchor-id="why-do-we-generate-library-feature-highlights">Why do we generate library feature highlights?</h2>
+<p>Library feature highlights group a library release into topics, providing a cohesive story for customers:</p>
+<ul>
+<li>Feature highlights are also required to generate[customer release notifications — notification emails pull highlight titles from curated theme pages (<code>pr-*-highlights.qmd</code>), not from individual per-PR <code>highlight</code> category release notes (<code>pr-{n}.qmd</code>).</li>
+<li>Materializing highlights creates those theme pages — without them, notifications have nothing to summarize except customer Zendesk ticket status. Skipping materialize leaves nothing theme-grouped for notifications to summarize, even if individual <code>pr-{n}.qmd</code> wrappers carry a <code>highlight</code> category.</li>
+</ul>
+</section>
+<section id="when-should-i-generate-library-feature-highlights" class="level2">
+<h2 class="anchored" data-anchor-id="when-should-i-generate-library-feature-highlights">When should I generate library feature highlights?</h2>
+<p>Only library feature releases need highlights. Patch v.s. feature is determined from the new tag relative to the previous stable tag:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Patch release</th>
+<th>Feature release</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Same major.minor bump (for example, <code>v2.13.4</code> → <code>v2.13.5</code>)</td>
+<td>Major or minor bump (for example, <code>v2.13.5</code> → <code>v2.14.0</code>, or <code>v2.14.0</code> → <code>v3.0.0</code>)</td>
+</tr>
+<tr class="even">
+<td>First in-scope tag with non-zero patch (for example, <code>v2.14.3</code>)</td>
+<td>First in-scope tag with patch <code>.0</code> (for example, <code>v2.14.0</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>Generate library feature highlights when initial library release note drafts have been created on a feature release, whether by GitHub Actions automation or by you as a human.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Scenario</th>
+<th>Branch context</th>
+<th>When to run</th>
+<th>Full context</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>A — Automation creates library release drafts, branch, &amp; PRs</strong></td>
+<td><code>automated/library-v{version}</code> (Refer to: <a href="../../../../../samples/content-engineering/validmind/release-notes/library/automation.html">Library release automation</a>)</td>
+<td>After checking out the open <code>release-notes</code> draft PR</td>
+<td>Automation opens the branch and drafts library <code>release-notes.qmd</code> plus partials; <em>does not</em> curate highlights</td>
+</tr>
+<tr class="even">
+<td><strong>B — You create library release drafts &amp; branch/worktree</strong></td>
+<td>Local batch or individual generate (Refer to: <a href="../../../../../samples/content-engineering/validmind/release-notes/library/generation.html">Manual library releases</a>)</td>
+<td>After <code>generate_library_release_notes.py</code> (or <code>generate_library_batch.py</code>) writes draft partials on your branch</td>
+<td>Generation drafts library shell plus partials; no branch/worktree or PR unless you create/open</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="how-should-i-generate-library-feature-highlights" class="level2">
+<h2 class="anchored" data-anchor-id="how-should-i-generate-library-feature-highlights">How should I generate library feature highlights?</h2>
+<section id="curate-library-highlight-topics" class="level3">
+<h3 class="anchored" data-anchor-id="curate-library-highlight-topics">1. Curate library highlight topics</h3>
+<ol type="i">
+<li>Run the interactive library feature curation script:</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">poetry</span> run python scripts/curate_library_highlights.py <span class="at">--version</span> {version}</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Include untagged highlight candidates when grouping topics:</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># poetry run python scripts/curate_library_highlights.py --version {version} --include-candidates</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Resume after quitting with q:</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># poetry run python scripts/curate_library_highlights.py --version {version} --resume</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The script will:</p>
+<ul>
+<li><p>Build suggested topics from GitHub <code>highlight</code> labels (+ optional <code>--include-candidates</code> for untagged candidates)</p></li>
+<li><p>Show interactive prompts including each topic’s PR <code>TITLE</code> and <code>CONTENTS</code> preview (shared monthly partial helpers)</p></li>
+<li><p>At each topic, choose from:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Input</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>1</code> or Enter</td>
+<td><em>Approve</em> topic</td>
+</tr>
+<tr class="even">
+<td><code>2</code></td>
+<td><em>Skip</em> topic</td>
+</tr>
+<tr class="odd">
+<td><code>3</code></td>
+<td><em>Rename</em> title and/or subtitle, then approve</td>
+</tr>
+<tr class="even">
+<td><code>q</code></td>
+<td><em>Quit</em> — Save progress to gitignored draft; re-run with <code>--resume</code></td>
+</tr>
+</tbody>
+</table></li>
+<li><p>Write committed <strong><code>library-highlights.json</code></strong></p></li>
+</ul>
+<ol start="2" type="i">
+<li>Spot-check <code>library-highlights.json</code> to confirm approved topics and PR lists look correct:</li>
+</ol>
+<ul>
+<li>Open <code>releases/validmind-library/v{version}/library-highlights.json</code> — Verify topic titles, slugs, and each topic’s <code>prs[]</code> entries before you commit.</li>
+<li>Quitting with <code>q</code> saves a gitignored draft only — finish the session or use <code>--resume</code> before committing the manifest.</li>
+</ul>
+<ol start="3" type="i">
+<li>Commit curated topics before reviewing orphan PRs:</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add releases/validmind-library/v{version}/library-highlights.json</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Curate library highlights for v{version}"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Example — commit topics for 2.14.0 on the automation branch</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="review-orphan-prs" class="level3">
+<h3 class="anchored" data-anchor-id="review-orphan-prs">2. Review orphan PRs</h3>
+<p>We’ll perform an interactive review for PRs not linked to any approved highlight topic (therefore not wrapped up into highlights and still listed under their independent library category sections).</p>
+<ol type="i">
+<li>Run the interactive orphan reporting script:</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">poetry</span> run python scripts/report_library_orphan_prs.py <span class="at">--version</span> {version}</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Report only (no prompts):</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># poetry run python scripts/report_library_orphan_prs.py --version {version} --report-only</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The script will:</p>
+<ul>
+<li><p>Show interactive prompts including a PR’s <code>TITLE</code>, <code>CONTENTS</code> preview, and <code>TAGS</code> (when present)</p></li>
+<li><p>Auto-keep PRs with both <code>support</code> and <code>bug</code> labels before the interactive loop (those orphans are not shown in prompts)</p></li>
+<li><p>For each orphan, choose from:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Input</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>1</code></td>
+<td><em>Promote</em> to a highlight topic — Select a topic by number; syncs <code>library-highlights.json</code></td>
+</tr>
+<tr class="even">
+<td><code>2</code></td>
+<td><em>Hide</em> PR — Sets <code>hidden</code> on the wrapper and comment-outs the library shell include in <code>release-notes.qmd</code></td>
+</tr>
+<tr class="odd">
+<td><code>3</code></td>
+<td><em>Keep</em> PR — leave as an independent library category section</td>
+</tr>
+<tr class="even">
+<td><code>q</code></td>
+<td><em>Quit</em> — Save progress to <code>library-orphan-prs.json</code> and continue later</td>
+</tr>
+</tbody>
+</table></li>
+<li><p>Write <code>releases/validmind-library/v{version}/library-orphan-prs.json</code> after orphan review completes or on quit; on a full session (every orphan reviewed), also write pre-materialize <code>{version}-library-highlights-overview.json</code> and <code>{version}-library-highlights-overview.md</code></p></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Can you rerun orphan review?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Yes — before materializing highlights, rerun the same command to resume an incomplete session or review newly orphaned PRs:</p>
+<ul>
+<li>The script reloads <code>library-orphan-prs.json</code>; orphans that already have a disposition are skipped, so only pending PRs appear in prompts.</li>
+<li><strong><code>q</code> quit</strong> saves progress to <code>library-orphan-prs.json</code> so you can continue later.</li>
+<li>Use <code>--dry-run</code> to walk prompts without writing <code>library-orphan-prs.json</code>, hide side effects, topic syncs, or overview files.</li>
+<li>Use <code>--report-only</code> to list orphans without interactive orphan review (add <code>--acknowledge</code> to write a timestamped report).</li>
+<li>To change an earlier orphan assignment, remove that PR from the <code>orphans[]</code> array in <code>library-orphan-prs.json</code> and undo any side effects before rerunning:
+<ul>
+<li><strong>Hidden</strong> — Restore the wrapper’s <code>hidden</code> category and uncomment the library shell include in <code>release-notes.qmd</code></li>
+<li><strong>Promoted</strong> — Remove the PR from the target topic’s <code>prs[]</code> in <code>library-highlights.json</code> (otherwise it stays linked and will not reappear as an orphan)</li>
+<li><strong>Kept</strong> — Remove the <code>library-orphan-prs.json</code> entry only; no other files change</li>
+</ul></li>
+</ul>
+<p>If you already materialized highlights and need to change orphan reviews:</p>
+<ol type="a">
+<li><p>Update orphan records and related topic or hide files as above.</p></li>
+<li><p>Rerun orphan review, then materialize highlights —</p></li>
+</ol>
+<ul>
+<li>Rerun orphan review after undoing side effects — <code>report_library_orphan_prs.py</code> has no <code>--preserve-human-edits</code> flag (that flag applies to initial generate/batch regenerate only):</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">poetry</span> run python scripts/report_library_orphan_prs.py <span class="at">--version</span> {version}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Use <code>--dry-run</code> first on materialize to inspect planned changes without writing files — the script prints a JSON summary of topics and paths it <em>would</em> create or update (highlight partials, wrappers, library shell include comment-outs, promoted to highlight wrapper <code>hidden</code> tags) plus any warnings; it skips disk writes, <code>--edit-highlights</code> polish, and overview output until you rerun without the flag:</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">poetry</span> run python scripts/curate_library_highlights.py <span class="at">--version</span> {version} <span class="at">--materialize</span> <span class="at">--dry-run</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<ol start="2" type="i">
+<li>Spot-check <code>{version}-library-highlights-overview.md</code> to confirm that PRs are grouped as expected:</li>
+</ol>
+<ul>
+<li>After a full orphan review session (every pending orphan reviewed), the script writes pre-materialize overview files under <code>releases/validmind-library/v{version}/</code>:
+<ul>
+<li><code>{version}-library-highlights-overview.md</code> — Human-readable roll-up of highlight topics, orphans, and hidden PRs</li>
+<li><code>{version}-library-highlights-overview.json</code> — Same payload in structured form</li>
+</ul></li>
+<li>Quitting with <code>q</code> saves progress to <code>library-orphan-prs.json</code> only; it does <em>not</em> write or refresh the overview files — resume and finish the session before spot-checking.</li>
+<li>Confirm topics, promoted orphans, hidden PRs, and kept orphans look correct before you commit and materialize.</li>
+</ul>
+<ol start="3" type="i">
+<li>Commit updated orphan output before materializing highlights:</li>
+</ol>
+<ul>
+<li><code>releases/validmind-library/v{version}/library-orphan-prs.json</code> (from orphan review)</li>
+<li><code>releases/validmind-library/v{version}/{version}-library-highlights-overview.md</code> (human-readable pre-materialize overview, full session)</li>
+<li><code>releases/validmind-library/v{version}/{version}-library-highlights-overview.json</code> (structured pre-materialize overview, full session)</li>
+<li><code>releases/validmind-library/v{version}/library-highlights.json</code> (promote sync)</li>
+<li><code>releases/validmind-library/v{version}/release-notes.qmd</code> (hide — library shell include comment-outs)</li>
+<li><code>releases/validmind-library/v{version}/pr-{n}.qmd</code> wrappers (hide — <code>hidden</code> category)</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add releases/validmind-library/v{version}/library-orphan-prs.json <span class="dt">\</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>        releases/validmind-library/v{version}/{version}-library-highlights-overview.md <span class="dt">\</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        releases/validmind-library/v{version}/{version}-library-highlights-overview.json <span class="dt">\</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        releases/validmind-library/v{version}/library-highlights.json <span class="dt">\</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        releases/validmind-library/v{version}/release-notes.qmd</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add releases/validmind-library/v{version}/pr-<span class="pp">*</span>.qmd  <span class="co"># Example — hidden wrappers if any</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add orphan PR review output for v{version}"</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Example — commit orphan output for 2.14.0 on the automation branch</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="materialize-library-highlights" class="level3">
+<h3 class="anchored" data-anchor-id="materialize-library-highlights">3. Materialize library highlights</h3>
+<p>Finally, let’s put it all together.</p>
+<ol type="i">
+<li>We’ll materialize the library feature highlights and pass in:</li>
+</ol>
+<ul>
+<li><strong><code>--edit-highlights</code></strong> — LLM polish on library highlight partials (<code>_pr-*-highlights.qmd</code>): rewrites <code>###</code> heading + prose columns when present; include-only partials are skipped. Does not touch topic wrappers (<code>pr-*-highlights.qmd</code>), individual <code>_pr-{n}.qmd</code>, or hidden PRs. Pass this flag every time you materialize.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Inspect planned changes first</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">poetry</span> run python scripts/curate_library_highlights.py <span class="at">--version</span> {version} <span class="at">--materialize</span> <span class="at">--dry-run</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ex">poetry</span> run python scripts/curate_library_highlights.py <span class="at">--version</span> {version} <span class="at">--materialize</span> <span class="at">--edit-highlights</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Fail when orphan review is missing or stale:</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># poetry run python scripts/curate_library_highlights.py --version {version} --materialize --edit-highlights --require-orphan-review</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Materialize will:</p>
+<ul>
+<li>Embed <code>_pr-{n}.qmd</code> into <code>pr-{slug}-highlights.qmd</code> / <code>_pr-{slug}-highlights.qmd</code></li>
+<li>Add <code>hidden</code> to promoted to highlight <code>pr-{n}.qmd</code> wrappers</li>
+<li>Update library <code>release-notes.qmd</code> <code>## Highlights</code> includes and comment-out promoted to highlight category lines</li>
+<li>Write post-materialize <code>{version}-library-release-overview.json</code> and <code>{version}-library-release-overview.md</code></li>
+<li>Warn (or fail with <code>--require-orphan-review</code>) when <code>library-orphan-prs.json</code> is missing or stale</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Can you rerun materialize highlights?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Yes — after upstream curate or orphan fixes, rerun the same command to refresh highlight output:</p>
+<ul>
+<li>The script re-reads <code>library-highlights.json</code> and rebuilds every approved topic from its <code>prs[]</code> mappings, <strong>overwriting</strong> highlight partials (<code>_pr-*-highlights.qmd</code>) and topic wrappers (<code>pr-*-highlights.qmd</code>) — scaffold and any prior prose in those files is replaced.</li>
+<li>Use <code>--dry-run</code> to inspect planned changes without writing files — the script prints a JSON summary of topics and paths it <em>would</em> create or update (highlight partials, wrappers, library shell include comment-outs, promoted to highlight <code>pr-{n}.qmd</code> wrapper <code>hidden</code> tags) plus any warnings; it skips disk writes, <code>--edit-highlights</code> polish, and overview output until you rerun without the flag.</li>
+<li>Use <code>--require-orphan-review</code> to block materialize when orphan disposition is incomplete.</li>
+<li>Unlike orphan review, there is no human-edit protection on highlight partials — on every rerun it refreshes library shell and wrapper output:
+<ul>
+<li><strong>Highlight partials</strong> — <code>_pr-*-highlights.qmd</code> scaffold and prose replaced (<code>--edit-highlights</code> rewrites prose when present)</li>
+<li><strong>Topic wrappers</strong> — <code>pr-*-highlights.qmd</code> title and structure replaced</li>
+<li><strong>Source partials</strong> — <code>_pr-{n}.qmd</code> draft partials are <em>not</em> overwritten — materialize only embeds them via include expressions</li>
+</ul></li>
+</ul>
+<p>If you need to refresh highlights after upstream curate or orphan changes:</p>
+<ol type="a">
+<li><p>Update <code>library-highlights.json</code>, orphan disposition side effects, or curation files as needed.</p></li>
+<li><p>Rerun materialize —</p></li>
+</ol>
+<ul>
+<li>Use <code>--dry-run</code> first:</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">poetry</span> run python scripts/curate_library_highlights.py <span class="at">--version</span> {version} <span class="at">--materialize</span> <span class="at">--dry-run</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Rerun without <code>--dry-run</code> to write highlight output and <code>--edit-highlights</code> for LLM polish — updates library <code>release-notes.qmd</code> <code>## Highlights</code> includes and comment-outs, sets <code>hidden</code> on promoted to highlight <code>pr-{n}.qmd</code> wrappers, and post-materialize overview files:</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">poetry</span> run python scripts/curate_library_highlights.py <span class="at">--version</span> {version} <span class="at">--materialize</span> <span class="at">--edit-highlights</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Scenario</th>
+<th>Rerun?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>library-highlights.json</code> changed</td>
+<td>Yes</td>
+<td>Re-read topics and rebuild highlight output</td>
+</tr>
+<tr class="even">
+<td>Orphan disposition side-effect fixes (promote/hide/keep)</td>
+<td>Yes</td>
+<td>Refresh wrappers, partials, and library includes</td>
+</tr>
+<tr class="odd">
+<td><code>--dry-run</code> surfaced missing partials or other upstream issues</td>
+<td>Yes</td>
+<td>Fix upstream, then rerun without <code>--dry-run</code></td>
+</tr>
+<tr class="even">
+<td>Only hand-polished highlight prose (<code>--edit-highlights</code> or manual edits) you intend to keep</td>
+<td>No</td>
+<td>Materialize overwrites highlight partials and wrappers</td>
+</tr>
+<tr class="odd">
+<td>Stable refresh on automation branch</td>
+<td>Yes</td>
+<td>Automation re-dispatch preserves automatically via <code>refresh_in_place</code>; manual batch regenerate passes <code>--preserve-human-edits</code>. Feature releases set <code>preserve_materialized=not is_patch</code> so <code>library-highlights.json</code>, <code>*highlights*</code>, <code>hidden</code> wrappers, orphan JSON, and overview pairs on disk are kept</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<ol start="2" type="i">
+<li>Spot-check <code>{version}-library-release-overview.md</code> to confirm materialized highlights look correct:</li>
+</ol>
+<ul>
+<li>Open <code>releases/validmind-library/v{version}/{version}-library-release-overview.md</code> — Verify topic groupings, promoted orphans, hidden PRs, and kept orphans align with orphan review (§2) and curation (§1).</li>
+<li>Cross-check highlight partials under <code>releases/validmind-library/v{version}/_pr-*-highlights.qmd</code> and topic wrappers <code>pr-*-highlights.qmd</code> when you ran with <code>--edit-highlights</code>.</li>
+<li>Use the <code>--dry-run</code> command above first if you want a JSON summary of planned paths before writing files.</li>
+</ul>
+<ol start="3" type="i">
+<li>Commit materialized highlight work:</li>
+</ol>
+<ul>
+<li><code>releases/validmind-library/v{version}/release-notes.qmd</code> (library shell — <code>## Highlights</code> sections and promoted include comment-outs)</li>
+<li><code>releases/validmind-library/v{version}/_pr-*-highlights.qmd</code> (embedded highlight partials; <code>--edit-highlights</code> targets)</li>
+<li><code>releases/validmind-library/v{version}/pr-*-highlights.qmd</code> (topic wrappers)</li>
+<li><code>releases/validmind-library/v{version}/pr-{n}.qmd</code> (promoted to highlight PR wrappers — <code>hidden</code> category)</li>
+<li><code>releases/validmind-library/v{version}/{version}-library-release-overview.md</code> (post-materialize overview)</li>
+<li><code>releases/validmind-library/v{version}/{version}-library-release-overview.json</code> (structured post-materialize overview)</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add releases/validmind-library/v{version}/release-notes.qmd <span class="dt">\</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>        releases/validmind-library/v{version}/{version}-library-release-overview.md <span class="dt">\</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>        releases/validmind-library/v{version}/{version}-library-release-overview.json</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add releases/validmind-library/v{version}/<span class="pp">*</span>-highlights.qmd <span class="dt">\</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>        releases/validmind-library/v{version}/pr-<span class="pp">*</span>.qmd  <span class="co"># Example — topic wrappers and promoted hidden wrappers</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Materialize library feature highlights for v{version}"</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Example — commit materialized highlights for 2.14.0 on the automation branch</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Scripts
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Script</th>
+<th>Purpose</th>
+<th>Phase</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>curate_library_highlights.py</code></td>
+<td>Interactive topic curation → <code>library-highlights.json</code></td>
+<td>1 — Curate</td>
+</tr>
+<tr class="even">
+<td><code>report_library_orphan_prs.py</code></td>
+<td>Orphan review for unlinked partials</td>
+<td>2 — Orphans</td>
+</tr>
+<tr class="odd">
+<td><code>curate_library_highlights.py --materialize</code></td>
+<td>Embed partials, library shell, overview</td>
+<td>3 — Materialize</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Skills
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Skill</th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>generate-release-notes</code></td>
+<td>Use in the final human proofread only, NOT to generate release notes as that is now taken care of by the automations/updated scripts — apply the <strong>Editing generated release notes</strong> process content rules</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+  // Quarto's layoutMarginEls only separates margin notes from each other.
+  // Seed that same cascade with the TOC/category panel bottom so footnotes
+  // start below #quarto-margin-sidebar instead of overlapping it.
+  // When notes stack taller than the body, pad main.content so the
+  // footer clears the last footnote. Padding the main grid row (not
+  // #quarto-content) also stretches the docked sidebar with it.
+  (() => {
+    const MARGIN_SEL =
+      ".column-margin.column-container > *, .margin-caption, .aside";
+    const GAP_AFTER_SIDEBAR = "0.5rem";
+    const GAP_BEFORE_FOOTER = "1.5rem";
+    const READY_CLASS = "margin-below-toc-ready";
+
+    const remPx = (raw) => {
+      const root = window.getComputedStyle(document.documentElement);
+      const fontSize = parseFloat(root.fontSize) || 16;
+      const value = String(raw).trim();
+      if (value.endsWith("rem")) return (parseFloat(value) || 0) * fontSize;
+      if (value.endsWith("px")) return parseFloat(value) || 0;
+      return parseFloat(value) || 0;
+    };
+
+    const contentHost = () =>
+      document.querySelector("main.content") ||
+      document.getElementById("quarto-document-content");
+
+    const sidebarContentBottom = () => {
+      const sidebar = document.getElementById("quarto-margin-sidebar");
+      if (!sidebar) return 0;
+
+      let bottom = 0;
+      for (const child of sidebar.children) {
+        if (child.classList.contains("quarto-sidebar-toggle")) continue;
+        if (child.id === "portfolio-toc-toggle") continue;
+        if (child.id === "portfolio-toc-sentinel") continue;
+        if (window.getComputedStyle(child).display === "none") continue;
+        const rect = child.getBoundingClientRect();
+        if (rect.height === 0) continue;
+        bottom = Math.max(bottom, rect.bottom + window.scrollY);
+      }
+      return bottom > 0 ? bottom + remPx(GAP_AFTER_SIDEBAR) : 0;
+    };
+
+    // Expand the main column (grid row), not #quarto-content padding —
+    // container padding sits outside the tracks and leaves a gap under
+    // the docked sidebar background.
+    // Theme sets padding-bottom with !important, so we must too.
+    const expandContentForMargins = (lastBottom) => {
+      const host = contentHost();
+      const legacy = document.getElementById("quarto-content");
+      // Clear older pad target if a previous version set it.
+      if (legacy && legacy !== host) {
+        legacy.style.removeProperty("padding-bottom");
+      }
+      if (!host) return;
+
+      if (!(lastBottom > 0)) {
+        host.style.removeProperty("padding-bottom");
+        return;
+      }
+
+      const computedPad =
+        parseFloat(window.getComputedStyle(host).paddingBottom) || 0;
+      const marginBottom =
+        parseFloat(window.getComputedStyle(host).marginBottom) || 0;
+      // Border-box bottom minus padding = content edge; negative
+      // margin-bottom pulls the footer up, so add it back into need.
+      const contentEdge =
+        host.getBoundingClientRect().bottom + window.scrollY - computedPad;
+      const needed = Math.ceil(
+        lastBottom + remPx(GAP_BEFORE_FOOTER) - contentEdge - marginBottom
+      );
+      const themeMin = remPx("2rem");
+      if (needed <= themeMin) {
+        host.style.removeProperty("padding-bottom");
+        return;
+      }
+
+      const next = `${needed}px`;
+      if (host.style.getPropertyValue("padding-bottom") !== next) {
+        host.style.setProperty("padding-bottom", next, "important");
+      }
+    };
+
+    // Quarto leaves margin footnotes inside tab panes and marks the
+    // tabset with page-columns/page-full, nesting a full page grid in
+    // the body column. Move those notes into the sibling
+    // .tabset-margin-container so the tabset can lay out normally and
+    // Quarto's shown.bs.tab handler can toggle note visibility.
+    const hoistTabsetMargins = () => {
+      document.querySelectorAll(".panel-tabset").forEach((tabset) => {
+        const margins = [
+          ...tabset.querySelectorAll(".column-margin.column-container"),
+        ];
+        if (!margins.length) return;
+
+        let container = tabset.previousElementSibling;
+        if (!container?.classList.contains("tabset-margin-container")) {
+          container = document.createElement("div");
+          container.className = "tabset-margin-container";
+          tabset.parentElement?.insertBefore(container, tabset);
+        }
+
+        // Sit in the parent section's page grid as the margin column.
+        container.classList.add(
+          "column-margin",
+          "column-container",
+          "no-row-height"
+        );
+
+        margins.forEach((margin) => {
+          const pane = margin.closest(".tab-pane");
+          const tabBtnId =
+            pane?.getAttribute("aria-labelledby") ||
+            (pane?.id ? `${pane.id}-tab` : null);
+          const wrap = document.createElement("div");
+          wrap.className = "tabset-margin-content";
+          if (tabBtnId) wrap.classList.add(`${tabBtnId}-margin-content`);
+          if (!pane?.classList.contains("active")) {
+            wrap.classList.add("collapse");
+          }
+          while (margin.firstChild) wrap.appendChild(margin.firstChild);
+          container.appendChild(wrap);
+          margin.remove();
+        });
+
+        const strip = (el) => {
+          el.classList.remove("page-columns", "page-full");
+        };
+        strip(tabset);
+        tabset.querySelectorAll(".page-columns, .page-full").forEach(strip);
+      });
+    };
+
+    const layoutMarginBelowToc = () => {
+      hoistTabsetMargins();
+
+      const marginChildren = document.querySelectorAll(MARGIN_SEL);
+      if (!marginChildren.length) {
+        expandContentForMargins(0);
+        return;
+      }
+
+      let lastBottom = sidebarContentBottom();
+      for (const el of marginChildren) {
+        if (el.offsetParent === null) continue;
+
+        el.style.marginTop = null;
+        const top = el.getBoundingClientRect().top + window.scrollY;
+        if (lastBottom > 0 && top < lastBottom) {
+          const marginBottom =
+            parseFloat(window.getComputedStyle(el).marginBottom) || 0;
+          el.style.marginTop = `${lastBottom - top + marginBottom}px`;
+        }
+
+        const marginTop =
+          parseFloat(window.getComputedStyle(el).marginTop) || 0;
+        const height = el.getBoundingClientRect().height;
+        lastBottom = top + height + marginTop;
+      }
+
+      expandContentForMargins(lastBottom);
+    };
+
+    const reveal = () => {
+      document.documentElement.classList.add(READY_CLASS);
+    };
+
+    const layoutAndReveal = () => {
+      layoutMarginBelowToc();
+      reveal();
+    };
+
+    // Run after Quarto's own throttled layoutMarginEls (50ms).
+    const schedule = () => {
+      clearTimeout(schedule._timer);
+      schedule._timer = setTimeout(layoutAndReveal, 60);
+    };
+
+    window.document.addEventListener("DOMContentLoaded", () => {
+      schedule();
+      // Failsafe: never leave footnotes hidden if layout is delayed.
+      setTimeout(reveal, 1500);
+      // Re-cascade when Quarto toggles tabset margin note visibility.
+      window.document.querySelectorAll('.panel-tabset a[data-bs-toggle="tab"]').forEach((tab) => {
+        tab.addEventListener("shown.bs.tab", schedule);
+      });
+      window.document.querySelectorAll(".column-margin img").forEach((img) => {
+        if (!img.complete) img.addEventListener("load", schedule, { once: true });
+      });
+      if (window.ResizeObserver) {
+        const ro = new ResizeObserver(schedule);
+        ro.observe(window.document.body);
+        const sidebar = window.document.getElementById("quarto-margin-sidebar");
+        if (sidebar) ro.observe(sidebar);
+        const margin = window.document.querySelector(
+          ".column-margin.column-container"
+        );
+        if (margin) ro.observe(margin);
+      }
+    });
+  })();
+</script>
+<script>
+  // Fixed TOC dropdown once the in-flow nav#TOC scrolls under the navbar.
+  // Uses a scrollY threshold captured at page top so detection still works
+  // if the margin sidebar goes sticky, and ignores brief TOC height=0
+  // blips during margin-below-toc footnote layout.
+  (() => {
+    const MQ = "(min-width: 992px)";
+    const TOGGLE_ID = "portfolio-toc-toggle";
+    const NAVBAR_FALLBACK = 75;
+    const ROLLED_CLASS = "portfolio-toc-rolled-up";
+
+    let lastScrollY = 0;
+    let seenToc = false;
+    // scrollY at which the TOC top meets the navbar — captured at rest only.
+    let showAfterY = null;
+
+    const marginSidebar = () =>
+      document.getElementById("quarto-margin-sidebar");
+    const tocNav = () => document.getElementById("TOC");
+    const toggleEl = () => document.getElementById(TOGGLE_ID);
+
+    const desktop = () =>
+      !!(window.matchMedia && window.matchMedia(MQ).matches);
+
+    const navbarOffset = () => {
+      const nav =
+        document.querySelector("#quarto-header nav.navbar") ||
+        document.querySelector("#quarto-header") ||
+        document.querySelector("nav.navbar");
+      if (!nav) return NAVBAR_FALLBACK;
+      const bottom = nav.getBoundingClientRect().bottom;
+      return bottom > 0 ? Math.ceil(bottom) : NAVBAR_FALLBACK;
+    };
+
+    const titleText = () => {
+      const toc = tocNav();
+      const heading = toc?.querySelector("#toc-title, h2, h3");
+      return (heading?.textContent || "Table of Contents").trim();
+    };
+
+    // Only capture near the top so sticky/visual offsets can't corrupt it.
+    const captureThreshold = () => {
+      const toc = tocNav();
+      if (!toc || toc.offsetHeight <= 0) return;
+      if (window.scrollY > 40) return;
+      const docTop = toc.getBoundingClientRect().top + window.scrollY;
+      showAfterY = Math.max(0, docTop - navbarOffset());
+    };
+
+    // true / false / null (layout glitch — keep current visibility)
+    const pastInlineToc = () => {
+      if (!desktop()) return false;
+      const toc = tocNav();
+      if (!toc && !seenToc) return false;
+      if (!toc) return null;
+
+      if (showAfterY != null) {
+        return window.scrollY >= showAfterY;
+      }
+
+      // Threshold not ready yet (footnote layout still settling).
+      if (toc.offsetHeight <= 0) return null;
+      return toc.getBoundingClientRect().top <= navbarOffset();
+    };
+
+    const positionToggle = (el) => {
+      if (!el) return;
+      const sidebar = marginSidebar();
+      const toc = tocNav();
+      // Margin column is the stable anchor (TOC may be rolled up / off-screen).
+      let left = null;
+      let width = null;
+      if (sidebar && sidebar.offsetWidth > 0) {
+        const sb = sidebar.getBoundingClientRect();
+        left = sb.left;
+        width = sb.width;
+      } else if (toc) {
+        const tr = toc.getBoundingClientRect();
+        if (tr.width > 0) {
+          left = tr.left;
+          width = tr.width;
+        }
+      }
+      if (!(width > 0) || left == null) return;
+      el.style.left = `${Math.round(left)}px`;
+      el.style.width = `${Math.round(width)}px`;
+      el.style.top = `${navbarOffset()}px`;
+    };
+
+    const setInlineRolled = (rolled) => {
+      const toc = tocNav();
+      if (!toc) return;
+      toc.classList.toggle(ROLLED_CLASS, rolled);
+    };
+
+    const closeToggle = (el) => {
+      if (!el) return;
+      el.classList.remove("expanded");
+      const contents = el.querySelector(".portfolio-toc-toggle-contents");
+      if (contents) contents.style.height = "0px";
+      el.dataset.open = "false";
+      const btn = el.querySelector(".portfolio-toc-toggle-title");
+      if (btn) btn.setAttribute("aria-expanded", "false");
+    };
+
+    const fillContents = (el) => {
+      const toc = tocNav();
+      const contents = el.querySelector(".portfolio-toc-toggle-contents");
+      if (!toc || !contents) return;
+
+      const clone = toc.cloneNode(true);
+      clone.removeAttribute("id");
+      clone.classList.remove(ROLLED_CLASS);
+      clone.classList.add("portfolio-toc-panel");
+      clone.querySelectorAll("[id]").forEach((node) => {
+        node.removeAttribute("id");
+      });
+
+      const heading = clone.querySelector("h2, h3");
+      if (heading) {
+        heading.classList.add("portfolio-toc-panel-heading");
+        const icon = document.createElement("i");
+        icon.className = "portfolio-toc-toggle-icon bi bi-caret-up-fill";
+        icon.setAttribute("aria-hidden", "true");
+        heading.append(icon);
+        heading.setAttribute("role", "button");
+        heading.setAttribute("tabindex", "0");
+        heading.setAttribute("aria-expanded", "true");
+        const collapse = (event) => {
+          event.preventDefault();
+          closeToggle(el);
+        };
+        heading.addEventListener("click", collapse);
+        heading.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") collapse(event);
+        });
+      }
+
+      contents.replaceChildren(clone);
+      contents.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener("click", () => closeToggle(el));
+      });
+    };
+
+    const openToggle = (el) => {
+      fillContents(el);
+      el.classList.add("expanded");
+      const contents = el.querySelector(".portfolio-toc-toggle-contents");
+      if (contents) {
+        contents.style.height = null;
+        contents.style.maxHeight = `calc(100vh - ${navbarOffset() + 24}px)`;
+      }
+      el.dataset.open = "true";
+      const btn = el.querySelector(".portfolio-toc-toggle-title");
+      if (btn) btn.setAttribute("aria-expanded", "true");
+    };
+
+    const ensureToggle = () => {
+      let el = toggleEl();
+      if (el) return el;
+      if (!tocNav()) return null;
+
+      el = document.createElement("div");
+      el.id = TOGGLE_ID;
+      el.className = "portfolio-toc-toggle zindex-over-content";
+      el.hidden = true;
+      el.dataset.open = "false";
+      el.setAttribute("role", "navigation");
+      el.setAttribute("aria-label", titleText());
+
+      const titleBtn = document.createElement("button");
+      titleBtn.type = "button";
+      titleBtn.className = "portfolio-toc-toggle-title";
+      titleBtn.setAttribute("aria-expanded", "false");
+      titleBtn.setAttribute("aria-controls", `${TOGGLE_ID}-contents`);
+
+      const label = document.createElement("span");
+      label.className = "portfolio-toc-toggle-label";
+      label.textContent = titleText();
+
+      const icon = document.createElement("i");
+      icon.className = "portfolio-toc-toggle-icon bi bi-caret-down-fill";
+      icon.setAttribute("aria-hidden", "true");
+
+      titleBtn.append(label, icon);
+
+      const contents = document.createElement("div");
+      contents.id = `${TOGGLE_ID}-contents`;
+      contents.className = "portfolio-toc-toggle-contents";
+      contents.style.height = "0px";
+
+      el.append(titleBtn, contents);
+      document.body.append(el);
+
+      titleBtn.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        if (el.dataset.open === "true") closeToggle(el);
+        else openToggle(el);
+      });
+
+      return el;
+    };
+
+    const setVisible = (visible) => {
+      const el = ensureToggle();
+      if (!el) return;
+
+      if (!visible) {
+        closeToggle(el);
+        el.hidden = true;
+        setInlineRolled(false);
+        return;
+      }
+
+      el.hidden = false;
+      setInlineRolled(true);
+      positionToggle(el);
+    };
+
+    const sync = () => {
+      const toc = tocNav();
+      if (toc) seenToc = true;
+
+      captureThreshold();
+
+      const el = ensureToggle();
+      if (!el) return;
+
+      if (!desktop() || (!toc && !seenToc)) {
+        setVisible(false);
+        return;
+      }
+
+      if (!toc) return;
+
+      const past = pastInlineToc();
+      if (past === null) {
+        if (!el.hidden) positionToggle(el);
+        return;
+      }
+
+      setVisible(past);
+    };
+
+    let tick = 0;
+    const onScroll = () => {
+      if (tick) return;
+      tick = requestAnimationFrame(() => {
+        tick = 0;
+        const el = toggleEl();
+        const dy = Math.abs(window.scrollY - lastScrollY);
+        lastScrollY = window.scrollY;
+        if (dy > 8 && el?.dataset.open === "true") closeToggle(el);
+        sync();
+      });
+    };
+
+    const boot = () => {
+      if (!tocNav()) return;
+
+      lastScrollY = window.scrollY;
+      ensureToggle();
+      sync();
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", () => {
+        if (window.scrollY <= 40) showAfterY = null;
+        sync();
+      });
+      requestAnimationFrame(sync);
+      window.addEventListener("load", sync, { once: true });
+      // Remeasure after margin-below-toc footnote cascade settles.
+      setTimeout(sync, 100);
+      setTimeout(sync, 400);
+      setTimeout(sync, 1000);
+
+      if (window.IntersectionObserver) {
+        const toc = tocNav();
+        if (toc) {
+          const io = new IntersectionObserver(() => sync(), {
+            root: null,
+            threshold: [0, 0.01, 1],
+          });
+          io.observe(toc);
+        }
+      }
+
+      if (window.ResizeObserver) {
+        const ro = new ResizeObserver(() => {
+          clearTimeout(ro._t);
+          ro._t = setTimeout(sync, 50);
+        });
+        const toc = tocNav();
+        const sidebar = marginSidebar();
+        const main = document.querySelector("main.content");
+        if (toc) ro.observe(toc);
+        if (sidebar) ro.observe(sidebar);
+        if (main) ro.observe(main);
+      }
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", boot);
+    } else {
+      boot();
+    }
+  })();
+</script>
+<script>
+  // Quarto sticky sidenav still scrolls with the page (min-height:100% + sticky
+  // containing block). Pin it fixed on desktop; lock width from the in-flow
+  // layout first so the grid column and nav stay aligned.
+  (() => {
+    const MQ = "(min-width: 992px)";
+    const CLASS = "is-pinned-sidenav";
+
+    const sidebar = () => document.getElementById("quarto-sidebar");
+
+    const unpin = (el) => {
+      el.classList.remove(CLASS);
+      el.style.removeProperty("width");
+    };
+
+    const pin = () => {
+      const el = sidebar();
+      if (!el) return;
+
+      if (!window.matchMedia(MQ).matches) {
+        unpin(el);
+        return;
+      }
+
+      // Measure while in normal flow so width matches the grid column.
+      unpin(el);
+      const width = el.getBoundingClientRect().width;
+      if (width > 0) el.style.width = `${width}px`;
+      el.classList.add(CLASS);
+    };
+
+    let resizeTimer = 0;
+    const schedule = () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(pin, 50);
+    };
+
+    window.document.addEventListener("DOMContentLoaded", pin);
+    window.addEventListener("resize", schedule);
+    if (window.matchMedia) {
+      window.matchMedia(MQ).addEventListener("change", pin);
+    }
+  })();
+</script>
+<script>
+  // Keep in-page hash targets below the fixed header. Quarto's hashchange
+  // offset looks for header.fixed-top and can fire before native scroll, and
+  // CSS scroll-margin is unreliable on page-columns grid sections.
+  (() => {
+    const OFFSET = 80;
+
+    const targetEl = (hash) => {
+      if (!hash) return null;
+      const id = decodeURIComponent(String(hash).replace(/^#/, ""));
+      if (!id) return null;
+      return (
+        document.getElementById(id) ||
+        document.querySelector(`[data-anchor-id="${CSS.escape(id)}"]`)
+      );
+    };
+
+    const scrollToEl = (el) => {
+      if (!el) return;
+      const top = el.getBoundingClientRect().top + window.scrollY - OFFSET;
+      window.scrollTo({ top: Math.max(0, top), behavior: "auto" });
+    };
+
+    const samePageHash = (link) => {
+      try {
+        const url = new URL(link.href, window.location.href);
+        if (url.pathname !== window.location.pathname) return null;
+        if (url.search !== window.location.search) return null;
+        return url.hash || null;
+      } catch {
+        return null;
+      }
+    };
+
+    document.addEventListener("click", (event) => {
+      const link = event.target.closest("a[href]");
+      if (!link) return;
+      if (link.dataset.bsToggle) return;
+      const hash = samePageHash(link);
+      if (!hash) return;
+      const el = targetEl(hash);
+      if (!el) return;
+      // After native scroll + Quarto's hashchange handler.
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => scrollToEl(el));
+      });
+    });
+
+    const applyHash = () => scrollToEl(targetEl(window.location.hash));
+
+    window.addEventListener("hashchange", () => {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(applyHash);
+      });
+    });
+
+    const onReady = () => {
+      if (!window.location.hash) return;
+      applyHash();
+      setTimeout(applyHash, 250);
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", onReady);
+    } else {
+      onReady();
+    }
+    window.addEventListener("load", onReady);
+  })();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation column-body">
+  <div class="nav-page nav-page-previous">
+      <a href="../../../../../samples/content-engineering/validmind/release-notes/library/generation.html" class="pagination-link" aria-label="Manual library releases generation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Manual library releases generation</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://github.com/beck-chan/portfolio/releases" target="_blank">
+<p>Releases</p>
+</a>
+  </li>  
+</ul>
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://github.com/beck-chan/portfolio/issues" target="_blank">
+<p><i class="fa-brands fa-github" aria-label="github"></i> Report Issue</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ © 2026 <b>Beck Chan</b>. All rights reserved.
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
