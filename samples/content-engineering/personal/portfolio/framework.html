@@ -85,9 +85,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-6a5d77c288ae9a328f8b889480dd1f82.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap-0062e773160ec7b30614b11e05b439f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../../site_libs/bootstrap/bootstrap-dark-cbdff46b3c532071db5dd428a750ad25.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../../../../site_libs/bootstrap/bootstrap-0062e773160ec7b30614b11e05b439f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-a33eb57eacd58093e2434a5701d5e2d4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-dark-cbb4d391aeadc2d3497aa43e9c96f189.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-a33eb57eacd58093e2434a5701d5e2d4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../../../site_libs/quarto-contrib/timeline-0.1.0/timeline.js"></script>
 <link href="../../../../site_libs/quarto-contrib/timeline-0.1.0/timeline.css" rel="stylesheet">
 <link href="../../../../site_libs/quarto-contrib/tachyons-4.12.0/tachyons.css" rel="stylesheet">
@@ -124,6 +124,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<style>
+  /* First paint: take notes out of the box entirely. visibility/opacity
+     still lets overflow:visible margin notes paint over the TOC. */
+  html:not(.margin-below-toc-ready):not(.margin-notes-measuring) .column-margin.column-container > *,
+  html:not(.margin-below-toc-ready):not(.margin-notes-measuring) .tabset-margin-content,
+  html:not(.margin-below-toc-ready):not(.margin-notes-measuring) .margin-caption,
+  html:not(.margin-below-toc-ready):not(.margin-notes-measuring) .aside,
+  html:not(.margin-below-toc-ready):not(.margin-notes-measuring) div[id^="fn"] {
+    display: none !important;
+  }
+
+  html.margin-notes-measuring:not(.margin-below-toc-ready) .column-margin.column-container > *,
+  html.margin-notes-measuring:not(.margin-below-toc-ready) .tabset-margin-content,
+  html.margin-notes-measuring:not(.margin-below-toc-ready) .margin-caption,
+  html.margin-notes-measuring:not(.margin-below-toc-ready) .aside,
+  html.margin-notes-measuring:not(.margin-below-toc-ready) div[id^="fn"] {
+    display: block !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+</style>
+<noscript>
+  <style>
+    html .column-margin.column-container > *,
+    html .tabset-margin-content,
+    html .margin-caption,
+    html .aside,
+    html div[id^="fn"] {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+  </style>
+</noscript>
 <script>
     !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}p||((p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",p.onerror=function(){p=null},(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r));var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="al ol ll init Il Rl Tl Ml Ol za El Dl Sl capture getExtension Pl nl Hl calculateEventProperties Bl register register_once register_for_session unregister unregister_for_session Vl Cl zl getFeatureFlag getFeatureFlagPayload getFeatureFlagResult getAllFeatureFlags isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync Gl identify setPersonProperties unsetPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset Zl shutdown setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty Ul ql createPersonProfile setInternalOrTestUser Wl ul hl opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing $l debug Ua Jn getPageViewId captureTraceFeedback captureTraceMetric bl".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
     posthog.init('phc_zqwk6XXUUjTLnofgQxcesCk2hnsCVoF3FCfB6KVg2Vym', {
@@ -1030,9 +1064,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="publishing">Publishing</h2>
 <p>I’ve chosen to automate the publishing process in the spirit of Continuous Integration and Continuous Delivery and Deployment (CI/CD), letting GitHub Workflows handle both generating (via <code>quarto render</code>) the website files from the source <code>.qmd</code> files, and deploying the completed site to GitHub Pages and Netlify where my production and staging portfolios are respectively hosted.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset page-columns page-full">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true" href="">Output</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false" href="">Pull Requests (PRs)</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true" href="">Output</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false" href="">Pull Requests (PRs)</a></li></ul>
 <div class="tab-content page-columns page-full">
-<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
+<div id="tabset-7-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-7-1-tab">
 <p>The first thing I did was define the output directory and and how and what files should be rendered in <code>_quarto.yml</code>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
@@ -1052,42 +1086,45 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="tabset-6-2" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-6-2-tab">
+<div id="tabset-7-2" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-7-2-tab">
 <p>Since the content for this portfolio lives in my GitHub repository,<a href="#fn24" class="footnote-ref" id="fnref24" role="doc-noteref"><sup>24</sup></a> I’ve also decided to use pull requests to merge major changes into my <code>main</code> branch as part of good version control practices even if I’m the only one working on any changes.</p>
 <div class="no-row-height column-margin column-container"><div id="fn24"><p><sup>24</sup>&nbsp;<a href="https://github.com/beck-chan/portfolio" target="_blank"><i class="fa-brands fa-github" aria-label="github"></i> beck-chan/portfolio</a></p></div><div id="fn25"><p><sup>25</sup>&nbsp;<strong><i class="fa-brands fa-github" aria-label="github"></i> beck-chan/portfolio/.github/:</strong> <a href="https://raw.githubusercontent.com/beck-chan/portfolio/refs/heads/main/.github/pull_request_template.md" target="_blank">pull_request_template.md</a></p></div></div><p>Each PR top-level comment is autopopulated with content from a PR template,<a href="#fn25" class="footnote-ref" id="fnref25" role="doc-noteref"><sup>25</sup></a> that includes information on how to trigger automated release notes:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Any internal notes go here --&gt;</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="fu">## Release notes</span></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- </span></span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="co">Tag the PR with one of the following labels so that releases.yaml can automatically generate a GitHub release bump:</span></span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co">1. `major` (example: 1.0.0)</span></span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="co">2. `minor` (example: 1.1.0)</span></span>
-<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="co">3. `patch` (example: 1.1.1)</span></span>
-<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="co">Tagging with more than one label will give precedence in the order as numbered.</span></span>
-<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="co">Include any release notes you want displayed under this section.</span></span>
-<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
-<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Release Notes</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- </span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co">Tag the PR with one of the following labels so that releases.yaml can automatically generate a GitHub release bump:</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="co">1. `major` (example: 1.0.0)</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co">2. `minor` (example: 1.1.0)</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="co">3. `patch` (example: 1.1.1)</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="co">Tagging with more than one label will give precedence in the order as numbered.</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="co">Include any release notes you want displayed under this section.</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Leave below untouched --&gt;</span></span>
 <span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Leave below untouched --&gt;</span></span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Browse the updated portfolio at: [https://beck-chan.github.io/](https://beck-chan.github.io/)**</span></span>
 <span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>**Browse the updated portfolio at: [https://beck-chan.github.io/](https://beck-chan.github.io/)**</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">How are releases generated?</span><span class="co">](https://beck-chan.github.io/samples/content-engineering/personal/portfolio/deployment.html#release-notes)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Utilizing pull requests allows me to streamline a few additional things with GitHub Workflows and automate (more on the last three in <a href="../../../../samples/content-engineering/personal/portfolio/deployment.html">Portfolio Deployment</a>):</p>
 <ul class="task-list">
-<li><label><input type="checkbox" checked="">Spellchecking relevant files as part of PR checks.</label></li>
+<li><label><input type="checkbox" checked="">Spellchecking relevant files and looking for broken links as part of PR checks.</label></li>
 <li><label><input type="checkbox" checked="">Rendering and deploying the rendered files to Netlify for an open PR to my staging site.</label></li>
 <li><label><input type="checkbox" checked="">Generating release notes from PRs tagged with specific labels.</label></li>
 <li><label><input type="checkbox" checked="">Rendering and deploying the rendered files to GitHub Pages production site when the PR is merged into <code>main</code>.</label></li>
 </ul>
-<section id="spellcheck" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="spellcheck">Spellcheck</h4>
-<p><code>.github/workflows/spellcheck.yaml</code><a href="#fn26" class="footnote-ref" id="fnref26" role="doc-noteref"><sup>26</sup></a> runs when a PR is opened, or when a commit is sent up to a branch connected to a PR, checking for spelling errors in relevant <code>*.qmd</code> files and adding a comment with the results when complete:<a href="#fn27" class="footnote-ref" id="fnref27" role="doc-noteref"><sup>27</sup></a></p>
+<p>The following GitHub Workflows run when a PR is opened, or when a commit is sent up to a branch connected to a PR:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset page-columns page-full">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true" href="">Spellcheck</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false" href="">Broken Link Check</a></li></ul>
+<div class="tab-content page-columns page-full">
+<div id="tabset-6-1" class="tab-pane active page-columns page-full" role="tabpanel" aria-labelledby="tabset-6-1-tab">
+<p><code>.github/workflows/spellcheck.yaml</code><a href="#fn26" class="footnote-ref" id="fnref26" role="doc-noteref"><sup>26</sup></a> Checks for spelling errors in relevant <code>*.qmd</code> files, then adds a comment with the results when complete:<a href="#fn27" class="footnote-ref" id="fnref27" role="doc-noteref"><sup>27</sup></a></p>
 <div class="no-row-height column-margin column-container"><div id="fn26"><p><sup>26</sup>&nbsp;<strong><i class="fa-brands fa-github" aria-label="github"></i> beck-chan/portfolio/.github/workflows:</strong> <a href="https://github.com/beck-chan/portfolio/blob/main/.github/workflows/spellcheck.yaml" target="_blank">spellcheck.yaml</a></p></div><div id="fn27"><p><sup>27</sup>&nbsp;<strong>Spellcheck Comment</strong>:</p>
 <div class="code-fold-wrap">
 <details class="code-fold"><summary>view example</summary>
@@ -1115,7 +1152,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>poetry/random/to-dc.qmd<span class="sc">:14:</span>1 - Unknown word (Aegeas)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-</div></div><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">        # Set up steps ...</span></span>
+</div></div><div class="code-fold-wrap">
+<details class="code-fold"><summary>show code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">        # Set up steps ...</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Run spell checker</span></span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">id</span><span class="kw">:</span><span class="at"> spellcheck</span></span>
@@ -1166,8 +1205,106 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb18-49"><a href="#cb18-49" aria-hidden="true" tabindex="-1"></a>                body,</span>
 <span id="cb18-50"><a href="#cb18-50" aria-hidden="true" tabindex="-1"></a>              });</span>
 <span id="cb18-51"><a href="#cb18-51" aria-hidden="true" tabindex="-1"></a>            }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
 <p>Words to be ignored are defined in <code>cspell.json</code>.<a href="#fn28" class="footnote-ref" id="fnref28" role="doc-noteref"><sup>28</sup></a></p>
-<div class="no-row-height column-margin column-container"><div id="fn28"><p><sup>28</sup>&nbsp;<strong><i class="fa-brands fa-github" aria-label="github"></i> beck-chan/portfolio/cspell.json:</strong> <a href="https://github.com/beck-chan/portfolio/blob/main/cspell.json" target="_blank">cspell.json</a></p></div></div></section>
+<div class="no-row-height column-margin column-container"><div id="fn28"><p><sup>28</sup>&nbsp;<strong><i class="fa-brands fa-github" aria-label="github"></i> beck-chan/portfolio/cspell.json:</strong> <a href="https://github.com/beck-chan/portfolio/blob/main/cspell.json" target="_blank">cspell.json</a></p></div></div></div>
+<div id="tabset-6-2" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-6-2-tab">
+<p><code>.github/workflows/link-check.yaml</code><a href="#fn29" class="footnote-ref" id="fnref29" role="doc-noteref"><sup>29</sup></a> Generates the static output site files with the default profile (no production PostHog tracking) and checks the output for broken links and other warnings, then adds a comment with the results when complete:<a href="#fn30" class="footnote-ref" id="fnref30" role="doc-noteref"><sup>30</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn29"><p><sup>29</sup>&nbsp;<strong><i class="fa-brands fa-github" aria-label="github"></i> beck-chan/portfolio/.github/workflows:</strong> <a href="https://github.com/beck-chan/portfolio/blob/main/.github/workflows/link-check.yaml" target="_blank">link-check.yaml</a></p></div><div id="fn30"><p><sup>30</sup>&nbsp;<strong>Broken Link Check Comment</strong>:</p>
+<div class="code-fold-wrap">
+<details class="code-fold"><summary>view example</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">### Render warnings found</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>WARNING: Unable to resolve link target: samples/content-engineering/validmind/missing.html</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>WARNING: Unable to resolve link target: #fig-not-real</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>WARNING: Unable to resolve crossref: fig-missing</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</div></div><div class="code-fold-wrap">
+<details class="code-fold"><summary>show code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">        # Set up steps ...</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Render site</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">id</span><span class="kw">:</span><span class="at"> render</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="fu">        run</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>          set +e</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>          set -o pipefail</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>          quarto render 2&gt;&amp;1 | tee render-output.txt</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>          status=${PIPESTATUS[0]}</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>          set -e</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>          sed 's/\x1b\[[0-9;]*[a-zA-Z]//g' render-output.txt \</span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>            | grep -E 'WARNING:|\[WARNING\]|ERROR:|\[ERROR\]|Unable to resolve' \</span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>            &gt; render-warnings.txt || true</span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>          if [ ! -s render-warnings.txt ] &amp;&amp; [ "$status" != "0" ]; then</span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>            tail -n 80 render-output.txt &gt; render-warnings.txt</span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a>          fi</span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a>          failed=false</span>
+<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a>          if [ "$status" != "0" ] || [ -s render-warnings.txt ]; then</span>
+<span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a>            failed=true</span>
+<span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a>          fi</span>
+<span id="cb20-24"><a href="#cb20-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-25"><a href="#cb20-25" aria-hidden="true" tabindex="-1"></a>          echo "exit_code=$status" &gt;&gt; "$GITHUB_OUTPUT"</span>
+<span id="cb20-26"><a href="#cb20-26" aria-hidden="true" tabindex="-1"></a>          echo "failed=$failed" &gt;&gt; "$GITHUB_OUTPUT"</span>
+<span id="cb20-27"><a href="#cb20-27" aria-hidden="true" tabindex="-1"></a>          cat render-warnings.txt</span>
+<span id="cb20-28"><a href="#cb20-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-29"><a href="#cb20-29" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Comment on PR</span></span>
+<span id="cb20-30"><a href="#cb20-30" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/github-script@v7</span></span>
+<span id="cb20-31"><a href="#cb20-31" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb20-32"><a href="#cb20-32" aria-hidden="true" tabindex="-1"></a><span class="fu">          script</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb20-33"><a href="#cb20-33" aria-hidden="true" tabindex="-1"></a>            const fs = require('fs');</span>
+<span id="cb20-34"><a href="#cb20-34" aria-hidden="true" tabindex="-1"></a>            const marker = '&lt;!-- quarto-render-pr-comment --&gt;';</span>
+<span id="cb20-35"><a href="#cb20-35" aria-hidden="true" tabindex="-1"></a>            const failed = '${{ steps.render.outputs.failed }}' === 'true';</span>
+<span id="cb20-36"><a href="#cb20-36" aria-hidden="true" tabindex="-1"></a>            const renderFailed = '${{ steps.render.outputs.exit_code }}' !== '0';</span>
+<span id="cb20-37"><a href="#cb20-37" aria-hidden="true" tabindex="-1"></a>            let output = '';</span>
+<span id="cb20-38"><a href="#cb20-38" aria-hidden="true" tabindex="-1"></a>            if (fs.existsSync('render-warnings.txt')) {</span>
+<span id="cb20-39"><a href="#cb20-39" aria-hidden="true" tabindex="-1"></a>              output = fs.readFileSync('render-warnings.txt', 'utf8').trim();</span>
+<span id="cb20-40"><a href="#cb20-40" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb20-41"><a href="#cb20-41" aria-hidden="true" tabindex="-1"></a>            const max = 60000;</span>
+<span id="cb20-42"><a href="#cb20-42" aria-hidden="true" tabindex="-1"></a>            if (output.length &gt; max) {</span>
+<span id="cb20-43"><a href="#cb20-43" aria-hidden="true" tabindex="-1"></a>              output = output.slice(0, max) + '\n\n…truncated';</span>
+<span id="cb20-44"><a href="#cb20-44" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb20-45"><a href="#cb20-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-46"><a href="#cb20-46" aria-hidden="true" tabindex="-1"></a>            const heading = renderFailed</span>
+<span id="cb20-47"><a href="#cb20-47" aria-hidden="true" tabindex="-1"></a>              ? 'Quarto render failed'</span>
+<span id="cb20-48"><a href="#cb20-48" aria-hidden="true" tabindex="-1"></a>              : failed</span>
+<span id="cb20-49"><a href="#cb20-49" aria-hidden="true" tabindex="-1"></a>                ? 'Render warnings found'</span>
+<span id="cb20-50"><a href="#cb20-50" aria-hidden="true" tabindex="-1"></a>                : 'No render warnings found';</span>
+<span id="cb20-51"><a href="#cb20-51" aria-hidden="true" tabindex="-1"></a>            const body = failed</span>
+<span id="cb20-52"><a href="#cb20-52" aria-hidden="true" tabindex="-1"></a>              ? `${marker}\n## ${heading}\n\n\`\`\`text\n${output}\n\`\`\``</span>
+<span id="cb20-53"><a href="#cb20-53" aria-hidden="true" tabindex="-1"></a>              : `${marker}\n## ${heading}`;</span>
+<span id="cb20-54"><a href="#cb20-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-55"><a href="#cb20-55" aria-hidden="true" tabindex="-1"></a>            const comments = await github.paginate(github.rest.issues.listComments, {</span>
+<span id="cb20-56"><a href="#cb20-56" aria-hidden="true" tabindex="-1"></a>              owner: context.repo.owner,</span>
+<span id="cb20-57"><a href="#cb20-57" aria-hidden="true" tabindex="-1"></a>              repo: context.repo.repo,</span>
+<span id="cb20-58"><a href="#cb20-58" aria-hidden="true" tabindex="-1"></a>              issue_number: context.issue.number,</span>
+<span id="cb20-59"><a href="#cb20-59" aria-hidden="true" tabindex="-1"></a>            });</span>
+<span id="cb20-60"><a href="#cb20-60" aria-hidden="true" tabindex="-1"></a>            const existing = comments.find((c) =&gt; c.body?.includes(marker));</span>
+<span id="cb20-61"><a href="#cb20-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-62"><a href="#cb20-62" aria-hidden="true" tabindex="-1"></a>            if (existing) {</span>
+<span id="cb20-63"><a href="#cb20-63" aria-hidden="true" tabindex="-1"></a>              await github.rest.issues.updateComment({</span>
+<span id="cb20-64"><a href="#cb20-64" aria-hidden="true" tabindex="-1"></a>                owner: context.repo.owner,</span>
+<span id="cb20-65"><a href="#cb20-65" aria-hidden="true" tabindex="-1"></a>                repo: context.repo.repo,</span>
+<span id="cb20-66"><a href="#cb20-66" aria-hidden="true" tabindex="-1"></a>                comment_id: existing.id,</span>
+<span id="cb20-67"><a href="#cb20-67" aria-hidden="true" tabindex="-1"></a>                body,</span>
+<span id="cb20-68"><a href="#cb20-68" aria-hidden="true" tabindex="-1"></a>              });</span>
+<span id="cb20-69"><a href="#cb20-69" aria-hidden="true" tabindex="-1"></a>            } else {</span>
+<span id="cb20-70"><a href="#cb20-70" aria-hidden="true" tabindex="-1"></a>              await github.rest.issues.createComment({</span>
+<span id="cb20-71"><a href="#cb20-71" aria-hidden="true" tabindex="-1"></a>                owner: context.repo.owner,</span>
+<span id="cb20-72"><a href="#cb20-72" aria-hidden="true" tabindex="-1"></a>                repo: context.repo.repo,</span>
+<span id="cb20-73"><a href="#cb20-73" aria-hidden="true" tabindex="-1"></a>                issue_number: context.issue.number,</span>
+<span id="cb20-74"><a href="#cb20-74" aria-hidden="true" tabindex="-1"></a>                body,</span>
+<span id="cb20-75"><a href="#cb20-75" aria-hidden="true" tabindex="-1"></a>              });</span>
+<span id="cb20-76"><a href="#cb20-76" aria-hidden="true" tabindex="-1"></a>            }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<p>Quarto can finish a render with a successful exit code even when links do not resolve, so the workflow treats <code>WARNING</code> and <code>ERROR</code> lines as failures.</p>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1177,6 +1314,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 </main> <!-- /main -->
+<style>
+  @media (max-width: 767.98px) {
+    .tabset-margin-container {
+      display: none !important;
+    }
+  }
+</style>
 <script>
   // Quarto's layoutMarginEls only separates margin notes from each other.
   // Seed that same cascade with the TOC/category panel bottom so footnotes
@@ -1190,6 +1334,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     const GAP_AFTER_SIDEBAR = "0.5rem";
     const GAP_BEFORE_FOOTER = "1.5rem";
     const READY_CLASS = "margin-below-toc-ready";
+    const MEASURING_CLASS = "margin-notes-measuring";
 
     const remPx = (raw) => {
       const root = window.getComputedStyle(document.documentElement);
@@ -1264,56 +1409,163 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
     // Quarto leaves margin footnotes inside tab panes and marks the
     // tabset with page-columns/page-full, nesting a full page grid in
-    // the body column. Move those notes into the sibling
-    // .tabset-margin-container so the tabset can lay out normally and
-    // Quarto's shown.bs.tab handler can toggle note visibility.
-    const hoistTabsetMargins = () => {
-      document.querySelectorAll(".panel-tabset").forEach((tabset) => {
-        const margins = [
-          ...tabset.querySelectorAll(".column-margin.column-container"),
-        ];
-        if (!margins.length) return;
+    // the body column. On desktop, move those notes into a sibling
+    // .tabset-margin-container so they sit in the page margin and
+    // Quarto's shown.bs.tab handler can toggle visibility.
+    // On mobile, Quarto inlines .column-margin in document order —
+    // keep notes after their host (same as outside tabsets) instead
+    // of leaving the hoisted container above the tabset.
+    const INLINE_MARGIN_MQ = "(max-width: 767.98px)";
+    const marginsAreInline = () =>
+      window.matchMedia(INLINE_MARGIN_MQ).matches;
 
-        let container = tabset.previousElementSibling;
-        if (!container?.classList.contains("tabset-margin-container")) {
-          container = document.createElement("div");
-          container.className = "tabset-margin-container";
-          tabset.parentElement?.insertBefore(container, tabset);
+    const escapeAttr = (value) =>
+      window.CSS?.escape ? window.CSS.escape(value) : value;
+
+    const findTabsetMarginContainer = (tabset) => {
+      for (const sib of [
+        tabset.previousElementSibling,
+        tabset.nextElementSibling,
+      ]) {
+        if (sib?.classList.contains("tabset-margin-container")) return sib;
+      }
+      return null;
+    };
+
+    const paneForMarginWrap = (tabset, wrap) => {
+      const paneId = wrap.dataset.tabPaneId;
+      if (paneId) {
+        const byId = document.getElementById(paneId);
+        if (byId) return byId;
+      }
+      for (const cls of wrap.classList) {
+        if (cls === "tabset-margin-content") continue;
+        const fromPane = cls.match(/^(.+)-tab-margin-content$/);
+        if (fromPane) {
+          const pane = document.getElementById(fromPane[1]);
+          if (pane) return pane;
         }
+        const fromTab = cls.match(/^(.+)-margin-content$/);
+        if (fromTab) {
+          const pane = tabset.querySelector(
+            `.tab-pane[aria-labelledby="${escapeAttr(fromTab[1])}"]`
+          );
+          if (pane) return pane;
+        }
+      }
+      return null;
+    };
 
-        // Sit in the parent section's page grid as the margin column.
-        container.classList.add(
-          "column-margin",
-          "column-container",
-          "no-row-height"
-        );
+    const stripNestedPageGrid = (tabset) => {
+      const strip = (el) => {
+        el.classList.remove("page-columns", "page-full");
+      };
+      strip(tabset);
+      tabset.querySelectorAll(".page-columns, .page-full").forEach(strip);
+    };
 
-        margins.forEach((margin) => {
-          const pane = margin.closest(".tab-pane");
-          const tabBtnId =
-            pane?.getAttribute("aria-labelledby") ||
-            (pane?.id ? `${pane.id}-tab` : null);
-          const wrap = document.createElement("div");
-          wrap.className = "tabset-margin-content";
-          if (tabBtnId) wrap.classList.add(`${tabBtnId}-margin-content`);
-          if (!pane?.classList.contains("active")) {
-            wrap.classList.add("collapse");
-          }
-          while (margin.firstChild) wrap.appendChild(margin.firstChild);
-          container.appendChild(wrap);
-          margin.remove();
-        });
+    const hoistTabsetMargins = (tabset) => {
+      const margins = [
+        ...tabset.querySelectorAll(".column-margin.column-container"),
+      ];
+      if (!margins.length) return;
 
-        const strip = (el) => {
-          el.classList.remove("page-columns", "page-full");
-        };
-        strip(tabset);
-        tabset.querySelectorAll(".page-columns, .page-full").forEach(strip);
+      let container = findTabsetMarginContainer(tabset);
+      if (!container) {
+        container = document.createElement("div");
+        container.className = "tabset-margin-container";
+      }
+      if (tabset.previousElementSibling !== container) {
+        tabset.parentElement?.insertBefore(container, tabset);
+      }
+
+      // Sit in the parent section's page grid as the margin column.
+      container.classList.add(
+        "column-margin",
+        "column-container",
+        "no-row-height"
+      );
+
+      margins.forEach((margin) => {
+        const pane = margin.closest(".tab-pane");
+        const tabBtnId =
+          pane?.getAttribute("aria-labelledby") ||
+          (pane?.id ? `${pane.id}-tab` : null);
+        const wrap = document.createElement("div");
+        wrap.className = "tabset-margin-content";
+        if (tabBtnId) wrap.classList.add(`${tabBtnId}-margin-content`);
+        if (pane?.id) wrap.dataset.tabPaneId = pane.id;
+        const host = margin.previousElementSibling;
+        if (host) {
+          const hostId =
+            host.dataset.marginHost ||
+            `mhost-${Math.random().toString(36).slice(2, 10)}`;
+          host.dataset.marginHost = hostId;
+          wrap.dataset.marginHost = hostId;
+        }
+        if (!pane?.classList.contains("active")) {
+          wrap.classList.add("collapse");
+        }
+        while (margin.firstChild) wrap.appendChild(margin.firstChild);
+        container.appendChild(wrap);
+        margin.remove();
       });
     };
 
+    const restoreTabsetMargins = (tabset) => {
+      const container = findTabsetMarginContainer(tabset);
+      if (!container) return;
+
+      [...container.children].forEach((child) => {
+        const pane = paneForMarginWrap(tabset, child);
+        if (!pane) return;
+
+        child.classList.remove("collapse");
+        const hostId = child.dataset.marginHost;
+        const host =
+          hostId && pane.querySelector(`[data-margin-host="${escapeAttr(hostId)}"]`);
+
+        if (child.classList.contains("column-margin")) {
+          // Quarto already hoisted the whole .column-margin node.
+          if (host) host.insertAdjacentElement("afterend", child);
+          else pane.appendChild(child);
+          return;
+        }
+
+        const margin = document.createElement("div");
+        margin.className = "column-margin column-container no-row-height";
+        while (child.firstChild) margin.appendChild(child.firstChild);
+        for (const note of margin.children) {
+          note.style.marginTop = null;
+        }
+        if (host) host.insertAdjacentElement("afterend", margin);
+        else pane.appendChild(margin);
+        child.remove();
+      });
+
+      if (!container.children.length) container.remove();
+    };
+
+    const syncTabsetMargins = () => {
+      const inline = marginsAreInline();
+      document.querySelectorAll(".panel-tabset").forEach((tabset) => {
+        stripNestedPageGrid(tabset);
+        if (inline) restoreTabsetMargins(tabset);
+        else hoistTabsetMargins(tabset);
+      });
+    };
+
+    const currentTranslateY = (el) => {
+      const match = String(el.style.transform || "").match(
+        /translateY\(([-\d.]+)px\)/
+      );
+      return match ? parseFloat(match[1]) : 0;
+    };
+
     const layoutMarginBelowToc = () => {
-      hoistTabsetMargins();
+      document.documentElement.classList.add(MEASURING_CLASS);
+      document.documentElement.offsetHeight;
+      syncTabsetMargins();
 
       const marginChildren = document.querySelectorAll(MARGIN_SEL);
       if (!marginChildren.length) {
@@ -1321,22 +1573,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         return;
       }
 
+      // Quarto's layoutMarginEls resets margin-top. Keep the desktop
+      // cascade in translateY, and never zero it before writing the next
+      // value — clearing first is what flashes notes over the TOC.
+      const persistShift = !marginsAreInline();
       let lastBottom = sidebarContentBottom();
       for (const el of marginChildren) {
         if (el.offsetParent === null) continue;
 
-        el.style.marginTop = null;
-        const top = el.getBoundingClientRect().top + window.scrollY;
+        const shiftNow = persistShift ? currentTranslateY(el) : 0;
+        const visualTop =
+          el.getBoundingClientRect().top + window.scrollY;
+        const top = visualTop - shiftNow;
+        let nextShift = 0;
         if (lastBottom > 0 && top < lastBottom) {
           const marginBottom =
             parseFloat(window.getComputedStyle(el).marginBottom) || 0;
-          el.style.marginTop = `${lastBottom - top + marginBottom}px`;
+          nextShift = lastBottom - top + marginBottom;
         }
 
+        if (persistShift) {
+          if (nextShift) {
+            el.style.transform = `translateY(${nextShift}px)`;
+          } else {
+            el.style.removeProperty("transform");
+          }
+          el.style.marginTop = null;
+        } else {
+          el.style.removeProperty("transform");
+          el.style.marginTop = nextShift ? `${nextShift}px` : null;
+        }
+
+        const placedTop = top + nextShift;
         const marginTop =
           parseFloat(window.getComputedStyle(el).marginTop) || 0;
-        const height = el.getBoundingClientRect().height;
-        lastBottom = top + height + marginTop;
+        lastBottom =
+          placedTop + el.getBoundingClientRect().height + marginTop;
       }
 
       expandContentForMargins(lastBottom);
@@ -1344,23 +1616,90 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
     const reveal = () => {
       document.documentElement.classList.add(READY_CLASS);
+      document.documentElement.classList.remove(MEASURING_CLASS);
     };
 
+    const sidebarHasPanel = () => {
+      const sidebar = document.getElementById("quarto-margin-sidebar");
+      if (!sidebar) return false;
+      if (window.getComputedStyle(sidebar).display === "none") return false;
+      return Boolean(
+        sidebar.querySelector(
+          "nav#TOC, nav[role='doc-toc'], .quarto-listing-category"
+        )
+      );
+    };
+
+    // Never unhide over the TOC: a 0px sidebar read used to look "settled".
+    const sidebarSettled = () => {
+      if (marginsAreInline()) return true;
+      if (!sidebarHasPanel()) return true;
+      return sidebarContentBottom() > 0;
+    };
+
+    // Don't paint notes until the cascade has run and the sidebar
+    // height has settled, so first load never shows a TOC collision.
     const layoutAndReveal = () => {
       layoutMarginBelowToc();
-      reveal();
+      if (!sidebarSettled()) {
+        if (!document.documentElement.classList.contains(READY_CLASS)) {
+          schedule();
+        }
+        return;
+      }
+      if (marginsAreInline()) {
+        reveal();
+        return;
+      }
+      requestAnimationFrame(() => {
+        layoutMarginBelowToc();
+        if (!sidebarSettled()) {
+          if (!document.documentElement.classList.contains(READY_CLASS)) {
+            schedule();
+          }
+          return;
+        }
+        reveal();
+      });
     };
 
-    // Run after Quarto's own throttled layoutMarginEls (50ms).
+    // After the first paint, only re-cascade — don't run the reveal
+    // rAF path again (that used to clear transforms while visible).
     const schedule = () => {
       clearTimeout(schedule._timer);
-      schedule._timer = setTimeout(layoutAndReveal, 60);
+      schedule._timer = setTimeout(() => {
+        if (document.documentElement.classList.contains(READY_CLASS)) {
+          layoutMarginBelowToc();
+        } else {
+          layoutAndReveal();
+        }
+      }, 60);
     };
 
-    window.document.addEventListener("DOMContentLoaded", () => {
+    const onInlineChange = () => {
+      syncTabsetMargins();
+      if (marginsAreInline()) reveal();
+      schedule();
+    };
+
+    // include-after-body: tabsets are already in the DOM. Place notes
+    // before the 60ms cascade so mobile never reveals them above.
+    syncTabsetMargins();
+    if (marginsAreInline()) reveal();
+
+    const onReady = () => {
       schedule();
       // Failsafe: never leave footnotes hidden if layout is delayed.
-      setTimeout(reveal, 1500);
+      setTimeout(() => {
+        layoutMarginBelowToc();
+        reveal();
+      }, 1500);
+      const inlineMq = window.matchMedia(INLINE_MARGIN_MQ);
+      if (inlineMq.addEventListener) {
+        inlineMq.addEventListener("change", onInlineChange);
+      } else if (inlineMq.addListener) {
+        inlineMq.addListener(onInlineChange);
+      }
       // Re-cascade when Quarto toggles tabset margin note visibility.
       window.document.querySelectorAll('.panel-tabset a[data-bs-toggle="tab"]').forEach((tab) => {
         tab.addEventListener("shown.bs.tab", schedule);
@@ -1368,6 +1707,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       window.document.querySelectorAll(".column-margin img").forEach((img) => {
         if (!img.complete) img.addEventListener("load", schedule, { once: true });
       });
+      if (document.fonts?.ready) {
+        document.fonts.ready.then(schedule);
+      }
       if (window.ResizeObserver) {
         const ro = new ResizeObserver(schedule);
         ro.observe(window.document.body);
@@ -1378,7 +1720,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         );
         if (margin) ro.observe(margin);
       }
-    });
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", onReady);
+    } else {
+      onReady();
+    }
   })();
 </script>
 <script>
@@ -1738,8 +2086,92 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   // Keep in-page hash targets below the fixed header. Quarto's hashchange
   // offset looks for header.fixed-top and can fire before native scroll, and
   // CSS scroll-margin is unreliable on page-columns grid sections.
+  // Desktop is the navbar only; mobile stacks navbar + quarto-secondary-nav.
+  // Margin footnotes also clear the accordion TOC / category filters.
   (() => {
-    const OFFSET = 80;
+    const GAP = 8;
+    const NAVBAR_FALLBACK = 80;
+
+    const visibleFixedBottom = (el) => {
+      if (!el) return 0;
+      const style = window.getComputedStyle(el);
+      if (style.display === "none" || style.visibility === "hidden") return 0;
+      if (style.position !== "fixed" && style.position !== "sticky") return 0;
+      const rect = el.getBoundingClientRect();
+      return rect.height > 0 && rect.bottom > 0 ? rect.bottom : 0;
+    };
+
+    const headerOffset = () => {
+      const navbar =
+        document.querySelector("#quarto-header nav.navbar") ||
+        document.querySelector("#quarto-header") ||
+        document.querySelector("nav.navbar");
+      const secondary = document.querySelector("nav.quarto-secondary-nav");
+      const bottom = Math.max(
+        visibleFixedBottom(navbar),
+        visibleFixedBottom(secondary)
+      );
+      if (bottom > 0) return Math.ceil(bottom) + GAP;
+      // Empty #quarto-header still exists on navbar:false pages.
+      const navbarHeight = navbar ? navbar.getBoundingClientRect().height : 0;
+      return navbarHeight > 0 ? NAVBAR_FALLBACK : 0;
+    };
+
+    // Desktop margin notes share a column with the accordion TOC and
+    // listing category filters. Measure whatever of that chrome is
+    // still on screen (fixed accordion after scroll, in-flow panel
+    // near the top).
+    const visibleBoxBottom = (el) => {
+      if (!el || el.hidden) return 0;
+      const style = window.getComputedStyle(el);
+      if (style.display === "none" || style.visibility === "hidden") return 0;
+      const rect = el.getBoundingClientRect();
+      if (rect.height <= 0) return 0;
+      if (rect.bottom <= 0 || rect.top >= window.innerHeight) return 0;
+      return rect.bottom;
+    };
+
+    const marginChromeBottom = () => {
+      const selectors = [
+        "#portfolio-toc-toggle",
+        "#quarto-margin-sidebar nav#TOC",
+        "#quarto-margin-sidebar nav[role='doc-toc']",
+        "#quarto-margin-sidebar .quarto-listing-category-title",
+        "#quarto-margin-sidebar .quarto-listing-category",
+      ];
+      let bottom = 0;
+      for (const selector of selectors) {
+        bottom = Math.max(bottom, visibleBoxBottom(document.querySelector(selector)));
+      }
+      return bottom;
+    };
+
+    const isMarginTarget = (el) => {
+      if (!el) return false;
+      if (el.id && /^fn\d/.test(el.id)) return true;
+      return Boolean(
+        el.closest(
+          ".column-margin, .aside, .tabset-margin-container, #quarto-margin-sidebar"
+        )
+      );
+    };
+
+    const targetOffset = (el) => {
+      const header = headerOffset();
+      if (!isMarginTarget(el)) return header;
+      const margin = marginChromeBottom();
+      if (margin > 0) return Math.max(header, Math.ceil(margin) + GAP);
+      return header;
+    };
+
+    const syncScrollPadding = () => {
+      const offset = headerOffset();
+      if (offset > 0) {
+        document.documentElement.style.scrollPaddingTop = `${offset}px`;
+      } else {
+        document.documentElement.style.removeProperty("scroll-padding-top");
+      }
+    };
 
     const targetEl = (hash) => {
       if (!hash) return null;
@@ -1753,7 +2185,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
     const scrollToEl = (el) => {
       if (!el) return;
-      const top = el.getBoundingClientRect().top + window.scrollY - OFFSET;
+      const offset = targetOffset(el);
+      if (offset <= 0) return;
+      const top = el.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top: Math.max(0, top), behavior: "auto" });
     };
 
@@ -1791,6 +2225,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     });
 
     const onReady = () => {
+      syncScrollPadding();
       if (!window.location.hash) return;
       applyHash();
       setTimeout(applyHash, 250);
@@ -1802,6 +2237,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       onReady();
     }
     window.addEventListener("load", onReady);
+    window.addEventListener("resize", syncScrollPadding);
   })();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">

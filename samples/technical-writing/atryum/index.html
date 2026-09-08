@@ -52,9 +52,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-6a5d77c288ae9a328f8b889480dd1f82.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-0062e773160ec7b30614b11e05b439f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-cbdff46b3c532071db5dd428a750ad25.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-0062e773160ec7b30614b11e05b439f7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-a33eb57eacd58093e2434a5701d5e2d4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-cbb4d391aeadc2d3497aa43e9c96f189.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-a33eb57eacd58093e2434a5701d5e2d4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../../site_libs/quarto-contrib/timeline-0.1.0/timeline.js"></script>
 <link href="../../../site_libs/quarto-contrib/timeline-0.1.0/timeline.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/tachyons-4.12.0/tachyons.css" rel="stylesheet">
@@ -172,6 +172,40 @@ ul.task-list li input[type="checkbox"] {
     }
   })
   </script>
+<style>
+  /* First paint: take notes out of the box entirely. visibility/opacity
+     still lets overflow:visible margin notes paint over the TOC. */
+  html:not(.margin-below-toc-ready):not(.margin-notes-measuring) .column-margin.column-container > *,
+  html:not(.margin-below-toc-ready):not(.margin-notes-measuring) .tabset-margin-content,
+  html:not(.margin-below-toc-ready):not(.margin-notes-measuring) .margin-caption,
+  html:not(.margin-below-toc-ready):not(.margin-notes-measuring) .aside,
+  html:not(.margin-below-toc-ready):not(.margin-notes-measuring) div[id^="fn"] {
+    display: none !important;
+  }
+
+  html.margin-notes-measuring:not(.margin-below-toc-ready) .column-margin.column-container > *,
+  html.margin-notes-measuring:not(.margin-below-toc-ready) .tabset-margin-content,
+  html.margin-notes-measuring:not(.margin-below-toc-ready) .margin-caption,
+  html.margin-notes-measuring:not(.margin-below-toc-ready) .aside,
+  html.margin-notes-measuring:not(.margin-below-toc-ready) div[id^="fn"] {
+    display: block !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+</style>
+<noscript>
+  <style>
+    html .column-margin.column-container > *,
+    html .tabset-margin-content,
+    html .margin-caption,
+    html .aside,
+    html div[id^="fn"] {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+  </style>
+</noscript>
 <script>
     !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}p||((p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",p.onerror=function(){p=null},(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r));var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="al ol ll init Il Rl Tl Ml Ol za El Dl Sl capture getExtension Pl nl Hl calculateEventProperties Bl register register_once register_for_session unregister unregister_for_session Vl Cl zl getFeatureFlag getFeatureFlagPayload getFeatureFlagResult getAllFeatureFlags isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync Gl identify setPersonProperties unsetPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset Zl shutdown setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty Ul ql createPersonProfile setInternalOrTestUser Wl ul hl opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing $l debug Ua Jn getPageViewId captureTraceFeedback captureTraceMetric bl".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
     posthog.init('phc_zqwk6XXUUjTLnofgQxcesCk2hnsCVoF3FCfB6KVg2Vym', {
@@ -897,6 +931,13 @@ Landing Page
 
 
 </main> <!-- /main -->
+<style>
+  @media (max-width: 767.98px) {
+    .tabset-margin-container {
+      display: none !important;
+    }
+  }
+</style>
 <script>
   // Quarto's layoutMarginEls only separates margin notes from each other.
   // Seed that same cascade with the TOC/category panel bottom so footnotes
@@ -910,6 +951,7 @@ Landing Page
     const GAP_AFTER_SIDEBAR = "0.5rem";
     const GAP_BEFORE_FOOTER = "1.5rem";
     const READY_CLASS = "margin-below-toc-ready";
+    const MEASURING_CLASS = "margin-notes-measuring";
 
     const remPx = (raw) => {
       const root = window.getComputedStyle(document.documentElement);
@@ -984,56 +1026,163 @@ Landing Page
 
     // Quarto leaves margin footnotes inside tab panes and marks the
     // tabset with page-columns/page-full, nesting a full page grid in
-    // the body column. Move those notes into the sibling
-    // .tabset-margin-container so the tabset can lay out normally and
-    // Quarto's shown.bs.tab handler can toggle note visibility.
-    const hoistTabsetMargins = () => {
-      document.querySelectorAll(".panel-tabset").forEach((tabset) => {
-        const margins = [
-          ...tabset.querySelectorAll(".column-margin.column-container"),
-        ];
-        if (!margins.length) return;
+    // the body column. On desktop, move those notes into a sibling
+    // .tabset-margin-container so they sit in the page margin and
+    // Quarto's shown.bs.tab handler can toggle visibility.
+    // On mobile, Quarto inlines .column-margin in document order —
+    // keep notes after their host (same as outside tabsets) instead
+    // of leaving the hoisted container above the tabset.
+    const INLINE_MARGIN_MQ = "(max-width: 767.98px)";
+    const marginsAreInline = () =>
+      window.matchMedia(INLINE_MARGIN_MQ).matches;
 
-        let container = tabset.previousElementSibling;
-        if (!container?.classList.contains("tabset-margin-container")) {
-          container = document.createElement("div");
-          container.className = "tabset-margin-container";
-          tabset.parentElement?.insertBefore(container, tabset);
+    const escapeAttr = (value) =>
+      window.CSS?.escape ? window.CSS.escape(value) : value;
+
+    const findTabsetMarginContainer = (tabset) => {
+      for (const sib of [
+        tabset.previousElementSibling,
+        tabset.nextElementSibling,
+      ]) {
+        if (sib?.classList.contains("tabset-margin-container")) return sib;
+      }
+      return null;
+    };
+
+    const paneForMarginWrap = (tabset, wrap) => {
+      const paneId = wrap.dataset.tabPaneId;
+      if (paneId) {
+        const byId = document.getElementById(paneId);
+        if (byId) return byId;
+      }
+      for (const cls of wrap.classList) {
+        if (cls === "tabset-margin-content") continue;
+        const fromPane = cls.match(/^(.+)-tab-margin-content$/);
+        if (fromPane) {
+          const pane = document.getElementById(fromPane[1]);
+          if (pane) return pane;
         }
+        const fromTab = cls.match(/^(.+)-margin-content$/);
+        if (fromTab) {
+          const pane = tabset.querySelector(
+            `.tab-pane[aria-labelledby="${escapeAttr(fromTab[1])}"]`
+          );
+          if (pane) return pane;
+        }
+      }
+      return null;
+    };
 
-        // Sit in the parent section's page grid as the margin column.
-        container.classList.add(
-          "column-margin",
-          "column-container",
-          "no-row-height"
-        );
+    const stripNestedPageGrid = (tabset) => {
+      const strip = (el) => {
+        el.classList.remove("page-columns", "page-full");
+      };
+      strip(tabset);
+      tabset.querySelectorAll(".page-columns, .page-full").forEach(strip);
+    };
 
-        margins.forEach((margin) => {
-          const pane = margin.closest(".tab-pane");
-          const tabBtnId =
-            pane?.getAttribute("aria-labelledby") ||
-            (pane?.id ? `${pane.id}-tab` : null);
-          const wrap = document.createElement("div");
-          wrap.className = "tabset-margin-content";
-          if (tabBtnId) wrap.classList.add(`${tabBtnId}-margin-content`);
-          if (!pane?.classList.contains("active")) {
-            wrap.classList.add("collapse");
-          }
-          while (margin.firstChild) wrap.appendChild(margin.firstChild);
-          container.appendChild(wrap);
-          margin.remove();
-        });
+    const hoistTabsetMargins = (tabset) => {
+      const margins = [
+        ...tabset.querySelectorAll(".column-margin.column-container"),
+      ];
+      if (!margins.length) return;
 
-        const strip = (el) => {
-          el.classList.remove("page-columns", "page-full");
-        };
-        strip(tabset);
-        tabset.querySelectorAll(".page-columns, .page-full").forEach(strip);
+      let container = findTabsetMarginContainer(tabset);
+      if (!container) {
+        container = document.createElement("div");
+        container.className = "tabset-margin-container";
+      }
+      if (tabset.previousElementSibling !== container) {
+        tabset.parentElement?.insertBefore(container, tabset);
+      }
+
+      // Sit in the parent section's page grid as the margin column.
+      container.classList.add(
+        "column-margin",
+        "column-container",
+        "no-row-height"
+      );
+
+      margins.forEach((margin) => {
+        const pane = margin.closest(".tab-pane");
+        const tabBtnId =
+          pane?.getAttribute("aria-labelledby") ||
+          (pane?.id ? `${pane.id}-tab` : null);
+        const wrap = document.createElement("div");
+        wrap.className = "tabset-margin-content";
+        if (tabBtnId) wrap.classList.add(`${tabBtnId}-margin-content`);
+        if (pane?.id) wrap.dataset.tabPaneId = pane.id;
+        const host = margin.previousElementSibling;
+        if (host) {
+          const hostId =
+            host.dataset.marginHost ||
+            `mhost-${Math.random().toString(36).slice(2, 10)}`;
+          host.dataset.marginHost = hostId;
+          wrap.dataset.marginHost = hostId;
+        }
+        if (!pane?.classList.contains("active")) {
+          wrap.classList.add("collapse");
+        }
+        while (margin.firstChild) wrap.appendChild(margin.firstChild);
+        container.appendChild(wrap);
+        margin.remove();
       });
     };
 
+    const restoreTabsetMargins = (tabset) => {
+      const container = findTabsetMarginContainer(tabset);
+      if (!container) return;
+
+      [...container.children].forEach((child) => {
+        const pane = paneForMarginWrap(tabset, child);
+        if (!pane) return;
+
+        child.classList.remove("collapse");
+        const hostId = child.dataset.marginHost;
+        const host =
+          hostId && pane.querySelector(`[data-margin-host="${escapeAttr(hostId)}"]`);
+
+        if (child.classList.contains("column-margin")) {
+          // Quarto already hoisted the whole .column-margin node.
+          if (host) host.insertAdjacentElement("afterend", child);
+          else pane.appendChild(child);
+          return;
+        }
+
+        const margin = document.createElement("div");
+        margin.className = "column-margin column-container no-row-height";
+        while (child.firstChild) margin.appendChild(child.firstChild);
+        for (const note of margin.children) {
+          note.style.marginTop = null;
+        }
+        if (host) host.insertAdjacentElement("afterend", margin);
+        else pane.appendChild(margin);
+        child.remove();
+      });
+
+      if (!container.children.length) container.remove();
+    };
+
+    const syncTabsetMargins = () => {
+      const inline = marginsAreInline();
+      document.querySelectorAll(".panel-tabset").forEach((tabset) => {
+        stripNestedPageGrid(tabset);
+        if (inline) restoreTabsetMargins(tabset);
+        else hoistTabsetMargins(tabset);
+      });
+    };
+
+    const currentTranslateY = (el) => {
+      const match = String(el.style.transform || "").match(
+        /translateY\(([-\d.]+)px\)/
+      );
+      return match ? parseFloat(match[1]) : 0;
+    };
+
     const layoutMarginBelowToc = () => {
-      hoistTabsetMargins();
+      document.documentElement.classList.add(MEASURING_CLASS);
+      document.documentElement.offsetHeight;
+      syncTabsetMargins();
 
       const marginChildren = document.querySelectorAll(MARGIN_SEL);
       if (!marginChildren.length) {
@@ -1041,22 +1190,42 @@ Landing Page
         return;
       }
 
+      // Quarto's layoutMarginEls resets margin-top. Keep the desktop
+      // cascade in translateY, and never zero it before writing the next
+      // value — clearing first is what flashes notes over the TOC.
+      const persistShift = !marginsAreInline();
       let lastBottom = sidebarContentBottom();
       for (const el of marginChildren) {
         if (el.offsetParent === null) continue;
 
-        el.style.marginTop = null;
-        const top = el.getBoundingClientRect().top + window.scrollY;
+        const shiftNow = persistShift ? currentTranslateY(el) : 0;
+        const visualTop =
+          el.getBoundingClientRect().top + window.scrollY;
+        const top = visualTop - shiftNow;
+        let nextShift = 0;
         if (lastBottom > 0 && top < lastBottom) {
           const marginBottom =
             parseFloat(window.getComputedStyle(el).marginBottom) || 0;
-          el.style.marginTop = `${lastBottom - top + marginBottom}px`;
+          nextShift = lastBottom - top + marginBottom;
         }
 
+        if (persistShift) {
+          if (nextShift) {
+            el.style.transform = `translateY(${nextShift}px)`;
+          } else {
+            el.style.removeProperty("transform");
+          }
+          el.style.marginTop = null;
+        } else {
+          el.style.removeProperty("transform");
+          el.style.marginTop = nextShift ? `${nextShift}px` : null;
+        }
+
+        const placedTop = top + nextShift;
         const marginTop =
           parseFloat(window.getComputedStyle(el).marginTop) || 0;
-        const height = el.getBoundingClientRect().height;
-        lastBottom = top + height + marginTop;
+        lastBottom =
+          placedTop + el.getBoundingClientRect().height + marginTop;
       }
 
       expandContentForMargins(lastBottom);
@@ -1064,23 +1233,90 @@ Landing Page
 
     const reveal = () => {
       document.documentElement.classList.add(READY_CLASS);
+      document.documentElement.classList.remove(MEASURING_CLASS);
     };
 
+    const sidebarHasPanel = () => {
+      const sidebar = document.getElementById("quarto-margin-sidebar");
+      if (!sidebar) return false;
+      if (window.getComputedStyle(sidebar).display === "none") return false;
+      return Boolean(
+        sidebar.querySelector(
+          "nav#TOC, nav[role='doc-toc'], .quarto-listing-category"
+        )
+      );
+    };
+
+    // Never unhide over the TOC: a 0px sidebar read used to look "settled".
+    const sidebarSettled = () => {
+      if (marginsAreInline()) return true;
+      if (!sidebarHasPanel()) return true;
+      return sidebarContentBottom() > 0;
+    };
+
+    // Don't paint notes until the cascade has run and the sidebar
+    // height has settled, so first load never shows a TOC collision.
     const layoutAndReveal = () => {
       layoutMarginBelowToc();
-      reveal();
+      if (!sidebarSettled()) {
+        if (!document.documentElement.classList.contains(READY_CLASS)) {
+          schedule();
+        }
+        return;
+      }
+      if (marginsAreInline()) {
+        reveal();
+        return;
+      }
+      requestAnimationFrame(() => {
+        layoutMarginBelowToc();
+        if (!sidebarSettled()) {
+          if (!document.documentElement.classList.contains(READY_CLASS)) {
+            schedule();
+          }
+          return;
+        }
+        reveal();
+      });
     };
 
-    // Run after Quarto's own throttled layoutMarginEls (50ms).
+    // After the first paint, only re-cascade — don't run the reveal
+    // rAF path again (that used to clear transforms while visible).
     const schedule = () => {
       clearTimeout(schedule._timer);
-      schedule._timer = setTimeout(layoutAndReveal, 60);
+      schedule._timer = setTimeout(() => {
+        if (document.documentElement.classList.contains(READY_CLASS)) {
+          layoutMarginBelowToc();
+        } else {
+          layoutAndReveal();
+        }
+      }, 60);
     };
 
-    window.document.addEventListener("DOMContentLoaded", () => {
+    const onInlineChange = () => {
+      syncTabsetMargins();
+      if (marginsAreInline()) reveal();
+      schedule();
+    };
+
+    // include-after-body: tabsets are already in the DOM. Place notes
+    // before the 60ms cascade so mobile never reveals them above.
+    syncTabsetMargins();
+    if (marginsAreInline()) reveal();
+
+    const onReady = () => {
       schedule();
       // Failsafe: never leave footnotes hidden if layout is delayed.
-      setTimeout(reveal, 1500);
+      setTimeout(() => {
+        layoutMarginBelowToc();
+        reveal();
+      }, 1500);
+      const inlineMq = window.matchMedia(INLINE_MARGIN_MQ);
+      if (inlineMq.addEventListener) {
+        inlineMq.addEventListener("change", onInlineChange);
+      } else if (inlineMq.addListener) {
+        inlineMq.addListener(onInlineChange);
+      }
       // Re-cascade when Quarto toggles tabset margin note visibility.
       window.document.querySelectorAll('.panel-tabset a[data-bs-toggle="tab"]').forEach((tab) => {
         tab.addEventListener("shown.bs.tab", schedule);
@@ -1088,6 +1324,9 @@ Landing Page
       window.document.querySelectorAll(".column-margin img").forEach((img) => {
         if (!img.complete) img.addEventListener("load", schedule, { once: true });
       });
+      if (document.fonts?.ready) {
+        document.fonts.ready.then(schedule);
+      }
       if (window.ResizeObserver) {
         const ro = new ResizeObserver(schedule);
         ro.observe(window.document.body);
@@ -1098,7 +1337,13 @@ Landing Page
         );
         if (margin) ro.observe(margin);
       }
-    });
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", onReady);
+    } else {
+      onReady();
+    }
   })();
 </script>
 <script>
@@ -1458,8 +1703,92 @@ Landing Page
   // Keep in-page hash targets below the fixed header. Quarto's hashchange
   // offset looks for header.fixed-top and can fire before native scroll, and
   // CSS scroll-margin is unreliable on page-columns grid sections.
+  // Desktop is the navbar only; mobile stacks navbar + quarto-secondary-nav.
+  // Margin footnotes also clear the accordion TOC / category filters.
   (() => {
-    const OFFSET = 80;
+    const GAP = 8;
+    const NAVBAR_FALLBACK = 80;
+
+    const visibleFixedBottom = (el) => {
+      if (!el) return 0;
+      const style = window.getComputedStyle(el);
+      if (style.display === "none" || style.visibility === "hidden") return 0;
+      if (style.position !== "fixed" && style.position !== "sticky") return 0;
+      const rect = el.getBoundingClientRect();
+      return rect.height > 0 && rect.bottom > 0 ? rect.bottom : 0;
+    };
+
+    const headerOffset = () => {
+      const navbar =
+        document.querySelector("#quarto-header nav.navbar") ||
+        document.querySelector("#quarto-header") ||
+        document.querySelector("nav.navbar");
+      const secondary = document.querySelector("nav.quarto-secondary-nav");
+      const bottom = Math.max(
+        visibleFixedBottom(navbar),
+        visibleFixedBottom(secondary)
+      );
+      if (bottom > 0) return Math.ceil(bottom) + GAP;
+      // Empty #quarto-header still exists on navbar:false pages.
+      const navbarHeight = navbar ? navbar.getBoundingClientRect().height : 0;
+      return navbarHeight > 0 ? NAVBAR_FALLBACK : 0;
+    };
+
+    // Desktop margin notes share a column with the accordion TOC and
+    // listing category filters. Measure whatever of that chrome is
+    // still on screen (fixed accordion after scroll, in-flow panel
+    // near the top).
+    const visibleBoxBottom = (el) => {
+      if (!el || el.hidden) return 0;
+      const style = window.getComputedStyle(el);
+      if (style.display === "none" || style.visibility === "hidden") return 0;
+      const rect = el.getBoundingClientRect();
+      if (rect.height <= 0) return 0;
+      if (rect.bottom <= 0 || rect.top >= window.innerHeight) return 0;
+      return rect.bottom;
+    };
+
+    const marginChromeBottom = () => {
+      const selectors = [
+        "#portfolio-toc-toggle",
+        "#quarto-margin-sidebar nav#TOC",
+        "#quarto-margin-sidebar nav[role='doc-toc']",
+        "#quarto-margin-sidebar .quarto-listing-category-title",
+        "#quarto-margin-sidebar .quarto-listing-category",
+      ];
+      let bottom = 0;
+      for (const selector of selectors) {
+        bottom = Math.max(bottom, visibleBoxBottom(document.querySelector(selector)));
+      }
+      return bottom;
+    };
+
+    const isMarginTarget = (el) => {
+      if (!el) return false;
+      if (el.id && /^fn\d/.test(el.id)) return true;
+      return Boolean(
+        el.closest(
+          ".column-margin, .aside, .tabset-margin-container, #quarto-margin-sidebar"
+        )
+      );
+    };
+
+    const targetOffset = (el) => {
+      const header = headerOffset();
+      if (!isMarginTarget(el)) return header;
+      const margin = marginChromeBottom();
+      if (margin > 0) return Math.max(header, Math.ceil(margin) + GAP);
+      return header;
+    };
+
+    const syncScrollPadding = () => {
+      const offset = headerOffset();
+      if (offset > 0) {
+        document.documentElement.style.scrollPaddingTop = `${offset}px`;
+      } else {
+        document.documentElement.style.removeProperty("scroll-padding-top");
+      }
+    };
 
     const targetEl = (hash) => {
       if (!hash) return null;
@@ -1473,7 +1802,9 @@ Landing Page
 
     const scrollToEl = (el) => {
       if (!el) return;
-      const top = el.getBoundingClientRect().top + window.scrollY - OFFSET;
+      const offset = targetOffset(el);
+      if (offset <= 0) return;
+      const top = el.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top: Math.max(0, top), behavior: "auto" });
     };
 
@@ -1511,6 +1842,7 @@ Landing Page
     });
 
     const onReady = () => {
+      syncScrollPadding();
       if (!window.location.hash) return;
       applyHash();
       setTimeout(applyHash, 250);
@@ -1522,6 +1854,7 @@ Landing Page
       onReady();
     }
     window.addEventListener("load", onReady);
+    window.addEventListener("resize", syncScrollPadding);
   })();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
