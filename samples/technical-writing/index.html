@@ -144,34 +144,6 @@ ul.task-list li input[type="checkbox"] {
   
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-personal-technical .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-personal-technical'] = new List('listing-personal-technical', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
     const listingTargetEl = window.document.querySelector('#listing-saasquatch-technical .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
@@ -535,42 +507,13 @@ window.Quarto = {
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../samples/technical-writing/personal/guestbook/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-1-label">Personal / y2k Guestbook</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section: Personal / y2k Guestbook">
+            <a href="../../samples/technical-writing/validmind/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">ValidMind</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section: ValidMind">
               <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
             </button> 
       </div>
       <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../samples/technical-writing/personal/guestbook/library.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">API Library Reference</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../samples/technical-writing/personal/guestbook/developer.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Developer Installation Guides</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../samples/technical-writing/personal/guestbook/guides.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">User Guides</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../samples/technical-writing/validmind/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-2-label">ValidMind</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section: ValidMind">
-              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
-            </button> 
-      </div>
-      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../samples/technical-writing/validmind/jupyter-notebooks.html" class="sidebar-item-text sidebar-link">
@@ -606,12 +549,12 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../samples/technical-writing/atryum/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-3-label">Atryum</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section: Atryum">
+ <span class="menu-text" id="quarto-sidebar-section-2-label">Atryum</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section: Atryum">
               <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
             </button> 
       </div>
-      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../samples/technical-writing/atryum/integrations.html" class="sidebar-item-text sidebar-link">
@@ -635,34 +578,34 @@ window.Quarto = {
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-controls="quarto-sidebar-section-4" aria-expanded="true">
- <span class="menu-text" id="quarto-sidebar-section-4-label">Archive</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-3-label">Archive</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
-      <ul id="quarto-sidebar-section-4" aria-labelledby="quarto-sidebar-section-4-label" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../samples/technical-writing/saasquatch/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-5-label">SaaSquatch</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-controls="quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section: SaaSquatch">
+ <span class="menu-text" id="quarto-sidebar-section-4-label">SaaSquatch</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-controls="quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section: SaaSquatch">
               <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
             </button> 
       </div>
-      <ul id="quarto-sidebar-section-5" aria-labelledby="quarto-sidebar-section-5-label" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-4" aria-labelledby="quarto-sidebar-section-4-label" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../samples/technical-writing/saasquatch/integrations/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-6-label">Integrations</span></a>
-            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-controls="quarto-sidebar-section-6" aria-expanded="false" aria-label="Toggle section: Integrations">
+ <span class="menu-text" id="quarto-sidebar-section-5-label">Integrations</span></a>
+            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-controls="quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section: Integrations">
               <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
             </button> 
       </div>
-      <ul id="quarto-sidebar-section-6" aria-labelledby="quarto-sidebar-section-6-label" class="collapse list-unstyled sidebar-section depth3 ">  
+      <ul id="quarto-sidebar-section-5" aria-labelledby="quarto-sidebar-section-5-label" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-controls="quarto-sidebar-section-7" aria-expanded="false">
- <span class="menu-text" id="quarto-sidebar-section-7-label">Salesforce</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-controls="quarto-sidebar-section-6" aria-expanded="false">
+ <span class="menu-text" id="quarto-sidebar-section-6-label">Salesforce</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
-      <ul id="quarto-sidebar-section-7" aria-labelledby="quarto-sidebar-section-7-label" class="collapse list-unstyled sidebar-section depth4 ">  
+      <ul id="quarto-sidebar-section-6" aria-labelledby="quarto-sidebar-section-6-label" class="collapse list-unstyled sidebar-section depth4 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../samples/technical-writing/saasquatch/integrations/sfdc/invocable-methods.html" class="sidebar-item-text sidebar-link">
@@ -685,10 +628,10 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-controls="quarto-sidebar-section-8" aria-expanded="false">
- <span class="menu-text" id="quarto-sidebar-section-8-label">Other</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-controls="quarto-sidebar-section-7" aria-expanded="false">
+ <span class="menu-text" id="quarto-sidebar-section-7-label">Other</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
-      <ul id="quarto-sidebar-section-8" aria-labelledby="quarto-sidebar-section-8-label" class="collapse list-unstyled sidebar-section depth4 ">  
+      <ul id="quarto-sidebar-section-7" aria-labelledby="quarto-sidebar-section-7-label" class="collapse list-unstyled sidebar-section depth4 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../samples/technical-writing/saasquatch/integrations/stripe.html" class="sidebar-item-text sidebar-link">
@@ -714,12 +657,12 @@ window.Quarto = {
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../samples/technical-writing/saasquatch/sdk/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-9-label">JavaScript SDK</span></a>
-            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-controls="quarto-sidebar-section-9" aria-expanded="false" aria-label="Toggle section: JavaScript SDK">
+ <span class="menu-text" id="quarto-sidebar-section-8-label">JavaScript SDK</span></a>
+            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-controls="quarto-sidebar-section-8" aria-expanded="false" aria-label="Toggle section: JavaScript SDK">
               <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
             </button> 
       </div>
-      <ul id="quarto-sidebar-section-9" aria-labelledby="quarto-sidebar-section-9-label" class="collapse list-unstyled sidebar-section depth3 ">  
+      <ul id="quarto-sidebar-section-8" aria-labelledby="quarto-sidebar-section-8-label" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../samples/technical-writing/saasquatch/sdk/key-sjs.html" class="sidebar-item-text sidebar-link">
@@ -743,12 +686,12 @@ window.Quarto = {
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../samples/technical-writing/saasquatch/user-guides/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-10-label">User Guides</span></a>
-            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-controls="quarto-sidebar-section-10" aria-expanded="false" aria-label="Toggle section: User Guides">
+ <span class="menu-text" id="quarto-sidebar-section-9-label">User Guides</span></a>
+            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-controls="quarto-sidebar-section-9" aria-expanded="false" aria-label="Toggle section: User Guides">
               <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
             </button> 
       </div>
-      <ul id="quarto-sidebar-section-10" aria-labelledby="quarto-sidebar-section-10-label" class="collapse list-unstyled sidebar-section depth3 ">  
+      <ul id="quarto-sidebar-section-9" aria-labelledby="quarto-sidebar-section-9-label" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../samples/technical-writing/saasquatch/user-guides/sharelinks.html" class="sidebar-item-text sidebar-link">
@@ -777,8 +720,7 @@ window.Quarto = {
     <h2 id="toc-title">Table of Contents</h2>
    
   <ul>
-  <li><a href="#personal" id="toc-personal" class="nav-link active" data-scroll-target="#personal">Personal</a></li>
-  <li><a href="#validmind" id="toc-validmind" class="nav-link" data-scroll-target="#validmind">ValidMind</a>
+  <li><a href="#validmind" id="toc-validmind" class="nav-link active" data-scroll-target="#validmind">ValidMind</a>
   <ul>
   <li><a href="#atryum" id="toc-atryum" class="nav-link" data-scroll-target="#atryum">Atryum</a></li>
   </ul></li>
@@ -788,7 +730,7 @@ window.Quarto = {
   </ul></li>
   </ul>
 </nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(14)</span></div><div class="category" data-category="QWdlbnQlMjBTa2lsbHM=">Agent Skills <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q0klMkZDRCUyMFdvcmtmbG93cw==">CI/CD Workflows <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29udGVudCUyMEVuYWJsZW1lbnQ=">Content Enablement <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q3VjdW1iZXI=">Cucumber <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q3Vyc29yJTIwQ29kZQ==">Cursor Code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RGV2ZWxvcGVyJTIwQ29udGVudA==">Developer Content <span class="quarto-category-count">(4)</span></div><div class="category" data-category="ZUNvbW1lcmNl">eCommerce <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RmVhdHVyZSUyMERvY3VtZW50YXRpb24=">Feature Documentation <span class="quarto-category-count">(6)</span></div><div class="category" data-category="RmVhdHVyZSUyMEZsYWdz">Feature Flags <span class="quarto-category-count">(2)</span></div><div class="category" data-category="R29vZ2xlJTIwQ2xvdWQlMjBQbGF0Zm9ybQ==">Google Cloud Platform <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SW50ZWdyYXRpb25z">Integrations <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SnVweXRlciUyME5vdGVib29rcw==">Jupyter Notebooks <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscw==">Large Language Models <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TGl0ZXJhdGUlMjBQcm9ncmFtbWluZw==">Literate Programming <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWFya2V0aW5nJTIwVGVjaG5vbG9neQ==">Marketing Technology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TW9kZWwlMjBDb250ZXh0JTIwUHJvdG9jb2wlMjBTZXJ2ZXJz">Model Context Protocol Servers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TmV4dC5qcw==">Next.js <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Tm9kZS5qcw==">Node.js <span class="quarto-category-count">(3)</span></div><div class="category" data-category="T3BlbkFQSQ==">OpenAPI <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UGF5bWVudCUyMFByb3ZpZGVycw==">Payment Providers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UG9zdGdyZXM=">Postgres <span class="quarto-category-count">(3)</span></div><div class="category" data-category="UG9zdEhvZw==">PostHog <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHl0aG9uJTIwTGlicmFyeQ==">Python Library <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UmVjdXJseQ==">Recurly <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVmZXJyYWxzJTIwJTI2JTIwQXR0cmlidXRpb25z">Referrals &amp; Attributions <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVsZWFzZSUyME5vdGVz">Release Notes <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmV3YXJkJTIwUHJvdmlkZXJz">Reward Providers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U2FhU3F1YXRjaA==">SaaSquatch <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U2NhbGFy">Scalar <span class="quarto-category-count">(2)</span></div><div class="category" data-category="U29mdHdhcmUlMjBhcyUyMGElMjBTZXJ2aWNl">Software as a Service <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U1FM">SQL <span class="quarto-category-count">(3)</span></div><div class="category" data-category="U3RyaXBl">Stripe <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U3VwYWJhc2U=">Supabase <span class="quarto-category-count">(3)</span></div><div class="category" data-category="VGFuZ28lMjBDYXJk">Tango Card <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VHJhaW5pbmclMjAlMjYlMjBPbmJvYXJkaW5n">Training &amp; Onboarding <span class="quarto-category-count">(3)</span></div><div class="category" data-category="VXNlJTIwQ2FzZSUyMFR1dG9yaWFscw==">Use Case Tutorials <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VXNlciUyMEd1aWRlcw==">User Guides <span class="quarto-category-count">(8)</span></div><div class="category" data-category="VmVyY2Vs">Vercel <span class="quarto-category-count">(3)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(11)</span></div><div class="category" data-category="QWdlbnQlMjBTa2lsbHM=">Agent Skills <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q0klMkZDRCUyMFdvcmtmbG93cw==">CI/CD Workflows <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29udGVudCUyMEVuYWJsZW1lbnQ=">Content Enablement <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q3Vyc29yJTIwQ29kZQ==">Cursor Code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RGV2ZWxvcGVyJTIwQ29udGVudA==">Developer Content <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZUNvbW1lcmNl">eCommerce <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RmVhdHVyZSUyMERvY3VtZW50YXRpb24=">Feature Documentation <span class="quarto-category-count">(3)</span></div><div class="category" data-category="SW50ZWdyYXRpb25z">Integrations <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SnVweXRlciUyME5vdGVib29rcw==">Jupyter Notebooks <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscw==">Large Language Models <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TGl0ZXJhdGUlMjBQcm9ncmFtbWluZw==">Literate Programming <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWFya2V0aW5nJTIwVGVjaG5vbG9neQ==">Marketing Technology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TW9kZWwlMjBDb250ZXh0JTIwUHJvdG9jb2wlMjBTZXJ2ZXJz">Model Context Protocol Servers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UGF5bWVudCUyMFByb3ZpZGVycw==">Payment Providers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHl0aG9uJTIwTGlicmFyeQ==">Python Library <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UmVjdXJseQ==">Recurly <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVmZXJyYWxzJTIwJTI2JTIwQXR0cmlidXRpb25z">Referrals &amp; Attributions <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVsZWFzZSUyME5vdGVz">Release Notes <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmV3YXJkJTIwUHJvdmlkZXJz">Reward Providers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U2FhU3F1YXRjaA==">SaaSquatch <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U29mdHdhcmUlMjBhcyUyMGElMjBTZXJ2aWNl">Software as a Service <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U3RyaXBl">Stripe <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VGFuZ28lMjBDYXJk">Tango Card <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VHJhaW5pbmclMjAlMjYlMjBPbmJvYXJkaW5n">Training &amp; Onboarding <span class="quarto-category-count">(3)</span></div><div class="category" data-category="VXNlJTIwQ2FzZSUyMFR1dG9yaWFscw==">Use Case Tutorials <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VXNlciUyMEd1aWRlcw==">User Guides <span class="quarto-category-count">(5)</span></div></div></div>
 <!-- main -->
 <main class="content page-columns page-full column-body" id="quarto-document-content" tabindex="-1">
 
@@ -828,63 +770,13 @@ window.Quarto = {
 <p>Engendering empowered users through effective guidance content.</p>
 <p>Along with a love of gratuitous alliteration, I truly enjoy authoring user guidance content. That’s because I believe that great guidance content empowers users, and empowered users get excited about product.</p>
 </blockquote>
-<section id="personal" class="level2">
-<h2 class="anchored" data-anchor-id="personal">Personal</h2>
-<p>I designed and built a mobile-responsive interactive Next.js application, complete with LLM-friendly documentation in MDX and an API reference implemented with Scalar.</p>
-<div id="listing-personal-technical" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ0ZlYXR1cmUlMjBEb2N1bWVudGF0aW9uJTJDVXNlciUyMEd1aWRlcyUyQ09wZW5BUEklMkNTY2FsYXIlMkNGZWF0dXJlJTIwRmxhZ3MlMkNOZXh0LmpzJTJDTm9kZS5qcyUyQ1NRTCUyQ1Bvc3RncmVzJTJDVmVyY2VsJTJDU3VwYWJhc2U=" data-listing-file-modified-sort="1789275915047" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="../../samples/technical-writing/personal/guestbook/library.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-y2k Guestbook API Library Reference
-</h5>
-<div class="card-subtitle listing-subtitle">
-Technical Writing
-</div>
-<div class="card-text listing-description delink">
+<!-- ## Personal
 
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ0ZlYXR1cmUlMjBEb2N1bWVudGF0aW9uJTJDVXNlciUyMEd1aWRlcyUyQ09wZW5BUEklMkNTY2FsYXIlMkNGZWF0dXJlJTIwRmxhZ3MlMkNOZXh0LmpzJTJDTm9kZS5qcyUyQ1NRTCUyQ1Bvc3RncmVzJTJDVmVyY2VsJTJDU3VwYWJhc2UlMkNDdWN1bWJlciUyQ0dvb2dsZSUyMENsb3VkJTIwUGxhdGZvcm0=" data-listing-file-modified-sort="1789275915047" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="../../samples/technical-writing/personal/guestbook/developer.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-y2k Guestbook Developer Guides
-</h5>
-<div class="card-subtitle listing-subtitle">
-Technical Writing
-</div>
-<div class="card-text listing-description delink">
+I designed and built a mobile-responsive interactive Next.js application, complete with LLM-friendly documentation in MDX and an API reference implemented with Scalar.
 
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ0ZlYXR1cmUlMjBEb2N1bWVudGF0aW9uJTJDVXNlciUyMEd1aWRlcyUyQ05leHQuanMlMkNOb2RlLmpzJTJDU1FMJTJDUG9zdGdyZXMlMkNWZXJjZWwlMkNTdXBhYmFzZSUyQ1Bvc3RIb2clMkNHb29nbGUlMjBDbG91ZCUyMFBsYXRmb3Jt" data-listing-file-modified-sort="1789275915047" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="../../samples/technical-writing/personal/guestbook/guides.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-y2k Guestbook User Guides
-</h5>
-<div class="card-subtitle listing-subtitle">
-Technical Writing
-</div>
-<div class="card-text listing-description delink">
 
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No Matches Found</div>
-</div>
-</section>
+:::{#personal-technical}
+::: -->
 <section id="validmind" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="validmind">ValidMind</h2>
 <p>I was the sole <strong>Senior Technical Writer</strong> for <a href="validmind.ai" target="_blank">ValidMind</a>, a generative artificial intelligence financial services startup, where I employed docs-as-code methodologies alongside software engineers delivering documentation as part of product in the same development ecosystem, transforming a minimal set of user guide drafts into a fully idealized and comprehensive knowledge base.</p>
@@ -895,7 +787,7 @@ Technical Writing
 </div>
 </div></div><div id="listing-validmind-technical" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ1VzZSUyMENhc2UlMjBUdXRvcmlhbHMlMkNGZWF0dXJlJTIwRG9jdW1lbnRhdGlvbiUyQ1VzZXIlMjBHdWlkZXMlMkNKdXB5dGVyJTIwTm90ZWJvb2tzJTJDTGl0ZXJhdGUlMjBQcm9ncmFtbWluZyUyQ1B5dGhvbiUyMExpYnJhcnk=" data-listing-file-modified-sort="1789275915052" data-listing-reading-time-sort="1" data-listing-word-count-sort="43">
+<div class="g-col-1" data-index="0" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ1VzZSUyMENhc2UlMjBUdXRvcmlhbHMlMkNGZWF0dXJlJTIwRG9jdW1lbnRhdGlvbiUyQ1VzZXIlMjBHdWlkZXMlMkNKdXB5dGVyJTIwTm90ZWJvb2tzJTJDTGl0ZXJhdGUlMjBQcm9ncmFtbWluZyUyQ1B5dGhvbiUyMExpYnJhcnk=" data-listing-file-modified-sort="1789276927466" data-listing-reading-time-sort="1" data-listing-word-count-sort="43">
 <a href="../../samples/technical-writing/validmind/jupyter-notebooks.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -911,7 +803,7 @@ Jupyter Notebook use case demonstrations written for ValidMind’s Python librar
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="VXNlciUyMEd1aWRlcyUyQ1RyYWluaW5nJTIwJTI2JTIwT25ib2FyZGluZw==" data-listing-file-modified-sort="1789275915052" data-listing-reading-time-sort="1" data-listing-word-count-sort="55">
+<div class="g-col-1" data-index="1" data-categories="VXNlciUyMEd1aWRlcyUyQ1RyYWluaW5nJTIwJTI2JTIwT25ib2FyZGluZw==" data-listing-file-modified-sort="1789276927466" data-listing-reading-time-sort="1" data-listing-word-count-sort="55">
 <a href="../../samples/technical-writing/validmind/training.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -927,7 +819,7 @@ Comprehensive interactive training curriculums developed to onboard users onto V
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVz" data-listing-file-modified-sort="1789275915052" data-listing-reading-time-sort="1" data-listing-word-count-sort="58">
+<div class="g-col-1" data-index="2" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVz" data-listing-file-modified-sort="1789276927466" data-listing-reading-time-sort="1" data-listing-word-count-sort="58">
 <a href="../../samples/technical-writing/validmind/user-guides.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -943,7 +835,7 @@ User guides produced as documentation and reference for ValidMind’s core featu
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="VXNlciUyMEd1aWRlcyUyQ1RyYWluaW5nJTIwJTI2JTIwT25ib2FyZGluZw==" data-listing-file-modified-sort="1789275915052" data-listing-reading-time-sort="1" data-listing-word-count-sort="57">
+<div class="g-col-1" data-index="3" data-categories="VXNlciUyMEd1aWRlcyUyQ1RyYWluaW5nJTIwJTI2JTIwT25ib2FyZGluZw==" data-listing-file-modified-sort="1789276927466" data-listing-reading-time-sort="1" data-listing-word-count-sort="57">
 <a href="../../samples/technical-writing/validmind/quickstarts.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -959,7 +851,7 @@ Intuitive quickstart guides developed to onboard users onto ValidMind.
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="UHl0aG9uJTIwTGlicmFyeSUyQ0NvbnRlbnQlMjBFbmFibGVtZW50JTJDUmVsZWFzZSUyME5vdGVzJTJDQ3Vyc29yJTIwQ29kZSUyQ0FnZW50JTIwU2tpbGxzJTJDTGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscyUyQ0NJJTJGQ0QlMjBXb3JrZmxvd3M=" data-listing-file-modified-sort="1789275915052" data-listing-reading-time-sort="1" data-listing-word-count-sort="70">
+<div class="g-col-1" data-index="4" data-categories="UHl0aG9uJTIwTGlicmFyeSUyQ0NvbnRlbnQlMjBFbmFibGVtZW50JTJDUmVsZWFzZSUyME5vdGVzJTJDQ3Vyc29yJTIwQ29kZSUyQ0FnZW50JTIwU2tpbGxzJTJDTGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscyUyQ0NJJTJGQ0QlMjBXb3JrZmxvd3M=" data-listing-file-modified-sort="1789276927466" data-listing-reading-time-sort="1" data-listing-word-count-sort="70">
 <a href="../../samples/technical-writing/validmind/enablement.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -984,7 +876,7 @@ Content produced to enable other creators to contribute to ValidMind’s open-so
 <p>I authored approximately 95% of the content for Atryum,<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> including the samples selected below:</p>
 <div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;Citation: <a href="https://github.com/validbeck/atryum/tree/main/website" target="_blank"><i class="fa-brands fa-github" aria-label="github"></i> Archive of <code>validmind/atryum/website</code> (documentation)</a></p></div></div><div id="listing-atryum-technical" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="SW50ZWdyYXRpb25zJTJDTGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscyUyQ01vZGVsJTIwQ29udGV4dCUyMFByb3RvY29sJTIwU2VydmVycw==" data-listing-file-modified-sort="1789275915047" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
+<div class="g-col-1" data-index="0" data-categories="SW50ZWdyYXRpb25zJTJDTGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscyUyQ01vZGVsJTIwQ29udGV4dCUyMFByb3RvY29sJTIwU2VydmVycw==" data-listing-file-modified-sort="1789276927461" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
 <a href="../../samples/technical-writing/atryum/integrations.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -1000,7 +892,7 @@ Feature Documentation
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1789275915047" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1789276927461" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
 <a href="../../samples/technical-writing/atryum/user-guides.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -1016,7 +908,7 @@ Feature Documentation
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="VHJhaW5pbmclMjAlMjYlMjBPbmJvYXJkaW5n" data-listing-file-modified-sort="1789275915047" data-listing-reading-time-sort="1" data-listing-word-count-sort="18">
+<div class="g-col-1" data-index="2" data-categories="VHJhaW5pbmclMjAlMjYlMjBPbmJvYXJkaW5n" data-listing-file-modified-sort="1789276927461" data-listing-reading-time-sort="1" data-listing-word-count-sort="18">
 <a href="../../samples/technical-writing/atryum/quickstart.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -1056,7 +948,7 @@ Tutorial
 <p>While the following samples are quite dated before I refined my voice in an official technical writing role, I’ve included them for completion and progression value:</p>
 <div id="listing-saasquatch-technical" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="U3RyaXBlJTJDUmVjdXJseSUyQ1RhbmdvJTIwQ2FyZCUyQ1BheW1lbnQlMjBQcm92aWRlcnMlMkNSZXdhcmQlMjBQcm92aWRlcnM=" data-listing-file-modified-sort="1789275915048" data-listing-reading-time-sort="1" data-listing-word-count-sort="11">
+<div class="g-col-1" data-index="0" data-categories="U3RyaXBlJTJDUmVjdXJseSUyQ1RhbmdvJTIwQ2FyZCUyQ1BheW1lbnQlMjBQcm92aWRlcnMlMkNSZXdhcmQlMjBQcm92aWRlcnM=" data-listing-file-modified-sort="1789276927462" data-listing-reading-time-sort="1" data-listing-word-count-sort="11">
 <a href="../../samples/technical-writing/saasquatch/integrations/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -1072,7 +964,7 @@ During my tenure at SaaSquatch, I became the company Subject Matter Expert for m
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1789275915051" data-listing-reading-time-sort="1" data-listing-word-count-sort="4">
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1789276927464" data-listing-reading-time-sort="1" data-listing-word-count-sort="4">
 <a href="../../samples/technical-writing/saasquatch/sdk/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -1088,7 +980,7 @@ As a <strong>Solutions Architect</strong>, I acted as the primary technical cont
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVzJTJDUmVmZXJyYWxzJTIwJTI2JTIwQXR0cmlidXRpb25zJTJDZUNvbW1lcmNlJTJDU29mdHdhcmUlMjBhcyUyMGElMjBTZXJ2aWNlJTJDTWFya2V0aW5nJTIwVGVjaG5vbG9neSUyQ1NhYVNxdWF0Y2g=" data-listing-file-modified-sort="1789275915051" data-listing-reading-time-sort="1" data-listing-word-count-sort="4">
+<div class="g-col-1" data-index="2" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVzJTJDUmVmZXJyYWxzJTIwJTI2JTIwQXR0cmlidXRpb25zJTJDZUNvbW1lcmNlJTJDU29mdHdhcmUlMjBhcyUyMGElMjBTZXJ2aWNlJTJDTWFya2V0aW5nJTIwVGVjaG5vbG9neSUyQ1NhYVNxdWF0Y2g=" data-listing-file-modified-sort="1789276927465" data-listing-reading-time-sort="1" data-listing-word-count-sort="4">
 <a href="../../samples/technical-writing/saasquatch/user-guides/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">

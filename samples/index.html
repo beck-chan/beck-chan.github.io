@@ -93,34 +93,6 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-personal-technical .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-personal-technical'] = new List('listing-personal-technical', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
     const listingTargetEl = window.document.querySelector('#listing-validmind-technical .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
@@ -679,7 +651,7 @@ window.Quarto = {
   <li><a href="#view-samples" id="toc-view-samples" class="nav-link active" data-scroll-target="#view-samples">View Samples</a></li>
   </ul>
 </nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(26)</span></div><div class="category" data-category="QWdlbnQlMjBTa2lsbHM=">Agent Skills <span class="quarto-category-count">(2)</span></div><div class="category" data-category="QUklMjBSaXNr">AI Risk <span class="quarto-category-count">(3)</span></div><div class="category" data-category="QXJ0aWZpY2lhbCUyMEludGVsbGlnZW5jZSUyMChBSSk=">Artificial Intelligence (AI) <span class="quarto-category-count">(3)</span></div><div class="category" data-category="QmxvZw==">Blog <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Q0klMkZDRCUyMFdvcmtmbG93cw==">CI/CD Workflows <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Q29udGVudCUyMEVuYWJsZW1lbnQ=">Content Enablement <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Q3VjdW1iZXI=">Cucumber <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Q3Vyc29yJTIwQ29kZQ==">Cursor Code <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RGV2ZWxvcGVyJTIwQ29udGVudA==">Developer Content <span class="quarto-category-count">(6)</span></div><div class="category" data-category="ZUNvbW1lcmNl">eCommerce <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RVUlMjBBSSUyMEFjdA==">EU AI Act <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RmVhdHVyZSUyMERvY3VtZW50YXRpb24=">Feature Documentation <span class="quarto-category-count">(9)</span></div><div class="category" data-category="RmVhdHVyZSUyMEZsYWdz">Feature Flags <span class="quarto-category-count">(3)</span></div><div class="category" data-category="RmVhdHVyZSUyMEhpZ2hsaWdodHM=">Feature Highlights <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RnJvbnRlbmQlMjBEZXZlbG9wbWVudA==">Frontend Development <span class="quarto-category-count">(4)</span></div><div class="category" data-category="R2VuZXJhdGl2ZSUyMEFJ">Generative AI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R29vZ2xlJTIwQ2xvdWQlMjBQbGF0Zm9ybQ==">Google Cloud Platform <span class="quarto-category-count">(3)</span></div><div class="category" data-category="SW5zdHJ1Y3Rpb25hbCUyMERlc2lnbg==">Instructional Design <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SW50ZWdyYXRpb25z">Integrations <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SnVweXRlciUyME5vdGVib29rcw==">Jupyter Notebooks <span class="quarto-category-count">(3)</span></div><div class="category" data-category="TGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscw==">Large Language Models <span class="quarto-category-count">(4)</span></div><div class="category" data-category="TGl0ZXJhdGUlMjBQcm9ncmFtbWluZw==">Literate Programming <span class="quarto-category-count">(3)</span></div><div class="category" data-category="TWFya2V0aW5nJTIwVGVjaG5vbG9neQ==">Marketing Technology <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TW9kZWwlMjBDb250ZXh0JTIwUHJvdG9jb2wlMjBTZXJ2ZXJz">Model Context Protocol Servers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TW9kZWwlMjBSaXNrJTIwTWFuYWdlbWVudA==">Model Risk Management <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TmV4dC5qcw==">Next.js <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Tm9kZS5qcw==">Node.js <span class="quarto-category-count">(4)</span></div><div class="category" data-category="T3Blbi1Tb3VyY2U=">Open-Source <span class="quarto-category-count">(1)</span></div><div class="category" data-category="T3BlbkFQSQ==">OpenAPI <span class="quarto-category-count">(3)</span></div><div class="category" data-category="UGF5bWVudCUyMFByb3ZpZGVycw==">Payment Providers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UG9zdGdyZXM=">Postgres <span class="quarto-category-count">(4)</span></div><div class="category" data-category="UG9zdEhvZw==">PostHog <span class="quarto-category-count">(3)</span></div><div class="category" data-category="UHl0aG9uJTIwTGlicmFyeQ==">Python Library <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UXVhcnRv">Quarto <span class="quarto-category-count">(4)</span></div><div class="category" data-category="UmVjdXJseQ==">Recurly <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVmZXJyYWxzJTIwJTI2JTIwQXR0cmlidXRpb25z">Referrals &amp; Attributions <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UmVsZWFzZSUyME5vdGVz">Release Notes <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UmV3YXJkJTIwUHJvdmlkZXJz">Reward Providers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmlzayUyMEdvdmVybmFuY2U=">Risk Governance <span class="quarto-category-count">(3)</span></div><div class="category" data-category="U2FhU3F1YXRjaA==">SaaSquatch <span class="quarto-category-count">(2)</span></div><div class="category" data-category="U2NhbGFy">Scalar <span class="quarto-category-count">(3)</span></div><div class="category" data-category="U29mdHdhcmUlMjBhcyUyMGElMjBTZXJ2aWNl">Software as a Service <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U1FM">SQL <span class="quarto-category-count">(4)</span></div><div class="category" data-category="U3RyaXBl">Stripe <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U3VwYWJhc2U=">Supabase <span class="quarto-category-count">(4)</span></div><div class="category" data-category="VGFuZ28lMjBDYXJk">Tango Card <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VHJhaW5pbmclMjAlMjYlMjBPbmJvYXJkaW5n">Training &amp; Onboarding <span class="quarto-category-count">(6)</span></div><div class="category" data-category="VXNlJTIwQ2FzZSUyMFR1dG9yaWFscw==">Use Case Tutorials <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VXNlciUyMEd1aWRlcw==">User Guides <span class="quarto-category-count">(12)</span></div><div class="category" data-category="VmFsaWRNaW5k">ValidMind <span class="quarto-category-count">(3)</span></div><div class="category" data-category="VmVyY2Vs">Vercel <span class="quarto-category-count">(4)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(22)</span></div><div class="category" data-category="QWdlbnQlMjBTa2lsbHM=">Agent Skills <span class="quarto-category-count">(2)</span></div><div class="category" data-category="QUklMjBSaXNr">AI Risk <span class="quarto-category-count">(3)</span></div><div class="category" data-category="QXJ0aWZpY2lhbCUyMEludGVsbGlnZW5jZSUyMChBSSk=">Artificial Intelligence (AI) <span class="quarto-category-count">(3)</span></div><div class="category" data-category="QmxvZw==">Blog <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Q0klMkZDRCUyMFdvcmtmbG93cw==">CI/CD Workflows <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Q29udGVudCUyMEFyY2hpdGVjdHVyZQ==">Content Architecture <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29udGVudCUyMEVuYWJsZW1lbnQ=">Content Enablement <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Q3Vyc29yJTIwQ29kZQ==">Cursor Code <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RGV2ZWxvcGVyJTIwQ29udGVudA==">Developer Content <span class="quarto-category-count">(2)</span></div><div class="category" data-category="ZUNvbW1lcmNl">eCommerce <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RVUlMjBBSSUyMEFjdA==">EU AI Act <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RmVhdHVyZSUyMERvY3VtZW50YXRpb24=">Feature Documentation <span class="quarto-category-count">(5)</span></div><div class="category" data-category="RmVhdHVyZSUyMEhpZ2hsaWdodHM=">Feature Highlights <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RnJvbnRlbmQlMjBEZXZlbG9wbWVudA==">Frontend Development <span class="quarto-category-count">(5)</span></div><div class="category" data-category="R2VuZXJhdGl2ZSUyMEFJ">Generative AI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R2l0SHViJTIwUGFnZXM=">GitHub Pages <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SW5zdHJ1Y3Rpb25hbCUyMERlc2lnbg==">Instructional Design <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SW50ZWdyYXRpb25z">Integrations <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SnVweXRlciUyME5vdGVib29rcw==">Jupyter Notebooks <span class="quarto-category-count">(3)</span></div><div class="category" data-category="TGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscw==">Large Language Models <span class="quarto-category-count">(4)</span></div><div class="category" data-category="TGl0ZXJhdGUlMjBQcm9ncmFtbWluZw==">Literate Programming <span class="quarto-category-count">(3)</span></div><div class="category" data-category="TWFya2V0aW5nJTIwVGVjaG5vbG9neQ==">Marketing Technology <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TW9kZWwlMjBDb250ZXh0JTIwUHJvdG9jb2wlMjBTZXJ2ZXJz">Model Context Protocol Servers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TW9kZWwlMjBSaXNrJTIwTWFuYWdlbWVudA==">Model Risk Management <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TmV0bGlmeQ==">Netlify <span class="quarto-category-count">(1)</span></div><div class="category" data-category="T3Blbi1Tb3VyY2U=">Open-Source <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UGF5bWVudCUyMFByb3ZpZGVycw==">Payment Providers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UG9zdEhvZw==">PostHog <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHl0aG9uJTIwTGlicmFyeQ==">Python Library <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UXVhcnRv">Quarto <span class="quarto-category-count">(5)</span></div><div class="category" data-category="UmVjdXJseQ==">Recurly <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVmZXJyYWxzJTIwJTI2JTIwQXR0cmlidXRpb25z">Referrals &amp; Attributions <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UmVsZWFzZSUyME5vdGVz">Release Notes <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UmV3YXJkJTIwUHJvdmlkZXJz">Reward Providers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmlzayUyMEdvdmVybmFuY2U=">Risk Governance <span class="quarto-category-count">(3)</span></div><div class="category" data-category="U2FhU3F1YXRjaA==">SaaSquatch <span class="quarto-category-count">(2)</span></div><div class="category" data-category="U29mdHdhcmUlMjBhcyUyMGElMjBTZXJ2aWNl">Software as a Service <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U3RyaXBl">Stripe <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VGFuZ28lMjBDYXJk">Tango Card <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VHJhaW5pbmclMjAlMjYlMjBPbmJvYXJkaW5n">Training &amp; Onboarding <span class="quarto-category-count">(6)</span></div><div class="category" data-category="VXNlJTIwQ2FzZSUyMFR1dG9yaWFscw==">Use Case Tutorials <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VXNlciUyMEd1aWRlcw==">User Guides <span class="quarto-category-count">(8)</span></div><div class="category" data-category="VmFsaWRNaW5k">ValidMind <span class="quarto-category-count">(3)</span></div></div></div>
 <!-- main -->
 <main class="content page-columns page-full column-page-left" id="quarto-document-content" tabindex="-1">
 
@@ -799,23 +771,7 @@ window.Quarto = {
 <p>Some behind-the-scenes insights into how I built this portfolio site and other projects, created to showcase my abilities as a content architect.</p>
 <div id="listing-personal-content" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-2">
-<div class="g-col-1" data-index="0" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ0ZlYXR1cmUlMjBEb2N1bWVudGF0aW9uJTJDVXNlciUyMEd1aWRlcyUyQ09wZW5BUEklMkNTY2FsYXIlMkNOZXh0LmpzJTJDTm9kZS5qcyUyQ1NRTCUyQ1Bvc3RncmVzJTJDUG9zdEhvZyUyQ1ZlcmNlbCUyQ1N1cGFiYXNlJTJDQ3VjdW1iZXIlMkNHb29nbGUlMjBDbG91ZCUyMFBsYXRmb3JtJTJDRmVhdHVyZSUyMEZsYWdz" data-listing-file-modified-sort="1789275915036" data-listing-reading-time-sort="1" data-listing-word-count-sort="57">
-<a href="../samples/content-engineering/personal/guestbook/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-y2k Guestbook
-</h5>
-<div class="card-subtitle listing-subtitle">
-Content Engineering
-</div>
-<div class="card-text listing-description delink">
-I designed and built a mobile-responsive interactive Next.js application, complete with LLM-friendly documentation in MDX and an API reference implemented with Scalar.
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="UG9zdEhvZw==" data-listing-file-modified-sort="1789275915036" data-listing-reading-time-sort="1" data-listing-word-count-sort="21">
+<div class="g-col-1" data-index="0" data-categories="Q29udGVudCUyMEFyY2hpdGVjdHVyZSUyQ1F1YXJ0byUyQ0dpdEh1YiUyMFBhZ2VzJTJDTmV0bGlmeSUyQ1Bvc3RIb2clMkNDSSUyRkNEJTIwV29ya2Zsb3dzJTJDRnJvbnRlbmQlMjBEZXZlbG9wbWVudA==" data-listing-file-modified-sort="1789276927450" data-listing-reading-time-sort="1" data-listing-word-count-sort="21">
 <a href="../samples/content-engineering/personal/portfolio/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -841,7 +797,7 @@ I designed and built this mobile-responsive portfolio website with Quarto and Bo
 <p>At ValidMind, I delivered documentation not just as complete product, but designed and implemented extensible documentation architecture:</p>
 <div id="listing-validmind-content" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-2">
-<div class="g-col-1" data-index="0" data-categories="VHJhaW5pbmclMjAlMjYlMjBPbmJvYXJkaW5nJTJDSW5zdHJ1Y3Rpb25hbCUyMERlc2lnbiUyQ1F1YXJ0byUyQ0Zyb250ZW5kJTIwRGV2ZWxvcG1lbnQ=" data-listing-file-modified-sort="1789275915041" data-listing-reading-time-sort="3" data-listing-word-count-sort="495">
+<div class="g-col-1" data-index="0" data-categories="VHJhaW5pbmclMjAlMjYlMjBPbmJvYXJkaW5nJTJDSW5zdHJ1Y3Rpb25hbCUyMERlc2lnbiUyQ1F1YXJ0byUyQ0Zyb250ZW5kJTIwRGV2ZWxvcG1lbnQ=" data-listing-file-modified-sort="1789276927455" data-listing-reading-time-sort="3" data-listing-word-count-sort="495">
 <a href="../samples/content-engineering/validmind/quickstarts.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -857,7 +813,7 @@ I transformed ValidMind’s cluttered and ill-defined quickstart experience with
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ0ZlYXR1cmUlMjBEb2N1bWVudGF0aW9uJTJDVXNlciUyMEd1aWRlcyUyQ0p1cHl0ZXIlMjBOb3RlYm9va3MlMkNMaXRlcmF0ZSUyMFByb2dyYW1taW5nJTJDUXVhcnRvJTJDRnJvbnRlbmQlMjBEZXZlbG9wbWVudA==" data-listing-file-modified-sort="1789275915041" data-listing-reading-time-sort="4" data-listing-word-count-sort="691">
+<div class="g-col-1" data-index="1" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ0ZlYXR1cmUlMjBEb2N1bWVudGF0aW9uJTJDVXNlciUyMEd1aWRlcyUyQ0p1cHl0ZXIlMjBOb3RlYm9va3MlMkNMaXRlcmF0ZSUyMFByb2dyYW1taW5nJTJDUXVhcnRvJTJDRnJvbnRlbmQlMjBEZXZlbG9wbWVudA==" data-listing-file-modified-sort="1789276927455" data-listing-reading-time-sort="4" data-listing-word-count-sort="691">
 <a href="../samples/content-engineering/validmind/library.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -873,7 +829,7 @@ I transformed our disorganized developer resources into a comprehensive referenc
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="SnVweXRlciUyME5vdGVib29rcyUyQ0xpdGVyYXRlJTIwUHJvZ3JhbW1pbmclMkNUcmFpbmluZyUyMCUyNiUyME9uYm9hcmRpbmclMkNJbnN0cnVjdGlvbmFsJTIwRGVzaWduJTJDUXVhcnRvJTJDQ0klMkZDRCUyMFdvcmtmbG93cyUyQ0Zyb250ZW5kJTIwRGV2ZWxvcG1lbnQ=" data-listing-file-modified-sort="1789275915040" data-listing-reading-time-sort="11" data-listing-word-count-sort="2121">
+<div class="g-col-1" data-index="2" data-categories="SnVweXRlciUyME5vdGVib29rcyUyQ0xpdGVyYXRlJTIwUHJvZ3JhbW1pbmclMkNUcmFpbmluZyUyMCUyNiUyME9uYm9hcmRpbmclMkNJbnN0cnVjdGlvbmFsJTIwRGVzaWduJTJDUXVhcnRvJTJDQ0klMkZDRCUyMFdvcmtmbG93cyUyQ0Zyb250ZW5kJTIwRGV2ZWxvcG1lbnQ=" data-listing-file-modified-sort="1789276927454" data-listing-reading-time-sort="11" data-listing-word-count-sort="2121">
 <a href="../samples/content-engineering/validmind/academy.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -889,7 +845,7 @@ I transformed ValidMind’s rudimentary training resources into a comprehensive 
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="Q29udGVudCUyMEVuYWJsZW1lbnQlMkNVc2VyJTIwR3VpZGVzJTJDUmVsZWFzZSUyME5vdGVzJTJDQ3Vyc29yJTIwQ29kZSUyQ0FnZW50JTIwU2tpbGxzJTJDTGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscyUyQ0ludGVncmF0aW9ucyUyQ0NJJTJGQ0QlMjBXb3JrZmxvd3M=" data-listing-file-modified-sort="1789275915043" data-listing-reading-time-sort="3" data-listing-word-count-sort="487">
+<div class="g-col-1" data-index="3" data-categories="Q29udGVudCUyMEVuYWJsZW1lbnQlMkNVc2VyJTIwR3VpZGVzJTJDUmVsZWFzZSUyME5vdGVzJTJDQ3Vyc29yJTIwQ29kZSUyQ0FnZW50JTIwU2tpbGxzJTJDTGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscyUyQ0ludGVncmF0aW9ucyUyQ0NJJTJGQ0QlMjBXb3JrZmxvd3M=" data-listing-file-modified-sort="1789276927458" data-listing-reading-time-sort="3" data-listing-word-count-sort="487">
 <a href="../samples/content-engineering/validmind/releases.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -905,7 +861,7 @@ I automated our fragmented and manual release notes process using Python scripts
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="UXVhcnRvJTJDRnJvbnRlbmQlMjBEZXZlbG9wbWVudA==" data-listing-file-modified-sort="1789275915041" data-listing-reading-time-sort="3" data-listing-word-count-sort="581">
+<div class="g-col-1" data-index="4" data-categories="UXVhcnRvJTJDRnJvbnRlbmQlMjBEZXZlbG9wbWVudA==" data-listing-file-modified-sort="1789276927455" data-listing-reading-time-sort="3" data-listing-word-count-sort="581">
 <a href="../samples/content-engineering/validmind/redesign.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -929,7 +885,7 @@ I transformed ValidMind’s documentation from a sparsely populated and poorly o
 <p>Atryum is an open-source agentic orchestration tool developed by ValidMind. As ValidMind’s sole <strong>Senior Technical Writer</strong>, I was responsible for almost all of the documentation for Atryum.</p>
 <div id="listing-atryum-content" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-2">
-<div class="g-col-1" data-index="0" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVzJTJDVHJhaW5pbmclMjAlMjYlMjBPbmJvYXJkaW5n" data-listing-file-modified-sort="1789275915035" data-listing-reading-time-sort="2" data-listing-word-count-sort="259">
+<div class="g-col-1" data-index="0" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVzJTJDVHJhaW5pbmclMjAlMjYlMjBPbmJvYXJkaW5n" data-listing-file-modified-sort="1789276927450" data-listing-reading-time-sort="2" data-listing-word-count-sort="259">
 <a href="../samples/content-engineering/atryum/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -959,63 +915,14 @@ Along with authoring approximately 95% of the content for Atryum, I also designe
 <p>Engendering empowered users through effective guidance content.</p>
 <p>Along with a love of gratuitous alliteration, I truly enjoy authoring user guidance content. That’s because I believe that great guidance content empowers users, and empowered users get excited about product.</p>
 </blockquote>
-<section id="personal-1" class="level3">
-<h3 class="anchored" data-anchor-id="personal-1">Personal</h3>
-<p>I designed and built a mobile-responsive interactive Next.js application, complete with LLM-friendly documentation in MDX and an API reference implemented with Scalar.</p>
-<div id="listing-personal-technical" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ0ZlYXR1cmUlMjBEb2N1bWVudGF0aW9uJTJDVXNlciUyMEd1aWRlcyUyQ09wZW5BUEklMkNTY2FsYXIlMkNGZWF0dXJlJTIwRmxhZ3MlMkNOZXh0LmpzJTJDTm9kZS5qcyUyQ1NRTCUyQ1Bvc3RncmVzJTJDVmVyY2VsJTJDU3VwYWJhc2U=" data-listing-file-modified-sort="1789275915047" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="../samples/technical-writing/personal/guestbook/library.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-y2k Guestbook API Library Reference
-</h5>
-<div class="card-subtitle listing-subtitle">
-Technical Writing
-</div>
-<div class="card-text listing-description delink">
+<!-- ### Personal
 
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ0ZlYXR1cmUlMjBEb2N1bWVudGF0aW9uJTJDVXNlciUyMEd1aWRlcyUyQ09wZW5BUEklMkNTY2FsYXIlMkNGZWF0dXJlJTIwRmxhZ3MlMkNOZXh0LmpzJTJDTm9kZS5qcyUyQ1NRTCUyQ1Bvc3RncmVzJTJDVmVyY2VsJTJDU3VwYWJhc2UlMkNDdWN1bWJlciUyQ0dvb2dsZSUyMENsb3VkJTIwUGxhdGZvcm0=" data-listing-file-modified-sort="1789275915047" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="../samples/technical-writing/personal/guestbook/developer.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-y2k Guestbook Developer Guides
-</h5>
-<div class="card-subtitle listing-subtitle">
-Technical Writing
-</div>
-<div class="card-text listing-description delink">
+I designed and built a mobile-responsive interactive Next.js application, complete with LLM-friendly documentation in MDX and an API reference implemented with Scalar.
 
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ0ZlYXR1cmUlMjBEb2N1bWVudGF0aW9uJTJDVXNlciUyMEd1aWRlcyUyQ05leHQuanMlMkNOb2RlLmpzJTJDU1FMJTJDUG9zdGdyZXMlMkNWZXJjZWwlMkNTdXBhYmFzZSUyQ1Bvc3RIb2clMkNHb29nbGUlMjBDbG91ZCUyMFBsYXRmb3Jt" data-listing-file-modified-sort="1789275915047" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="../samples/technical-writing/personal/guestbook/guides.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-y2k Guestbook User Guides
-</h5>
-<div class="card-subtitle listing-subtitle">
-Technical Writing
-</div>
-<div class="card-text listing-description delink">
 
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No Matches Found</div>
-</div>
-</section>
+:::{#personal-technical}
+::: 
+-->
 <section id="validmind-1" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="validmind-1">ValidMind</h3>
 <p>I was the sole <strong>Senior Technical Writer</strong> for <a href="validmind.ai" target="_blank">ValidMind</a>, a generative artificial intelligence financial services startup, where I employed docs-as-code methodologies alongside software engineers delivering documentation as part of product in the same development ecosystem, transforming a minimal set of user guide drafts into a fully idealized and comprehensive knowledge base.</p>
@@ -1036,7 +943,7 @@ Technical Writing
 </div>
 </div></div><div id="listing-validmind-technical" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ1VzZSUyMENhc2UlMjBUdXRvcmlhbHMlMkNGZWF0dXJlJTIwRG9jdW1lbnRhdGlvbiUyQ1VzZXIlMjBHdWlkZXMlMkNKdXB5dGVyJTIwTm90ZWJvb2tzJTJDTGl0ZXJhdGUlMjBQcm9ncmFtbWluZyUyQ1B5dGhvbiUyMExpYnJhcnk=" data-listing-file-modified-sort="1789275915052" data-listing-reading-time-sort="1" data-listing-word-count-sort="43">
+<div class="g-col-1" data-index="0" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ1VzZSUyMENhc2UlMjBUdXRvcmlhbHMlMkNGZWF0dXJlJTIwRG9jdW1lbnRhdGlvbiUyQ1VzZXIlMjBHdWlkZXMlMkNKdXB5dGVyJTIwTm90ZWJvb2tzJTJDTGl0ZXJhdGUlMjBQcm9ncmFtbWluZyUyQ1B5dGhvbiUyMExpYnJhcnk=" data-listing-file-modified-sort="1789276927466" data-listing-reading-time-sort="1" data-listing-word-count-sort="43">
 <a href="../samples/technical-writing/validmind/jupyter-notebooks.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -1052,7 +959,7 @@ Jupyter Notebook use case demonstrations written for ValidMind’s Python librar
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="VXNlciUyMEd1aWRlcyUyQ1RyYWluaW5nJTIwJTI2JTIwT25ib2FyZGluZw==" data-listing-file-modified-sort="1789275915052" data-listing-reading-time-sort="1" data-listing-word-count-sort="55">
+<div class="g-col-1" data-index="1" data-categories="VXNlciUyMEd1aWRlcyUyQ1RyYWluaW5nJTIwJTI2JTIwT25ib2FyZGluZw==" data-listing-file-modified-sort="1789276927466" data-listing-reading-time-sort="1" data-listing-word-count-sort="55">
 <a href="../samples/technical-writing/validmind/training.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -1068,7 +975,7 @@ Comprehensive interactive training curriculums developed to onboard users onto V
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVz" data-listing-file-modified-sort="1789275915052" data-listing-reading-time-sort="1" data-listing-word-count-sort="58">
+<div class="g-col-1" data-index="2" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVz" data-listing-file-modified-sort="1789276927466" data-listing-reading-time-sort="1" data-listing-word-count-sort="58">
 <a href="../samples/technical-writing/validmind/user-guides.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -1084,7 +991,7 @@ User guides produced as documentation and reference for ValidMind’s core featu
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="VXNlciUyMEd1aWRlcyUyQ1RyYWluaW5nJTIwJTI2JTIwT25ib2FyZGluZw==" data-listing-file-modified-sort="1789275915052" data-listing-reading-time-sort="1" data-listing-word-count-sort="57">
+<div class="g-col-1" data-index="3" data-categories="VXNlciUyMEd1aWRlcyUyQ1RyYWluaW5nJTIwJTI2JTIwT25ib2FyZGluZw==" data-listing-file-modified-sort="1789276927466" data-listing-reading-time-sort="1" data-listing-word-count-sort="57">
 <a href="../samples/technical-writing/validmind/quickstarts.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -1100,7 +1007,7 @@ Intuitive quickstart guides developed to onboard users onto ValidMind.
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="UHl0aG9uJTIwTGlicmFyeSUyQ0NvbnRlbnQlMjBFbmFibGVtZW50JTJDUmVsZWFzZSUyME5vdGVzJTJDQ3Vyc29yJTIwQ29kZSUyQ0FnZW50JTIwU2tpbGxzJTJDTGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscyUyQ0NJJTJGQ0QlMjBXb3JrZmxvd3M=" data-listing-file-modified-sort="1789275915052" data-listing-reading-time-sort="1" data-listing-word-count-sort="70">
+<div class="g-col-1" data-index="4" data-categories="UHl0aG9uJTIwTGlicmFyeSUyQ0NvbnRlbnQlMjBFbmFibGVtZW50JTJDUmVsZWFzZSUyME5vdGVzJTJDQ3Vyc29yJTIwQ29kZSUyQ0FnZW50JTIwU2tpbGxzJTJDTGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscyUyQ0NJJTJGQ0QlMjBXb3JrZmxvd3M=" data-listing-file-modified-sort="1789276927466" data-listing-reading-time-sort="1" data-listing-word-count-sort="70">
 <a href="../samples/technical-writing/validmind/enablement.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -1125,7 +1032,7 @@ Content produced to enable other creators to contribute to ValidMind’s open-so
 <p>I authored approximately 95% of the content for Atryum,<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> including the samples selected below:</p>
 <div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;Citation: <a href="https://github.com/validbeck/atryum/tree/main/website" target="_blank"><i class="fa-brands fa-github" aria-label="github"></i> Archive of <code>validmind/atryum/website</code> (documentation)</a></p></div></div><div id="listing-atryum-technical" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="SW50ZWdyYXRpb25zJTJDTGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscyUyQ01vZGVsJTIwQ29udGV4dCUyMFByb3RvY29sJTIwU2VydmVycw==" data-listing-file-modified-sort="1789275915047" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
+<div class="g-col-1" data-index="0" data-categories="SW50ZWdyYXRpb25zJTJDTGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscyUyQ01vZGVsJTIwQ29udGV4dCUyMFByb3RvY29sJTIwU2VydmVycw==" data-listing-file-modified-sort="1789276927461" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
 <a href="../samples/technical-writing/atryum/integrations.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -1141,7 +1048,7 @@ Feature Documentation
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1789275915047" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1789276927461" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
 <a href="../samples/technical-writing/atryum/user-guides.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -1157,7 +1064,7 @@ Feature Documentation
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="VHJhaW5pbmclMjAlMjYlMjBPbmJvYXJkaW5n" data-listing-file-modified-sort="1789275915047" data-listing-reading-time-sort="1" data-listing-word-count-sort="18">
+<div class="g-col-1" data-index="2" data-categories="VHJhaW5pbmclMjAlMjYlMjBPbmJvYXJkaW5n" data-listing-file-modified-sort="1789276927461" data-listing-reading-time-sort="1" data-listing-word-count-sort="18">
 <a href="../samples/technical-writing/atryum/quickstart.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -1187,7 +1094,7 @@ Tutorial
 <p>While the following samples are quite dated before I refined my voice in an official technical writing role, I’ve included them for completion and progression value:</p>
 <div id="listing-saasquatch-technical" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="U3RyaXBlJTJDUmVjdXJseSUyQ1RhbmdvJTIwQ2FyZCUyQ1BheW1lbnQlMjBQcm92aWRlcnMlMkNSZXdhcmQlMjBQcm92aWRlcnM=" data-listing-file-modified-sort="1789275915048" data-listing-reading-time-sort="1" data-listing-word-count-sort="11">
+<div class="g-col-1" data-index="0" data-categories="U3RyaXBlJTJDUmVjdXJseSUyQ1RhbmdvJTIwQ2FyZCUyQ1BheW1lbnQlMjBQcm92aWRlcnMlMkNSZXdhcmQlMjBQcm92aWRlcnM=" data-listing-file-modified-sort="1789276927462" data-listing-reading-time-sort="1" data-listing-word-count-sort="11">
 <a href="../samples/technical-writing/saasquatch/integrations/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -1203,7 +1110,7 @@ During my tenure at SaaSquatch, I became the company Subject Matter Expert for m
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1789275915051" data-listing-reading-time-sort="1" data-listing-word-count-sort="4">
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1789276927464" data-listing-reading-time-sort="1" data-listing-word-count-sort="4">
 <a href="../samples/technical-writing/saasquatch/sdk/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -1219,7 +1126,7 @@ As a <strong>Solutions Architect</strong>, I acted as the primary technical cont
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVzJTJDUmVmZXJyYWxzJTIwJTI2JTIwQXR0cmlidXRpb25zJTJDZUNvbW1lcmNlJTJDU29mdHdhcmUlMjBhcyUyMGElMjBTZXJ2aWNlJTJDTWFya2V0aW5nJTIwVGVjaG5vbG9neSUyQ1NhYVNxdWF0Y2g=" data-listing-file-modified-sort="1789275915051" data-listing-reading-time-sort="1" data-listing-word-count-sort="4">
+<div class="g-col-1" data-index="2" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVzJTJDUmVmZXJyYWxzJTIwJTI2JTIwQXR0cmlidXRpb25zJTJDZUNvbW1lcmNlJTJDU29mdHdhcmUlMjBhcyUyMGElMjBTZXJ2aWNlJTJDTWFya2V0aW5nJTIwVGVjaG5vbG9neSUyQ1NhYVNxdWF0Y2g=" data-listing-file-modified-sort="1789276927465" data-listing-reading-time-sort="1" data-listing-word-count-sort="4">
 <a href="../samples/technical-writing/saasquatch/user-guides/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -1252,7 +1159,7 @@ While I served no formal technical writing role while at SaaSquatch, a core face
 <p>Check out some blog posts I wrote on our product offering and industry that shine some insight into my writing style:</p>
 <div id="listing-validmind-copywriting" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="QmxvZyUyQ0FydGlmaWNpYWwlMjBJbnRlbGxpZ2VuY2UlMjAoQUkpJTJDRVUlMjBBSSUyMEFjdCUyQ0FJJTIwUmlzayUyQ01vZGVsJTIwUmlzayUyME1hbmFnZW1lbnQlMkNSaXNrJTIwR292ZXJuYW5jZSUyQ1ZhbGlkTWluZA==" data-listing-file-modified-sort="1789275915044" data-listing-reading-time-sort="6" data-listing-word-count-sort="1079">
+<div class="g-col-1" data-index="0" data-categories="QmxvZyUyQ0FydGlmaWNpYWwlMjBJbnRlbGxpZ2VuY2UlMjAoQUkpJTJDRVUlMjBBSSUyMEFjdCUyQ0FJJTIwUmlzayUyQ01vZGVsJTIwUmlzayUyME1hbmFnZW1lbnQlMkNSaXNrJTIwR292ZXJuYW5jZSUyQ1ZhbGlkTWluZA==" data-listing-file-modified-sort="1789276927458" data-listing-reading-time-sort="6" data-listing-word-count-sort="1079">
 <a href="../samples/copywriting/validmind/honor-the-human.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -1268,7 +1175,7 @@ I owned this blog post from start to finish.
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="QmxvZyUyQ0FydGlmaWNpYWwlMjBJbnRlbGxpZ2VuY2UlMjAoQUkpJTJDQUklMjBSaXNrJTJDTW9kZWwlMjBSaXNrJTIwTWFuYWdlbWVudCUyQ1Jpc2slMjBHb3Zlcm5hbmNlJTJDVmFsaWRNaW5k" data-listing-file-modified-sort="1789275915045" data-listing-reading-time-sort="7" data-listing-word-count-sort="1298">
+<div class="g-col-1" data-index="1" data-categories="QmxvZyUyQ0FydGlmaWNpYWwlMjBJbnRlbGxpZ2VuY2UlMjAoQUkpJTJDQUklMjBSaXNrJTJDTW9kZWwlMjBSaXNrJTIwTWFuYWdlbWVudCUyQ1Jpc2slMjBHb3Zlcm5hbmNlJTJDVmFsaWRNaW5k" data-listing-file-modified-sort="1789276927459" data-listing-reading-time-sort="7" data-listing-word-count-sort="1298">
 <a href="../samples/copywriting/validmind/reduce-culture-risk.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -1284,7 +1191,7 @@ I owned this blog post from start to finish.
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="QmxvZyUyQ0FydGlmaWNpYWwlMjBJbnRlbGxpZ2VuY2UlMjAoQUkpJTJDR2VuZXJhdGl2ZSUyMEFJJTJDTGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscyUyQ0FJJTIwUmlzayUyQ1Jpc2slMjBHb3Zlcm5hbmNlJTJDT3Blbi1Tb3VyY2UlMkNWYWxpZE1pbmQ=" data-listing-file-modified-sort="1789275915045" data-listing-reading-time-sort="3" data-listing-word-count-sort="576">
+<div class="g-col-1" data-index="2" data-categories="QmxvZyUyQ0FydGlmaWNpYWwlMjBJbnRlbGxpZ2VuY2UlMjAoQUkpJTJDR2VuZXJhdGl2ZSUyMEFJJTJDTGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscyUyQ0FJJTIwUmlzayUyQ1Jpc2slMjBHb3Zlcm5hbmNlJTJDT3Blbi1Tb3VyY2UlMkNWYWxpZE1pbmQ=" data-listing-file-modified-sort="1789276927459" data-listing-reading-time-sort="3" data-listing-word-count-sort="576">
 <a href="../samples/copywriting/validmind/osff-takeaways.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -1313,7 +1220,7 @@ I owned this blog post from start to finish.
 <p>Below is the very first article I wrote for SaaSquatch. While it feels a bit rough now years later, it still showcases my consistent author voice:</p>
 <div id="listing-saasquatch-copywriting" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-2">
-<div class="g-col-1" data-index="0" data-categories="RmVhdHVyZSUyMEhpZ2hsaWdodHMlMkNSZWZlcnJhbHMlMjAlMjYlMjBBdHRyaWJ1dGlvbnMlMkNlQ29tbWVyY2UlMkNNYXJrZXRpbmclMjBUZWNobm9sb2d5JTJDU2FhU3F1YXRjaA==" data-listing-file-modified-sort="1789275915043" data-listing-reading-time-sort="5" data-listing-word-count-sort="860">
+<div class="g-col-1" data-index="0" data-categories="RmVhdHVyZSUyMEhpZ2hsaWdodHMlMkNSZWZlcnJhbHMlMjAlMjYlMjBBdHRyaWJ1dGlvbnMlMkNlQ29tbWVyY2UlMkNNYXJrZXRpbmclMjBUZWNobm9sb2d5JTJDU2FhU3F1YXRjaA==" data-listing-file-modified-sort="1789276927458" data-listing-reading-time-sort="5" data-listing-word-count-sort="860">
 <a href="../samples/copywriting/saasquatch/growth-automation.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">

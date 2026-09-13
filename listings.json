@@ -84,7 +84,7 @@
   {
     "listing": "/samples/organizations/index.html",
     "items": [
-      "/samples/organizations/personal/index.html",
+      "/samples/content-engineering/personal/index.html",
       "/samples/organizations/validmind.html",
       "/samples/organizations/atryum.html",
       "/samples/organizations/saasquatch.html"
@@ -93,9 +93,6 @@
   {
     "listing": "/samples/index.html",
     "items": [
-      "/samples/technical-writing/personal/guestbook/library.html",
-      "/samples/technical-writing/personal/guestbook/developer.html",
-      "/samples/technical-writing/personal/guestbook/guides.html",
       "/samples/technical-writing/validmind/jupyter-notebooks.html",
       "/samples/technical-writing/validmind/training.html",
       "/samples/technical-writing/validmind/user-guides.html",
@@ -117,7 +114,6 @@
       "/samples/technical-writing/saasquatch/integrations/index.html",
       "/samples/technical-writing/saasquatch/sdk/index.html",
       "/samples/technical-writing/saasquatch/user-guides/index.html",
-      "/samples/content-engineering/personal/guestbook/index.html",
       "/samples/content-engineering/personal/portfolio/index.html"
     ]
   },
@@ -177,7 +173,6 @@
       "/samples/content-engineering/validmind/quickstarts.html",
       "/samples/content-engineering/validmind/redesign.html",
       "/samples/content-engineering/atryum/index.html",
-      "/samples/content-engineering/personal/guestbook/index.html",
       "/samples/content-engineering/personal/portfolio/index.html"
     ]
   },
@@ -260,9 +255,6 @@
       "/samples/technical-writing/atryum/integrations.html",
       "/samples/technical-writing/atryum/user-guides.html",
       "/samples/technical-writing/atryum/quickstart.html",
-      "/samples/technical-writing/personal/guestbook/library.html",
-      "/samples/technical-writing/personal/guestbook/developer.html",
-      "/samples/technical-writing/personal/guestbook/guides.html",
       "/samples/technical-writing/saasquatch/integrations/index.html",
       "/samples/technical-writing/saasquatch/sdk/index.html",
       "/samples/technical-writing/saasquatch/user-guides/index.html"
