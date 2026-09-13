@@ -204,6 +204,7 @@
     "text": "I owned this entire guide from start to finish.\nFor this endeavour I drew upon my knowledge of:\n\nREST APIs\nGraphQL API\nJSON Objects\n\nAny links to guides I did not author have been removed for this archived version below.\nLearn about the different types of sharelinks that are available for each of your referral program’s participants, and how they can be utilized to drive extremely detailed and accurate analytics data.\nBy default, each user in your SaaSquatch referral programs have a series of links assigned to them designed to:",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "User Guides",
       "Understanding Sharelinks"
@@ -217,6 +218,7 @@
     "text": "The sharelink object\n\n\n\n\n\n\nSharelinks are contained in an object that groups the links by Engagement medium.\n\n\n\nMaking the correct sharelink available in the right place in your referral program will mean that your program’s analytics are able to provide a more detailed breakdown of where Referrers and Referred Users are interacting with your referral program.\nThis information can be used to help understand and optimize your programs.\n\nRetrieving the sharelink object\nA few methods can be used to retrieve a user’s sharelinks:\n\nVia the SaaSquatch administrative portal, on the participant’s Codes and Links tab (see image below).\nVia the REST API, by using either the Lookup a user or Lookup a user’s share URLs calls.\nVia the GraphQL API, using the user.shareLinks query.\n\n\n\n\n\n\nSharelink object example\n\n\n\n\n\n\nYou can see that the example below groups the sharelinks by Engagement medium and provides a full array of share medium links for each engagement type.\n\n\n\n\n\n\n\n\n\n\nEngagement Medium\nDetails\n\n\n\n\nPOPUP\nShown to users via a PopupWidget.\n\n\nEMBED\nShown to users via an EmbedWidget.\n\n\nHOSTED\nShown to users via a “Hosted” Widget.\n\n\ncleanShareLink\nShown on the user’s participant profile in the SaaSquatch administrative portal.\n\n\nUNKNOWN\nSet of sharelinks retrieved for a user via a User Details Report.\n\n\nEMAIL\nShown to users via program notification emails.\n\n\nMOBILE\nShown to users via the mobile SDKs.\n\n\n\n{\n  \"POPUP\": {\n    \"FACEBOOK\": \"http://ssqt.co/m9xLQfw\",\n    \"TWITTER\": \"http://ssqt.co/mMxLQfw\",\n    \"EMAIL\": \"http://ssqt.co/moxLQfw\",\n    \"DIRECT\": \"http://ssqt.co/m5xLQfw\",\n    \"LINKEDIN\": \"http://ssqt.co/m7xLQfw\",\n    \"SMS\": \"http://ssqt.co/maxLQfw\",\n    \"FBMESSENGER\": \"http://ssqt.co/mhxLQfw\",\n    \"WHATSAPP\": \"http://ssqt.co/mFxLQfw\",\n    \"LINEMESSENGER\": \"http://ssqt.co/mDxLQfw\",\n    \"PINTEREST\": \"http://ssqt.co/RzxLQfw\",\n    \"UNKNOWN\": \"http://ssqt.co/mBxLQfw\"\n  },\n  \"EMBED\": {\n    \"FACEBOOK\": \"http://ssqt.co/mwxLQfw\",\n    \"TWITTER\": \"http://ssqt.co/mcxLQfw\",\n    \"EMAIL\": \"http://ssqt.co/mJxLQfw\",\n    \"DIRECT\": \"http://ssqt.co/mQxLQfw\",\n    \"LINKEDIN\": \"http://ssqt.co/mHxLQfw\",\n    \"SMS\": \"http://ssqt.co/m2xLQfw\",\n    \"FBMESSENGER\": \"http://ssqt.co/mgxLQfw\",\n    \"WHATSAPP\": \"http://ssqt.co/mZxLQfw\",\n    \"LINEMESSENGER\": \"http://ssqt.co/mxxLQfw\",\n    \"PINTEREST\": \"http://ssqt.co/mfxLQfw\",\n    \"UNKNOWN\": \"http://ssqt.co/mXxLQfw\"\n  },\n  \"HOSTED\": {\n    \"FACEBOOK\": \"http://ssqt.co/muxLQfw\",\n    \"TWITTER\": \"http://ssqt.co/mSxLQfw\",\n    \"EMAIL\": \"http://ssqt.co/mlxLQfw\",\n    \"DIRECT\": \"http://ssqt.co/mtxLQfw\",\n    \"LINKEDIN\": \"http://ssqt.co/mYxLQfw\",\n    \"SMS\": \"http://ssqt.co/mqxLQfw\",\n    \"FBMESSENGER\": \"http://ssqt.co/mKxLQfw\",\n    \"WHATSAPP\": \"http://ssqt.co/mrxLQfw\",\n    \"LINEMESSENGER\": \"http://ssqt.co/mWxLQfw\",\n    \"PINTEREST\": \"http://ssqt.co/RmxLQfw\",\n    \"UNKNOWN\": \"http://ssqt.co/mAxLQfw\"\n  },\n  \"cleanShareLink\": \"http://ssqt.co/mzxLQfw\",\n  \"UNKNOWN\": {\n    \"FACEBOOK\": \"http://ssqt.co/mmxLQfw\",\n    \"TWITTER\": \"http://ssqt.co/mRxLQfw\",\n    \"EMAIL\": \"http://ssqt.co/mLxLQfw\",\n    \"DIRECT\": \"http://ssqt.co/mvxLQfw\",\n    \"LINKEDIN\": \"http://ssqt.co/m6xLQfw\",\n    \"SMS\": \"http://ssqt.co/mkxLQfw\",\n    \"FBMESSENGER\": \"http://ssqt.co/m0xLQfw\",\n    \"WHATSAPP\": \"http://ssqt.co/mIxLQfw\",\n    \"LINEMESSENGER\": \"http://ssqt.co/m8xLQfw\",\n    \"PINTEREST\": \"http://ssqt.co/mpxLQfw\",\n    \"UNKNOWN\": \"http://ssqt.co/mzxLQfw\"\n  },\n  \"EMAIL\": {\n    \"FACEBOOK\": \"http://ssqt.co/mTxLQfw\",\n    \"TWITTER\": \"http://ssqt.co/mGxLQfw\",\n    \"EMAIL\": \"http://ssqt.co/mbxLQfw\",\n    \"DIRECT\": \"http://ssqt.co/mPxLQfw\",\n    \"LINKEDIN\": \"http://ssqt.co/m1xLQfw\",\n    \"SMS\": \"http://ssqt.co/mOxLQfw\",\n    \"FBMESSENGER\": \"http://ssqt.co/m4xLQfw\",\n    \"WHATSAPP\": \"http://ssqt.co/mixLQfw\",\n    \"LINEMESSENGER\": \"http://ssqt.co/myxLQfw\",\n    \"PINTEREST\": \"http://ssqt.co/RLxLQfw\",\n    \"UNKNOWN\": \"http://ssqt.co/mVxLQfw\"\n  },\n  \"MOBILE\": {\n    \"FACEBOOK\": \"http://ssqt.co/mnxLQfw\",\n    \"TWITTER\": \"http://ssqt.co/mCxLQfw\",\n    \"EMAIL\": \"http://ssqt.co/mExLQfw\",\n    \"DIRECT\": \"http://ssqt.co/mexLQfw\",\n    \"LINKEDIN\": \"http://ssqt.co/m3xLQfw\",\n    \"SMS\": \"http://ssqt.co/mNxLQfw\",\n    \"FBMESSENGER\": \"http://ssqt.co/mUxLQfw\",\n    \"WHATSAPP\": \"http://ssqt.co/msxLQfw\",\n    \"LINEMESSENGER\": \"http://ssqt.co/mdxLQfw\",\n    \"PINTEREST\": \"http://ssqt.co/RRxLQfw\",\n    \"UNKNOWN\": \"http://ssqt.co/mjxLQfw\"\n  }\n\nCitation\nSaaSquatch Help Center: View Original Guide",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "User Guides",
       "Understanding Sharelinks"
@@ -230,6 +232,7 @@
     "text": "I owned this entire guide from start to finish.\nThis step-by-step guide was meant to offer a low-impact alterative program install method to customers who were not able to acquire development team resources.\nAny links to guides I did not author have been removed for this archived version below.\nThis guide outlines how to upload users and trigger Program Goals by only using our Bulk Import processes.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "User Guides",
       "CSV Import"
@@ -243,6 +246,7 @@
     "text": "Adding users\nYou can use the Bulk User Import to upload both Referrers and Referred Users, or Loyalty users.\n\nAll you will need to include at minimum is accountId and id, but we recommend also including the user’s first and last names as well as email.\nTo connect up a referral, the referrer’s code (FRIENDCODE in the example file below) will need to be provided in a referredBy.Code column.\n\n\n\n\n\n\n\nSupply both an account ID (accountId) and a user ID (id) field for the users being imported. Unless you are using our Shared Accounts feature, both the account and user ID fields should be the same value and ideally match your internal user IDs.\nYou can include any other additional information about the user by using the fields outlined on our Bulk User Import page.\n\n\n\n\nExample user import\n\n\n\n\nRow 1 “Referred User” will be referred to an existing user whose referral code is FRIENDCODE.\nRow 2 “Loyalty User” will not be referred to any existing users, and simply be created or updated.\n\n\n\nImporting the User File\n\n\n\n\n\n\nOnce the file has been filled with all relevant user information, export it as a .csv file and proceed with importing the file.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "User Guides",
       "CSV Import"
@@ -256,6 +260,7 @@
     "text": "Triggering program goals\nYour program should be set up with Program Goals that trigger on either:\n\nUser events\nUser custom fields\n\n\n\n\n\n\n\nYou’ll need to identify the event or custom field that triggers your goal and apply that logic to the below instructions.\n\n\n\n\nUser event trigger\nFor goals that trigger when a user performs an action, you’ll need to build a Bulk Event Import.\n\n\nUser custom field trigger\nYou can use the same Bulk User Import to send along the custom field. In the below example, the program goal is met when the custom field status is subscriber.\n\n\n\n\n\n\n\n\n\nYou’re able to send this custom field along with the user creation in order to trigger the goal if the user has already met the conditions.\n\n\n\n\nCitation\nSaaSquatch Help Center: View Original Guide",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "User Guides",
       "CSV Import"
@@ -269,6 +274,7 @@
     "text": "While I did not write the original material, I was involved heavily with consulting for accuracy and provided code samples. I also restructured and edited the entire article for coherency and accessibility.\nFor this endeavour I researched and familiarized myself with:\n\nJSON Web Tokens\nDOM: querySelector()\ni18n\n\nAny links to guides I did not author have been removed for this archived version below.\nsquatch.js, our JavaScript SDK, has all the functionality required to incorporate a SaaSquatch program into your website or web app. Below are some advanced use cases that you may run into when implementing squatch.js.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "JavaScript SDK",
       "`squatch.js` Advanced"
@@ -282,6 +288,7 @@
     "text": "Running multiple referral programs\n\nRetrieving multiple codes\nWhen you have multiple referral programs with the same landing page and form, you can retrieve information from multiple programs if more than one cookie has been dropped using the Autofill script as this information is kept in a combined JSON array.\n\nRetrieving a primary code\nThe example below uses only one form field and selects which code to use in priority order if multiple codes are present in the combined cookie.\nsquatch.ready(function () {\n\n  squatch.api().squatchReferralCookie().then(function(response) {\n\n    // Define the hierarchy of desired referral codes \n    // The following will use `primary-program` as default or `secondary-program` if no cookie is found for the former\n    document.getElementById('referralCode').value = response.codes['primary-program'] || response.codes['secondary-program']; \n\n    });\n  });\n\n\nRetrieving more than one code\nThe example below uses only one form field and joins all the codes in the array together in a list.\nYou may choose not to expose this list to users, but rather pluck out the codes for use in your other calls if users are eligible to be referred to multiple programs.\nsquatch.ready(function () {\n\n  squatch.api().squatchReferralCookie().then(function(response) {\n\n    // Retrieve the full list of codes to capture in a field\n    var codesList = Object.values(response.codes);\n    if(codesList.length &gt; 0){\n       document.getElementById('referralCodes').value = codesList.join(\", \");\n    }\n\n    // Or simply log the return so you can apply any individual codes for applicable programs\n    console.log(codesList);\n\n    });\n  });",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "JavaScript SDK",
       "`squatch.js` Advanced"
@@ -295,6 +302,7 @@
     "text": "Multi-program widgets\nThe squatch.js library provides multi-program support by allowing you to include multiple widgets on the same page, as well as widgets that display information from combined programs.\nFor example, the following snippets below display program-agnostic widgets with the respective keys of referrals-widget & loyalty-widget:\n&lt;squatch-embed widget=\"w/referrals-widget\"&gt;&lt;/squatch-embed&gt;\n&lt;squatch-popup widget=\"w/loyalty-widget\"&gt;&lt;/squatch-embed&gt;",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "JavaScript SDK",
       "`squatch.js` Advanced"
@@ -308,6 +316,7 @@
     "text": "Advanced widgets\n\nDisplay translated widgets\n\n\n\n\n\n\nBefore you begin: To display a translated widget, you must first upload translated content to the Admin Portal.\n\n\n\nTranslated widget content can be displayed to participants in two ways:\nBy including a locale attribute with the squatch.js web component By including a locale value on a participant’s user object For the best participant experience, we recommend including a locale attribute with the web component. This locale allows you to serve content to the participant according to their browser language. It temporarily overrides any locale value on the user object.\nIf a locale value exists on both the user object and in the web component, then the value used in the web component determines which version of the content your participants see.\nExample:\n&lt;squatch-embed locale=\"fr_FR\" widget=\"w/myWidget\"&gt;&lt;/squatch-embed&gt;\n\n\nPreload an embedded widget\n\n\n\n\n\n\nReduce load times for participants by preloading an embedded widget in the background.\n\n\n\nYou can pass a parent container or a query selector to squatch.js, giving you more control on where and how your widget is loaded within your app. When you pass squatch.js a container or query selector, the embedded widget is shown via a calling method instead of being displayed when loaded. For example, the widget can be loaded and then shown or hidden as a participant navigates your app, instead of re-rendering.\nThe widget returned from your call to squatch.js has .open() and .close() methods to show or hide itself. Calling .open() reveals the widget and can trigger a background refresh. Calling .close() hides the widget.\nThe following example applies to popup and embedded widgets with a container or custom query selector. The code opens the widget as soon as it is available:\nconst initObj = {\n    ...\n    engagementMedium: \"EMBED\",\n    container: \"#customcontainer\"\n}  \n\nsquatch.widgets().upsertUser(initObj).then(function(response) {\n      response.widget.open();\n\n  });\nThe example below opens the widget as soon as it’s available and closes it after a 5 second delay:\nconst initObj = {\n    ...\n    engagementMedium: \"EMBED\",\n    container: \"#customcontainer\"\n}  \n\nsquatch.widgets().upsertUser(initObj).then(function(response) {\n  response.widget.open();\n  setTimeout(function() {\n      response.widget.close()\n    }, 5000);\n\n  });",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "JavaScript SDK",
       "`squatch.js` Advanced"
@@ -321,6 +330,7 @@
     "text": "Legacy object-based squatch.js\nsquatch.js supports uploading user data by using a user object within the widget and tracking scripts. This user object should ideally be sent along with a signed JWT for a fully secure implementation.\n\n\n\n\n\n\nInformation about our current widget and tracking scripts can be found in our Key squatch.js Scripts doc.\n\n\n\n\nRegister participants\n&lt;script&gt;\n// Include `squatch.js` loader script in your website\n!function(a,b){a(\"squatch\",\"https://fast.ssqt.io/squatch-js@2\",b)}(function(a,b,c){var d,e,f;c[\"_\"+a]={},c[a]={},c[a].ready=function(b){c[\"_\" + a].ready =  c[\"_\" + a].ready || [];c[\"_\" + a].ready.push(b);},e=document.createElement(\"script\"),e.async=1,e.src=b,f=document.getElementsByTagName(\"script\")[0],f.parentNode.insertBefore(e,f)},this);\n\n// Wait for `squatch.js` to be ready\nsquatch.ready(function(){\n\n  // Configure `squatch.js` for the tenant you are using \n  // Compare this with setting up your environment with `squatchTenant`\n  squatch.init({\n    tenantAlias: 'test_aym93okveuya4'\n  });\n\n  // Object containing the init parameters for `squatch.js`\n  var initObj = {\n\n    // The object for the user you want to upsert\n    user: {                               \n      id: 'legacy.user@example.com',      \n      accountId: 'legacy.user@example.com',       \n      email: 'legacy.user@example.com',               \n      firstName: 'Legacy',       \n      lastName: 'User',\n      locale: 'en_US',\n      customFields: {\n        companyName: \"Legacy Inc.\",\n        phoneNumber: \"(555) 555-5555\"\n          }            \n      },\n\n    // Include your JWT here (compare this with setting up your environment with `squatchToken`)\n    // Exclude the JWT entirely if secure mode is disabled \n    jwt: \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoibGVnYWN5LnVzZXJAZXhhbXBsZS5jb20iLCJhY2NvdW50SWQiOiJsZWdhY3kudXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoibGVnYWN5LnVzZXJAZXhhbXBsZS5jb20iLCJmaXJzdE5hbWUiOiJMZWdhY3kiLCJsYXN0TmFtZSI6IlVzZXIiLCJsb2NhbGUiOiJlbl9VUyIsImN1c3RvbUZpZWxkcyI6eyJjb21wYW55TmFtZSI6IkxlZ2FjeSBJbmMuIiwicGhvbmVOdW1iZXIiOiIoNTU1KSA1NTUtNTU1NSJ9fX0.lr2rIVjUYByOFRZ0mIRHgu3nan1g0ryhG4WJB00ClWU\"\n\n  };\n\n  // Make the call to create/update your user\n  squatch.api().upsertUser(initObj).then(function(response) {\n    user = response.user;\n  }).catch(function(error){\n    console.log(error);\n  });\n\n});\n&lt;/script&gt;\n\n### Render a widget\n&lt;script&gt;\n// Include `squatch.js` loader script in your website\n!function(a,b){a(\"squatch\",\"https://fast.ssqt.io/squatch-js@2\",b)}(function(a,b,c){var d,e,f;c[\"_\"+a]={},c[a]={},c[a].ready=function(b){c[\"_\" + a].ready =  c[\"_\" + a].ready || [];c[\"_\" + a].ready.push(b);},e=document.createElement(\"script\"),e.async=1,e.src=b,f=document.getElementsByTagName(\"script\")[0],f.parentNode.insertBefore(e,f)},this);\n\n// Wait for `squatch.js` to be ready\nsquatch.ready(function(){\n\n  // Configure `squatch.js` for the tenant you are using \n  // Compare this with setting up your environment with `squatchTenant`\n  squatch.init({\n      tenantAlias: 'test_aym93okveuya4'\n  });\n\n  // Object containing the init parameters for `squatch.js`\n  var initObj = {\n\n  // The object for the user you want to render the widget for\n  user: {                               \n      id: 'legacy.user@example.com',      \n      accountId: 'legacy.user@example.com',       \n      email: 'legacy.user@example.com',               \n      firstName: 'Legacy',       \n      lastName: 'User',\n      locale: 'en_US'\n      },\n\n  // Define the type of widget you want to display, you may also choose to display a `POPUP`\n  engagementMedium: 'EMBED',\n\n  // Define the widget you want to display by ID string (program-bound only, requires widget type)\n  widgetType: 'p/example-program/w/referrerWidget',\n\n  // Include your JWT here (compare this with setting up your environment with `squatchToken`)\n  // Exclude the JWT entirely if secure mode is disabled\n  jwt: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoibGVnYWN5LnVzZXJAZXhhbXBsZS5jb20iLCJhY2NvdW50SWQiOiJsZWdhY3kudXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoibGVnYWN5LnVzZXJAZXhhbXBsZS5jb20iLCJmaXJzdE5hbWUiOiJMZWdhY3kiLCJsYXN0TmFtZSI6IlVzZXIiLCJsb2NhbGUiOiJlbl9VUyJ9fQ.IAZuGUCf5v9Bd0CFnVprFciqlrTYBd9PfMaYbKY1r-o'\n\n  };\n\n  // Update/register a referral participant and display a widget\n  squatch.widgets().upsertUser(initObj).then(function(response) {\n    user = response.user;\n  }).catch(function(error){\n    console.log(error);\n  }); \n\n});\n&lt;/script&gt;\n\n      &lt;!-- Include the widget in the body of your page as an embed --&gt;\n      &lt;div class=\"squatchembed\"&gt;&lt;/div&gt;\n      &lt;!-- Or as a CTA popup --&gt;\n      &lt;button class=\"squatchpop\"&gt;Click me!&lt;/button&gt;",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "JavaScript SDK",
       "`squatch.js` Advanced"
@@ -334,6 +344,7 @@
     "text": "Learn more\n\nKey squatch.js Scripts: See general examples of the most important scripts you’ll need when implementing a SaaSquatch program.\nSigned Requests: Learn how to require a JWT or an API key when sending data to SaaSquatch.\nTracking Cookies: Learn more about squatch.js and first-party cookies.\nIssue Code List: Find details and troubleshooting steps about error codes you encounter.\nsquatch.js Reference: Full list of methods available.\n\n\nCitation\nSaaSquatch Help Center: View Original Guide",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "JavaScript SDK",
       "`squatch.js` Advanced"
@@ -347,6 +358,7 @@
     "text": "As a Solutions Architect, I acted as the primary technical contact for both installations of the SaaSquatch product suite and our many APIs and SDKs, including squatch.JS.\nBelow are a few samples of the guides I was involved heavily in writing, editing and reviewing for accuracy. The following guides were composed based on our SDK reference or provided Cucumber specs, as well as several independent UATs I performed in order to understand the features fully:\n\n\n\n\n\n\n\nKey squatch.js Scripts\n\n\nJavaScript SDK\n\n\n\n\n\n\n\n\n\n\n\n\nsquatch.js Advanced Use Cases\n\n\nJavaScript SDK\n\n\n\n\n\n\n\n\n\n\n\n\nTracking Cookies\n\n\nJavaScript SDK\n\n\n\n\n\n\n\n\nNo Matches Found",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "JavaScript SDK"
     ]
@@ -359,6 +371,7 @@
     "text": "I owned this entire guide from start to finish.\nFor this endeavour I researched and familiarized myself with:\n\nStripe Connect\nStripe - Issue credit notes\nStripe - Security, permissions, and access …\nISO 4217 - Currency codes\nStripe - The customer object\nStripe - Customer invoice balance\n\nAny links to guides I did not author have been removed for this archived version below.\nSaaSquatch’s Stripe integration uses Stripe Connect to automatically fulfill credit rewards as balance adjustments on a customer’s account in Stripe.\nThis guide will walk you through how to set up the Stripe integration.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Other",
@@ -373,6 +386,7 @@
     "text": "Overview\nWhat you’ll need to do to setup your Stripe Integration:\n\nConnect Stripe\nConfigure the Stripe Integration\nConfigure your reward program in SaaSquatch\nConnect SaaSquatch Users with their matching Stripe Customer IDs",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Other",
@@ -387,6 +401,7 @@
     "text": "Connect Stripe\nThe first step is to grant your SaaSquatch Account access to your Stripe Account’s Live and Test modes by using Stripe Connect.\n\n\n\n\n\n\nTest Mode vs. Live Mode: Your SaaSquatch program provides both a live and test tenant. The test mode can be used in conjunction with Stripe’s Test Mode to test reward fulfillment before deploying to your production environments on SaaSquatch and Stripe.\n\n\n\nTo authorize your SaaSquatch Live and Test Tenants with the respective Stripe Account Live and Test modes:\n\nIn the SaaSquatch Admin Portal, go to Settings &gt; Integrations.\n\nNote: We recommend setting up the integration in your test tenant first. Make sure that you are linking your SaaSquatch Test Tenant with Test Mode in Stripe and your SaaSquatch Live Tenant with Live Mode in Stripe.\n\nExpand the Stripe integration card and click Enable Stripe.\nClick the Connect to Stripe button, which will open a pop-up window prompting you to login with your Stripe credentials. This will authorize SaaSquatch to add credit to your customer accounts in Stripe.\nRepeat the same process in both your Test and Live Tenants on SaaSquatch.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Other",
@@ -401,6 +416,7 @@
     "text": "Configure Stripe\nAfter you’ve connected your Stripe Integration, you’ll need to configure the currencies you wish to fulfill via Stripe. If no configuration is set, rewards will not be sent to Stripe. You can have the integration fulfill any currency by selecting “All Currencies” or pick one or more specific currencies to fulfill. We recommend picking the currency of your customer’s subscriptions.\nAny currencies you choose will be associated with the program reward unit CREDIT/{CURRENCY_CODE}.\n\n\n\n\n\n\n\n\nNoneA Few Examples:\n\n\n\nThese are all based on the assumption that the recipient of the reward is linked with a valid Stripe Customer ID.\n\nIf you selected USD as your currency, then any program configured to reward CREDIT/USD will be automatically fulfilled by Stripe.\nIf you selected CAD for Stripe, then a program configured to reward CREDIT/CAD will be automatically fulfilled by Stripe, but NOT a program configured to reward CREDIT/USD.\nIf you selected BOTH CAD and USD then programs configured to reward CREDIT/CAD and CREDIT/USD will both be fulfilled by Stripe. A Program configured to reward CREDIT/JPY would not.\nIf you have selected All Currencies in your Stripe integration, then all CREDIT/CURRENCY_CODE will be automatically fulfilled by Stripe. Based on the above examples, this would include the programs configured to reward CREDIT/USD, CREDIT/CAD, and CREDIT/JPY. This setting will support any valid ISO 4217 currency code.\n\n\n\n\n\n\n\n\n\nCustom Stripe Reward Units\nThe Stripe Integration supports fulfillment of alternative reward units in addition to CREDIT as long as it is specified in the Stripe Configuration and a valid currency code is appended. For example, instead of using CREDIT/USD you could use SPECIAL/USD.\nTo do so, navigate to the Stripe Configurator in the Integrations tab and select “Custom” rather than “Currency” from the drop-down menu. You can then add SPECIAL as the custom unit that accepts all currencies, or SPECIAL/USD or SPECIAL/CAD if you would like to specify the currency accepted. As with the standard CREDIT/ unit, custom units will accept any valid ISO 4217 currency code.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Other",
@@ -415,6 +431,7 @@
     "text": "Configure your SaaSquatch Programs\nIf you would like one of your programs in SaaSquatch to issue rewards that are automatically fulfilled by Stripe, you will need to configure the unit for the reward to match what you configured Stripe to look for. This is done using the Custom reward unit using the following steps:\n\nIn the SaaSquatch Admin Portal, go to Rewards &gt; Reward Units.\nCreate a reward unit.\nChoose the Custom reward unit type.\nIf you have selected a standard currency (i.e. USD) when configuring Stripe, then you will add CREDIT/USD as the custom reward unit. The pattern is CREDIT/{CURRENCY_CODE} for rewards to be picked up by Stripe.\nIf you selected a Custom unit when configuring Stripe, you will need to utilize that unit if you want Stripe to automatically fulfill the reward. Using the above examples, in the Custom unit field of your program, you would enter SPECIAL/USD.\n\n\n\n\n\n\n\n\n\n\nApplicable Reward Types/Fulfillment\nStripe Integration currently only supports fulfillment of credit reward types and does not yet support fulfillment of percentage discounts. Unsupported rewards will be ignored by Stripe and go unfulfilled.\nWhile SaaSquatch recommends using the custom reward units as outlined above, it is possible to use the Dollar reward unit with Stripe. To do so, return to the Stripe configuration and select Custom instead of Currency and put CENTS/USD into the field. Note that using this setup will only support USD as the currency.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Other",
@@ -429,6 +446,7 @@
     "text": "Connect SaaSquatch Users\nIn order for a customer to have their rewards fulfilled by Stripe, you must link their SaaSquatch User Account with their Stripe Customer ID (e.g. cus_FpRWZEB4b77zAI).\nTo do so, perform a user upsert and include the Stripe Customer ID as a customer user field named stripeCustomerId. As an example: stripeCustomerID: \"cus_FpRWZEB4b77zAI\".\nAs an API Call, an example user upsert that includes the stripeCustomerId field might look like:\n{\n  \"id\": \"ABC_123\",\n  \"accountId\": \"ABC_123\",\n  \"customFields\": {\n    \"stripeCustomerId\": \"cus_FpRWZEB4b77zAI\"\n  }\n}\n\n\n\n\n\n\nNote: Stripe is not able to retroactively fulfill rewards, so be sure to add the Stripe Customer ID to your SaaSquatch users before they might be issued rewards.\n\n\n\nTo confirm a user reward has been fulfilled by Stripe, sign into your SaaSquatch portal and visit the rewarded user’s profile. If the reward was fulfilled by Stripe, you will see a fulfillment note beside the reward status. In Stripe you see an Adjustment corresponding to the customer’s reward under their Customer Balance.\n\nCitation\nSaaSquatch Help Center: View Original Guide",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Other",
@@ -443,6 +461,7 @@
     "text": "I owned this entire guide from start to finish.\nFor this endeavour, I researched and familiarized myself with the following Salesforce features:\n\nSalesforce: InvocableMethod Annotation\nSalesforce: Process Builder\n\nAny links to guides I did not author have been removed for this archived version.\nThe SaaSquatch SFDC integration provides a number of Invocable Methods that can be used within Process Builder to send information to SaaSquatch.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Salesforce",
@@ -457,6 +476,7 @@
     "text": "Introduction\nThis guide provides an overview of how to work with the following Invocable Methods within Process Builder:\n\nUpsert User by Lead\nUpsert User by Contact\nUpsert User by Id\nTrack Event by Lead\nTrack Event by Contact\nTrack Event by Id",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Salesforce",
@@ -471,6 +491,7 @@
     "text": "Before You Start\n\nMake sure that you’ve installed the SaaSquatch SFDC integration into your Salesforce instance.\nMake sure you have administrative access to create and modify Processes within Process Builder.\nThe below guide also assumes that:\n\nYou have an understanding of how to work with Process Builder\nYou have identified the who, what, where, and when behind sending data to SaaSquatch, as well as what the data being sent will be (e.g. whenever any user in Salesforce creates a Lead record with an email, upsert a user in SaaSquatch with the email as their User ID & Account ID)\nSetup has already been configured for the activity meant to trigger sending the information to SaaSquatch (e.g a referral code should to applied to the user in SaaSquatch when a value is seen on a ReferredByCodes Custom Field in a Lead or Contact, so that ReferredByCodes Custom Field exists on those Objects and is accessible)",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Salesforce",
@@ -485,6 +506,7 @@
     "text": "Upserting Users\nThe following Apex Classes perform the same function as our User Upsert call in our REST API.\nYou would use any of the three following methods when:\n\nCreating your Leads or Contacts as participants in SaaSquatch,\nMaking referral attributions between users in SaaSquatch when a ReferredByCodes Custom Field is seen with a value on a Lead or a Contact,\nUpdating a SaaSquatch participant’s standard or custom User Fields on activity seen on a Lead, Contact, Account or Opportunity,\nAdding or removing a SaaSquatch participant’s segments on criteria seen on a Lead, Contact, Account or Opportunity.\n\n\nUpsert User by Lead\nThis method allows you to create and update SaaSquatch participants when activity or criteria are seen on a Lead Object.\n\nCreate a New Process. Give it a name and description that reflects the outcome of the Process, such as “Upsert User on Lead” and “Creates or updates a user in SaaSquatch when a Lead record is created or changed.”\nFor ‘The process starts when’, select “A record changes”.\nAdd an Object, and select ‘Lead’ as your Object. We recommend allowing the Process to start “when a record is created or edited”, so that both creation and update of users can occur.\nAdd your Criteria:\n\nFor example, if you want an Upsert to occur any time a Lead is created or updated, name your criteria “Always” and select ‘No criteria—just execute the actions!’\nFor more advanced usage, such as “only create or update user when an email exists,” or “only update a user if certain fields are modified,” you will have to specify your Criteria and Conditions here.\n\nAdd your Actions:\n\nSelect ‘Apex’ under “Action Type”, and give your action a name that reflects the outcome (e.g. Apply Referral Code)\nSelect ‘Upsert User by Lead’ under your “Apex Class”.\n\nSet your Apex Variables:\n\nAt minimum, a User Upsert must include the user’s accountId & userId. We recommend referencing a field that already exists on the Lead, such as email.\nSend along any additional information about the user you’d like SaaSquatch to receive, such as “First Name,” “Last Name”, “Email”, the code of who they were referred by, etc.\nYou can also choose whether or not to sync this information instantly back to SFDC once sent to SaaSquatch (e.g. have the newly created SaaSquatch user sync to the Lead record) by using the variable “Immediately Upserts Objects”.\n\nOnce your Process is completed and Saved, make sure to Activate it so it can run.\n\n\n\nUpsert User by Contact\nThis method allows you to create and update SaaSquatch participants when activity or criteria are seen on the Contact Object.\n\nCreate a New Process. Give it a name and description that reflects the outcome of the Process, such as “Upsert User on Contact” and “Creates or updates a user in SaaSquatch when a Contact record is created or changed.”\nFor ‘The process starts when’, select “A record changes”.\nAdd an Object, and select ‘Contact’ as your Object. We recommend allowing the Process to start “when a record is created or edited”, so that both creation and update of users can occur.\nAdd your Criteria:\n\nFor example, if you want an Upsert to occur any time a Contact is created or updated, name your criteria “Always” and select ‘No criteria—just execute the actions!’\nFor more advanced usage, such as “only create or update user when an email exists,” or “only update a user if certain fields are modified,” you will have to specify your Criteria and Conditions here.\n\nAdd your Actions:\n\nSelect ‘Apex’ under “Action Type”, and give your action a name that reflects the outcome (e.g. Update User Segments)\nSelect ‘Upsert User by Contact’ under your “Apex Class”.\n\nSet your Apex Variables:\n\nAt minimum, a User Upsert must include the user’s accountId & userId. We recommend referencing a field that already exists on the Contact, such as email.\nSend along any additional information about the user you’d like SaaSquatch to receive, such as “First Name,” “Last Name”, “Email”, the custom field or segment you’d like to add or change, etc.\nYou can also choose whether or not to sync this information instantly back to SFDC once sent to SaaSquatch (e.g. have the newly created SaaSquatch user sync to the Contact record) by using the variable “Immediately Upserts Objects”.\n\nOnce your Process is completed and Saved, make sure to Activate it so it can run.\n\n\n\nUpsert User by Id\n\n\n\n\n\n\nThis Apex Class assumes that you have made the User ID & Account ID accessible on the Object you are working with.\n\n\n\nYou would most likely want to use Upsert User by Id when you want to create a user from a SFDC Lead in SaaSquatch, or make changes to an existing SaaSquatch participant on activity or criteria seen on an associated Account or Opportunity.\nFor updating users on Lead or Contact, we recommend either “Upsert User by Lead” or “Upsert User by Contact” (above).\n\nCreate a New Process. Give it a name and description that reflects the outcome of the Process, such as “Update User on Account” and “Updates a user in SaaSquatch when the associated Account record is created or changed.”\nFor ‘The process starts when’, select “A record changes”.\nAdd an Object, and select ‘Account’ or ‘Opportunity’ as your Object. We recommend allowing the Process to start “when a record is created or edited”.\nAdd your Criteria:\n\nFor example, if you want an Upsert to occur any time an Account or Opportunity is created or updated, name your criteria “Always” and select ‘No criteria—just execute the actions!’\nFor more advanced usage, such as “only send information to SaaSquatch when an Opportunity is Closed Won”, you will have to specify your Criteria and Conditions here.\n\nAdd your Actions:\n\nSelect ‘Apex’ under “Action Type”, and give your action a name that reflects the outcome (e.g. Update Account Status)\nSelect ‘Upsert User by Id’ under your “Apex Class”.\n\nSet your Apex Variables:\n\nAt minimum, a User Upsert must include the user’s accountId & userId. Make sure to reference the correct field(s) containing the associated SaaSquatch user’s User and Account IDs.\nSend along any additional information about the user you’d like SaaSquatch to receive, such as “First Name,” “Last Name”, “Email”, the custom field or segment you’d like to add or change, etc.\nYou can also choose whether or not to sync this information instantly back to SFDC once sent to SaaSquatch (e.g. have the newly created SaaSquatch user sync to the SFDC record) by using the variable “Immediately Upserts Objects”.\n\nOnce your Process is completed and Saved, make sure to Activate it so it can run.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Salesforce",
@@ -499,6 +521,7 @@
     "text": "Tracking Events\nThe following Apex Classes perform the same function as our Track User Event in our REST API.\n\n\n\n\n\n\nKeep in mind that as user has to exist in SaaSquatch before it can receive event data.\n\n\n\n\nTrack Event by Lead\nThis method allows you to send events to SaaSquatch participants when activity or criteria are seen on a Lead Object.\n\nCreate a New Process. Give it a name and description that reflects the outcome of the Process, such as “Track Events on Lead” and “Sends events to the SaaSquatch user when a Lead record is created or changed.”\nFor ‘The process starts when’, select “A record changes”.\nAdd an Object, and select ‘Lead’ as your Object. We recommend allowing the Process to start “when a record is created or edited”.\nAdd your Criteria:\n\nFor example, if you want the event to be sent any time a Lead is created or updated, name your criteria “Always” and select ‘No criteria—just execute the actions!’\nFor more advanced usage, such as “only send an event to the user when an email exists,” or “only send an event if certain fields are modified,” you will have to specify your Criteria and Conditions here.\n\nAdd your Actions:\n\nSelect ‘Apex’ under “Action Type”, and give your action a name that reflects the outcome (e.g. Add Purchase Event)\nSelect ‘Track Event by Lead’ under your “Apex Class”.\n\nSet your Apex Variables:\n\nAn event must include the user’s accountId & userId that is the same as what is already in the SaaSquatch system. We recommend referencing the same fields you used to upsert the user.\nYou will also need to at at minimum provide the key of your event (e.g. purchase).\nIf the SaaSquatch system is set up to look for specific custom fields and field values under your event (e.g. revenue), you will need to include those as well.\n\nOnce your Process is completed and Saved, make sure to Activate it so it can run.\n\n\n\nTrack Event by Contact\nThis method allows you to send events to SaaSquatch participants when activity or criteria are seen on a Contact Object.\n\nCreate a New Process. Give it a name and description that reflects the outcome of the Process, such as “Track Events on Contact” and “Sends events to the SaaSquatch user when a Contact record is created or changed.”\nFor ‘The process starts when’, select “A record changes”.\nAdd an Object, and select ‘Contact’ as your Object. We recommend allowing the Process to start “when a record is created or edited”.\nAdd your Criteria:\n\nFor example, if you want the event to be sent any time a Contact is created or updated, name your criteria “Always” and select ‘No criteria—just execute the actions!’\nFor more advanced usage, such as “only send an event to the user when an email exists,” or “only send an event if certain fields are modified,” you will have to specify your Criteria and Conditions here.\n\nAdd your Actions:\n\nSelect ‘Apex’ under “Action Type”, and give your action a name that reflects the outcome (e.g. Add Purchase Event)\nSelect ‘Track Event by Contact’ under your “Apex Class”.\n\nSet your Apex Variables:\n\nAn event must include the user’s accountId & userId that is the same as what is already in the SaaSquatch system. We recommend referencing the same fields you used to upsert the user.\nYou will also need to at at minimum provide the key of your event (e.g. purchase).\nIf the SaaSquatch system is set up to look for specific custom fields and field values under your event (e.g. revenue), you will need to include those as well.\n\nOnce your Process is completed and Saved, make sure to Activate it so it can run.\n\n\n\nTrack Event by Id\n\n\n\n\n\n\nThis Apex Class assumes that you have made the User ID & Account ID accessible on the Object you are working with.\n\n\n\nThis method allows you to send events to SaaSquatch participants when activity or criteria are seen on a Contact or Opportunity Object as long as you have access to the associated user’s Account ID and User ID.\n\nCreate a New Process. Give it a name and description that reflects the outcome of the Process, such as “Track Events on Account” and “Updates a user in SaaSquatch when the associated Account record is created or changed.”\nFor ‘The process starts when’, select “A record changes”.\nAdd an Object, and select ‘Account’ or ‘Opportunity’ as your Object. We recommend allowing the Process to start “when a record is created or edited”.\nAdd your Criteria:\n\nFor example, if you want an event to be sent any time an Account or Opportunity is created or updated, name your criteria “Always” and select ‘No criteria—just execute the actions!’\nFor more advanced usage, such as “only send an event to SaaSquatch when an Opportunity is Closed Won”, you will have to specify your Criteria and Conditions here.\n\nAdd your Actions:\n\nSelect ‘Apex’ under “Action Type”, and give your action a name that reflects the outcome (e.g. Send OppWon Event)\nSelect ‘Track Event by Id’ under your “Apex Class”.\n\nSet your Apex Variables:\n\nAn event must include the user’s accountId & userId that is the same as what is already in the SaaSquatch system. Make sure to reference the correct field(s) containing the associated SaaSquatch user’s User and Account IDs.\nYou will also need to at at minimum provide the key of your event (e.g. oppWon).\nIf the SaaSquatch system is set up to look for specific custom fields and field values under your event (e.g. closedDate), you will need to include those as well.\n\nOnce your Process is completed and Saved, make sure to Activate it so it can run.\n\n\nCitation\nSaaSquatch Help Center: View Original Guide",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Salesforce",
@@ -513,6 +536,7 @@
     "text": "I owned this entire guide from start to finish.\nFor this endeavour I researched and familiarized myself with:\n\nRecurly - Test gateway\nRecurly - REST API keys\nRecurly - Webhooks (JSON & XML)\n\nAny links to guides I did not author have been removed for this archived version below.\nSaaSquatch’s Recurly integration uses Recurly’s Push Notifications and Recurly’s API to automatically track subscriptions and apply referral and loyalty rewards. This guide will walk you through how to set up this integration.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Other",
@@ -527,6 +551,7 @@
     "text": "Set up Recurly\n\n\n\n\n\n\nTest tenant vs. Live tenant - Your SaaSquatch program provides both a live and test tenant. Test tenants can be used in conjunction with a Recurly Sandbox account to test payments, subscriptions, and reward automation before deploying to your production environment.\n\n\n\n\nAdd your Recurly API Key in the SaaSquatch Portal\nWe connect to the Recurly API using your Recurly API key. This allows us automatically apply discounts to participants’ accounts.\n\nSign in to Recurly and click on Developer &gt; API Credentials.\nCopy the private API key.\nSign in to the SaaSquatch Admin Portal.\nChoose your test tenant from the tenant selection dropdown list at the top left of the page.\nGo to Settings &gt; Integrations.\nExpand the Recurly card and click Enable Recurly.\nPaste the API key in the Recurly API Key field.\nClick Save.\n\nRepeat this process for your live tenant when you are ready to go live.\n\n\nChoose which reward units to automate\nThe Recurly integration can automatically create credit line items in Recurly when rewards are created in SaaSquatch. By default, base currency units such as USD, EUR and CAD are fulfilled. If your programs are using multiple monetary units, such as cash vs. credit, then you can configure Recurly to only fulfill one of those units.\n\nIn the SaaSquatch Admin Portal, go to Settings &gt; Integrations.\nExpand the Recurly card.\nSelect the Custom from the Reward Units dropdown list.\nEnter the unitId for an existing reward unit.\n\nTip: To find a reward unit’s ID, go to Rewards &gt; Reward Units. The unit ID appears below the reward unit’s name.\n\nClick Save.\n\nAfter a reward unit is configured, any new rewards created in that unit will be automatically fulfilled.\n\nOnly rewards with \"type\": \"CREDIT\" and a configured unit are automatically fulfilled.\nRewards with \"unit\": \"CENTS\" are treated as USD.\n\n\n\nSet up Recurly to forward Webhooks to SaaSquatch\nSaaSquatch uses Recurly Webhook Events as triggers for your program’s reward and email automation. Recurly supports multiple Webhook Endpoints, which allows you to simultaneously receive webhooks in your other software while also sending them to SaaSquatch. Add SaaSquatch as a webhook endpoint by adding our URL into your Recurly portal.\n\nSign in to the SaaSquatch Admin Portal.\nChoose your test tenant from the tenant selection dropdown list at the top left of the page.\nGo to Settings &gt; Integrations.\nExpand the Recurly card.\nCopy the webhooks URL (it should look like https://recurly.integrations.saasquatch.com/recurly/{tenant_alias}/webhook).\nSign in to Recurly and go to Developer &gt; Webhooks &gt; Configure.\nClick New Endpoint.\nSelect a name for your SaaSquatch Webhook endpoint.\nPaste the URL you copied in step 3 into the field labeled Endpoint URL.\nClick Save Changes.\n\nRepeat this process for your live tenant when you are ready to publish your referral program. This will require that you switch your Recurly account to production mode.\n\n\n\n\n\n\nBe aware: The conversion of your Recurly account from test to production is not reversible.\n\n\n\n\nThe Recurly integration will attempt to create participants that don’t exist in SaaSquatch using the Recurly &lt;account_code&gt; as the participant’s id and accountId. This field is the Account Code field when looking at a participant on the Recurly website.\nRecurly webhooks can potentially be recorded multiple times. Recurly doesn’t support sending IDs along with Webhooks, so there is a chance that it will be received and logged twice.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Other",
@@ -541,6 +566,7 @@
     "text": "Convert a referral\nTo successfully convert a referral that’s been started, the following steps must be completed in order.\nBefore you begin:\n\nYour Recurly integration must be fully set up\nYour program rules are should be set to trigger based on one of the supported webhooks types\nThe reward unit used in your programs should configured for automatic fulfillment\n\n\nMake sure that the Referrer has been:\n\nRegistered in Recurly with a valid credit card and plan selected\nCreated as a user in SaaSquatch, with the Recurly &lt;account_code&gt; as their SaaSquatch id and accountId.\n\nMake sure that the referred user has been:\n\nCreated as a user in SaaSquatch\nAttributed as a referral of the Referrer\n\nCreate an account for the referred user in Recurly, using Recurly’s &lt;account_code&gt; as their SaaSquatch id and accountId.\nCreate a subscription in Recurly for the referred user.\n\nResult: Referral converted, rewards fulfilled in Recurly, rewards redeemed in SaaSquatch.\n\nKey Considerations\n\nThe conversion process may take time to propagate from Recurly to SaaSquatch depending on the load on Recurly’s system and the frequency of them sending out updates.\nEvent tracking and reward fulfilment rely on Recurly &lt;account_code&gt; matching a participant’s id and accountId.\nThe rewards are applied as a line item on a pending or existing invoice. This is due to Recurly’s limitations on how account credits can be applied to customers. Recurly only allows account credits to be applied as line items, and line items can only be applied to invoices. In this way Recurly has designed invoices to only be used with subscriptions.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Other",
@@ -555,6 +581,7 @@
     "text": "Compatible Rewards\nLooking to run a referral program with Recurly as your payment provider and an arbitrary reward type like points or swag? The Recurly integration only supports monetary reward fulfillment in a specified currency.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Other",
@@ -569,6 +596,7 @@
     "text": "More Information\nRecurly API Keys - SaaSquatch connects to Recurly through their REST API, using an API key from your Recurly account. This lets SaaSquatch automatically apply discounts to user’s accounts, making the integration extremely powerful, as well as easy and fast to connect.\n\n\n\n\n\n\nYou can learn more about creating and managing Recurly API keys in their documentation.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Other",
@@ -583,6 +611,7 @@
     "text": "Supported Webhooks\nRecurly webhooks are sent as XML, but they are processed and stored in SaaSquatch as User Events as JSON.\nFor example, a Recurly closed_invoice_notification notification:\n &lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;\n &lt;closed_invoice_notification&gt;\n   &lt;account&gt;\n      &lt;account_code&gt;1&lt;/account_code&gt;\n      &lt;username nil=\"true\" /&gt;\n      &lt;email&gt;verena@example.com&lt;/email&gt;\n      &lt;first_name&gt;Verana&lt;/first_name&gt;\n      &lt;last_name&gt;Example&lt;/last_name&gt;\n      &lt;company_name nil=\"true\" /&gt;\n  &lt;/account&gt;\n  &lt;invoice&gt;\n      &lt;uuid&gt;ffc64d71d4b5404e93f13aac9c63b007&lt;/uuid&gt;\n      &lt;subscription_id nil=\"true\" /&gt;\n      &lt;state&gt;collected&lt;/state&gt;\n      &lt;invoice_number_prefix /&gt;\n      &lt;invoice_number type=\"integer\"&gt;1000&lt;/invoice_number&gt;\n      &lt;po_number /&gt;\n      &lt;vat_number /&gt;\n      &lt;total_in_cents type=\"integer\"&gt;1100&lt;/total_in_cents&gt;\n      &lt;currency&gt;USD&lt;/currency&gt;\n      &lt;date type=\"datetime\"&gt;2014-01-01T20:20:29Z&lt;/date&gt;\n      &lt;closed_at type=\"datetime\"&gt;2014-01-01T20:24:02Z&lt;/closed_at&gt;\n      &lt;net_terms type=\"integer\"&gt;0&lt;/net_terms&gt;\n      &lt;collection_method&gt;manual&lt;/collection_method&gt;\n  &lt;/invoice&gt;\n&lt;/closed_invoice_notification&gt;\nThen Recurly integration will track it as a user event in JSON format with value:\n{\n  \"account\": {\n    \"account_code\": \"1\",\n    \"username\": null,\n    \"email\": \"verena@example.com\",\n    \"first_name\": \"Verana\",\n    \"last_name\": \"Example\",\n    \"company_name\": null\n  },\n  \"invoice\": {\n    \"uuid\": \"ffc64d71d4b5404e93f13aac9c63b007\",\n    \"subscription_id\": null,\n    \"state\": \"collected\",\n    \"invoice_number_prefix\": \"\",\n    \"invoice_number\": 1000,\n    \"po_number\": \"\",\n    \"vat_number\": \"\",\n    \"total_in_cents\": 1100,\n    \"currency\": \"USD\",\n    \"date\": 1388607629000,\n    \"closed_at\": 1388607842000,\n    \"net_terms\": 0,\n    \"collection_method\": \"manual\"\n  }\n}\nThe Recurly integration will only forward payment and invoice webhooks to SaaSquatch. These are tracked as events on the users, and can be looked up in the SaaSquatch admin portal and via the GraphQL API.\n\n\n\nRecurly Webhook Type\nProcessed\n\n\n\n\nnew_credit_invoice_notification\n\n\n\nprocessing_credit_invoice_notification\n\n\n\nclosed_credit_invoice_notification\n\n\n\nvoided_credit_invoice_notification\n\n\n\nreopened_credit_invoice_notification\n\n\n\nupdated_credit_invoice_notification\n\n\n\nscheduled_payment_notification\n\n\n\nprocessing_payment_notification\n\n\n\nsuccessful_payment_notification\n\n\n\nfailed_payment_notification\n\n\n\nvoid_payment_notification\n\n\n\nnew_credit_payment_notification\n\n\n\nsuccessful_refund_notification\nignored\n\n\nnew_account_notification\nignored\n\n\nupdated_account_notification\nignored\n\n\ncanceled_account_notification\nignored\n\n\nbilling_info_updated_notification\nignored\n\n\nbilling_info_update_failed_notification\nignored\n\n\nnew_shipping_address_notification\nignored\n\n\nupdated_shipping_address_notification\nignored\n\n\ndeleted_shipping_address_notification\nignored\n\n\nnew_item_notification\nignored\n\n\nupdated_item_notification\nignored\n\n\ndeactivated_item_notification\nignored\n\n\nreactivated_item_notification\nignored\n\n\n\n\nCitation\nSaaSquatch Help Center: View Original Guide",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Other",
@@ -597,6 +626,7 @@
     "text": "Before we had any formal technical writers at SaaSquatch, a B2B affiliate software startup, I created and maintained company-wide technical process, product and installation documentation. Using Contentful and a bit of cobbled together code, I overhauled our public knowledge base with a focus on accuracy, client accessibility, increased internal ease of upkeep, and future extensibility.\nWhile the following samples are quite dated before I refined my voice in an official technical writing role, I’ve included them for completion and progression value:",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch"
     ]
   },
@@ -608,6 +638,7 @@
     "text": "SaaSquatch Integrations\nDuring my tenure at SaaSquatch, I became the company Subject Matter Expert for many of our custom integrations, including our integration for Salesforce which I helped develop.\n\n\n\n\n\n\nPlease note that these guides were written between 2018 – 2022, and as such, the archived documentation below may not reflect the current functionality of the third-party software.\n\n\n\n\nSalesforceOther\n\n\nBefore I worked at SaaSquatch, I had never used Salesforce (SFDC). Very quickly after onboarding, I helped develop our SFDC integration during my time as a Solutions Architect as part of custom work for a client.\nBelow are a few samples of the guides I produced to assist with custom implementations utilizing our SFDC integration:\n\n\n\n\n\n\n\nSaasquatch + SFDC: Using Invocable Methods in Process Builder\n\n\nSFDC Integration\n\n\n\n\n\n\n\n\n\n\n\n\nSaaSquatch + SFDC: Attribution via Contact Loookup\n\n\nSFDC Integration\n\n\n\n\n\n\n\n\n\n\n\n\nSaaSquatch + SFDC: User & Account IDs\n\n\nSFDC Integration\n\n\n\n\n\n\n\n\nNo Matches Found\n\n\n\nBelow are a few samples of the guides I produced to assist with custom payment provider and rewards integrations, written based on provided Cucumber specs and several independent UATs I performed in order to understand the features fully:\n\n\n\n\n\n\n\nStripe Integration Install Guide\n\n\nPayment Provider Integration\n\n\n\n\n\n\n\n\n\n\n\n\nRecurly Integration Install Guide\n\n\nPayment Provider Integration\n\n\n\n\n\n\n\n\n\n\n\n\nConnect Your Tango Card Account to SaaSquatch\n\n\nReward Integration\n\n\n\n\n\n\n\n\nNo Matches Found",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch"
     ]
   },
@@ -619,6 +650,7 @@
     "text": "SaaSquatch JavaScript SDK\nAs a Solutions Architect, I acted as the primary technical contact for both installations of the SaaSquatch product suite and our many APIs and SDKs, including squatch.JS.\nBelow are a few samples of the guides I was involved heavily in writing, editing and reviewing for accuracy. The following guides were composed based on our SDK reference or provided Cucumber specs, as well as several independent UATs I performed in order to understand the features fully:\n\n\n\n\n\n\n\nKey squatch.js Scripts\n\n\nJavaScript SDK\n\n\n\n\n\n\n\n\n\n\n\n\nsquatch.js Advanced Use Cases\n\n\nJavaScript SDK\n\n\n\n\n\n\n\n\n\n\n\n\nTracking Cookies\n\n\nJavaScript SDK\n\n\n\n\n\n\n\n\nNo Matches Found",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch"
     ]
   },
@@ -630,108 +662,67 @@
     "text": "SaaSquatch User Guides\nWhile I served no formal technical writing role while at SaaSquatch, a core facet of my work was my focus on improving user content for both customers and colleagues.\nBelow are a few samples of the core software feature documentation guides I produced to instruct customers before I held any formal technical writing or content role:\n\n\n\n\n\n\n\nUnderstanding Sharelinks\n\n\nUser Guides\n\n\n\n\n\n\n\n\n\n\n\n\nAdding Users & Triggering Reward Goals via CSV Import\n\n\nUser Guides\n\n\n\n\n\n\n\n\nNo Matches Found",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch"
     ]
   },
   {
-    "objectID": "samples/technical-writing/index.html",
-    "href": "samples/technical-writing/index.html",
-    "title": "Technical Writing",
+    "objectID": "samples/technical-writing/personal/guestbook/index.html",
+    "href": "samples/technical-writing/personal/guestbook/index.html",
+    "title": "y2k Guestbook",
     "section": "",
-    "text": "Engendering empowered users through effective guidance content.\nAlong with a love of gratuitous alliteration, I truly enjoy authoring user guidance content. That’s because I believe that great guidance content empowers users, and empowered users get excited about product.",
+    "text": "I designed and built a mobile-responsive interactive Next.js application, complete with LLM-friendly documentation in MDX and an API reference implemented with Scalar.\n\n\n\n\n\n\n\ny2k Guestbook API Library Reference\n\n\nTechnical Writing\n\n\n\n\n\n\n\n\n\n\n\n\ny2k Guestbook Developer Guides\n\n\nTechnical Writing\n\n\n\n\n\n\n\n\n\n\n\n\ny2k Guestbook User Guides\n\n\nTechnical Writing\n\n\n\n\n\n\n\n\nNo Matches Found",
     "crumbs": [
       "Content Engineering",
-      "Technical Writing"
+      "Personal / y2k Guestbook"
     ]
   },
   {
-    "objectID": "samples/technical-writing/index.html#validmind",
-    "href": "samples/technical-writing/index.html#validmind",
-    "title": "Technical Writing",
-    "section": "ValidMind",
-    "text": "ValidMind\nI was the sole Senior Technical Writer for ValidMind, a generative artificial intelligence financial services startup, where I employed docs-as-code methodologies alongside software engineers delivering documentation as part of product in the same development ecosystem, transforming a minimal set of user guide drafts into a fully idealized and comprehensive knowledge base.\nAs I authored the bulk of 53% of user content out of many contributors,1 most of ValidMind’s documentation saw my influence at some point. I’ve selected some of my best work to showcase below:\n1 Citation:  validmind/documentation statistic archive\n\n \n\n\n\n\n\n\n\n\nValidMind Jupyter Notebooks\n\n\nDeveloper Content\n\n\n\n\n\n\n\n\n\n\n\n\nValidMind Training\n\n\nOnboarding & Education\n\n\n\n\n\n\n\n\n\n\n\n\nValidMind User Guides\n\n\nFeature Documentation\n\n\n\n\n\n\n\n\n\n\n\n\nValidMind Quickstarts\n\n\nTutorials\n\n\n\n\n\n\n\n\n\n\n\n\nValidMind Enablement Content\n\n\nContent Creation\n\n\n\n\n\n\n\n\nNo Matches Found\n\n\nAtryum\nAtryum is an open-source agentic orchestration tool developed by ValidMind. As ValidMind’s sole Senior Technical Writer, I was responsible for almost all of the documentation for Atryum.\nI authored approximately 95% of the content for Atryum,2 including the samples selected below:\n2 Citation:  Archive of validmind/atryum/website (documentation)\n\n\n\n\n\n\nAtryum Integrations\n\n\nFeature Documentation\n\n\nUser guides written for Atryum integrations.\n\n\n\n\n\n\n\n\n\nAtryum User Guides\n\n\nFeature Documentation\n\n\nUser guides written for core Atryum functionality.\n\n\n\n\n\n\n\n\n\nAtryum Quickstart\n\n\nTutorial\n\n\nQuickstart and installation guide for Atryum.\n\n\n\n\n\nNo Matches Found\n\n\n\n\n\n\n\nYou can learn more about my involvement with ValidMind, Atryum, and the impact I had on content and content architecture under Content Engineering.",
-    "crumbs": [
-      "Content Engineering",
-      "Technical Writing"
-    ]
-  },
-  {
-    "objectID": "samples/technical-writing/index.html#saasquatch",
-    "href": "samples/technical-writing/index.html#saasquatch",
-    "title": "Technical Writing",
-    "section": "SaaSquatch",
-    "text": "SaaSquatch\nBefore we had any formal technical writers at SaaSquatch, a B2B affiliate software startup, I created and maintained company-wide technical process, product and installation documentation. Using Contentful and a bit of cobbled together code, I overhauled our public knowledge base with a focus on accuracy, client accessibility, increased internal ease of upkeep, and future extensibility.\nWhile the following samples are quite dated before I refined my voice in an official technical writing role, I’ve included them for completion and progression value:\n\n\n\n\n\n\n\nSaaSquatch Integrations\n\n\nFeature Documentation\n\n\n\n\n\n\n\n\n\n\n\n\nSaaSquatch JavaScript SDK\n\n\nDeveloper Content\n\n\n\n\n\n\n\n\n\n\n\n\nSaaSquatch User Guides\n\n\nFeature Documentation\n\n\n\n\n\n\n\n\nNo Matches Found",
-    "crumbs": [
-      "Content Engineering",
-      "Technical Writing"
-    ]
-  },
-  {
-    "objectID": "samples/technical-writing/atryum/quickstart.html",
-    "href": "samples/technical-writing/atryum/quickstart.html",
-    "title": "Atryum Quickstart",
+    "objectID": "samples/technical-writing/atryum/user-guides.html",
+    "href": "samples/technical-writing/atryum/user-guides.html",
+    "title": "Atryum User Guides",
     "section": "",
-    "text": "I owned the linked quickstart in this section from start to finish.\nThis quickstart is special because I also designed the landing page installation script for Atryum.",
+    "text": "I owned the linked guides in this section from start to finish.",
     "crumbs": [
       "Content Engineering",
       "Atryum",
-      "Quickstart"
+      "User Guides"
     ]
   },
   {
-    "objectID": "samples/technical-writing/atryum/quickstart.html#citation",
-    "href": "samples/technical-writing/atryum/quickstart.html#citation",
-    "title": "Atryum Quickstart",
+    "objectID": "samples/technical-writing/atryum/user-guides.html#citation",
+    "href": "samples/technical-writing/atryum/user-guides.html#citation",
+    "title": "Atryum User Guides",
     "section": "Citation",
     "text": "Citation\n Archive of validmind/atryum Commits by Beck",
     "crumbs": [
       "Content Engineering",
       "Atryum",
-      "Quickstart"
+      "User Guides"
     ]
   },
   {
-    "objectID": "samples/technical-writing/atryum/index.html",
-    "href": "samples/technical-writing/atryum/index.html",
-    "title": "Atryum",
+    "objectID": "samples/technical-writing/atryum/integrations.html",
+    "href": "samples/technical-writing/atryum/integrations.html",
+    "title": "Atryum Integrations",
     "section": "",
-    "text": "Atryum is an open-source agentic orchestration tool developed by ValidMind. As ValidMind’s sole Senior Technical Writer, I was responsible for almost all of the documentation for Atryum.\nI authored approximately 95% of the content for Atryum,1 including the samples selected below:",
+    "text": "I owned the linked guides in this section from start to finish.",
     "crumbs": [
       "Content Engineering",
-      "Atryum"
+      "Atryum",
+      "Integrations"
     ]
   },
   {
-    "objectID": "samples/technical-writing/atryum/index.html#atryum-integrations",
-    "href": "samples/technical-writing/atryum/index.html#atryum-integrations",
-    "title": "Atryum",
-    "section": "Atryum Integrations",
-    "text": "Atryum Integrations\nI owned the linked guides in this section from start to finish.\n\n\n\n\n\n\n\nConnect agents\n\n\nIntegrations\n\n\n\n\n\n\n\n\n\nConnect MCP servers\n\n\nIntegrations\n\n\n\n\n\n\n\n\n\nConfigure LLM providers\n\n\nIntegrations\n\n\n\n\n\n\n\n\n\nConnect ValidMind\n\n\nIntegrations\n\n\n\n\n\nNo Matches Found",
+    "objectID": "samples/technical-writing/atryum/integrations.html#citation",
+    "href": "samples/technical-writing/atryum/integrations.html#citation",
+    "title": "Atryum Integrations",
+    "section": "Citation",
+    "text": "Citation\n Archive of validmind/atryum Commits by Beck",
     "crumbs": [
       "Content Engineering",
-      "Atryum"
-    ]
-  },
-  {
-    "objectID": "samples/technical-writing/atryum/index.html#atryum-user-guides",
-    "href": "samples/technical-writing/atryum/index.html#atryum-user-guides",
-    "title": "Atryum",
-    "section": "Atryum User Guides",
-    "text": "Atryum User Guides\nI owned the linked guides in this section from start to finish.\n\n\n\n\n\n\n\nInvocations\n\n\nUser Guides\n\n\n\n\n\n\n\n\n\nRules\n\n\nUser Guides\n\n\n\n\n\nNo Matches Found",
-    "crumbs": [
-      "Content Engineering",
-      "Atryum"
-    ]
-  },
-  {
-    "objectID": "samples/technical-writing/atryum/index.html#atryum-quickstart",
-    "href": "samples/technical-writing/atryum/index.html#atryum-quickstart",
-    "title": "Atryum",
-    "section": "Atryum Quickstart",
-    "text": "Atryum Quickstart\nI owned the linked quickstart in this section from start to finish.\nThis quickstart is special because I also designed the landing page installation script for Atryum.\n\n\n\n\n\n\n\nQuickstart\n\n\nTutorial\n\n\n\n\n\n\n\n\n\natryum.org\n\n\nLanding Page\n\n\n\n\n\nNo Matches Found\n\n\n\nCompare:\nPrevious Atryum quickstart guide\nPrevious Atryum landing page\n\nCitation\n Archive of validmind/atryum Commits by Beck\n\n\n\n\n\n\nYou can learn more about my involvement with ValidMind, Atryum, and the impact I had on content and content architecture under Content Engineering.",
-    "crumbs": [
-      "Content Engineering",
-      "Atryum"
+      "Atryum",
+      "Integrations"
     ]
   },
   {
@@ -865,11 +856,11 @@
     ]
   },
   {
-    "objectID": "samples/copywriting/index.html#saasquatch",
-    "href": "samples/copywriting/index.html#saasquatch",
+    "objectID": "samples/copywriting/index.html#archive",
+    "href": "samples/copywriting/index.html#archive",
     "title": "Copywriting",
-    "section": "SaaSquatch",
-    "text": "SaaSquatch\nBefore we had any formal technical writers at SaaSquatch, a B2B affiliate software startup, I created and maintained company-wide technical process, product and installation documentation. Using Contentful and a bit of cobbled together code, I overhauled our public knowledge base with a focus on accuracy, client accessibility, increased internal ease of upkeep, and future extensibility.\nBelow is the very first article I wrote for SaaSquatch. While it feels a bit rough now years later, it still showcases my consistent author voice:\n\n\n\n\n\n\n\nSaaSquatch Growth Automation Platform\n\n\nFeature Highlight\n\n\n\n\n\n\n\n\nNo Matches Found",
+    "section": "Archive",
+    "text": "Archive\nSamples from older roles or projects.\n\nSaaSquatch\nBefore we had any formal technical writers at SaaSquatch, a B2B affiliate software startup, I created and maintained company-wide technical process, product and installation documentation. Using Contentful and a bit of cobbled together code, I overhauled our public knowledge base with a focus on accuracy, client accessibility, increased internal ease of upkeep, and future extensibility.\nBelow is the very first article I wrote for SaaSquatch. While it feels a bit rough now years later, it still showcases my consistent author voice:\n\n\n\n\n\n\n\nSaaSquatch Growth Automation Platform\n\n\nFeature Highlight\n\n\n\n\n\n\n\n\nNo Matches Found",
     "crumbs": [
       "Content Engineering",
       "Copywriting"
@@ -962,9 +953,10 @@
     "href": "samples/content-engineering/personal/portfolio/index.html",
     "title": "Portfolio",
     "section": "",
-    "text": "How this portfolio website is built and maintained, more or less.\n\n\n\n\n\n\n\nPortfolio Framework\n\n\n\n\n\n\n\n\n\n\n\n\nPortfolio Deployment\n\n\n\n\n\n\n\n\nNo Matches Found",
+    "text": "I designed and built this mobile-responsive portfolio website with Quarto and Bootstrap CSS, which automatically deploys to GitHub Pages and Netlify.\n\n\n\n\n\n\n\nPortfolio Framework\n\n\n\n\n\n\n\n\n\n\n\n\nPortfolio Deployment\n\n\n\n\n\n\n\n\nNo Matches Found",
     "crumbs": [
       "Content Engineering",
+      "Personal",
       "Portfolio"
     ]
   },
@@ -976,6 +968,7 @@
     "text": "Website files are generated by GitHub Workflows on the fly, then deployed to either Netlify or GitHub Pages.\nWebsite files are generated by GitHub Workflows1 on the fly, then deployed to either Netlify2 or GitHub Pages.3",
     "crumbs": [
       "Content Engineering",
+      "Personal",
       "Portfolio",
       "Deployment"
     ]
@@ -988,8 +981,69 @@
     "text": "Local Fallbacks\nI created a justfile14 (like a Makefile, but in Rust) to handle fallback cases locally, in the unlikely event that GitHub Actions is out of commission and I need to manually handle website deployments.\n14  beck-chan/portfolio: Justfile\njust staging\njust staging first runs spellcheck on relevant files and returns any errors:\n    npx cspell \"**/*.qmd\" --exclude \"_output\" --exclude \".quarto\" --exclude \"poetry/random/*\"\nIf no errors are found, the site is rendered with no PostHog tracking and deployed to Netlify, then a link to the staging preview site returned:\n    just _render\n    just _netlify _output \"$NETLIFY_PROJECT\" \"$message\"\n    echo \"{{staging_url}}\"\n\n\njust refresh\njust refresh clears the staging site with a replacement redirect to the production site, then returns a link to the staging preview site:\n    dir=\"$(mktemp -d)\"\n    printf '%s\\n' '/*    {{production_url}}    302' &gt; \"$dir/_redirects\"\n    printf '%s\\n' \\\n      '&lt;!doctype html&gt;' \\\n      '&lt;meta http-equiv=\"refresh\" content=\"0;url={{production_url}}\"&gt;' \\\n      '&lt;title&gt;Redirecting…&lt;/title&gt;' \\\n      '&lt;p&gt;No active preview. &lt;a href=\"{{production_url}}\"&gt;Go to portfolio&lt;/a&gt;.&lt;/p&gt;' \\\n      &gt; \"$dir/index.html\"\n    just _netlify \"$dir\" \"$NETLIFY_PROJECT\" \"$message\"\n    echo \"{{staging_url}}\"\n\n\njust production\njust production renders the site with PostHog tracking and copies the rendered output to the beck-chan/beck-chan.github.io repository, where GitHub Pages should automatically serve the site from the main branch:\n    just _render production\n    just _pages_sync\n    echo \"{{pages_repo_url}}\"\n\n\njust deploy\njust deploy manually deploys the files in from the main branch of beck-chan/beck-chan.github.io repository to GitHub Pages in the event that GitHub Workflows are out of commission and returns a link to the production site:\n    command -v gh &gt;/dev/null || { echo \"gh is required\" &gt;&2; exit 1; }\n    build_type=\"$(gh api repos/{{pages_repo}}/pages --jq '.build_type // \"legacy\"')\"\n    html_url=\"$(gh api repos/{{pages_repo}}/pages --jq '.html_url')\"\n    branch=\"$(gh api repos/{{pages_repo}}/pages --jq '.source.branch // empty')\"\n    echo \"Pages: ${html_url} (branch=${branch:-unknown}, build_type=${build_type})\"\n    if [ \"$build_type\" = \"workflow\" ]; then\n      echo \"GitHub Pages build_type is workflow (Actions). POST /pages/builds will not publish this site.\" &gt;&2\n      echo \"Use Settings → Pages → Source: Deploy from a branch (legacy) for this command.\" &gt;&2\n      exit 1\n    fi\n    if [ \"$dry\" -eq 1 ]; then\n      echo \"Would: POST /repos/{{pages_repo}}/pages/builds\"\n      echo \"{{production_url}}\"\n      exit 0\n    fi\n    gh api -X POST \"repos/{{pages_repo}}/pages/builds\" &gt;/dev/null\n    echo \"Latest build:\"\n    gh api \"repos/{{pages_repo}}/pages/builds/latest\" --jq '{status, commit, created_at, updated_at}'\n    echo \"{{production_url}}\"\n\n\njust release\njust release interactively generates the next semver tag and notes for the next release.\n\nTag RetrievalRelease Type SelectionRelease Notes BodyRelease Confirmation\n\n\nFirst we identify the bumped tags from the latest vX.Y.Z tags:\n    latest_major=0\n    latest_minor=0\n    latest_patch=0\n    while IFS= read -r tag; do\n      [ -z \"$tag\" ] && continue\n      if [[ \"$tag\" =~ ^v?([0-9]+)\\.([0-9]+)\\.([0-9]+)$ ]]; then\n        major=\"${BASH_REMATCH[1]}\"\n        minor=\"${BASH_REMATCH[2]}\"\n        patch=\"${BASH_REMATCH[3]}\"\n        if (( major &gt; latest_major \\\n          || (major == latest_major && minor &gt; latest_minor) \\\n          || (major == latest_major && minor == latest_minor && patch &gt; latest_patch) )); then\n          latest_major=$major\n          latest_minor=$minor\n          latest_patch=$patch\n        fi\n      fi\n    done &lt; &lt;(gh api --paginate \"repos/{{source_repo}}/tags\" --jq '.[].name')\n\n    major_tag=\"v$((latest_major + 1)).0.0\"\n    minor_tag=\"v${latest_major}.$((latest_minor + 1)).0\"\n    patch_tag=\"v${latest_major}.${latest_minor}.$((latest_patch + 1))\"\n    echo \"Latest: v${latest_major}.${latest_minor}.${latest_patch}\"\n    echo \"1. major  ${major_tag}  https://github.com/{{source_repo}}/releases/tag/${major_tag}\"\n    echo \"2. minor  ${minor_tag}  https://github.com/{{source_repo}}/releases/tag/${minor_tag}\"\n    echo \"3. patch  ${patch_tag}  https://github.com/{{source_repo}}/releases/tag/${patch_tag}\"\n\n\nUser is prompted to select the type of release: 1. major, 2. minor, or 3. patch\n    read -r -p \"Select bump (1/2/3): \" choice\n    case \"$choice\" in\n      1) new_tag=\"$major_tag\" ;;\n      2) new_tag=\"$minor_tag\" ;;\n      3) new_tag=\"$patch_tag\" ;;\n      *) echo \"Invalid choice: ${choice}\" &gt;&2; exit 1 ;;\n    esac\n\n    if gh api --paginate \"repos/{{source_repo}}/tags\" --jq '.[].name' | grep -Fxq \"$new_tag\"; then\n      echo \"Tag ${new_tag} already exists.\" &gt;&2\n      exit 1\n    fi\n\n\nUser is prompted to enter the release notes body. An empty body falls back to “No public-facing release notes,” then the PR template footer is appended:\n    echo \"Enter release notes. Finish with a line containing only END.\"\n    notes=\"\"\n    while IFS= read -r line || [ -n \"$line\" ]; do\n      [[ \"$line\" == \"END\" ]] && break\n      notes+=\"${line}\"$'\\n'\n    done\n    notes=\"$(printf '%s' \"$notes\" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')\"\n    if [ -z \"$notes\" ]; then\n      notes=\"No public-facing release notes.\"\n    fi\n\n    body=\"${notes}\n\n  &gt; **Browse the updated portfolio at: [{{production_url}}]({{production_url}})**\n\n  [How are releases generated?]({{production_url}}samples/content-engineering/personal/portfolio/deployment.html#release-notes)\"\n\n\nAfter confirmation, a GitHub release is created and the new release URL returned:\n    echo\n    echo \"----\"\n    echo \"Release ${new_tag}\"\n    printf '%s\\n' \"$body\"\n    echo \"----\"\n    read -r -p \"Create release? [y/N] \" confirm\n    case \"$confirm\" in\n      y|Y) ;;\n      *) echo \"Aborted.\"; exit 1 ;;\n    esac\n\n    printf '%s\\n' \"$body\" | gh release create \"$new_tag\" \\\n      --title \"Release ${new_tag}\" \\\n      --notes-file - \\\n      --target \"$(git rev-parse HEAD)\"\n    echo \"https://github.com/{{source_repo}}/releases/tag/${new_tag}\"",
     "crumbs": [
       "Content Engineering",
+      "Personal",
       "Portfolio",
       "Deployment"
+    ]
+  },
+  {
+    "objectID": "samples/content-engineering/personal/guestbook/index.html",
+    "href": "samples/content-engineering/personal/guestbook/index.html",
+    "title": "y2k Guestbook",
+    "section": "",
+    "text": "I designed and built a mobile-responsive interactive Next.js application, complete with LLM-friendly documentation in MDX and an API reference implemented with Scalar.",
+    "crumbs": [
+      "Content Engineering",
+      "Personal",
+      "y2k Guestbook"
+    ]
+  },
+  {
+    "objectID": "samples/content-engineering/personal/guestbook/index.html#wip-section",
+    "href": "samples/content-engineering/personal/guestbook/index.html#wip-section",
+    "title": "y2k Guestbook",
+    "section": "WIP section",
+    "text": "WIP section\n\n  \n    \n      \n    \n    \n      \n    \n  \n  wip\n\n\n  \n    \n      \n    \n  \n  mobile wip\n\n\n  \n    \n      \n    \n    \n      \n    \n  \n  wip\n\n\n  \n    \n      \n    \n  \n  mobile wip\n\n\n  \n    \n      \n    \n    \n      \n    \n  \n  wip\n\n\n  \n    \n      \n    \n  \n  mobile wip\n\n\n  \n    \n      \n    \n    \n      \n    \n  \n  wip\n\n\n  \n    \n      \n    \n  \n  mobile wip",
+    "crumbs": [
+      "Content Engineering",
+      "Personal",
+      "y2k Guestbook"
+    ]
+  },
+  {
+    "objectID": "samples/content-engineering/personal/guestbook/index.html#interactive-guestbook",
+    "href": "samples/content-engineering/personal/guestbook/index.html#interactive-guestbook",
+    "title": "y2k Guestbook",
+    "section": "Interactive Guestbook",
+    "text": "Interactive Guestbook",
+    "crumbs": [
+      "Content Engineering",
+      "Personal",
+      "y2k Guestbook"
+    ]
+  },
+  {
+    "objectID": "samples/content-engineering/personal/guestbook/index.html#documentation-build",
+    "href": "samples/content-engineering/personal/guestbook/index.html#documentation-build",
+    "title": "y2k Guestbook",
+    "section": "Documentation Build",
+    "text": "Documentation Build",
+    "crumbs": [
+      "Content Engineering",
+      "Personal",
+      "y2k Guestbook"
+    ]
+  },
+  {
+    "objectID": "samples/content-engineering/personal/guestbook/index.html#citation",
+    "href": "samples/content-engineering/personal/guestbook/index.html#citation",
+    "title": "y2k Guestbook",
+    "section": "Citation",
+    "text": "Citation",
+    "crumbs": [
+      "Content Engineering",
+      "Personal",
+      "y2k Guestbook"
     ]
   },
   {
@@ -1059,14 +1113,14 @@
     "href": "cv.html",
     "title": "curriculum vitae",
     "section": "",
-    "text": "ValidMind, Inc\n\nOwned Agile feature development from design to release supported by storytelling alongside SWEs in GitHub.\nImproved documentation and training through quality auditing and comprehensive redesigns using Quarto.\nAuthored 53% of user guidance content, including Jupyter Notebook samples for models and agentic systems.\nBridged gap between product design and user experience, verifying feature functionality and applying bug fixes.\nContributed to CI/CD infrastructure, open-source code libraries and software frontend built on TypeScript.\nDesigned, standardized, and implemented processes built to scale to close gaps and reduce team workload.\nSpearheaded the implementation of an extensible custom Zendesk solution.\n\n\n\n\n\n\nSaaSquatch by impact.com\n\nExecuted migration of evolving support processes to Freshdesk, resulting in a team 100% CSAT satisfaction rate.\nPioneered comprehensive reporting solutions, maintaining systematic report history to identify long-term trends.\nCreated exhaustive documentation, feedback metrics, and learning curriculums to onboard and train new agents.\nEmpowered users to understand and maximize the use of products by auditing and overhauling documentation.\n\n\n\n\nSaaSquatch by impact.com\n\nDesigned and led solo migration of support processes to Zendesk built to scale, increasing efficiency by 74%.\nManaged team escalations from complex technical cases, ensuring delivery of solutions to customers.\nProactively identified opportunities for customer growth and product improvements during ticket management.\nProvided advanced technical support for web and mobile SDKs built on JavaScript, REST API, and GraphQL.\n\n\n\n\nSaaSquatch by impact.com\n\nStreamlined workload by 51% through improvement of implementation processes and onboarding strategies.\nProactively created and maintained public documentation, focusing on accuracy, accessibility, and extensibility.\nProduced tangible results for customers by collaborating cross-functionally to deliver custom features.\nDesigned and executed solutions for custom JavaScript, REST API, and GraphQL software installations.\n\n\n\n\n\n\nDevelus Systems Inc. for Complia Health\n\nLed creation of a knowledge base to empower team members with extensive training and reference materials.\nCreated a mentorship and feedback program, strengthening team cohesion.\nTriaged, escalated, and owned resolution of product bugs for custom installations using Zendesk.\n\n\n\n\nAbeBooks.com, Amazon subsidiary\n\nExceeded target metric expectations at 160% while providing technical support in a fast-paced call center.\nInitiated improvements to best practices and processes, including documentation for team knowledge base.\n\n\n\n\nHudson’s Bay Optical\n\nMultitasked in a fast-paced sales environment to administer and facilitate the sale of prescription glasses.\nManaged patient charts, sales reports, office inventory and stock orders.\n\n\n\n\nInner Harbour Optometry\n\nManaged confidential medical charts while performing optometric testing and customer support.\nImproved patient re-call system to increase business revenue.\n\n\n\n\nSylvan Learning, Inc.\n\nCoached and assisted students on the classroom floor and in 1-on-1 lessons.\nCreated lesson plans and personalized curriculums tailored to individual student needs.\n\n\n\n\n\n\nTechnical Writing\n\nDocs-as-code engineering\nQuarto publishing\nJupyter Notebooks \nMarkdown\n\nSoftware Development\n\nCI/CD workflows\nGitHub\nCursor Code\nVisual Studio Code \nDocker\nPostman\nNetlify \n\nSolutions Architecture & Implementation\n\nREST API\nGraphQL\nJavaScript\nNext.js\nJSONata\nPython\nRust\nHTML \nCSS\nTypeScript\nSQL\nFTP\n\nAgents\n\nCursor\nClaude\nChatGPT\nGemini\nCopilot\n\nSupport Engineering & Lifecycle Automation\n\nZendesk\nFreshdesk\nZapier\nSalesforce\nHubSpot\nIntercom\nFront\n\nProject Management\n\nConfluence\nJira\nShortcut\nNotion\nAsana\nGoogle Workspace\nMicrosoft 365\nAdobe Creative Cloud\n\nIntegrations\n\nPayPal\nRecurly\nStripe\nBranch\nAppsFlyer"
+    "text": "ValidMind, Inc\n\nImproved documentation and training through quality auditing and comprehensive redesigns using Quarto.\nAuthored 53% of user guidance content, including Jupyter Notebook samples for models and agentic systems.\nContributed to CI/CD infrastructure, open-source code libraries and software frontend built on TypeScript.\nOwned Agile feature development from design to release supported by storytelling alongside SWEs in GitHub.\nDesigned, standardized, and implemented processes built to scale to close gaps and reduce team workload.\nSpearheaded the implementation of an extensible custom Zendesk solution.\nBridged gap between product design and user experience, verifying feature functionality and applying bug fixes.\n\n\n\n\n\n\nSaaSquatch by impact.com\n\nCreated exhaustive documentation, feedback metrics, and learning curriculums to onboard and train new agents.\nEmpowered users to understand and maximize the use of products by auditing and overhauling documentation.\nExecuted migration of evolving support processes to Freshdesk, resulting in a team 100% CSAT satisfaction rate.\nPioneered comprehensive reporting solutions, maintaining systematic report history to identify long-term trends.\n\n\n\n\nSaaSquatch by impact.com\n\nDesigned and led solo migration of support processes to Zendesk built to scale, increasing efficiency by 74%.\nProactively identified opportunities for customer growth and product improvements during ticket management.\nManaged team escalations from complex technical cases, ensuring delivery of solutions to customers.\nProvided advanced technical support for web and mobile SDKs built on JavaScript, REST API, and GraphQL API.\n\n\n\n\nSaaSquatch by impact.com\n\nProactively created and maintained public documentation, focusing on accuracy, accessibility, and extensibility.\nStreamlined workload by 51% through improvement of implementation processes and onboarding strategies.\nProduced tangible results for customers by collaborating cross-functionally to deliver custom features.\nDesigned and executed solutions for custom JavaScript, REST API, and GraphQL API software installations.\n\n\n\n\n\n\nDevelus Systems Inc. for Complia Health\n\nLed creation of a knowledge base to empower team members with extensive training and reference materials.\nCreated a mentorship and feedback program, strengthening team cohesion.\nTriaged, escalated, and owned resolution of product bugs for custom installations using Zendesk.\n\n\n\n\nAbeBooks.com, Amazon subsidiary\n\nExceeded target metric expectations at 160% while providing technical support in a fast-paced call center.\nInitiated improvements to best practices and processes, including documentation for team knowledge base.\n\n\n\n\nHudson’s Bay Optical\n\nMultitasked in a fast-paced sales environment to administer and facilitate the sale of prescription glasses.\nManaged patient charts, sales reports, office inventory and stock orders.\n\n\n\n\nInner Harbour Optometry\n\nManaged confidential medical charts while performing optometric testing and customer support.\nImproved patient re-call system to increase business revenue.\n\n\n\n\nSylvan Learning, Inc.\n\nCoached and assisted students on the classroom floor and in 1-on-1 lessons.\nCreated lesson plans and personalized curriculums tailored to individual student needs.\n\n\n\n\n\n\nTechnical Writing\n\nDocs-as-code engineering\nMDX\nQuarto publishing\nJupyter Notebooks\nContentful\nMarkdown\n\nIntegration & API Architecture\n\nOpenAPI\nScalar\nRest API\nGraphQL API\nJSONata\nPostman\n\nLanguages & Libraries\n\nNode.js\nTypeScript\nJavaScript\nTailwind CSS\nBootstrap CSS\nHTML5\nCSS3\nPython\nLua\nRust\n\nData & Cloud Infrastructure\n\nGitHub\nPostgreSQL\nSupabase\nDocker\nNetlify\nVercel\nCI/CD workflows\n\nEnterprise Operations & Automation\n\nSalesforce\nZendesk\nFreshdesk\nHubSpot\nZapier\nIntercom\nFront\n\nAgile Project Management\n\nJira\nConfluence\nShortcut\nAsana\nNotion\nGoogle Workspace\nMicrosoft 365\n\nAI & Agentic Workflows\n\nCursor\nClaude\nGitHub Copilot\nChatGPT\nGemini\n\nIntegrations\n\nPayPal\nRecurly\nStripe\nBranch\nAppsFlyer"
   },
   {
     "objectID": "cv.html#work-experience",
     "href": "cv.html#work-experience",
     "title": "curriculum vitae",
     "section": "",
-    "text": "ValidMind, Inc\n\nOwned Agile feature development from design to release supported by storytelling alongside SWEs in GitHub.\nImproved documentation and training through quality auditing and comprehensive redesigns using Quarto.\nAuthored 53% of user guidance content, including Jupyter Notebook samples for models and agentic systems.\nBridged gap between product design and user experience, verifying feature functionality and applying bug fixes.\nContributed to CI/CD infrastructure, open-source code libraries and software frontend built on TypeScript.\nDesigned, standardized, and implemented processes built to scale to close gaps and reduce team workload.\nSpearheaded the implementation of an extensible custom Zendesk solution.\n\n\n\n\n\n\nSaaSquatch by impact.com\n\nExecuted migration of evolving support processes to Freshdesk, resulting in a team 100% CSAT satisfaction rate.\nPioneered comprehensive reporting solutions, maintaining systematic report history to identify long-term trends.\nCreated exhaustive documentation, feedback metrics, and learning curriculums to onboard and train new agents.\nEmpowered users to understand and maximize the use of products by auditing and overhauling documentation.\n\n\n\n\nSaaSquatch by impact.com\n\nDesigned and led solo migration of support processes to Zendesk built to scale, increasing efficiency by 74%.\nManaged team escalations from complex technical cases, ensuring delivery of solutions to customers.\nProactively identified opportunities for customer growth and product improvements during ticket management.\nProvided advanced technical support for web and mobile SDKs built on JavaScript, REST API, and GraphQL.\n\n\n\n\nSaaSquatch by impact.com\n\nStreamlined workload by 51% through improvement of implementation processes and onboarding strategies.\nProactively created and maintained public documentation, focusing on accuracy, accessibility, and extensibility.\nProduced tangible results for customers by collaborating cross-functionally to deliver custom features.\nDesigned and executed solutions for custom JavaScript, REST API, and GraphQL software installations.\n\n\n\n\n\n\nDevelus Systems Inc. for Complia Health\n\nLed creation of a knowledge base to empower team members with extensive training and reference materials.\nCreated a mentorship and feedback program, strengthening team cohesion.\nTriaged, escalated, and owned resolution of product bugs for custom installations using Zendesk.\n\n\n\n\nAbeBooks.com, Amazon subsidiary\n\nExceeded target metric expectations at 160% while providing technical support in a fast-paced call center.\nInitiated improvements to best practices and processes, including documentation for team knowledge base.\n\n\n\n\nHudson’s Bay Optical\n\nMultitasked in a fast-paced sales environment to administer and facilitate the sale of prescription glasses.\nManaged patient charts, sales reports, office inventory and stock orders.\n\n\n\n\nInner Harbour Optometry\n\nManaged confidential medical charts while performing optometric testing and customer support.\nImproved patient re-call system to increase business revenue.\n\n\n\n\nSylvan Learning, Inc.\n\nCoached and assisted students on the classroom floor and in 1-on-1 lessons.\nCreated lesson plans and personalized curriculums tailored to individual student needs.\n\n\n\n\n\n\nTechnical Writing\n\nDocs-as-code engineering\nQuarto publishing\nJupyter Notebooks \nMarkdown\n\nSoftware Development\n\nCI/CD workflows\nGitHub\nCursor Code\nVisual Studio Code \nDocker\nPostman\nNetlify \n\nSolutions Architecture & Implementation\n\nREST API\nGraphQL\nJavaScript\nNext.js\nJSONata\nPython\nRust\nHTML \nCSS\nTypeScript\nSQL\nFTP\n\nAgents\n\nCursor\nClaude\nChatGPT\nGemini\nCopilot\n\nSupport Engineering & Lifecycle Automation\n\nZendesk\nFreshdesk\nZapier\nSalesforce\nHubSpot\nIntercom\nFront\n\nProject Management\n\nConfluence\nJira\nShortcut\nNotion\nAsana\nGoogle Workspace\nMicrosoft 365\nAdobe Creative Cloud\n\nIntegrations\n\nPayPal\nRecurly\nStripe\nBranch\nAppsFlyer"
+    "text": "ValidMind, Inc\n\nImproved documentation and training through quality auditing and comprehensive redesigns using Quarto.\nAuthored 53% of user guidance content, including Jupyter Notebook samples for models and agentic systems.\nContributed to CI/CD infrastructure, open-source code libraries and software frontend built on TypeScript.\nOwned Agile feature development from design to release supported by storytelling alongside SWEs in GitHub.\nDesigned, standardized, and implemented processes built to scale to close gaps and reduce team workload.\nSpearheaded the implementation of an extensible custom Zendesk solution.\nBridged gap between product design and user experience, verifying feature functionality and applying bug fixes.\n\n\n\n\n\n\nSaaSquatch by impact.com\n\nCreated exhaustive documentation, feedback metrics, and learning curriculums to onboard and train new agents.\nEmpowered users to understand and maximize the use of products by auditing and overhauling documentation.\nExecuted migration of evolving support processes to Freshdesk, resulting in a team 100% CSAT satisfaction rate.\nPioneered comprehensive reporting solutions, maintaining systematic report history to identify long-term trends.\n\n\n\n\nSaaSquatch by impact.com\n\nDesigned and led solo migration of support processes to Zendesk built to scale, increasing efficiency by 74%.\nProactively identified opportunities for customer growth and product improvements during ticket management.\nManaged team escalations from complex technical cases, ensuring delivery of solutions to customers.\nProvided advanced technical support for web and mobile SDKs built on JavaScript, REST API, and GraphQL API.\n\n\n\n\nSaaSquatch by impact.com\n\nProactively created and maintained public documentation, focusing on accuracy, accessibility, and extensibility.\nStreamlined workload by 51% through improvement of implementation processes and onboarding strategies.\nProduced tangible results for customers by collaborating cross-functionally to deliver custom features.\nDesigned and executed solutions for custom JavaScript, REST API, and GraphQL API software installations.\n\n\n\n\n\n\nDevelus Systems Inc. for Complia Health\n\nLed creation of a knowledge base to empower team members with extensive training and reference materials.\nCreated a mentorship and feedback program, strengthening team cohesion.\nTriaged, escalated, and owned resolution of product bugs for custom installations using Zendesk.\n\n\n\n\nAbeBooks.com, Amazon subsidiary\n\nExceeded target metric expectations at 160% while providing technical support in a fast-paced call center.\nInitiated improvements to best practices and processes, including documentation for team knowledge base.\n\n\n\n\nHudson’s Bay Optical\n\nMultitasked in a fast-paced sales environment to administer and facilitate the sale of prescription glasses.\nManaged patient charts, sales reports, office inventory and stock orders.\n\n\n\n\nInner Harbour Optometry\n\nManaged confidential medical charts while performing optometric testing and customer support.\nImproved patient re-call system to increase business revenue.\n\n\n\n\nSylvan Learning, Inc.\n\nCoached and assisted students on the classroom floor and in 1-on-1 lessons.\nCreated lesson plans and personalized curriculums tailored to individual student needs.\n\n\n\n\n\n\nTechnical Writing\n\nDocs-as-code engineering\nMDX\nQuarto publishing\nJupyter Notebooks\nContentful\nMarkdown\n\nIntegration & API Architecture\n\nOpenAPI\nScalar\nRest API\nGraphQL API\nJSONata\nPostman\n\nLanguages & Libraries\n\nNode.js\nTypeScript\nJavaScript\nTailwind CSS\nBootstrap CSS\nHTML5\nCSS3\nPython\nLua\nRust\n\nData & Cloud Infrastructure\n\nGitHub\nPostgreSQL\nSupabase\nDocker\nNetlify\nVercel\nCI/CD workflows\n\nEnterprise Operations & Automation\n\nSalesforce\nZendesk\nFreshdesk\nHubSpot\nZapier\nIntercom\nFront\n\nAgile Project Management\n\nJira\nConfluence\nShortcut\nAsana\nNotion\nGoogle Workspace\nMicrosoft 365\n\nAI & Agentic Workflows\n\nCursor\nClaude\nGitHub Copilot\nChatGPT\nGemini\n\nIntegrations\n\nPayPal\nRecurly\nStripe\nBranch\nAppsFlyer"
   },
   {
     "objectID": "cv.html#education",
@@ -1080,7 +1134,7 @@
     "href": "cv.html#projects",
     "title": "curriculum vitae",
     "section": "Projects",
-    "text": "Projects\n\n\n\n\nPersonal Portfolio\nhttps://beck-chan.github.io\n\nMobile-responsive build using Quarto, deployed to GitHub Pages and Netlify via GitHub CI/CD Workflows.\nCustom themes and styling using Bootstrap. Custom functionality added with JavaScript and Lua.\nLocal deployment fallbacks via Justfile in Rust."
+    "text": "Projects\n\n\ny2k Guestbook\nhttps://beck-chan.vercel.app\n\nMobile-responsive frontend built on Next.js and Tailwind CSS, integrated Supabase edge functions and backend.\nBuilt-in rate limiting and profanity filtering. Admin functionality for comment management and customization.\nLLM-friendly docs in MDX, API reference implemented with Scalar. Admin gating via Google OAuth 2.0.\n\n\n\nPersonal Portfolio\nhttps://beck-chan.github.io\n\nMobile-responsive build using Quarto, deployed to GitHub Pages and Netlify via GitHub CI/CD Workflows.\nCustom themes and styling using Bootstrap. Custom functionality added with JavaScript and Lua.\nLocal deployment fallbacks via Justfile in Rust."
   },
   {
     "objectID": "index.html",
@@ -1107,6 +1161,16 @@
     ]
   },
   {
+    "objectID": "samples/content-engineering/index.html#personal",
+    "href": "samples/content-engineering/index.html#personal",
+    "title": "Content Engineering",
+    "section": "Personal",
+    "text": "Personal\nSome behind-the-scenes insights into how I built this portfolio site and other projects, created to showcase my abilities as a content architect.\n\n\n\n\n\n\n\ny2k Guestbook\n\n\nContent Engineering\n\n\n\n\n\n\n\n\n\n\n\n\nPortfolio\n\n\nContent Engineering\n\n\n\n\n\n\n\n\nNo Matches Found",
+    "crumbs": [
+      "Content Engineering"
+    ]
+  },
+  {
     "objectID": "samples/content-engineering/index.html#validmind",
     "href": "samples/content-engineering/index.html#validmind",
     "title": "Content Engineering",
@@ -1117,13 +1181,14 @@
     ]
   },
   {
-    "objectID": "samples/content-engineering/index.html#personal",
-    "href": "samples/content-engineering/index.html#personal",
-    "title": "Content Engineering",
-    "section": "Personal",
-    "text": "Personal\nSome behind-the-scenes insights into how I built this portfolio site and other projects.\n\n\n\n\n\n\n\nPortfolio\n\n\nContent Engineering\n\n\n\n\n\n\n\n\nNo Matches Found",
+    "objectID": "samples/content-engineering/personal/index.html",
+    "href": "samples/content-engineering/personal/index.html",
+    "title": "Personal",
+    "section": "",
+    "text": "Some behind-the-scenes insights into how I built this portfolio site and other projects, created to showcase my abilities as a content architect.\n\n\n\n\n\n\n\ny2k Guestbook\n\n\nContent Engineering\n\n\n\n\n\n\n\n\n\n\n\n\nPortfolio\n\n\nContent Engineering\n\n\n\n\n\n\n\n\nNo Matches Found",
     "crumbs": [
-      "Content Engineering"
+      "Content Engineering",
+      "Personal"
     ]
   },
   {
@@ -1134,6 +1199,7 @@
     "text": "This static portfolio site is built using Quarto, styled with custom Bootstrap themes, and deployed by GitHub Workflows.\nThis static portfolio site is built using Quarto,1 styled with custom Bootstrap themes,2 and deployed with GitHub Workflows.3",
     "crumbs": [
       "Content Engineering",
+      "Personal",
       "Portfolio",
       "Framework"
     ]
@@ -1146,6 +1212,7 @@
     "text": "Authoring\nI choose Quarto because Quarto is extensible, but simple to use.\n\n\n\n\n\n\nTipWhat is Quarto?\n\n\n\n\n\nQuarto is not a traditional Content Management System (CMS), but an open-source publication framework.\nFrom your variety of source files, Quarto can build file formats such as .html or .pdf, and can natively run code within your content in languages such as Python or R to include live outputs.\n\n\n\n\nContent\n\nIndependent PagesSingle-Sourced ContentSearching ContentMobile View\n\n\nPortfolio content is written in .qmd files, Quarto’s version of Markdown where you specify metadata in a YAML frontmatter block.\nFor example:\n---\ntitle: \"Portfolio\"\nsubtitle: \"Content Engineering\"\ncategories: [\"Content Architecture\", \"Quarto\", \"GitHub Pages\", \"Netlify\", \"CI/CD Workflows\", \"Frontend Development\"]\n---\n\nHow [https://beck-chan.github.io/](https://beck-chan.github.io/) is built and maintained.\n\n\nContent that is repeated can be single-sourced from Quarto Includes4 _*.qmd files, allowing for updates to shared content across multiple pages without having to manually update each page.\n4 Quarto: IncludesFor example, my introduction for one of the organizations I’ve worked with, ValidMind …\n{{&lt; include /samples/single-source/validmind/_validmind.qmd &gt;}}\n… renders as the below snippet everywhere it’s embedded:\n\nI was the sole Senior Technical Writer for ValidMind, a generative artificial intelligence financial services startup, where I employed docs-as-code methodologies alongside software engineers delivering documentation as part of product in the same development ecosystem, transforming a minimal set of user guide drafts into a fully idealized and comprehensive knowledge base.\n\n\n\nQuarto offers built-in indexing and searching capabilities,5 placed in the top navigation via an independent top-level frontmatter file called _quarto.yml:\n5 Quarto: Website Search  search:\n    location: navbar\nI’ve also written a quick script to embed the same search within a page’s content itself for ease of access:6\n6  beck-chan/portfolio/assets: search.html\n\n\n    \n    Search Portfolio\n    /\n\n\n\n\n\n\nI implemented better support for viewing the portfolio on mobile devices by using Tachyons flex7 classes for columns, and adjusting parts of the theme to be more mobile-friendly:8\n7 Tachyons: Flexbox8 Styling\n  \n    \n      \n    \n  \n  Portfolio in Mobile View\n\n\n\n\n\n\nNavigation\nFilepaths are defined by directory structure, and then link display specified in the top or side navigation bars via _*.yml files.\n\nTop NavigationSidebarsFooter\n\n\nThe consistent top navigation bar is defined in the root directory with our top-level _quarto.yml:\n# Include the independent directory _sidebar.yaml files to display the correct sidenavs \nmetadata-files:\n  - samples/content-engineering/_sidebar.yaml\n  - samples/technical-writing/_sidebar.yaml\n  - samples/copywriting/_sidebar.yaml\n\n# Define the top navigation bar\nwebsite:\n  title: \"Portfolio\"\n  favicon: assets/headshot.png\n  page-navigation: true\n  navbar:\n    left:\n      - samples/content-engineering/index.qmd\n      - samples/technical-writing/index.qmd\n      - samples/copywriting/index.qmd\n    right:\n      - cv.qmd\n      - text: '[{{&lt; fa brands github &gt;}}]{title=\"GitHub / beck-chan\"}'\n        target: _blank\n        href: https://github.com/beck-chan\n        aria-label: GitHub\n      - text: '[{{&lt; fa brands linkedin &gt;}}]{title=\"LinkedIn / beck-chan\"}'\n        target: _blank\n        href: https://linkedin.com/in/beck-chan\n        aria-label: LinkedIn\n      - text: '[{{&lt; fa envelope &gt;}}]{title=\"Email / beckchan.tech@gmail.com\"}'\n        href: mailto:beckchan.tech@gmail.com\n        target: _blank\n        aria-label: Email\n      - text: '[{{&lt; fa feather &gt;}}]{title=\"Poetry\"}'\n        href: poetry/index.qmd\n        aria-label: Poetry\n\n\nEach external facing directory has its own _sidebar.yml and _metadata.yml files that defines the sidebar navigation for that directory.\nFor the content-engineering/ directory, the contents of those two files are:\n# _sidebar.yaml\nwebsite:\n  sidebar:\n    - id: content\n      title: \"Content Engineering\"\n      contents:\n        - text: \"Content Engineering\"\n          file: samples/content-engineering/index.qmd\n        - text: \"---\"\n        - section: \"ValidMind\"\n          href: samples/content-engineering/validmind/index.qmd\n          contents:\n            - text: \"Developer Library\"\n              file: samples/content-engineering/validmind/library.qmd\n            - text: \"Training\"\n              file: samples/content-engineering/validmind/academy.qmd\n            - text: \"Release Notes\"\n              file: samples/content-engineering/validmind/releases.qmd\n            - text: \"Quickstarts\"\n              file: samples/content-engineering/validmind/quickstarts.qmd\n            - text: \"Documentation Redesign\"\n              file: samples/content-engineering/validmind/redesign.qmd\n\n        #  And all the rest...\n# _metadata.yml\nformat:\n  html:\n    sidebar: content\n\n\nSimilarly, the footer is also defined in _quarto.yml:\n  page-footer:\n    left:\n      - text: \"Releases\"\n        href: https://github.com/beck-chan/portfolio/releases\n        target: _blank\n    center:\n      - text: \"{{&lt; fa brands github &gt;}} Report Issue\"\n        href: https://github.com/beck-chan/portfolio/issues\n        target: _blank\n    right:\n      - text: \"&#169; 2026 &lt;b&gt;Beck Chan&lt;/b&gt;. All rights reserved.\"",
     "crumbs": [
       "Content Engineering",
+      "Personal",
       "Portfolio",
       "Framework"
     ]
@@ -1158,6 +1225,7 @@
     "text": "Styling\nQuarto offers a few built-in themes, but I chose define custom themes using Bootstrap (.scss).\n\nCore Theming\nThemes are defined in the root directory with our top-level _quarto.yml:\n    theme:\n    # default theme\n      light: assets/themes/default/styles.scss\n    # monochrome theme\n      dark: assets/themes/minimal/styles.scss\n    syntax-highlighting:\n    # default theme\n      light: assets/themes/default/code.theme\n    # muted theme\n      dark: assets/themes/minimal/code.theme\nFor reference, this is how the portfolio looks without my custom themes applied:9\n9 View Unstyled Portfolio\n  \n    \n      \n    \n    \n      \n    \n  \n  Unstyled Portfolio\n\n\nFull Colour ThemeMonochrome Theme\n\n\nDefault theme users see when they load the portfolio. Defined in assets/themes/default/styles.scss:10\n10  beck-chan/portfolio/assets: styles.scss/*-- scss:defaults --*/\n\n// Foundations\n$body-bg: #fff8f9; // Page colour\n$body-color: #0b2a12; // Font colour\n$navbar-bg: #0b2a12; // Top nav bg colour\n$sidebar-bg: #fee3e5; // Side nav bg colour\n$navbar-padding-y: 1rem; // Top nav padding\n$sidebar-padding-y: 1rem; // Top nav padding\n$footer-bg: #df9a49; // Footer bg\n\n// And so on\n\n\n/*-- scss:rules --*/\n\n/* Import modular SCSS files */\n@import '_styles/links';\n@import '_styles/nav';\n@import '_styles/content';\n@import '_styles/margin';\n@import '_styles/mobile';\nAnd code styling is defined in assets/themes/default/code.theme:11\n11  beck-chan/portfolio/assets: code.theme{\n  \"text-color\": \"#df9a49\",\n  \"background-color\": \"#0b2a12\",\n  \"line-number-color\": \"#4a5d4e\",\n  \"text-styles\": {\n    \"Normal\": { \"text-color\": \"#df9a49\" },\n    \"Variable\": { \"text-color\": \"#df9a49\" },\n    \"Other\": { \"text-color\": \"#e8b06a\" },\n\n    // And so on ...\n\n  }\n}\n\n\nYou can toggle this theme in the top navigation bar by clicking . Defined in assets/themes/minimal/styles.scss:12\n12  beck-chan/portfolio/assets: styles.scss/*-- scss:defaults --*/\n\n// Foundations\n$body-bg: #FFFFFF; // Page colour\n$body-color: #212121; // Font colour\n$navbar-bg: #000000; // Top nav bg colour\n$sidebar-bg: #e9e9e9; // Side nav bg colour\n$navbar-padding-y: 1rem; // Top nav padding\n$sidebar-padding-y: 1rem; // Top nav padding\n\n// And so on\n\n\n/*-- scss:rules --*/\n\n/* Import modular SCSS files */\n@import '_styles/links-min';\n@import '_styles/nav-min';\n@import '_styles/content-min';\n@import '_styles/margin-min';\n@import '_styles/mobile-min';\nAnd code styling is defined in assets/themes/minimal/code.theme:13\n13  beck-chan/portfolio/assets: code.theme{\n  \"text-color\": \"#c2a077\",\n  \"background-color\": \"#212121\",\n  \"line-number-color\": \"#505952\",\n  \"text-styles\": {\n    \"Normal\": { \"text-color\": \"#c2a077\" },\n    \"Variable\": { \"text-color\": \"#c2a077\" },\n    \"Other\": { \"text-color\": \"#d0b491\" },\n\n    // And so on ...\n  }\n}\n\n\n\n\n\nCustom Adjustments\nThere’s a limit to what you can adjust with CSS due to Quarto’s quirks, so I have some additional custom script adjustments set in _quarto.yml under include-after-body:\n    include-after-body:\n      - assets/margin-below-toc.html\n      - assets/sticky-toc-toggle.html\n      - assets/pin-sidenav.html\n      - assets/anchor-offset.html\n\nPinned SidenavMargin Below ToCSticky ToC Drop-DownAnchor Link Offset\n\n\nassets/pin-sidenav.html:14 Patch for Quarto’s left sidebar scrolling vertically with the page instead of staying fixed, since CSS alone can’t pin the sidebar reliably without breaking the page layout.\n14  beck-chan/portfolio/assets: pin-sidenav.html\n\nBefore\n\n\n\nSidebar Scrolling Up\n\n\n\n\nAfter\n\n\n\nSidebar Stays Fixed\n\n\n\n\n\n\nFootnotes are positioned in the right margin as a matter of personal preference, which means that they can overlap with the table of contents, any category filtering options, and the footer when the margin stacks tall, as well as break tabset containment.\nassets/margin-below-toc.html:15 Cascades notes below the table of contents and category filters, pads the main content area when margin outgrows the body so it doesn’t collide with the footer, and hoists footnotes attached to tabset content into a sibling container.\n15  beck-chan/portfolio/assets: margin-below-toc.html\n\nBefore\n\n\n\nTable of Contents & Category Filters Overlap\n\n\n\n\nAfter\n\n\n\nTable of Contents & Category Filters Don’t Overlap\n\n\n\n\n\n\nassets/sticky-toc-toggle.html:16 Shows a fixed table of contents dropdown when the page scrolls past the inline table of contents, allowing access to the table of contents anywhere on the page.\n16  beck-chan/portfolio/assets: sticky-toc-toggle.html\n\n\n\n\nTable of Contents Inline\n\n\n\n\n\n\n\nTable of Contents Drop-Down\n\n\n\n\n\n\nWith CSS I applied a fixed top navigation bar, causing anchor links to scroll to their targets under the heading hiding information. CSS scroll-margin on headings is unreliable because Quarto lays pages out as a CSS grid, and Quarto’s own hash handler fires before the browser has finished scrolling.\nassets/anchor-offset.html:17 Waits for the native scroll to finish, then nudges the page so the target sits 80px below the 75px height of the header.\n17  beck-chan/portfolio/assets: anchor-offset.html\n\nBefore\n\n\n\nHeading Hidden by Header\n\n\n\n\nAfter\n\n\n\nHeading Offset Below Header",
     "crumbs": [
       "Content Engineering",
+      "Personal",
       "Portfolio",
       "Framework"
     ]
@@ -1170,6 +1238,7 @@
     "text": "Extensions\nI’ve also written a few Quarto Extensions18 in Lua for custom functionality I found myself reusing and wanted to simplify the implementation of.\n18 Quarto: Extensions\nCode FoldingEmbedded IframesMobile Category Filter\n\n\nQuarto’s build-in option for folding code19 only covers executable cell output. This extension allows non-executable fenced code blocks to be wrapped in a &lt;details&gt; toggle used below:20\n19 Quarto: HTML Code Blocks20  beck-chan/portfolio/: fold-code.lua\nview code\nlocal function is_html()\n  return quarto.doc.is_format(\"html:js\") or quarto.doc.is_format(\"html\")\nend\n\nlocal function escape_html(text)\n  return text\n    :gsub(\"&\", \"&amp;\")\n    :gsub(\"&lt;\", \"&lt;\")\n    :gsub(\"&gt;\", \"&gt;\")\n    :gsub('\"', \"&quot;\")\nend\n\nlocal function normalize_fold(value)\n  if value == nil then\n    return nil\n  end\n  local fold = pandoc.utils.stringify(value):lower()\n  if fold == \"true\" then\n    return \"true\"\n  elseif fold == \"false\" then\n    return \"false\"\n  end\n  return nil\nend\n\nfunction CodeBlock(block)\n  if not is_html() then\n    return nil\n  end\n\n  local fold = normalize_fold(block.attributes[\"fold\"])\n  if fold == nil and block.classes:includes(\"fold\") then\n    fold = \"true\"\n  end\n  if fold == nil then\n    return nil\n  end\n\n  local summary = block.attributes[\"summary\"] or \"show code\"\n  summary = escape_html(pandoc.utils.stringify(summary))\n\n  block.attributes[\"fold\"] = nil\n  block.attributes[\"summary\"] = nil\n  block.classes = block.classes:filter(function(class)\n    return class ~= \"fold\"\n  end)\n\n  local open = fold == \"false\" and \" open\" or \"\"\n  return pandoc.Div({\n    pandoc.RawBlock(\n      \"html\",\n      \"&lt;details class=\\\"code-fold\\\"\" .. open .. \"&gt;&lt;summary&gt;\" .. summary .. \"&lt;/summary&gt;\"\n    ),\n    block,\n    pandoc.RawBlock(\"html\", \"&lt;/details&gt;\")\n  }, pandoc.Attr(\"\", { \"code-fold-wrap\" }))\nend\n\n\n\n\nEmbeds an iframe with a fenced div with options to include a caption under the iframe, as well as adjust zoom, sizing, and loading configurations:21\n21  beck-chan/portfolio/: iframe.lua\n  \n    \n      \n    \n    \n      \n    \n  \n  Embedded Portfolio in Iframe\n\n\n\nWhen enabled, Quarto’s category page filters display in the right margin on desktop,22 but are hidden by default on mobile. To solve this, I embedded a category filter as an inline drop-down for mobile view:23\n22 Quarto: Document Listings23  beck-chan/portfolio/: category-filter.lua\n\n\nInline Category Filter on Mobile",
     "crumbs": [
       "Content Engineering",
+      "Personal",
       "Portfolio",
       "Framework"
     ]
@@ -1182,6 +1251,7 @@
     "text": "Publishing\nI’ve chosen to automate the publishing process in the spirit of Continuous Integration and Continuous Delivery and Deployment (CI/CD), letting GitHub Workflows handle both generating (via quarto render) the website files from the source .qmd files, and deploying the completed site to GitHub Pages and Netlify where my production and staging portfolios are respectively hosted.\n\nOutputPull Requests (PRs)\n\n\nThe first thing I did was define the output directory and and how and what files should be rendered in _quarto.yml:\nproject:\n  type: website\n  output-dir: _output # The default is _site\n  render:\n    - \"**/*.qmd\"\n    - \"**/*.ipynb\"\nIn my .gitignore, I’ve added the _output directory to avoid committing website files to the repository whenever they are generated locally by previewing or testing as I want rendering to actually be done on the fly via GitHub Actions.\n\n\n\n\n\n\nThis prevents me from ever accidentally forgetting to render the updated output files before calling it done, and as a result having outdated files displaying on the live portfolio site.\n\n\n\n\n\nSince the content for this portfolio lives in my GitHub repository,24 I’ve also decided to use pull requests to merge major changes into my main branch as part of good version control practices even if I’m the only one working on any changes.\n24  beck-chan/portfolio25  beck-chan/portfolio/.github/: pull_request_template.mdEach PR top-level comment is autopopulated with content from a PR template,25 that includes information on how to trigger automated release notes:\n&lt;!-- Any internal notes go here --&gt;\n\n## Release Notes\n\n&lt;!-- \n\nTag the PR with one of the following labels so that releases.yaml can automatically generate a GitHub release bump:\n\n1. `major` (example: 1.0.0)\n2. `minor` (example: 1.1.0)\n3. `patch` (example: 1.1.1)\n\nTagging with more than one label will give precedence in the order as numbered.\n\nInclude any release notes you want displayed under this section.\n\n--&gt;\n\n&lt;!-- Leave below untouched --&gt;\n\n&gt; **Browse the updated portfolio at: [https://beck-chan.github.io/](https://beck-chan.github.io/)**\n\n[How are releases generated?](https://beck-chan.github.io/samples/content-engineering/personal/portfolio/deployment.html#release-notes)\nUtilizing pull requests allows me to streamline a few additional things with GitHub Workflows and automate (more on the last three in Portfolio Deployment):\n\nSpellchecking relevant files and looking for broken links as part of PR checks.\nRendering and deploying the rendered files to Netlify for an open PR to my staging site.\nGenerating release notes from PRs tagged with specific labels.\nRendering and deploying the rendered files to GitHub Pages production site when the PR is merged into main.\n\nThe following GitHub Workflows run when a PR is opened, or when a commit is sent up to a branch connected to a PR:\n\nSpellcheckBroken Link Check\n\n\n.github/workflows/spellcheck.yaml26 Checks for spelling errors in relevant *.qmd files, then adds a comment with the results when complete:27\n26  beck-chan/portfolio/.github/workflows: spellcheck.yaml27 Spellcheck Comment:\n\nview example\n### Spelling errors found\n\npoetry/random/24-guests.qmd:11:10 - Unknown word (wolfberries)\npoetry/random/derelict-dog-star.qmd:11:2 - Unknown word (emsp)\npoetry/random/derelict-dog-star.qmd:19:17 - Unknown word (Laika)\npoetry/random/persimmons.qmd:50:40 - Unknown word (cinnabarite)\npoetry/random/persimmons.qmd:51:18 - Unknown word (vermillion) fix: (vermilion)\npoetry/random/taken.qmd:12:16 - Unknown word (Wheelock's)\npoetry/random/taken.qmd:15:8 - Unknown word (rapio)\npoetry/random/taken.qmd:15:15 - Unknown word (rapere)\npoetry/random/taken.qmd:15:23 - Unknown word (rapui)\npoetry/random/taken.qmd:15:30 - Unknown word (raptum)\npoetry/random/taken.qmd:23:7 - Unknown word (ingly)\npoetry/random/taken.qmd:25:9 - Unknown word (rapior)\npoetry/random/taken.qmd:28:19 - Unknown word (suffereth)\npoetry/random/taken.qmd:29:11 - Unknown word (violenti)\npoetry/random/taken.qmd:29:20 - Unknown word (rapiunt)\npoetry/random/taken.qmd:29:28 - Unknown word (illa)\npoetry/random/taken.qmd:32:7 - Unknown word (iful)\npoetry/random/taken.qmd:36:32 - Unknown word (Oothoon)\npoetry/random/taken.qmd:39:8 - Unknown word (impeity)\npoetry/random/to-dc.qmd:14:1 - Unknown word (Aegeas)\n\n\n\nshow code\n        # Set up steps ...\n\n      - name: Run spell checker\n        id: spellcheck\n        run: |\n          set +e\n          npx --yes cspell \"**/*.qmd\" --exclude \"_output\" --exclude \".quarto\" --exclude \"poetry/random/*\" &gt; cspell-output.txt\n          status=$?\n          set -e\n          cat cspell-output.txt\n          echo \"exit_code=$status\" &gt;&gt; \"$GITHUB_OUTPUT\"\n\n      - name: Comment on PR\n        uses: actions/github-script@v7\n        with:\n          script: |\n            const fs = require('fs');\n            const marker = '&lt;!-- cspell-pr-comment --&gt;';\n            const failed = '${{ steps.spellcheck.outputs.exit_code }}' !== '0';\n            let output = fs.readFileSync('cspell-output.txt', 'utf8').trim();\n            const max = 60000;\n            if (output.length &gt; max) {\n              output = output.slice(0, max) + '\\n\\n…truncated';\n            }\n\n            const body = failed\n              ? `${marker}\\n## Spelling errors found\\n\\n\\`\\`\\`text\\n${output}\\n\\`\\`\\``\n              : `${marker}\\n## No spelling errors found`;\n\n            const comments = await github.paginate(github.rest.issues.listComments, {\n              owner: context.repo.owner,\n              repo: context.repo.repo,\n              issue_number: context.issue.number,\n            });\n            const existing = comments.find((c) =&gt; c.body?.includes(marker));\n\n            if (existing) {\n              await github.rest.issues.updateComment({\n                owner: context.repo.owner,\n                repo: context.repo.repo,\n                comment_id: existing.id,\n                body,\n              });\n            } else {\n              await github.rest.issues.createComment({\n                owner: context.repo.owner,\n                repo: context.repo.repo,\n                issue_number: context.issue.number,\n                body,\n              });\n            }\n\n\nWords to be ignored are defined in cspell.json.28\n28  beck-chan/portfolio/cspell.json: cspell.json\n\n.github/workflows/link-check.yaml29 Generates the static output site files with the default profile (no production PostHog tracking) and checks the output for broken links and other warnings, then adds a comment with the results when complete:30\n29  beck-chan/portfolio/.github/workflows: link-check.yaml30 Broken Link Check Comment:\n\nview example\n### Render warnings found\n\nWARNING: Unable to resolve link target: samples/content-engineering/validmind/missing.html\nWARNING: Unable to resolve link target: #fig-not-real\nWARNING: Unable to resolve crossref: fig-missing\n\n\n\nshow code\n        # Set up steps ...\n\n      - name: Render site\n        id: render\n        run: |\n          set +e\n          set -o pipefail\n          quarto render 2&gt;&1 | tee render-output.txt\n          status=${PIPESTATUS[0]}\n          set -e\n\n          sed 's/\\x1b\\[[0-9;]*[a-zA-Z]//g' render-output.txt \\\n            | grep -E 'WARNING:|\\[WARNING\\]|ERROR:|\\[ERROR\\]|Unable to resolve' \\\n            &gt; render-warnings.txt || true\n\n          if [ ! -s render-warnings.txt ] && [ \"$status\" != \"0\" ]; then\n            tail -n 80 render-output.txt &gt; render-warnings.txt\n          fi\n\n          failed=false\n          if [ \"$status\" != \"0\" ] || [ -s render-warnings.txt ]; then\n            failed=true\n          fi\n\n          echo \"exit_code=$status\" &gt;&gt; \"$GITHUB_OUTPUT\"\n          echo \"failed=$failed\" &gt;&gt; \"$GITHUB_OUTPUT\"\n          cat render-warnings.txt\n\n      - name: Comment on PR\n        uses: actions/github-script@v7\n        with:\n          script: |\n            const fs = require('fs');\n            const marker = '&lt;!-- quarto-render-pr-comment --&gt;';\n            const failed = '${{ steps.render.outputs.failed }}' === 'true';\n            const renderFailed = '${{ steps.render.outputs.exit_code }}' !== '0';\n            let output = '';\n            if (fs.existsSync('render-warnings.txt')) {\n              output = fs.readFileSync('render-warnings.txt', 'utf8').trim();\n            }\n            const max = 60000;\n            if (output.length &gt; max) {\n              output = output.slice(0, max) + '\\n\\n…truncated';\n            }\n\n            const heading = renderFailed\n              ? 'Quarto render failed'\n              : failed\n                ? 'Render warnings found'\n                : 'No render warnings found';\n            const body = failed\n              ? `${marker}\\n## ${heading}\\n\\n\\`\\`\\`text\\n${output}\\n\\`\\`\\``\n              : `${marker}\\n## ${heading}`;\n\n            const comments = await github.paginate(github.rest.issues.listComments, {\n              owner: context.repo.owner,\n              repo: context.repo.repo,\n              issue_number: context.issue.number,\n            });\n            const existing = comments.find((c) =&gt; c.body?.includes(marker));\n\n            if (existing) {\n              await github.rest.issues.updateComment({\n                owner: context.repo.owner,\n                repo: context.repo.repo,\n                comment_id: existing.id,\n                body,\n              });\n            } else {\n              await github.rest.issues.createComment({\n                owner: context.repo.owner,\n                repo: context.repo.repo,\n                issue_number: context.issue.number,\n                body,\n              });\n            }\n\n\nQuarto can finish a render with a successful exit code even when links do not resolve, so the workflow treats WARNING and ERROR lines as failures.",
     "crumbs": [
       "Content Engineering",
+      "Personal",
       "Portfolio",
       "Framework"
     ]
@@ -1434,6 +1504,7 @@
     "text": "I owned this feature highlight post from start to finish.\nAny links to guides I did not author have been removed for this archived version.\nHow the SaaSquatch approach to Growth Automation extends the frontiers of marketing.\nThis guide provides an outline of how the SaaSquatch Growth Automation Platform enables you to leverage the fundamental values of Growth Automation to grow your Customer Lifetime Value.\nConsisting of three parts, this guide includes all the resources you need to use our Growth Automation platform and skyrocket the success of your business.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Growth Automation"
     ]
@@ -1446,6 +1517,7 @@
     "text": "Growth Automation and Referral Marketing\n\n\nAs a business, customer lifetime value is no doubt among your top goals. SaaSquatch helps you achieve these goals by recognizing the importance of interacting with your users on an individual level and providing consistent but ever-evolving programs that entice customers to remain with you over a lifetime.\nReferral marketing has long been a foundational piece in user engagement and lead generation, but not all customer programs are created equal.\nOur Growth Automation platform will allow you to grow those leads into dynamic and individualized relationships with your customer base.\n\n\n\n\n\nOur Growth Automation platform provides a single, affordable solution for marketers to engage with their customers directly and with more relevance than previously possible in an innovative streamlined flow.\nWith all new program types such as First Purchase, Signup Reward, Profile Completion Reward, Days Since Last Purchase, Regional Signup, Birthday Program, and more, including any custom events of your choice, you’re able to configure as many reward programs as there are unique milestones in your customer lifecycle.\nTo learn more about how Growth Automation can maximize usage of modern marketing techniques, click here to see our GA-101 primer.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Growth Automation"
     ]
@@ -1458,6 +1530,7 @@
     "text": "Unlimited Flexibility\nYour business is extremely varied in what it offers to customers, so we’ve built our Growth Automation platform to be extremely flexible and capable of supporting a wide range of possibilities with regards to when you can reward users.\nIf none of the above offered turnkey programs suit your needs, we can help you design a custom program that rewards your customers on a milestone of your choice. By using our infinitely adaptable API library, you’ll be able to send us varied information about your customers’ activity within your business — as much or as little as you want — information that is processed by our system in a way that automatically signals when a user should receive a reward.\nWe call this information custom events, and they can be anything you like — from account information updates to an arbitrary action performed by your users within your system. Once a user hits the required amount, or type of event, that will have already been passed through to SaaSquatch upon completion, they will be immediately rewarded without requiring any further action.\nThese events are entirely adjustable; you can ask our system to reward on a specific accumulation of a type of event or on receipt of a specific type of event. You can even pass additional events for use in future Growth Automation programs you may want to run based on user account history.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Growth Automation"
     ]
@@ -1470,6 +1543,7 @@
     "text": "The Loyalty Lexicon\n\n\nGrowth Automation is about more than just referrals — it’s about learning the language of your users. While our usual core topics might still be in play depending on the configuration of your program, Growth Automation focuses on the customer, not the process. What does this mean, exactly? Let’s take an in-depth look at one of our template programs: Win Back Program.\nThe premise of this program is simple; we want to: re-engage past customers; reduce customer churn; increase customer spending frequency; and promote new services. There’s no referral widget, no share-links or codes involved, just settings you enter once (and adjust at your leisure) to indicate when a user should receive a reward.\n\n\n\n\n\n\n\nAs you will have been passing user information to SaaSquatch from the beginning, no additional information is required from you. But what about encouraging new customers to sign up and start engaging with your product, so you can first learn more about their ongoing needs?\nOur Profile Completion Reward Program encourages your users to fully integrate themselves with your product or interface after initial signup, providing you an easy and unobtrusive way to collect data to use for any programs you might want to run going forward.\nYou’re able to request any fields you want to be mandatory, as well the ability to create any number of custom fields that might not already be provided by us. With just the check of a box, you can reward customers for simply sharing details they may already be entering anyway — it’s a win-win.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Growth Automation"
     ]
@@ -1482,6 +1556,7 @@
     "text": "Additional Resources\nThe Growth Automation 101 article provides the basics of what Growth Automation offers.\n\n\n\n\n\n\nThe next part of this guide outlines the core components that are unique to a Growth Automation program. Familiarizing yourself with these pieces will allow you to build an extremely flexible custom program.\n\n\n\nMore about how your users will interact with your Growth Automation program can be found in our Growth Automation Customer Lifecycle article.\n\nCitation\nSaaSquatch Help Center: View Original Post",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Growth Automation"
     ]
@@ -1499,51 +1574,115 @@
     ]
   },
   {
-    "objectID": "samples/technical-writing/atryum/integrations.html",
-    "href": "samples/technical-writing/atryum/integrations.html",
-    "title": "Atryum Integrations",
+    "objectID": "samples/technical-writing/atryum/index.html",
+    "href": "samples/technical-writing/atryum/index.html",
+    "title": "Atryum",
     "section": "",
-    "text": "I owned the linked guides in this section from start to finish.",
+    "text": "Atryum is an open-source agentic orchestration tool developed by ValidMind. As ValidMind’s sole Senior Technical Writer, I was responsible for almost all of the documentation for Atryum.\nI authored approximately 95% of the content for Atryum,1 including the samples selected below:",
     "crumbs": [
       "Content Engineering",
-      "Atryum",
-      "Integrations"
+      "Atryum"
     ]
   },
   {
-    "objectID": "samples/technical-writing/atryum/integrations.html#citation",
-    "href": "samples/technical-writing/atryum/integrations.html#citation",
-    "title": "Atryum Integrations",
+    "objectID": "samples/technical-writing/atryum/index.html#atryum-integrations",
+    "href": "samples/technical-writing/atryum/index.html#atryum-integrations",
+    "title": "Atryum",
+    "section": "Atryum Integrations",
+    "text": "Atryum Integrations\nI owned the linked guides in this section from start to finish.\n\n\n\n\n\n\n\nConnect agents\n\n\nIntegrations\n\n\n\n\n\n\n\n\n\nConnect MCP servers\n\n\nIntegrations\n\n\n\n\n\n\n\n\n\nConfigure LLM providers\n\n\nIntegrations\n\n\n\n\n\n\n\n\n\nConnect ValidMind\n\n\nIntegrations\n\n\n\n\n\nNo Matches Found",
+    "crumbs": [
+      "Content Engineering",
+      "Atryum"
+    ]
+  },
+  {
+    "objectID": "samples/technical-writing/atryum/index.html#atryum-user-guides",
+    "href": "samples/technical-writing/atryum/index.html#atryum-user-guides",
+    "title": "Atryum",
+    "section": "Atryum User Guides",
+    "text": "Atryum User Guides\nI owned the linked guides in this section from start to finish.\n\n\n\n\n\n\n\nInvocations\n\n\nUser Guides\n\n\n\n\n\n\n\n\n\nRules\n\n\nUser Guides\n\n\n\n\n\nNo Matches Found",
+    "crumbs": [
+      "Content Engineering",
+      "Atryum"
+    ]
+  },
+  {
+    "objectID": "samples/technical-writing/atryum/index.html#atryum-quickstart",
+    "href": "samples/technical-writing/atryum/index.html#atryum-quickstart",
+    "title": "Atryum",
+    "section": "Atryum Quickstart",
+    "text": "Atryum Quickstart\nI owned the linked quickstart in this section from start to finish.\nThis quickstart is special because I also designed the landing page installation script for Atryum.\n\n\n\n\n\n\n\nQuickstart\n\n\nTutorial\n\n\n\n\n\n\n\n\n\natryum.org\n\n\nLanding Page\n\n\n\n\n\nNo Matches Found\n\n\n\nCompare:\nPrevious Atryum quickstart guide\nPrevious Atryum landing page\n\nCitation\n Archive of validmind/atryum Commits by Beck\n\n\n\n\n\n\nYou can learn more about my involvement with ValidMind, Atryum, and the impact I had on content and content architecture under Content Engineering.",
+    "crumbs": [
+      "Content Engineering",
+      "Atryum"
+    ]
+  },
+  {
+    "objectID": "samples/technical-writing/atryum/quickstart.html",
+    "href": "samples/technical-writing/atryum/quickstart.html",
+    "title": "Atryum Quickstart",
+    "section": "",
+    "text": "I owned the linked quickstart in this section from start to finish.\nThis quickstart is special because I also designed the landing page installation script for Atryum.",
+    "crumbs": [
+      "Content Engineering",
+      "Atryum",
+      "Quickstart"
+    ]
+  },
+  {
+    "objectID": "samples/technical-writing/atryum/quickstart.html#citation",
+    "href": "samples/technical-writing/atryum/quickstart.html#citation",
+    "title": "Atryum Quickstart",
     "section": "Citation",
     "text": "Citation\n Archive of validmind/atryum Commits by Beck",
     "crumbs": [
       "Content Engineering",
       "Atryum",
-      "Integrations"
+      "Quickstart"
     ]
   },
   {
-    "objectID": "samples/technical-writing/atryum/user-guides.html",
-    "href": "samples/technical-writing/atryum/user-guides.html",
-    "title": "Atryum User Guides",
+    "objectID": "samples/technical-writing/index.html",
+    "href": "samples/technical-writing/index.html",
+    "title": "Technical Writing",
     "section": "",
-    "text": "I owned the linked guides in this section from start to finish.",
+    "text": "Engendering empowered users through effective guidance content.\nAlong with a love of gratuitous alliteration, I truly enjoy authoring user guidance content. That’s because I believe that great guidance content empowers users, and empowered users get excited about product.",
     "crumbs": [
       "Content Engineering",
-      "Atryum",
-      "User Guides"
+      "Technical Writing"
     ]
   },
   {
-    "objectID": "samples/technical-writing/atryum/user-guides.html#citation",
-    "href": "samples/technical-writing/atryum/user-guides.html#citation",
-    "title": "Atryum User Guides",
-    "section": "Citation",
-    "text": "Citation\n Archive of validmind/atryum Commits by Beck",
+    "objectID": "samples/technical-writing/index.html#personal",
+    "href": "samples/technical-writing/index.html#personal",
+    "title": "Technical Writing",
+    "section": "Personal",
+    "text": "Personal\nI designed and built a mobile-responsive interactive Next.js application, complete with LLM-friendly documentation in MDX and an API reference implemented with Scalar.\n\n\n\n\n\n\n\ny2k Guestbook API Library Reference\n\n\nTechnical Writing\n\n\n\n\n\n\n\n\n\n\n\n\ny2k Guestbook Developer Guides\n\n\nTechnical Writing\n\n\n\n\n\n\n\n\n\n\n\n\ny2k Guestbook User Guides\n\n\nTechnical Writing\n\n\n\n\n\n\n\n\nNo Matches Found",
     "crumbs": [
       "Content Engineering",
-      "Atryum",
-      "User Guides"
+      "Technical Writing"
+    ]
+  },
+  {
+    "objectID": "samples/technical-writing/index.html#validmind",
+    "href": "samples/technical-writing/index.html#validmind",
+    "title": "Technical Writing",
+    "section": "ValidMind",
+    "text": "ValidMind\nI was the sole Senior Technical Writer for ValidMind, a generative artificial intelligence financial services startup, where I employed docs-as-code methodologies alongside software engineers delivering documentation as part of product in the same development ecosystem, transforming a minimal set of user guide drafts into a fully idealized and comprehensive knowledge base.\nAs I authored the bulk of 53% of user content out of many contributors,1 most of ValidMind’s documentation saw my influence at some point. I’ve selected some of my best work to showcase below:\n1 Citation:  validmind/documentation statistic archive\n\n \n\n\n\n\n\n\n\n\nValidMind Jupyter Notebooks\n\n\nDeveloper Content\n\n\n\n\n\n\n\n\n\n\n\n\nValidMind Training\n\n\nOnboarding & Education\n\n\n\n\n\n\n\n\n\n\n\n\nValidMind User Guides\n\n\nFeature Documentation\n\n\n\n\n\n\n\n\n\n\n\n\nValidMind Quickstarts\n\n\nTutorials\n\n\n\n\n\n\n\n\n\n\n\n\nValidMind Enablement Content\n\n\nContent Creation\n\n\n\n\n\n\n\n\nNo Matches Found\n\n\nAtryum\nAtryum is an open-source agentic orchestration tool developed by ValidMind. As ValidMind’s sole Senior Technical Writer, I was responsible for almost all of the documentation for Atryum.\nI authored approximately 95% of the content for Atryum,2 including the samples selected below:\n2 Citation:  Archive of validmind/atryum/website (documentation)\n\n\n\n\n\n\nAtryum Integrations\n\n\nFeature Documentation\n\n\nUser guides written for Atryum integrations.\n\n\n\n\n\n\n\n\n\nAtryum User Guides\n\n\nFeature Documentation\n\n\nUser guides written for core Atryum functionality.\n\n\n\n\n\n\n\n\n\nAtryum Quickstart\n\n\nTutorial\n\n\nQuickstart and installation guide for Atryum.\n\n\n\n\n\nNo Matches Found\n\n\n\n\n\n\n\nYou can learn more about my involvement with ValidMind, Atryum, and the impact I had on content and content architecture under Content Engineering.",
+    "crumbs": [
+      "Content Engineering",
+      "Technical Writing"
+    ]
+  },
+  {
+    "objectID": "samples/technical-writing/index.html#archive",
+    "href": "samples/technical-writing/index.html#archive",
+    "title": "Technical Writing",
+    "section": "Archive",
+    "text": "Archive\nSamples from older roles or projects.\n\nSaaSquatch\nBefore we had any formal technical writers at SaaSquatch, a B2B affiliate software startup, I created and maintained company-wide technical process, product and installation documentation. Using Contentful and a bit of cobbled together code, I overhauled our public knowledge base with a focus on accuracy, client accessibility, increased internal ease of upkeep, and future extensibility.\nWhile the following samples are quite dated before I refined my voice in an official technical writing role, I’ve included them for completion and progression value:\n\n\n\n\n\n\n\nSaaSquatch Integrations\n\n\nFeature Documentation\n\n\n\n\n\n\n\n\n\n\n\n\nSaaSquatch JavaScript SDK\n\n\nDeveloper Content\n\n\n\n\n\n\n\n\n\n\n\n\nSaaSquatch User Guides\n\n\nFeature Documentation\n\n\n\n\n\n\n\n\nNo Matches Found",
+    "crumbs": [
+      "Content Engineering",
+      "Technical Writing"
     ]
   },
   {
@@ -1554,6 +1693,7 @@
     "text": "During my tenure at SaaSquatch, I became the company Subject Matter Expert for many of our custom integrations, including our integration for Salesforce which I helped develop.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations"
     ]
@@ -1566,6 +1706,7 @@
     "text": "Salesforce\nBefore I worked at SaaSquatch, I had never used Salesforce (SFDC). Very quickly after onboarding, I helped develop our SFDC integration during my time as a Solutions Architect as part of custom work for a client.\nBelow are a few samples of the guides I produced to assist with custom implementations utilizing our SFDC integration:\n\n\n\n\n\n\n\nSaasquatch + SFDC: Using Invocable Methods in Process Builder\n\n\nSFDC Integration\n\n\n\n\n\n\n\n\n\n\n\n\nSaaSquatch + SFDC: Attribution via Contact Loookup\n\n\nSFDC Integration\n\n\n\n\n\n\n\n\n\n\n\n\nSaaSquatch + SFDC: User & Account IDs\n\n\nSFDC Integration\n\n\n\n\n\n\n\n\nNo Matches Found",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations"
     ]
@@ -1578,6 +1719,7 @@
     "text": "Other\nBelow are a few samples of the guides I produced to assist with custom payment provider and rewards integrations, written based on provided Cucumber specs and several independent UATs I performed in order to understand the features fully:\n\n\n\n\n\n\n\nStripe Integration Install Guide\n\n\nPayment Provider Integration\n\n\n\n\n\n\n\n\n\n\n\n\nRecurly Integration Install Guide\n\n\nPayment Provider Integration\n\n\n\n\n\n\n\n\n\n\n\n\nConnect Your Tango Card Account to SaaSquatch\n\n\nReward Integration\n\n\n\n\n\n\n\n\nNo Matches Found",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations"
     ]
@@ -1590,6 +1732,7 @@
     "text": "I owned this entire guide from start to finish.\nFor this endeavour, I researched and familiarized myself with the following Salesforce features:\n\nSalesforce: Page Layouts\nSalesforce: Create a Custom Field\nSalesforce: Map Custom Lead Fields …\n\nAny links to guides I did not author have been removed for this archived version.\nWhen properly synced, the SaaSquatch SFDC can be configured to automatically retrieve a Referrer’s (Contact) “Referral Code” and apply it to a Custom Field on the Referred User (Lead).",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Salesforce",
@@ -1604,6 +1747,7 @@
     "text": "Introduction\nThis guide provides instruction on how to make use of a Lookup Custom Field to populate a Text Custom Field with the Referrer’s “Referral Code” on the Lead record, which can then be sent to SaaSquatch to attribute the Lead to the Contact (creating a referral).",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Salesforce",
@@ -1618,6 +1762,7 @@
     "text": "Before You Start\n\nMake sure that you’ve installed the SaaSquatch SFDC integration into your Salesforce instance, including adding the “Referral Code” field to the Contact Page Layout.\nMake sure you have administrative access and know how to work with:\n\nPage Layouts\nCustom Fields\nProcesses within Process Builder\n\nThe below guide also assumes that:\n\nYour new Referred Users are being created as Leads,\nYou intend to create/update a user in SaaSquatch when a Lead is created/updated in SFDC.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Salesforce",
@@ -1632,6 +1777,7 @@
     "text": "1. Creating the Contact Lookup Field\nCreate a new Custom Field on the Lead:\n\nMake sure to select a Data Type of “Lookup Relationship”\nSelect “Contact” for your related object\nName your field something like “Referred By”\nName the Child Relationship Name something like “Leads”\nName the related list something like “Referred Leads”\nSFDC Contact Lookup Field\n\n\n\n\n\n\n\n\n\n\nMake sure to make the field available to the required users as well as adding it to the Lead Page Layout. We recommend editing the Page Layout to include your Custom Field in the “SaaSquatch” section.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Salesforce",
@@ -1646,6 +1792,7 @@
     "text": "2. Creating the ReferredByCodes Custom Field\nCreate a new Custom Field on the Lead:\n\nMake sure to select a Data Type of “Text”\nEnter a max length (e.g. 255)\nName your field something like “Attribution Code” or “Referred By Code”\n\n\n\n\n\n\n\n\n\n\nMake sure to make the field available to the required users as well as adding it to the Lead Page Layout. We recommend editing the Page Layout to include your Custom Field in the “SaaSquatch” section.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Salesforce",
@@ -1660,6 +1807,7 @@
     "text": "3. Automatically Populating the Referral Code When a Contact is Selected via Lookup\nOnce you’ve set up a Lookup field to search for Contacts, and a Text field to hold the Referrer’s “Referral Code”, you can build a Process to grab the “Referral Code” from the Contact record and place it onto the custom field on the Lead.\n\nCreate a New Process. Give it a name and description that reflects the outcome of the Process, such as “Apply Referral Code from Contact”.\nFor ‘The process starts when’, select “A record changes”.\nAdd an Object, and select ‘Lead’ as your Object. We recommend allowing the Process to start “when a record is created or edited”, so that both creation and update of users can occur.\nAdd your Criteria. We recommend setting a Condition that the Process will only run if the “Referral Code” field on the Contact that was looked up exists (i.e. Is null: False): SFDC Contact Referral Code SFDC Referral Code Exists\n\n\n  \n\n\nAdd your Actions:\n\nSelect ‘Update Records’ under “Action Type”, and give your action a name that reflects the outcome (e.g. Apply Referral Code)\nChoose ‘Select the Lead record that started your process’ under your “Record Type”.\nSet the field value for the Lead you want to update. Select the Text Custom Field you created previously (e.g. Attribution Code) and select the Contact’s Referral Code as the Value via a Field Reference Type:\n\n\n\n\n\n\nOnce your Process is completed and Saved, make sure to Activate it so it can run.\n\n\n\n\n\n\n\nYou can also set this up using Workflow Rules or through APEX if those methods are more accessible for you.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Salesforce",
@@ -1674,6 +1822,7 @@
     "text": "4. Sending the ReferredByCodes Information to SaaSquatch\nOnce the your ReferredByCodes Custom Field is populated, you can send that information to SaaSquatch via an upsert.\nWhen defining your Apex Variables in your Process, select the Field “Referred By Codes” and then reference the Custom Field you’ve created and configured to autopopulate with the Referrer’s “Referral Code”:\n\n\n\n\n\n\n\n\n\nYou can also make an upsert via APEX if this is easier for you.\n\n\n\n\nCitation\nSaaSquatch Help Center: View Original Guide",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Salesforce",
@@ -1688,6 +1837,7 @@
     "text": "I owned this entire guide from start to finish.\nFor this endeavour, I researched and familiarized myself with the following Salesforce features:\n\nSalesforce: Page Layouts\nSalesforce: Create a Custom Field\nSalesforce: Map Custom Lead Fields …\n\nAny links to guides I did not author have been removed for this archived version.\nThe SaaSquatch Salesforce integration requires that you send along both the user’s SaaSquatch Account and User ID from SFDC when using an Invocable Method such as Upsert User by Id & Track Event by Id.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Salesforce",
@@ -1702,6 +1852,7 @@
     "text": "Introduction\nThe Invocable Methods Upsert User by Id & Track Event by Id allow you to make changes to SaaSquatch from Salesforce from records other than the automatically linked Lead or Contact, such as Account or Opportunity, as long as you have access to the user’s SaaSquatch Account ID and User ID.\nThis guide walks you through the recommended configuration of the User ID and Account ID Custom Field(s) in order to make that information accessible on the Account and/or Opportunity Objects.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Salesforce",
@@ -1716,6 +1867,7 @@
     "text": "Before You Start\n\nMake sure that you’ve installed the SaaSquatch SFDC integration into your Salesforce instance.\nMake sure you have administrative access and know how to work with:\n\nPage Layouts\nCustom Fields\nField Mapping\n\nThe below guide assumes that:\n\nYour new Referred Users are being created as Leads, then converted to a Contact, an Account, and an Opportunity when they become eligible,\nYou intend to send information to SaaSquatch for the Referred User that is linked to the Object when certain actions happen within those Accounts or Opportunities.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Salesforce",
@@ -1730,6 +1882,7 @@
     "text": "1. Setting Up Your ID(s)\n\n\n\n\n\n\nWhen making use of the SaaSquatch SalesForce integration, we highly recommend that you use the user’s email address as both their SaaSquatch Account ID and User ID.\n\n\n\n\nCreate your Custom Field(s) on the Lead Object. We recommend:\n\nUsing a Text Field Type,\nThat User & Account ID are the same value (thus requiring only one custom field),\nThat you name your Custom Field(s) something like “SaaSquatch User/Account ID”,\nThat if are using an existing field on the Lead Object as your ID(s) (e.g. email or Lead ID), making use of a formula to prepopulate the Custom Field(s) so it does not have to be manually entered,\nThat you add your Custom Field(s) to the “SaaSquatch” Section of your page layout. \n\nCreate and place your Custom Field(s) on your Account and/or Opportunity layouts that mirror the field(s) on the Lead:\n\nAs these Custom Field(s) will be automatically populated when the Lead converts (if mapped as instructed below), there is no need to insert a formula.\nYou must create an additional Custom Field on every Object you’d like the original Custom Field from the Lead to persist to when a Lead gets converted (e.g. Lead: “SaaSquatch ID” &gt; Account: “SaaSquatch ID”, Opportunity: “SaaSquatch ID”)",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Salesforce",
@@ -1744,6 +1897,7 @@
     "text": "2. Mapping Your ID(s)\n\n\n\n\n\n\nYou only need to map the Custom Fields from the Lead to the Objects you intend to interact with to send information to SaaSquatch. For example, if you only want to trigger on actions that happen in Opportunities, you do not need to map to Accounts.\n\n\n\n\nMap To Account\n\nIf you intend to send information to SaaSquatch about the associated user when actions are taken on the Account, map the Custom Field(s) on the Lead to Custom Field(s) on the Account.\nSelect which Custom Field(s) on the Account the “SaaSquatch Account/User ID” field(s) should automatically populate when a Lead is converted (e.g. Lead: “SaaSquatch ID” &gt; Account: “SaaSquatch ID”). \n\nMap to Opportunity\n\nIf you intend to send information to SaaSquatch about the associated user when actions are taken on the Opportunity, map the Custom Field(s) on the Lead to Custom Field(s) on the Opportunity.\nSelect which Custom Field(s) on the Opportunity the “SaaSquatch Account/User ID” field(s) should automatically populate when a Lead is converted (e.g. Lead: “SaaSquatch ID” &gt; Opportunity: “SaaSquatch ID”).",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Salesforce",
@@ -1758,6 +1912,7 @@
     "text": "3. Reference Your ID Field(s)\nOnce a Lead has been converted, and the Custom Field(s) mapped to the Account and/or Opportunity, you can then reference those field(s) within a Workflow Rule or within an Apex Trigger.\n\nCitation\nSaaSquatch Help Center: View Original Guide",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Salesforce",
@@ -1772,6 +1927,7 @@
     "text": "I owned this entire guide from start to finish.\nFor this endeavour I researched and familiarized myself with:\n\nTango - Manage Basic Auth API keys in Tango\nTango - Manage accounts and groups in Tango\nTango - Manage accounts and groups in Tango\n\nAny links to guides I did not author have been removed for this archived version below.\nLearn how to connect your Tango Card gift card account to SaaSquatch.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Other",
@@ -1786,6 +1942,7 @@
     "text": "Tango Card overview\nTango Card offers the ability to reward your participants with a number of different gift cards. Using Tango Card gift cards in your program makes it easy to set up and manage rewards.\nNote: All test tenants are set up with the SaaSquatch Tango Card sandbox account. This allows you to test the reward flow without additional configuration. Your own Tango Card account can only be configured in your live tenant.\n\nTango Card account types\nThere are two types of Tango Card accounts: direct accounts and Saasquatch-managed sub-accounts.\nDirect Tango Card account: Direct Tango Card accounts offer the most functionality and control within Tango Card. As of 2020 we recommend all clients create a direct Tango Card account to use with SaaSquatch.\nSaaSquatch managed sub-account: Sub-accounts have access to the basic Tango Card functionality, however there are more restrictions and less control over managing the account. As of 2020 we do not recommend using a sub-account.\n\n\n\n\n\n\nNot sure which Tango Card account to use? Contact your Solutions Architect or Launch Manager for advice.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Other",
@@ -1800,6 +1957,7 @@
     "text": "Connect your direct Tango Card account to SaaSquatch\nIf you were onboarded with SaaSquatch after 2020, you will most likely have your own Tango Card Rewards Genius login with full control over your users, funding, reporting, orders, and most importantly, Groups and Accounts.\nFollow the instructions below to ensure that the correct Account from the correct Group is funding your SaaSquatch rewards.\n\nHead to your SaaSquatch account.\nIn the upper left corner of your SaaSquatch account, select your Live tenant from the dropdown menu.\nClick Settings in the upper header of your SaaSquatch account.\nSelect Integrations in the secondary header.\nScroll down to the Tango integration and click the down arrow to expand the integration view.\nEnter your Tango Card account information:\n\nAccount Identifier\nGroup Identifier\nTango Card Username\nAPI Key (see Tango Card’s doc on how to locate it)\nReferrer Template ID (Classic only)\nReferred Template ID (Classic only) Tango Card - Direct Account_v2\n\nClick Connect at the bottom of the Tango Card integration section to save and connect your account.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Other",
@@ -1814,6 +1972,7 @@
     "text": "Connect your SaaSquatch-managed TangoCard Account\n\nHead to your SaaSquatch account.\nIn the upper left corner of your SaaSquatch account, select your Live tenant from the dropdown menu.\nClick Settings in the upper header of your SaaSquatch account.\nSelect Integrations in the secondary header.\nScroll down to the Tango integration and click the down arrow to expand the integration view.\nEnter your TangoCard Account information:\n\nAccount Identifier\nGroup Identifier\nReferrer Template ID (Classic only)\nReferred Template ID (Classic only)\n\nClick Connect at the bottom of the Tango Card integration section to save and connect your account.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Other",
@@ -1828,6 +1987,7 @@
     "text": "Configure your Tango Card emails\nTango Card offers the ability to customize the email that is sent with each gift card reward. To keep track of which customized email is sent with each reward, they use an Email Template ID (ETID) that can be included on each reward.\n\nWithin your Tango Card account, create an email template. If you need help, see Tango Card’s Email Templates FAQ.\nCopy your Email Template ID (ETID).\n\nThe ETID should follow this format: Exxxxxxx.\n\nHead to your SaaSquatch account.\nIn the upper left corner of your SaaSquatch account, select your Live tenant from the dropdown menu.\nClick Rewards in the upper header of your SaaSquatch account.\nSelect an existing gift card reward, or create a new gift card reward.\nPaste the ETID value from the previous step into the Custom Tango Card Email Template ID field.\nClick Save to save your changes.\n\nNow, when the gift card is earned, the custom email you have set up will be sent to the participant.\n\nCitation\nSaaSquatch Help Center: View Original Guide",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "Integrations",
       "Other",
@@ -1842,6 +2002,7 @@
     "text": "While I did not write the original material, I was involved heavily with consulting for accuracy and provided code samples. I also restructured and edited the entire article for coherency and accessibility.\nYou can view a “live” version of these scripts at my old repo here (seen in my original section Program loop): https://github.com/beckatimpact/squatch-js\nFor this endeavour I researched and familiarized myself with:\n\nJSON Web Tokens\nDOM: getElementById()\nDOM: getElementsByClassName()\nDOM: getElementsByTagName()\n\nAny links to guides I did not author have been removed for this archived version below.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "JavaScript SDK",
       "Key `squatch.js` Scripts"
@@ -1855,6 +2016,7 @@
     "text": "Key squatch.js Scripts\nThis page has a list of the key squatch.js scripts you may need for your implementation of a SaaSquatch program. These are general scripts meant for reference purposes.\nAdd your tenant- and program-specific information to ensure they function as intended. To generate your personalized code snippets, sign in to the Admin Portal and go to Settings &gt; Install.\n\n\n\n\n\n\nWe strongly recommend you use your test tenant while implementing, so that your sample data can be cleared when done.\n\n\n\n\nLoader script\nThis async loader script must be included on your website in order to call squatch.js to perform many functions, including creating cookies that will take care of referral attributions. The rest of the scripts on this page rely on the Loader script to be present as it is what retrieves the functionality of squatch.js and allows referral cookies to be dropped and retrieved.\n\n\n\n\n\n\nWe recommend placing it on every page of your site, not just the pages where your users will be interacting with your SaaSquatch-run program.\n\n\n\n!function(a,b){a(\"squatch\",\"https://fast.ssqt.io/squatch-js@2\",b)}(function(a,b,c){var d,e,f;c[\"_\"+a]={},c[a]={},c[a].ready=function(b){c[\"_\" + a].ready =  c[\"_\" + a].ready || [];c[\"_\" + a].ready.push(b);},e=document.createElement(\"script\"),e.async=1,e.src=b,f=document.getElementsByTagName(\"script\")[0],f.parentNode.insertBefore(e,f)},this);\n\nEnvironment setup\n\n\n\n\n\n\nAdding your SaaSquatch tenant alias and JWT to the head in your window allows for easier integration of our widget, event tracking, registration and autofill scripts into individual pages.\n\n\n\nThe squatchToken JWT added here will be used for user upsert (when a user is created, when a widget loads) as well as for event tracking. The example below is a static value, but you should be dynamically generating it based on your user object as needed.\nwindow.squatchTenant = \"test_aym93okveuya4\";\nwindow.squatchToken = \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoidXNlcklkIiwiYWNjb3VudElkIjoiYWNjb3VudElkIiwiZmlyc3ROYW1lIjoiU3F1YXRjaEpzIiwibGFzdE5hbWUiOiJVc2VyIiwiZW1haWwiOiJzcXVhdGNoanNAZXhhbXBsZS5jb20ifX0.E2_OHk84j7BeNtkn5v8q24htsvIrN6ecyXzoSuDlJb4\";\n\n// Below used for overriding default config values\nwindow.squatchConfig = {\n    domain: \"&lt;domain&gt;\",\n    npmCdn: \"&lt;npmCdn&gt;\",\n    debug: &lt;trueOrFalse&gt;\n    }",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "JavaScript SDK",
       "Key `squatch.js` Scripts"
@@ -1868,6 +2030,7 @@
     "text": "Widget scripts\n\n\n\n\n\n\nWe recommend consulting the Settings &gt; Install page in the Admin Portal to generate a personalized script for your implementation. The general examples provided below are for informational purposes only and when used as is will display widgets from an example program.\n\n\n\n\nWidget styles\nsquatch.js supports two widget styles: embedded and popup.\n\nEmbedded widgets show up directly within your web page or app.\nPop-up widgets are displayed in a modal window. When you use the squatch-popup element, any HTML within the children of the element will serve as a CTA for opening the popup.\n\n\nVerified access widget\nVerified access widgets provide a robust, in-app experience for your referral or loyalty participants. To protect your participants’ personal information, we recommend displaying this widget only to those who have signed in to your product.\n\n\n\n\n\n\nJWTs are required by default for verified access widgets.\nIn-app/Points Widgets require:\n\nA program ID (for program-bound widgets)\nWidget type (linked to program type) or widget ID (for program agnostic widgets)\n\n\n\n\nThe below code snippets display an in-app widget for a Referrer in a referral program with the ID example-program.\nEmbedded widget\n&lt;squatch-embed widget=\"p/example-program/w/referrerWidget\"&gt;&lt;div&gt;Loading...&lt;/div&gt;&lt;/squatch-embed&gt;\nPopup widget\n&lt;squatch-popup widget=\"p/example-program/w/referrerWidget\"&gt;&lt;button&gt;Click me to show widget!&lt;/button&gt;&lt;/squatch-popup&gt;\n\n\nInstant access widget\nInstant access widgets give your participants a simple way to engage with your referral program–without signing into your product or service. They’re available for clients using the current version of the SaaSquatch platform (post-2019).\n\n\n\n\n\n\nJWTs are not required for instant access widgets.\nWebsite Referral Widgets require:\n\nA program ID (for program-bound widgets)\nWidget type (linked to program type) or widget ID (for program agnostic widgets)\n\n\n\n\nThe below code snippets display a widget for a anonymous Referrer in a referral program with the ID example-program.\nEmbedded widget\n&lt;squatch-embed widget=\"p/example-program/w/websiteReferralWidget\"&gt;&lt;div&gt;Loading...&lt;/div&gt;&lt;/squatch-embed&gt;\nPopup widget\n// Click to open button\n&lt;squatch-popup widget=\"p/example-program/w/websiteReferralWidget\"&gt;&lt;button&gt;Click me!&lt;/button&gt;&lt;/squatch-popup&gt;\nAuto-popup friend widget\nIn addition to the standard embedded and popup widget styles, instant access widgets allow for an automatic pop-up widget to appear whenever the landing page is loaded for Friend Widgets. Participants don’t need to interact with your landing page to trigger a widget load when Show automatically for referred friends is toggled in the program settings as long as the loader script is present.\n\n\n\n\n\n\nSee Setting Up an Instant Access Widget for more details.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "JavaScript SDK",
       "Key `squatch.js` Scripts"
@@ -1881,6 +2044,7 @@
     "text": "Register participants script\nUse squatch.api’s upsertUser method to create or update a user in your referral program without displaying a widget. For example, this method can be used to create a user in SaaSquatch when someone fills out a registration form.\nWhen a cookie is present, squatch.js will also automatically attribute the referral when users are upserted without the need to pass in an explicit referral code.\n\n\n\n\n\n\nNote that if you added a JWT during the environment setup, then you don’t need to include one with this script too. If there is an existing token on window.squatchToken, then all requests will use that as the default.\n\n\n\nIf you are following along by testing the examples on this page, you’ll need to adjust the hardcoded squatchToken outlined in “Environment setup” for the below call to reflect the user object.\n// Wait for `squatch.js` to be ready\nsquatch.ready(function(){\n\n    // Configure squatch-js for your user\n    const userConfig = {\n        user: {                               \n        id: 'sample.user@example.com',      \n        accountId: 'sample.user@example.com',       \n        email: 'sample.user@example.com',               \n        firstName: 'Sample',       \n        lastName: 'User',\n        locale: 'en_US',\n        customFields: {\n            companyName: \"Example Inc.\",\n            phoneNumber: \"(555) 340-0505\"\n                }            \n            }\n        };\n\n    // Make the request to upsert your user\n    squatch.api().upsertUser(userConfig).then(function(response) {\n        const user = response.user;\n            }).catch(function(error){\n        console.log(error);\n                });\n    });\n\nAutofill script\n\n\n\n\n\n\nThe squatch.js library can be used to retrieve a referral code from dropped cookie value, or the cookie value itself via squatch.api’s squatchReferralCookie method.\n\n\n\nYou can then “autofill” an element with the value, such as a referral code field in a sign-up form. There are many methods to accomplish this, such as:\n\ngetElementbyId: https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById\ngetElementsByClassName: https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName\ngetElementsByTag: https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName\n\nReferral codes\n\nThe request to retrieve the information from the dropped cookie returns referral codes within an object called “codes”.\nThis object is key value pair where the key is the program ID and the value is the referral code.\nYou’ll need to use your referral program’s ID to access and apply the correct referral code to your element.\n\nIf you want to learn more about using autofill for multiple referral programs, then check out our autofill guide.\nCookie values\n\nCookies are dropped after a user clicks on a sharelink.\nThis cookie includes important referral analytics information and should be passed along with REST API & GraphQL API calls if you are not upserting users/attributing users automatically with squatch.js.\n\nTo read more on our referral cookies see: /developer/squatchjs/cookies/\n\nAutofill a referral code\nUse cases:\n\nDisplaying the referral code in a sign-up form field to your new user to confirm that a referral is taking place.\nUsing the retrieved referral code to perform a Get a user by referral code REST API call to show the Referrer’s details to the Referred User.\nRetrieved then applied as a discount/coupon code with our HubSpot, Stripe and Recurly integrations.\n\n\n\n\n\n\n\nNonePlease note that it is NOT recommended to retrieve the referral code from the cookie to pass in explicitly if using squatch.js to upsert your users.\n\n\n\nIn this scenario, allow squatch.js to make the attribution automatically in the background, which will also capture important analytics information that would otherwise be overridden by the inclusion of a manual referral code.\n\n\n// Wait for `squatch.js` to be ready\nsquatch.ready(function(){\n\n    // Retrieve the element you want to autofill the Referral Code into from the DOM. \n    var code = document.getElementById('referralCode');\n\n    // Make the request to retrieve the information from the dropped cookie\n    squatch.api().squatchReferralCookie().then(function(response) {\n        // Use your referral program id to access and apply the correct referral code to your element\n        code.value = response.codes[\"example-program\"];\n        });\n    });\n\n\nRetrieve a cookie value\nUse case:\n\nIncluded as part of a REST API User Upsert call to attribute a Referred User with extended analytics information.\n\n\n\n\n\n\n\nPassing in the cookie value instead of just the referral code allows you to capture additional analytics information such as the sharelink used, which provides context like engagement and share mediums.\n\n\n\n// Wait for `squatch.js` to be ready\nsquatch.ready(function(){\n\n    // Retrieve the element you want to autofill the Referral Code into from the DOM. \n    var cookie = document.getElementById('cookieValue');\n\n    // Make the request to retrieve the dropped cookie value\n    squatch.api().squatchReferralCookie().then(function(response) {\n        cookie.value = response.encodedCookie;\n        });\n    });",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "JavaScript SDK",
       "Key `squatch.js` Scripts"
@@ -1894,6 +2058,7 @@
     "text": "Track user event script\nYou can use squatch.js to send user events directly to SaaSquatch, such as during a check-out action via the squatch.events’s track method.\n\n\n\n\n\n\nBy default, SaaSquatch requires a user object payload JWT to be included with the request when sending a user event. This JWT’s payload should be in the format as outlined for the Write Token, including the id and accountId as well as at least one additional user value.\n\n\n\nIf you are following along by testing the examples on this page, you’ll need to adjust the hardcoded squatchToken outlined in “Environment setup” for the below call to reflect the user object.\n// Wait for `squatch.js` to be ready\nsquatch.ready(function(){\n\n    // Object containing the user & event object\n    var eventObj = {\n        \"userId\": \"sample.user@example.com\",\n        \"accountId\": \"sample.user@example.com\",\n        \"events\": [{\n        \"key\": \"purchase\",\n        \"fields\":{\n            \"checkout_id\": \"123456\",\n            \"order_id\": \"234567\",\n            \"total\": 100,\n            \"revenue\": 40,\n            \"tax\": 15,\n            \"currency\": \"USD\",\n            \"products\": [   {\n            \"product_id\": \"p_name\",\n            \"name\": \"Product Name\",\n            \"price\": 85,\n            \"quantity\": 1               \n                }]\n            }\n        }]\n    };\n\n    // If window.squatchToken is not set, pass in a jwt with .track(eventObj, { jwt }), otherwise include the {squatchToken}\n    squatch.events().track(eventObj, {squatchToken}).then(function(response) {\n    }).catch(function(error){\n    console.log(error);\n    })\n});\n\nAuthentication\nThe requirement for including a JWT in the request can be removed by disabling the Track User Event option on the Settings &gt; Security page. If you choose not to include a JWT, then you MUST use an empty JSON object ({}) instead of excluding that value.\n\n\n\n\n\n\nNoneWARNING: Including a JWT is important for fraud prevention and security.\n\n\n\nWe highly recommend including a JWT as outlined in the example above, as otherwise anyone with access to the JWT for that participant will be able to send authorized events. We additionally recommend that your JWT include an expiry for extra security.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "JavaScript SDK",
       "Key `squatch.js` Scripts"
@@ -1907,6 +2072,7 @@
     "text": "Program loop\nSee a sample referral program as outlined on this page’s scripts in action: Sample Referral Program Code\nThe sample program includes use of:\n\nsquatch.api().upsertUser()\nsquatch.api().squatchReferralCookie()\nEmbedded “Verified access widget”\nsquatch.events().track()\nEmbedded “Instant access widget”\n\n\n\n\n\n\n\n\nTo ensure that everything runs smoothly after launch, we recommend identifying a few users via the Register Participants script.\nOnce these users have been created, attempt to send a few (purchase) events via the Track User Event script.\nReview these users by clicking on the Participants tab in the administrative portal for your program to ensure that all details and events have been captured successfully.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "JavaScript SDK",
       "Key `squatch.js` Scripts"
@@ -1920,6 +2086,7 @@
     "text": "Learn more\n\nError codes\nWe maintain an Issue Code List with details and specific troubleshooting tips for any error codes that you may receive. If you try out the troubleshooting steps and are still experiencing problems, then don’t hesitate to reach out to our Support team for assistance.\n\n\nAdditional documentation\n\nAdvanced Use Cases: Go beyond the basic scripts and learn how to reference existing user data, render a widget without requiring user information, and more.\nSigned Requests: Learn how to require a JWT or an API key when sending data to SaaSquatch.\nTracking Cookies: Learn more about squatch.js and first-party cookies.\nIssue Code List: Find details and troubleshooting steps about error codes you encounter.\nsquatch.js Reference: Full list of methods available.\n\n\nCitation\nSaaSquatch Help Center: View Original Guide",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "JavaScript SDK",
       "Key `squatch.js` Scripts"
@@ -1933,6 +2100,7 @@
     "text": "I owned this entire guide from start to finish.\nFor this endeavour I researched and familiarized myself with First-party cookie recipes.\nAny links to guides I did not author have been removed for this archived version below.\nAs of June 2020, SaaSquatch has enabled the usage of 1st Party Cookies to accommodate a wider industry shift towards the increased protection of end user privacy.\nSaaSquatch uses first-party cookies for referral attribution—the process of connecting a referred participant to the person who made the referral. The cookies are based on UTM parameters passed through the URL. By placing squatch.js on your landing page, it is able to read the UTM parameters and create a valid first-party cookie that’s in compliance with all browsers.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "JavaScript SDK",
       "Tracking Cookies"
@@ -1946,6 +2114,7 @@
     "text": "Set up first-party cookies\nWe recommend that all implementations that make use of our referral cookie adhere to the following instructions to enable usage of first-party cookies: Make sure your landing page and your signup page exist on the same domain Add squatch.js to your landing page. This sets the first-party cookie. Place squatch.js on the signup page where your users are upserted. This reads the first-party cookie.\nHere’s how it works:\n\nsquatch.js reads _saasquatch from the URL and stores a first-party cookie on the specified landing page’s domain.\nIt automatically sets the cookies field on users during an upsert.\nIt reads the first-party cookie during use of autofill.",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "JavaScript SDK",
       "Tracking Cookies"
@@ -1959,6 +2128,7 @@
     "text": "Attribution Preference Hierarchy\nAs there are several ways to attribute a referred participant to a referrer, the connection will always be linked following the below scheme:\n\nExplicit inclusion of a referredByCodes either via squatch.js or the REST API will always override any identified cookie.\nIf a referral code is not included directly with a user upsert, then squatch.js will look for the first-party cookie and make the attribution.\nIf no first-party cookie exists and a third-party cookie is available through a compatible browser, the 3rd-party cookie will be detected and applied.\n\n\nCitation\nSaaSquatch Help Center: View Original Guide",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "JavaScript SDK",
       "Tracking Cookies"
@@ -1972,6 +2142,7 @@
     "text": "While I served no formal technical writing role while at SaaSquatch, a core facet of my work was my focus on improving user content for both customers and colleagues.\nBelow are a few samples of the core software feature documentation guides I produced to instruct customers before I held any formal technical writing or content role:\n\n\n\n\n\n\n\nUnderstanding Sharelinks\n\n\nUser Guides\n\n\n\n\n\n\n\n\n\n\n\n\nAdding Users & Triggering Reward Goals via CSV Import\n\n\nUser Guides\n\n\n\n\n\n\n\n\nNo Matches Found",
     "crumbs": [
       "Content Engineering",
+      "Archive",
       "SaaSquatch",
       "User Guides"
     ]

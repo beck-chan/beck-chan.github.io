@@ -1,35 +1,35 @@
 /* quarto syntax highlight colors */
 :root {
-  --quarto-hl-va-color: #c2a077;
-  --quarto-hl-ot-color: #d0b491;
-  --quarto-hl-dt-color: #ad8d66;
-  --quarto-hl-cn-color: #d0b491;
-  --quarto-hl-co-color: #f4e7e8;
-  --quarto-hl-do-color: #e8d6d7;
-  --quarto-hl-an-color: #c4acae;
-  --quarto-hl-cv-color: #e8d6d7;
-  --quarto-hl-re-color: #c4acae;
-  --quarto-hl-kw-color: #e4bec2;
-  --quarto-hl-im-color: #e4bec2;
-  --quarto-hl-cf-color: #d4a8ac;
-  --quarto-hl-op-color: #cfabaf;
-  --quarto-hl-at-color: #cfabaf;
-  --quarto-hl-ex-color: #d4a8ac;
-  --quarto-hl-pp-color: #ecd0d4;
-  --quarto-hl-fu-color: #c87879;
-  --quarto-hl-bu-color: #b46b6c;
-  --quarto-hl-st-color: #d08e8e;
-  --quarto-hl-vs-color: #d79e9f;
-  --quarto-hl-ss-color: #d79e9f;
-  --quarto-hl-ch-color: #d08e8e;
-  --quarto-hl-sc-color: #d8a68e;
-  --quarto-hl-dv-color: #d4b098;
-  --quarto-hl-fl-color: #d4b098;
-  --quarto-hl-bn-color: #c9a189;
-  --quarto-hl-in-color: #f7ecec;
-  --quarto-hl-wa-color: #d8a68e;
-  --quarto-hl-al-color: #c87879;
-  --quarto-hl-er-color: #c87879;
+  --quarto-hl-va-color: #df9a49;
+  --quarto-hl-ot-color: #e8b06a;
+  --quarto-hl-dt-color: #c8883a;
+  --quarto-hl-cn-color: #e8b06a;
+  --quarto-hl-co-color: #fee3e5;
+  --quarto-hl-do-color: #f5d0d3;
+  --quarto-hl-an-color: #d4a5a8;
+  --quarto-hl-cv-color: #f5d0d3;
+  --quarto-hl-re-color: #d4a5a8;
+  --quarto-hl-kw-color: #ffb3ba;
+  --quarto-hl-im-color: #ffb3ba;
+  --quarto-hl-cf-color: #f49aa3;
+  --quarto-hl-op-color: #e8a0a8;
+  --quarto-hl-at-color: #e8a0a8;
+  --quarto-hl-ex-color: #f49aa3;
+  --quarto-hl-pp-color: #ffc8ce;
+  --quarto-hl-fu-color: #ff6162;
+  --quarto-hl-bu-color: #e85556;
+  --quarto-hl-st-color: #ff7a7b;
+  --quarto-hl-vs-color: #ff8e8f;
+  --quarto-hl-ss-color: #ff8e8f;
+  --quarto-hl-ch-color: #ff7a7b;
+  --quarto-hl-sc-color: #ff9a6a;
+  --quarto-hl-dv-color: #f0a878;
+  --quarto-hl-fl-color: #f0a878;
+  --quarto-hl-bn-color: #e89868;
+  --quarto-hl-in-color: #ffe8ea;
+  --quarto-hl-wa-color: #ff9a6a;
+  --quarto-hl-al-color: #ff6162;
+  --quarto-hl-er-color: #ff6162;
 }
 
 /* other quarto variables */
@@ -39,186 +39,186 @@
 
 /* syntax highlight based on Pandoc's rules */
 pre > code.sourceCode > span {
-  color: #c2a077;
+  color: #df9a49;
 }
 
 code.sourceCode > span {
-  color: #c2a077;
+  color: #df9a49;
 }
 
 div.sourceCode,
 div.sourceCode pre.sourceCode {
-  color: #c2a077;
+  color: #df9a49;
 }
 
 /* Normal */
 code span {
-  color: #c2a077;
+  color: #df9a49;
 }
 
 /* Alert */
 code span.al {
-  color: #c87879;
-  background-color: #f4e7e8;
+  color: #ff6162;
+  background-color: #fee3e5;
   font-weight: bold;
 }
 
 /* Annotation */
 code span.an {
-  color: #c4acae;
+  color: #d4a5a8;
   font-style: italic;
 }
 
 /* Attribute */
 code span.at {
-  color: #cfabaf;
+  color: #e8a0a8;
 }
 
 /* BaseN */
 code span.bn {
-  color: #c9a189;
+  color: #e89868;
 }
 
 /* BuiltIn */
 code span.bu {
-  color: #b46b6c;
+  color: #e85556;
   font-style: italic;
 }
 
 /* ControlFlow */
 code span.cf {
-  color: #d4a8ac;
+  color: #f49aa3;
   font-weight: bold;
 }
 
 /* Char */
 code span.ch {
-  color: #d08e8e;
+  color: #ff7a7b;
 }
 
 /* Constant */
 code span.cn {
-  color: #d0b491;
+  color: #e8b06a;
   font-weight: bold;
 }
 
 /* Comment */
 code span.co {
-  color: #f4e7e8;
+  color: #fee3e5;
   font-style: italic;
 }
 
 /* CommentVar */
 code span.cv {
-  color: #e8d6d7;
+  color: #f5d0d3;
   font-weight: bold;
 }
 
 /* Documentation */
 code span.do {
-  color: #e8d6d7;
+  color: #f5d0d3;
   font-style: italic;
 }
 
 /* DataType */
 code span.dt {
-  color: #ad8d66;
+  color: #c8883a;
   font-weight: bold;
 }
 
 /* DecVal */
 code span.dv {
-  color: #d4b098;
+  color: #f0a878;
 }
 
 /* Error */
 code span.er {
-  color: #c87879;
+  color: #ff6162;
   text-decoration: underline;
 }
 
 /* Extension */
 code span.ex {
-  color: #d4a8ac;
+  color: #f49aa3;
 }
 
 /* Float */
 code span.fl {
-  color: #d4b098;
+  color: #f0a878;
 }
 
 /* Function */
 code span.fu {
-  color: #c87879;
+  color: #ff6162;
   font-weight: bold;
 }
 
 /* Import */
 code span.im {
-  color: #e4bec2;
+  color: #ffb3ba;
   font-weight: bold;
 }
 
 /* Information */
 code span.in {
-  color: #f7ecec;
+  color: #ffe8ea;
 }
 
 /* Keyword */
 code span.kw {
-  color: #e4bec2;
+  color: #ffb3ba;
   font-weight: bold;
 }
 
 /* Operator */
 code span.op {
-  color: #cfabaf;
+  color: #e8a0a8;
 }
 
 /* Other */
 code span.ot {
-  color: #d0b491;
+  color: #e8b06a;
 }
 
 /* Preprocessor */
 code span.pp {
-  color: #ecd0d4;
+  color: #ffc8ce;
 }
 
 /* RegionMarker */
 code span.re {
-  color: #c4acae;
+  color: #d4a5a8;
 }
 
 /* SpecialChar */
 code span.sc {
-  color: #d8a68e;
+  color: #ff9a6a;
 }
 
 /* SpecialString */
 code span.ss {
-  color: #d79e9f;
+  color: #ff8e8f;
   font-weight: bold;
 }
 
 /* String */
 code span.st {
-  color: #d08e8e;
+  color: #ff7a7b;
 }
 
 /* Variable */
 code span.va {
-  color: #c2a077;
+  color: #df9a49;
 }
 
 /* VerbatimString */
 code span.vs {
-  color: #d79e9f;
+  color: #ff8e8f;
 }
 
 /* Warning */
 code span.wa {
-  color: #d8a68e;
+  color: #ff9a6a;
   font-weight: bold;
 }
 
@@ -226,4 +226,4 @@ code span.wa {
   content: "</";
 }
 
-/*# sourceMappingURL=414cd26467357f6b64bccf74f9fa1a82.css.map */
+/*# sourceMappingURL=46387f28a232cca47c8f6ffd3ce7fbe8.css.map */
