@@ -36,6 +36,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../../">
+<link href="../../../../samples/technical-writing/personal/guestbook/developer.html" rel="next">
 <link href="../../../../assets/headshot.png" rel="icon" type="image/png">
 <script src="../../../../site_libs/quarto-listing/list.min.js"></script>
 <script src="../../../../site_libs/quarto-listing/quarto-listing.js"></script>
@@ -102,6 +103,34 @@ ul.task-list li input[type="checkbox"] {
 
     window['quarto-listings'] = window['quarto-listings'] || {};
     window['quarto-listings']['listing-personal-technical'] = new List('listing-personal-technical', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-guestbook .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-guestbook'] = new List('listing-guestbook', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -430,7 +459,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item">y2k Guestbook</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../../samples/technical-writing/personal/guestbook/index.html">Personal / y2k Guestbook</a></li></ol></nav>
         <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -451,13 +480,36 @@ window.Quarto = {
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../../samples/technical-writing/validmind/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-1-label">ValidMind</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section: ValidMind">
+            <a href="../../../../samples/technical-writing/personal/guestbook/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">Personal / y2k Guestbook</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section: Personal / y2k Guestbook">
               <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
             </button> 
       </div>
       <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../samples/technical-writing/personal/guestbook/developer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Developer Guides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../samples/technical-writing/personal/guestbook/guides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">User Guides</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../../samples/technical-writing/validmind/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text" id="quarto-sidebar-section-2-label">ValidMind</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section: ValidMind">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
+      </div>
+      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../../samples/technical-writing/validmind/jupyter-notebooks.html" class="sidebar-item-text sidebar-link">
@@ -493,12 +545,12 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../../../samples/technical-writing/atryum/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-2-label">Atryum</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section: Atryum">
+ <span class="menu-text" id="quarto-sidebar-section-3-label">Atryum</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section: Atryum">
               <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
             </button> 
       </div>
-      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../../samples/technical-writing/atryum/integrations.html" class="sidebar-item-text sidebar-link">
@@ -522,34 +574,34 @@ window.Quarto = {
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text" id="quarto-sidebar-section-3-label">Archive</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-controls="quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-4-label">Archive</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
-      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" aria-labelledby="quarto-sidebar-section-4-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../../../samples/technical-writing/saasquatch/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-4-label">SaaSquatch</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-controls="quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section: SaaSquatch">
+ <span class="menu-text" id="quarto-sidebar-section-5-label">SaaSquatch</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-controls="quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section: SaaSquatch">
               <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
             </button> 
       </div>
-      <ul id="quarto-sidebar-section-4" aria-labelledby="quarto-sidebar-section-4-label" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-5" aria-labelledby="quarto-sidebar-section-5-label" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../../../samples/technical-writing/saasquatch/integrations/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-5-label">Integrations</span></a>
-            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-controls="quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section: Integrations">
+ <span class="menu-text" id="quarto-sidebar-section-6-label">Integrations</span></a>
+            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-controls="quarto-sidebar-section-6" aria-expanded="false" aria-label="Toggle section: Integrations">
               <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
             </button> 
       </div>
-      <ul id="quarto-sidebar-section-5" aria-labelledby="quarto-sidebar-section-5-label" class="collapse list-unstyled sidebar-section depth3 ">  
+      <ul id="quarto-sidebar-section-6" aria-labelledby="quarto-sidebar-section-6-label" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-controls="quarto-sidebar-section-6" aria-expanded="false">
- <span class="menu-text" id="quarto-sidebar-section-6-label">Salesforce</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-controls="quarto-sidebar-section-7" aria-expanded="false">
+ <span class="menu-text" id="quarto-sidebar-section-7-label">Salesforce</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
-      <ul id="quarto-sidebar-section-6" aria-labelledby="quarto-sidebar-section-6-label" class="collapse list-unstyled sidebar-section depth4 ">  
+      <ul id="quarto-sidebar-section-7" aria-labelledby="quarto-sidebar-section-7-label" class="collapse list-unstyled sidebar-section depth4 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../../samples/technical-writing/saasquatch/integrations/sfdc/invocable-methods.html" class="sidebar-item-text sidebar-link">
@@ -572,10 +624,10 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-controls="quarto-sidebar-section-7" aria-expanded="false">
- <span class="menu-text" id="quarto-sidebar-section-7-label">Other</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-controls="quarto-sidebar-section-8" aria-expanded="false">
+ <span class="menu-text" id="quarto-sidebar-section-8-label">Other</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
-      <ul id="quarto-sidebar-section-7" aria-labelledby="quarto-sidebar-section-7-label" class="collapse list-unstyled sidebar-section depth4 ">  
+      <ul id="quarto-sidebar-section-8" aria-labelledby="quarto-sidebar-section-8-label" class="collapse list-unstyled sidebar-section depth4 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../../samples/technical-writing/saasquatch/integrations/stripe.html" class="sidebar-item-text sidebar-link">
@@ -601,12 +653,12 @@ window.Quarto = {
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../../../samples/technical-writing/saasquatch/sdk/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-8-label">JavaScript SDK</span></a>
-            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-controls="quarto-sidebar-section-8" aria-expanded="false" aria-label="Toggle section: JavaScript SDK">
+ <span class="menu-text" id="quarto-sidebar-section-9-label">JavaScript SDK</span></a>
+            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-controls="quarto-sidebar-section-9" aria-expanded="false" aria-label="Toggle section: JavaScript SDK">
               <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
             </button> 
       </div>
-      <ul id="quarto-sidebar-section-8" aria-labelledby="quarto-sidebar-section-8-label" class="collapse list-unstyled sidebar-section depth3 ">  
+      <ul id="quarto-sidebar-section-9" aria-labelledby="quarto-sidebar-section-9-label" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../../samples/technical-writing/saasquatch/sdk/key-sjs.html" class="sidebar-item-text sidebar-link">
@@ -630,12 +682,12 @@ window.Quarto = {
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../../../samples/technical-writing/saasquatch/user-guides/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-9-label">User Guides</span></a>
-            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-controls="quarto-sidebar-section-9" aria-expanded="false" aria-label="Toggle section: User Guides">
+ <span class="menu-text" id="quarto-sidebar-section-10-label">User Guides</span></a>
+            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-controls="quarto-sidebar-section-10" aria-expanded="false" aria-label="Toggle section: User Guides">
               <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
             </button> 
       </div>
-      <ul id="quarto-sidebar-section-9" aria-labelledby="quarto-sidebar-section-9-label" class="collapse list-unstyled sidebar-section depth3 ">  
+      <ul id="quarto-sidebar-section-10" aria-labelledby="quarto-sidebar-section-10-label" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../../samples/technical-writing/saasquatch/user-guides/sharelinks.html" class="sidebar-item-text sidebar-link">
@@ -659,11 +711,17 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">Table of Contents</h2>
+   
+  <ul>
+  <li><a href="#citation" id="toc-citation" class="nav-link active" data-scroll-target="#citation">Citation</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content" tabindex="-1">
+<main class="content column-body" id="quarto-document-content" tabindex="-1">
 
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -678,6 +736,8 @@ window.Quarto = {
     <div class="quarto-category">Scalar</div>
     <div class="quarto-category">Feature Flags</div>
     <div class="quarto-category">Next.js</div>
+    <div class="quarto-category">React</div>
+    <div class="quarto-category">TypeScript</div>
     <div class="quarto-category">Node.js</div>
     <div class="quarto-category">SQL</div>
     <div class="quarto-category">Postgres</div>
@@ -690,7 +750,7 @@ window.Quarto = {
 
 
 
-<div class="quarto-title-meta column-page-right">
+<div class="quarto-title-meta column-body">
 
     
   
@@ -702,26 +762,13 @@ window.Quarto = {
 </header>
 
 
-<p>I designed and built a mobile-responsive interactive Next.js application, complete with LLM-friendly documentation in MDX and an API reference implemented with Scalar.</p>
+<div class="hidden">
+<p>To support installation and usage of my guestbook application, I created comprehensive documentation in MDX, including an API reference implemented with Scalar.</p>
+</div>
+<p>I designed and built a retro-inspired, mobile-responsive Next.js guestbook application styled with Tailwind CSS and a backend powered by Supabase, complete with comprehensive documentation in MDX, including an API reference implemented with Scalar.</p>
 <div id="listing-personal-technical" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ0ZlYXR1cmUlMjBEb2N1bWVudGF0aW9uJTJDVXNlciUyMEd1aWRlcyUyQ09wZW5BUEklMkNTY2FsYXIlMkNGZWF0dXJlJTIwRmxhZ3MlMkNOZXh0LmpzJTJDTm9kZS5qcyUyQ1NRTCUyQ1Bvc3RncmVzJTJDVmVyY2VsJTJDU3VwYWJhc2U=" data-listing-file-modified-sort="1789277378215" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="../../../../samples/technical-writing/personal/guestbook/library.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-y2k Guestbook API Library Reference
-</h5>
-<div class="card-subtitle listing-subtitle">
-Technical Writing
-</div>
-<div class="card-text listing-description delink">
-
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ0ZlYXR1cmUlMjBEb2N1bWVudGF0aW9uJTJDVXNlciUyMEd1aWRlcyUyQ09wZW5BUEklMkNTY2FsYXIlMkNGZWF0dXJlJTIwRmxhZ3MlMkNOZXh0LmpzJTJDTm9kZS5qcyUyQ1NRTCUyQ1Bvc3RncmVzJTJDVmVyY2VsJTJDU3VwYWJhc2UlMkNDdWN1bWJlciUyQ0dvb2dsZSUyMENsb3VkJTIwUGxhdGZvcm0=" data-listing-file-modified-sort="1789277378215" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="list grid quarto-listing-cols-2">
+<div class="g-col-1" data-index="0" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ0ZlYXR1cmUlMjBEb2N1bWVudGF0aW9uJTJDVXNlciUyMEd1aWRlcyUyQ09wZW5BUEklMkNTY2FsYXIlMkNGZWF0dXJlJTIwRmxhZ3MlMkNOZXh0LmpzJTJDUmVhY3QlMkNUeXBlU2NyaXB0JTJDTm9kZS5qcyUyQ1NRTCUyQ1Bvc3RncmVzJTJDVmVyY2VsJTJDU3VwYWJhc2UlMkNDdWN1bWJlciUyQ0dvb2dsZSUyMENsb3VkJTIwUGxhdGZvcm0=" data-listing-file-modified-sort="1789606895261" data-listing-reading-time-sort="1" data-listing-word-count-sort="11">
 <a href="../../../../samples/technical-writing/personal/guestbook/developer.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -732,12 +779,12 @@ y2k Guestbook Developer Guides
 Technical Writing
 </div>
 <div class="card-text listing-description delink">
-
+Developer-focused guides I created for my y2k Guestbook application.
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ0ZlYXR1cmUlMjBEb2N1bWVudGF0aW9uJTJDVXNlciUyMEd1aWRlcyUyQ05leHQuanMlMkNOb2RlLmpzJTJDU1FMJTJDUG9zdGdyZXMlMkNWZXJjZWwlMkNTdXBhYmFzZSUyQ1Bvc3RIb2clMkNHb29nbGUlMjBDbG91ZCUyMFBsYXRmb3Jt" data-listing-file-modified-sort="1789277378215" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="g-col-1" data-index="1" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ0ZlYXR1cmUlMjBEb2N1bWVudGF0aW9uJTJDVXNlciUyMEd1aWRlcyUyQ05leHQuanMlMkNSZWFjdCUyQ1R5cGVTY3JpcHQlMkNOb2RlLmpzJTJDU1FMJTJDUG9zdGdyZXMlMkNWZXJjZWwlMkNTdXBhYmFzZSUyQ1Bvc3RIb2clMkNHb29nbGUlMjBDbG91ZCUyMFBsYXRmb3Jt" data-listing-file-modified-sort="1789606895261" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
 <a href="../../../../samples/technical-writing/personal/guestbook/guides.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -748,7 +795,7 @@ y2k Guestbook User Guides
 Technical Writing
 </div>
 <div class="card-text listing-description delink">
-
+Some of the general user guides I created for my y2k Guestbook application.
 </div>
 </div>
 </div></a>
@@ -756,11 +803,37 @@ Technical Writing
 </div>
 <div class="listing-no-matching d-none">No Matches Found</div>
 </div>
+<section id="citation" class="level2">
+<h2 class="anchored" data-anchor-id="citation">Citation</h2>
+<div class="guestbook">
+
+</div>
 
 
 
+</section>
 
-</main> <!-- /main -->
+<div class="quarto-listing quarto-listing-container-grid" id="listing-guestbook">
+<div class="list grid quarto-listing-cols-2">
+<div class="g-col-1" data-index="0" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ0ZlYXR1cmUlMjBEb2N1bWVudGF0aW9uJTJDVXNlciUyMEd1aWRlcyUyQ05leHQuanMlMkNSZWFjdCUyQ1R5cGVTY3JpcHQlMkNOb2RlLmpzJTJDU1FMJTJDUG9zdGdyZXMlMkNUYWlsd2luZCUyMENTUyUyQ1Bvc3RIb2clMkNWZXJjZWwlMkNTdXBhYmFzZSUyQ0dvb2dsZSUyMENsb3VkJTIwUGxhdGZvcm0lMkNGZWF0dXJlJTIwRmxhZ3M=" data-listing-file-modified-sort="1789606895249" data-listing-reading-time-sort="2" data-listing-word-count-sort="266">
+<a href="../../../../samples/content-engineering/personal/guestbook/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+y2k Guestbook
+</h5>
+<div class="card-subtitle listing-subtitle">
+Content Engineering
+</div>
+<div class="card-text listing-description delink">
+<p>Learn how I built the guestbook application, the accompanying documentation, and my custom installation of the guestbook.</p>
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No Matches Found</div>
+</div></main> <!-- /main -->
 <style>
   @media (max-width: 767.98px) {
     .tabset-margin-container {
@@ -2140,6 +2213,15 @@ Technical Writing
     }
   });
   </script>
+<nav class="page-navigation column-body" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../../../samples/technical-writing/personal/guestbook/developer.html" class="pagination-link" aria-label="Developer Guides">
+        <span class="nav-page-text">Developer Guides</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

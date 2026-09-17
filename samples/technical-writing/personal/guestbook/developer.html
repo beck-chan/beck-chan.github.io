@@ -36,7 +36,11 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../../">
+<link href="../../../../samples/technical-writing/personal/guestbook/guides.html" rel="next">
+<link href="../../../../samples/technical-writing/personal/guestbook/index.html" rel="prev">
 <link href="../../../../assets/headshot.png" rel="icon" type="image/png">
+<script src="../../../../site_libs/quarto-listing/list.min.js"></script>
+<script src="../../../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../../../site_libs/quarto-html/popper.min.js"></script>
@@ -83,6 +87,35 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-guestbook-developer-guides .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-subtitle","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-guestbook-developer-guides'] = new List('listing-guestbook-developer-guides', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <style>
   /* First paint: take notes out of the box entirely. visibility/opacity
      still lets overflow:visible margin notes paint over the TOC. */
@@ -126,6 +159,35 @@ ul.task-list li input[type="checkbox"] {
     })
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -370,7 +432,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item">y2k Guestbook Developer Guides</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../../samples/technical-writing/personal/guestbook/index.html">Personal / y2k Guestbook</a></li><li class="breadcrumb-item"><a href="../../../../samples/technical-writing/personal/guestbook/developer.html">Developer Guides</a></li></ol></nav>
         <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -391,13 +453,36 @@ ul.task-list li input[type="checkbox"] {
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../../samples/technical-writing/validmind/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-1-label">ValidMind</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section: ValidMind">
+            <a href="../../../../samples/technical-writing/personal/guestbook/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">Personal / y2k Guestbook</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section: Personal / y2k Guestbook">
               <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
             </button> 
       </div>
       <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../samples/technical-writing/personal/guestbook/developer.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Developer Guides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../samples/technical-writing/personal/guestbook/guides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">User Guides</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../../samples/technical-writing/validmind/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text" id="quarto-sidebar-section-2-label">ValidMind</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section: ValidMind">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
+      </div>
+      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../../samples/technical-writing/validmind/jupyter-notebooks.html" class="sidebar-item-text sidebar-link">
@@ -433,12 +518,12 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../../../samples/technical-writing/atryum/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-2-label">Atryum</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section: Atryum">
+ <span class="menu-text" id="quarto-sidebar-section-3-label">Atryum</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section: Atryum">
               <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
             </button> 
       </div>
-      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../../samples/technical-writing/atryum/integrations.html" class="sidebar-item-text sidebar-link">
@@ -462,34 +547,34 @@ ul.task-list li input[type="checkbox"] {
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text" id="quarto-sidebar-section-3-label">Archive</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-controls="quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-4-label">Archive</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
-      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" aria-labelledby="quarto-sidebar-section-4-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../../../samples/technical-writing/saasquatch/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-4-label">SaaSquatch</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-controls="quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section: SaaSquatch">
+ <span class="menu-text" id="quarto-sidebar-section-5-label">SaaSquatch</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-controls="quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section: SaaSquatch">
               <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
             </button> 
       </div>
-      <ul id="quarto-sidebar-section-4" aria-labelledby="quarto-sidebar-section-4-label" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-5" aria-labelledby="quarto-sidebar-section-5-label" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../../../samples/technical-writing/saasquatch/integrations/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-5-label">Integrations</span></a>
-            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-controls="quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section: Integrations">
+ <span class="menu-text" id="quarto-sidebar-section-6-label">Integrations</span></a>
+            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-controls="quarto-sidebar-section-6" aria-expanded="false" aria-label="Toggle section: Integrations">
               <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
             </button> 
       </div>
-      <ul id="quarto-sidebar-section-5" aria-labelledby="quarto-sidebar-section-5-label" class="collapse list-unstyled sidebar-section depth3 ">  
+      <ul id="quarto-sidebar-section-6" aria-labelledby="quarto-sidebar-section-6-label" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-controls="quarto-sidebar-section-6" aria-expanded="false">
- <span class="menu-text" id="quarto-sidebar-section-6-label">Salesforce</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-controls="quarto-sidebar-section-7" aria-expanded="false">
+ <span class="menu-text" id="quarto-sidebar-section-7-label">Salesforce</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
-      <ul id="quarto-sidebar-section-6" aria-labelledby="quarto-sidebar-section-6-label" class="collapse list-unstyled sidebar-section depth4 ">  
+      <ul id="quarto-sidebar-section-7" aria-labelledby="quarto-sidebar-section-7-label" class="collapse list-unstyled sidebar-section depth4 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../../samples/technical-writing/saasquatch/integrations/sfdc/invocable-methods.html" class="sidebar-item-text sidebar-link">
@@ -512,10 +597,10 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-controls="quarto-sidebar-section-7" aria-expanded="false">
- <span class="menu-text" id="quarto-sidebar-section-7-label">Other</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-controls="quarto-sidebar-section-8" aria-expanded="false">
+ <span class="menu-text" id="quarto-sidebar-section-8-label">Other</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
-      <ul id="quarto-sidebar-section-7" aria-labelledby="quarto-sidebar-section-7-label" class="collapse list-unstyled sidebar-section depth4 ">  
+      <ul id="quarto-sidebar-section-8" aria-labelledby="quarto-sidebar-section-8-label" class="collapse list-unstyled sidebar-section depth4 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../../samples/technical-writing/saasquatch/integrations/stripe.html" class="sidebar-item-text sidebar-link">
@@ -541,12 +626,12 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../../../samples/technical-writing/saasquatch/sdk/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-8-label">JavaScript SDK</span></a>
-            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-controls="quarto-sidebar-section-8" aria-expanded="false" aria-label="Toggle section: JavaScript SDK">
+ <span class="menu-text" id="quarto-sidebar-section-9-label">JavaScript SDK</span></a>
+            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-controls="quarto-sidebar-section-9" aria-expanded="false" aria-label="Toggle section: JavaScript SDK">
               <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
             </button> 
       </div>
-      <ul id="quarto-sidebar-section-8" aria-labelledby="quarto-sidebar-section-8-label" class="collapse list-unstyled sidebar-section depth3 ">  
+      <ul id="quarto-sidebar-section-9" aria-labelledby="quarto-sidebar-section-9-label" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../../samples/technical-writing/saasquatch/sdk/key-sjs.html" class="sidebar-item-text sidebar-link">
@@ -570,12 +655,12 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../../../samples/technical-writing/saasquatch/user-guides/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-9-label">User Guides</span></a>
-            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-controls="quarto-sidebar-section-9" aria-expanded="false" aria-label="Toggle section: User Guides">
+ <span class="menu-text" id="quarto-sidebar-section-10-label">User Guides</span></a>
+            <button type="button" class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-controls="quarto-sidebar-section-10" aria-expanded="false" aria-label="Toggle section: User Guides">
               <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
             </button> 
       </div>
-      <ul id="quarto-sidebar-section-9" aria-labelledby="quarto-sidebar-section-9-label" class="collapse list-unstyled sidebar-section depth3 ">  
+      <ul id="quarto-sidebar-section-10" aria-labelledby="quarto-sidebar-section-10-label" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../../samples/technical-writing/saasquatch/user-guides/sharelinks.html" class="sidebar-item-text sidebar-link">
@@ -606,7 +691,7 @@ ul.task-list li input[type="checkbox"] {
 <main class="content column-page-right" id="quarto-document-content" tabindex="-1">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../../samples/technical-writing/personal/guestbook/index.html">Personal / y2k Guestbook</a></li><li class="breadcrumb-item"><a href="../../../../samples/technical-writing/personal/guestbook/developer.html">Developer Guides</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">y2k Guestbook Developer Guides</h1>
 <p class="subtitle lead">Technical Writing</p>
@@ -618,6 +703,8 @@ ul.task-list li input[type="checkbox"] {
     <div class="quarto-category">Scalar</div>
     <div class="quarto-category">Feature Flags</div>
     <div class="quarto-category">Next.js</div>
+    <div class="quarto-category">React</div>
+    <div class="quarto-category">TypeScript</div>
     <div class="quarto-category">Node.js</div>
     <div class="quarto-category">SQL</div>
     <div class="quarto-category">Postgres</div>
@@ -642,10 +729,67 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Developer-focused guides I created for my y2k Guestbook application.</p>
+<div class="developer-guides">
+
+</div>
 
 
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-grid" id="listing-guestbook-developer-guides">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0">
+<a href="https://y2k-guestbook.vercel.app/docs/api" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+API Library
+</h5>
+<div class="card-subtitle listing-subtitle">
+Developer Guides
+</div>
+<div class="card-text listing-description delink">
+<p>API Library reference featuring a custom Scalar explorer implementation where users can input their own credentials to test the API.</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1">
+<a href="https://beck-chan.vercel.app/docs/tests" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Cucumber Tests
+</h5>
+<div class="card-subtitle listing-subtitle">
+Developer Guides
+</div>
+<div class="card-text listing-description delink">
+<p>Cucumber testing guide, including sample Gherkin <code>.feature</code> files and step definitions users can run to test their own installations with Playwright.</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2">
+<a href="https://y2k-guestbook.vercel.app/docs/install" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Install with npm
+</h5>
+<div class="card-subtitle listing-subtitle">
+Developer Guides
+</div>
+<div class="card-text listing-description delink">
+<p>End-to-end installation guide for integrating the y2k Guestbook package into your own Next.js application using Node Package Manager (npm).</p>
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No Matches Found</div>
+</div></main> <!-- /main -->
 <style>
   @media (max-width: 767.98px) {
     .tabset-margin-container {
@@ -2025,6 +2169,18 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
+<nav class="page-navigation column-page-right" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="../../../../samples/technical-writing/personal/guestbook/index.html" class="pagination-link" aria-label="Personal / y2k Guestbook">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Personal / y2k Guestbook</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../../../samples/technical-writing/personal/guestbook/guides.html" class="pagination-link" aria-label="User Guides">
+        <span class="nav-page-text">User Guides</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
