@@ -1204,7 +1204,7 @@
     "href": "cv.html#projects",
     "title": "curriculum vitae",
     "section": "Projects",
-    "text": "Projects\n\n\ny2k Guestbook\nhttps://beck-chan.vercel.app\n\nMobile-responsive frontend built on Next.js and Tailwind CSS, integrated Supabase edge functions and backend.\nBuilt-in rate limiting and profanity filtering. Admin functionality for comment management and customization.\nDocs in MDX with Gemini chatbot, API reference implemented with Scalar. Admin gating via Google OAuth 2.0.\n\nContent Engineering: Guestbook\n\n\nPersonal Portfolio\nhttps://beck-chan.github.io\n\nMobile-responsive build using Quarto, deployed to GitHub Pages and Netlify via GitHub CI/CD Workflows.\nCustom themes and styling using Bootstrap. Custom functionality added with JavaScript and Lua.\nLocal deployment fallbacks via Justfile in Rust.\n\nContent Engineering: Portfolio"
+    "text": "Projects\n\n\ny2k Guestbook\nhttps://beck-chan.vercel.app\n\nMobile-responsive frontend built on Next.js and Tailwind CSS, integrated Supabase edge functions and backend.\nBuilt-in rate limiting and profanity filtering. Admin functionality for comment management and customization.\nDocs in MDX with Gemini chatbot, API reference implemented with Scalar. Admin gating via Google OAuth 2.0.\n\nContent Engineering: y2k Guestbook\n\n\nPersonal Portfolio\nhttps://beck-chan.github.io\n\nMobile-responsive build using Quarto, deployed to GitHub Pages and Netlify via GitHub CI/CD Workflows.\nCustom themes and styling using Bootstrap. Custom functionality added with JavaScript and Lua.\nLocal deployment fallbacks via Justfile in Rust.\n\nContent Engineering: Portfolio"
   },
   {
     "objectID": "index.html",
