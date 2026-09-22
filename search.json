@@ -1092,7 +1092,7 @@
     "href": "samples/content-engineering/personal/guestbook/index.html#documentation",
     "title": "y2k Guestbook",
     "section": "Documentation",
-    "text": "Documentation\nDocumentation guides include search functionality, and the API reference features an interactive explorer where users can input their own credentials to test the API when their applications are fully installed:\n\nDocumentation LandingAPI Library\n\n\n\n  \n    \n      \n    \n    \n      \n    \n  \n  y2k Guestbook Docs\n\n\n\n\n  \n    \n      \n    \n    \n      \n    \n  \n  y2k Guestbook API Library",
+    "text": "Documentation\nDocumentation guides include search functionality, and the API reference features an interactive explorer where users can input their own credentials to test the API when their applications are fully installed:\n\nDocumentation LandingAPI Library\n\n\n\n  \n    \n      \n    \n    \n      \n    \n  \n  y2k Guestbook Docs\n\n\n\n\n  \n    \n      \n    \n    \n      \n    \n  \n  y2k Guestbook API Library\n\n\n\n\nAlongside the interactive API library, I built a chatbot powered by Gemini that can answer questions about the documentation:\n\nLive ChatbotProof-of-Concept Chatbot\n\n\nThe live chatbot uses Supabase’s pgvector extension to store the embeddings of the documentation, and the Gemini API to answer questions:\n\n\n\nLive Chatbot Powered by pgvector\n\n\n\n\nMy initial, more complex proof-of-concept chatbot used a local Elasticsearch instance served via Docker and the Gemini API to answer questions about the documentation:\n\n  \n    \n      \n    \n    \n      \n    \n  \n  Proof-of-Concept Chatbot Built with Elasticsearch\n\n\n\n\n\n\n Try Chatbot Yourself!",
     "crumbs": [
       "Content Engineering",
       "Personal",
@@ -1204,7 +1204,7 @@
     "href": "cv.html#projects",
     "title": "curriculum vitae",
     "section": "Projects",
-    "text": "Projects\n\n\ny2k Guestbook\nhttps://beck-chan.vercel.app\n\nMobile-responsive frontend built on Next.js and Tailwind CSS, integrated Supabase edge functions and backend.\nBuilt-in rate limiting and profanity filtering. Admin functionality for comment management and customization.\nLLM-friendly docs in MDX, API reference implemented with Scalar. Admin gating via Google OAuth 2.0.\n\nContent Engineering: Guestbook\n\n\nPersonal Portfolio\nhttps://beck-chan.github.io\n\nMobile-responsive build using Quarto, deployed to GitHub Pages and Netlify via GitHub CI/CD Workflows.\nCustom themes and styling using Bootstrap. Custom functionality added with JavaScript and Lua.\nLocal deployment fallbacks via Justfile in Rust.\n\nContent Engineering: Portfolio"
+    "text": "Projects\n\n\ny2k Guestbook\nhttps://beck-chan.vercel.app\n\nMobile-responsive frontend built on Next.js and Tailwind CSS, integrated Supabase edge functions and backend.\nBuilt-in rate limiting and profanity filtering. Admin functionality for comment management and customization.\nDocs in MDX with Gemini chatbot, API reference implemented with Scalar. Admin gating via Google OAuth 2.0.\n\nContent Engineering: Guestbook\n\n\nPersonal Portfolio\nhttps://beck-chan.github.io\n\nMobile-responsive build using Quarto, deployed to GitHub Pages and Netlify via GitHub CI/CD Workflows.\nCustom themes and styling using Bootstrap. Custom functionality added with JavaScript and Lua.\nLocal deployment fallbacks via Justfile in Rust.\n\nContent Engineering: Portfolio"
   },
   {
     "objectID": "index.html",

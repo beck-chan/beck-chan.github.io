@@ -52,9 +52,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-11d350dff1962c4b5ccd67639fc79ccc.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap-47f126b145d5ee226a0c5e0c495c3376.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../../site_libs/bootstrap/bootstrap-dark-acd44de01ed676ca2281a2ff8b0fc726.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../../../../site_libs/bootstrap/bootstrap-47f126b145d5ee226a0c5e0c495c3376.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-2d3f7336fda89c73ca37a9cbdf4699dc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-dark-c0c3f7c9113077194510a888f38228e0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-2d3f7336fda89c73ca37a9cbdf4699dc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../../../site_libs/quarto-contrib/timeline-0.1.0/timeline.js"></script>
 <link href="../../../../site_libs/quarto-contrib/timeline-0.1.0/timeline.css" rel="stylesheet">
 <link href="../../../../site_libs/quarto-contrib/tachyons-4.12.0/tachyons.css" rel="stylesheet">
@@ -62,6 +62,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../../site_libs/quarto-contrib/iframe-1.1.1/iframe.css" rel="stylesheet">
 <link href="../../../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
 <link href="../../../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
+<script src="../../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -633,7 +636,7 @@ window.Quarto = {
   <figcaption>Modernized Guestbook Mobile View</figcaption>
 </figure>
 </div></div></section>
-<section id="documentation" class="level2">
+<section id="documentation" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="documentation">Documentation</h2>
 <p>Documentation guides include search functionality, and the API reference features an interactive explorer where users can input their own credentials to test the API when their applications are fully installed:</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
@@ -667,7 +670,39 @@ window.Quarto = {
 </div>
 </div>
 </div>
-</section>
+<p>Alongside the interactive API library, I built a chatbot powered by Gemini that can answer questions about the documentation:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Live Chatbot</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Proof-of-Concept Chatbot</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>The live chatbot uses Supabase’s <code>pgvector</code> extension to store the embeddings of the documentation, and the Gemini API to answer questions:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="livebot.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Live Chatbot Powered by pgvector"><img src="livebot.gif" class="pics img-fluid figure-img" style="width:100.0%" alt="Live Chatbot Powered by pgvector"></a></p>
+<figcaption>Live Chatbot Powered by <code>pgvector</code></figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>My initial, more complex proof-of-concept chatbot used a local Elasticsearch instance served via Docker and the Gemini API to answer questions about the documentation:</p>
+<figure class="iframe-embed figure iframe-embed--align-center iframe-embed--valign-center iframe-embed--new-window" style="--iframe-zoom: 0.5; --iframe-width: 100%; --iframe-height: 560px;">
+  <div class="iframe-embed__chrome pics">
+    <div class="iframe-embed__frame">
+      <iframe src="https://www.youtube.com/embed/zpzFcJU4MtU" title="Proof-of-Concept Chatbot Built with Elasticsearch" loading="lazy"></iframe>
+    </div>
+    <a class="iframe-embed__open" href="https://www.youtube.com/embed/zpzFcJU4MtU" target="_blank" rel="noopener noreferrer" title="Open Proof-of-Concept Chatbot Built with Elasticsearch" aria-label="Open Proof-of-Concept Chatbot Built with Elasticsearch">
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+    </a>
+  </div>
+  <figcaption>Proof-of-Concept Chatbot Built with Elasticsearch</figcaption>
+</figure>
+</div>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><a href="https://beck-chan.vercel.app/docs/" class="button"><i class="fa-solid fa-flask" aria-label="flask"></i> Try Chatbot Yourself!</a></p>
+</div></div></section>
 <section id="feature-flags" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="feature-flags">Feature Flags</h2>
 <p>Using feature flags I implemented, I can toggle between different versions of the application, like the deployment below which doesn’t feature the poetry volume and instead serves the guestbook commenting board at full size:</p>
@@ -694,9 +729,9 @@ window.Quarto = {
 </figure>
 </div></div><p>Or display two different versions of the documentation, such as one that reflects the features of my custom install, and one that reflects the features of the public install:</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Custom Install</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Public Install</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Custom Install</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Public Install</a></li></ul>
 <div class="tab-content">
-<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
 <figure class="iframe-embed figure iframe-embed--align-center iframe-embed--valign-center iframe-embed--new-window" style="--iframe-zoom: 0.5; --iframe-width: 100%; --iframe-height: 560px;">
   <div class="iframe-embed__chrome pics">
     <div class="iframe-embed__frame">
@@ -709,7 +744,7 @@ window.Quarto = {
   <figcaption>y2k Guestbook Custom Docs</figcaption>
 </figure>
 </div>
-<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
 <figure class="iframe-embed figure iframe-embed--align-center iframe-embed--valign-center iframe-embed--new-window" style="--iframe-zoom: 0.5; --iframe-width: 100%; --iframe-height: 560px;">
   <div class="iframe-embed__chrome pics">
     <div class="iframe-embed__frame">
@@ -740,7 +775,7 @@ window.Quarto = {
 </div></div></section>
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-guestbook-citations">
-<div class="list grid quarto-listing-cols-2">
+<div class="list grid quarto-listing-cols-3">
 <div class="g-col-1" data-index="0">
 <a href="https://beck-chan.vercel.app/docs/docs-build" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
@@ -758,6 +793,22 @@ y2k Guestbook Docs
 </div></a>
 </div>
 <div class="g-col-1" data-index="1">
+<a href="https://beck-chan.vercel.app/docs/bot-build" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Chatbot Build
+</h5>
+<div class="card-subtitle listing-subtitle">
+y2k Guestbook Docs
+</div>
+<div class="card-text listing-description delink">
+<p>Learn how I built the chatbot for the documentation, using Supabase’s <code>pgvector</code> extension and Gemini API.</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2">
 <a href="https://beck-chan.vercel.app/docs/book-build" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -2197,6 +2248,38 @@ y2k Guestbook Docs
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
