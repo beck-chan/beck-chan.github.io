@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.11.5">
+<meta name="generator" content="quarto-1.11.6">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Personal – Portfolio</title>
+<title>Build apps with Google Sheets API – Portfolio</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -29,37 +29,35 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<link href="../../../samples/content-engineering/personal/index.html" rel="next">
-<link href="../../../assets/headshot.png" rel="icon" type="image/png">
-<script src="../../../site_libs/quarto-listing/list.min.js"></script>
-<script src="../../../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-11d350dff1962c4b5ccd67639fc79ccc.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bd0f6b19ad8437980ad0cd7d7c14ee51.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-11d350dff1962c4b5ccd67639fc79ccc.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-2d3f7336fda89c73ca37a9cbdf4699dc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-c0c3f7c9113077194510a888f38228e0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-2d3f7336fda89c73ca37a9cbdf4699dc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
-<script src="../../../site_libs/quarto-contrib/timeline-0.1.0/timeline.js"></script>
-<link href="../../../site_libs/quarto-contrib/timeline-0.1.0/timeline.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-contrib/tachyons-4.12.0/tachyons.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-contrib/tachyons-4.12.0/quarto-resets.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<link href="../../../../assets/headshot.png" rel="icon" type="image/png">
+<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-af8b5491cdc33476d473beceb28705d4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-90d3a2189a08747cfc660bd9b2e9f06b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-af8b5491cdc33476d473beceb28705d4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-bb307872747ef06070b5515c93ee7967.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-dark-5a0ed42a14751c57e122640d57c2d910.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-bb307872747ef06070b5515c93ee7967.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../../site_libs/quarto-contrib/timeline-0.1.0/timeline.js"></script>
+<link href="../../../../site_libs/quarto-contrib/timeline-0.1.0/timeline.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-contrib/tachyons-4.12.0/tachyons.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-contrib/tachyons-4.12.0/quarto-resets.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -86,63 +84,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-personal-content .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-personal-content'] = new List('listing-personal-content', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-personal-technical .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-personal-technical'] = new List('listing-personal-technical', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>
   /* First paint: take notes out of the box entirely. visibility/opacity
      still lets overflow:visible margin notes paint over the TOC. */
@@ -186,39 +127,10 @@ ul.task-list li input[type="checkbox"] {
     })
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
-<body class="nav-sidebar docked nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -271,13 +183,19 @@ window.Quarto = {
       manageTransitions('#quarto-margin-sidebar .nav-link', true);
       // Switch the toggles
       setColorSchemeToggle(alternate)
-      // Hack to workaround the fact that safari doesn't
-      // properly recolor the scrollbar when toggling (#1455)
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455).
+    // Not run on load: stylesheets are set before first paint there, and
+    // scrolling would undo the scroll to a URL fragment (#14973).
+    // The one pixel nudge keeps the reader where they were.
+    const refreshSafariScrollbar = () => {
       if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
         manageTransitions("body", false);
-        window.scrollTo(0, 1);
+        const scrollY = window.scrollY;
+        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
         setTimeout(() => {
-          window.scrollTo(0, 0);
+          window.scrollTo(0, scrollY);
           manageTransitions("body", true);
         }, 40);
       }
@@ -371,6 +289,7 @@ window.Quarto = {
       // Read the current dark / light value
       let toAlternate = !hasAlternateSentinel();
       toggleColorMode(toAlternate);
+      refreshSafariScrollbar();
       setStyleSentinel(toAlternate);
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
@@ -388,7 +307,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../../index.html">
+    <a class="navbar-brand" href="../../../../index.html">
     <span class="navbar-title">Portfolio</span>
     </a>
   </div>
@@ -399,15 +318,15 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../samples/content-engineering/index.html"> 
+    <a class="nav-link" href="../../../../samples/content-engineering/index.html"> 
 <span class="menu-text">Content Engineering</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../samples/technical-writing/index.html"> 
+    <a class="nav-link" href="../../../../samples/technical-writing/index.html"> 
 <span class="menu-text">Technical Writing</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../samples/copywriting/index.html"> 
+    <a class="nav-link" href="../../../../samples/copywriting/index.html"> 
 <span class="menu-text">Copywriting</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -416,11 +335,11 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-all-samples">    
         <li>
-    <a class="dropdown-item" href="../../../samples/index.html">
+    <a class="dropdown-item" href="../../../../samples/index.html">
  <span class="dropdown-text">Filter by Criteria</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../samples/organizations/index.html">
+    <a class="dropdown-item" href="../../../../samples/organizations/index.html">
  <span class="dropdown-text">Collated by Organization</span></a>
   </li>  
     </ul>
@@ -428,7 +347,7 @@ window.Quarto = {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../cv.html"> 
+    <a class="nav-link" href="../../../../cv.html"> 
 <span class="menu-text"><em>curriculum vitae</em></span></a>
   </li>  
   <li class="nav-item">
@@ -454,190 +373,38 @@ window.Quarto = {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav" aria-label="Toolbar">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../samples/organizations/personal/index.html">Personal</a></li></ol></nav>
-        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto" aria-label="Section">
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../samples/organizations/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Collated Samples</span></a>
-  </div>
-</li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../../samples/organizations/personal/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text" id="quarto-sidebar-section-1-label">Personal</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section: Personal">
-              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
-            </button> 
-      </div>
-      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../samples/content-engineering/personal/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Content Engineering</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../samples/technical-writing/personal/guestbook/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Technical Writing</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../../samples/organizations/validmind.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-2-label">ValidMind</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section: ValidMind">
-              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
-            </button> 
-      </div>
-      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../samples/content-engineering/validmind/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Content Engineering</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../samples/technical-writing/validmind/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Technical Writing</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../samples/copywriting/index.html#validmind" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Copywriting</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../../samples/organizations/atryum.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-3-label">Atryum</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section: Atryum">
-              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
-            </button> 
-      </div>
-      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../samples/content-engineering/atryum/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Content Engineering</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../samples/technical-writing/atryum/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Technical Writing</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-controls="quarto-sidebar-section-4" aria-expanded="true">
- <span class="menu-text" id="quarto-sidebar-section-4-label">Archive</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
-      </div>
-      <ul id="quarto-sidebar-section-4" aria-labelledby="quarto-sidebar-section-4-label" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../../samples/organizations/saasquatch.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text" id="quarto-sidebar-section-5-label">SaaSquatch</span></a>
-            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-controls="quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section: SaaSquatch">
-              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
-            </button> 
-      </div>
-      <ul id="quarto-sidebar-section-5" aria-labelledby="quarto-sidebar-section-5-label" class="collapse list-unstyled sidebar-section depth2 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../samples/technical-writing/saasquatch/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Technical Writing</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../samples/copywriting/index.html#saasquatch" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Copywriting</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
     <h2 id="toc-title">Table of Contents</h2>
    
   <ul>
-  <li><a href="#content-engineering" id="toc-content-engineering" class="nav-link active" data-scroll-target="#content-engineering">Content Engineering</a></li>
-  <li><a href="#technical-writing" id="toc-technical-writing" class="nav-link" data-scroll-target="#technical-writing">Technical Writing</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
   </ul>
 </nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Qm9vdHN0cmFwJTIwQ1NT">Bootstrap CSS <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q0klMkZDRCUyMFdvcmtmbG93cw==">CI/CD Workflows <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29udGVudCUyMEFyY2hpdGVjdHVyZQ==">Content Architecture <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q3VjdW1iZXI=">Cucumber <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RGV2ZWxvcGVyJTIwQ29udGVudA==">Developer Content <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RmVhdHVyZSUyMERvY3VtZW50YXRpb24=">Feature Documentation <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RmVhdHVyZSUyMEZsYWdz">Feature Flags <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RnJvbnRlbmQlMjBEZXZlbG9wbWVudA==">Frontend Development <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R2l0SHViJTIwUGFnZXM=">GitHub Pages <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R29vZ2xlJTIwQ2xvdWQlMjBQbGF0Zm9ybQ==">Google Cloud Platform <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SFRNTA==">HTML <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TmV0bGlmeQ==">Netlify <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TmV4dC5qcw==">Next.js <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Tm9kZS5qcw==">Node.js <span class="quarto-category-count">(2)</span></div><div class="category" data-category="T3BlbkFQSQ==">OpenAPI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UG9zdGdyZXM=">Postgres <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UG9zdEhvZw==">PostHog <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UXVhcnRv">Quarto <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVhY3Q=">React <span class="quarto-category-count">(2)</span></div><div class="category" data-category="U2NhbGFy">Scalar <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U1FM">SQL <span class="quarto-category-count">(2)</span></div><div class="category" data-category="U3VwYWJhc2U=">Supabase <span class="quarto-category-count">(2)</span></div><div class="category" data-category="VGFpbHdpbmQlMjBDU1M=">Tailwind CSS <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VHlwZVNjcmlwdA==">TypeScript <span class="quarto-category-count">(2)</span></div><div class="category" data-category="VXNlciUyMEd1aWRlcw==">User Guides <span class="quarto-category-count">(2)</span></div><div class="category" data-category="VmVyY2Vs">Vercel <span class="quarto-category-count">(2)</span></div></div></div>
+    </div>
 <!-- main -->
-<main class="content column-body" id="quarto-document-content" tabindex="-1">
+<main class="content column-page-left" id="quarto-document-content" tabindex="-1">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Personal</h1>
-<p class="subtitle lead">Collated Samples</p>
+<h1 class="title">Build apps with Google Sheets API</h1>
+<p class="subtitle lead">Developer Advocacy</p>
   <div class="quarto-categories">
-    <div class="quarto-category">Content Architecture</div>
-    <div class="quarto-category">Developer Content</div>
-    <div class="quarto-category">Feature Documentation</div>
-    <div class="quarto-category">User Guides</div>
-    <div class="quarto-category">OpenAPI</div>
-    <div class="quarto-category">Scalar</div>
-    <div class="quarto-category">Next.js</div>
-    <div class="quarto-category">React</div>
-    <div class="quarto-category">TypeScript</div>
-    <div class="quarto-category">Node.js</div>
-    <div class="quarto-category">SQL</div>
-    <div class="quarto-category">Postgres</div>
-    <div class="quarto-category">Quarto</div>
-    <div class="quarto-category">GitHub Pages</div>
-    <div class="quarto-category">Netlify</div>
-    <div class="quarto-category">PostHog</div>
-    <div class="quarto-category">Vercel</div>
-    <div class="quarto-category">Supabase</div>
-    <div class="quarto-category">Cucumber</div>
-    <div class="quarto-category">Google Cloud Platform</div>
-    <div class="quarto-category">Feature Flags</div>
-    <div class="quarto-category">CI/CD Workflows</div>
-    <div class="quarto-category">Frontend Development</div>
+    <div class="quarto-category">Developer Advocacy</div>
+    <div class="quarto-category">Integrations</div>
+    <div class="quarto-category">Google Sheets API</div>
   </div>
   </div>
 
 
 
-<div class="quarto-title-meta column-body">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -649,72 +416,9 @@ window.Quarto = {
 </header>
 
 
-<p>I love to write and build things, so much so that I do it recreationally.</p>
-<section id="content-engineering" class="level2">
-<h2 class="anchored" data-anchor-id="content-engineering">Content Engineering</h2>
-<p>Some behind-the-scenes insights into how I built this portfolio site and other projects, created to showcase my abilities as a content architect.</p>
-<div id="listing-personal-content" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-2">
-<div class="g-col-1" data-index="0" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ0ZlYXR1cmUlMjBEb2N1bWVudGF0aW9uJTJDVXNlciUyMEd1aWRlcyUyQ05leHQuanMlMkNSZWFjdCUyQ1R5cGVTY3JpcHQlMkNOb2RlLmpzJTJDU1FMJTJDUG9zdGdyZXMlMkNUYWlsd2luZCUyMENTUyUyQ1Bvc3RIb2clMkNWZXJjZWwlMkNTdXBhYmFzZSUyQ0dvb2dsZSUyMENsb3VkJTIwUGxhdGZvcm0lMkNGZWF0dXJlJTIwRmxhZ3M=" data-listing-file-modified-sort="1791178133868" data-listing-reading-time-sort="3" data-listing-word-count-sort="456">
-<a href="../../../samples/content-engineering/personal/guestbook/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-y2k Guestbook
-</h5>
-<div class="card-subtitle listing-subtitle">
-Content Engineering
-</div>
-<div class="card-text listing-description delink">
-I designed and built a retro-inspired, mobile-responsive Next.js guestbook application styled with Tailwind CSS and a backend powered by Supabase, complete with comprehensive documentation in MDX, including an API reference implemented with Scalar.
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="Q29udGVudCUyMEFyY2hpdGVjdHVyZSUyQ1F1YXJ0byUyQ0dpdEh1YiUyMFBhZ2VzJTJDTmV0bGlmeSUyQ1Bvc3RIb2clMkNIVE1MJTJDQm9vdHN0cmFwJTIwQ1NTJTJDQ0klMkZDRCUyMFdvcmtmbG93cyUyQ0Zyb250ZW5kJTIwRGV2ZWxvcG1lbnQ=" data-listing-file-modified-sort="1791178133928" data-listing-reading-time-sort="1" data-listing-word-count-sort="68">
-<a href="../../../samples/content-engineering/personal/portfolio/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Portfolio
-</h5>
-<div class="card-subtitle listing-subtitle">
-Content Engineering
-</div>
-<div class="card-text listing-description delink">
-I designed and built this mobile-responsive portfolio website with Quarto and Bootstrap CSS, which automatically deploys to GitHub Pages and Netlify.
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No Matches Found</div>
-</div>
-</section>
-<section id="technical-writing" class="level2">
-<h2 class="anchored" data-anchor-id="technical-writing">Technical Writing</h2>
-<div id="listing-personal-technical" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-2">
-<div class="g-col-1" data-index="0" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ0ZlYXR1cmUlMjBEb2N1bWVudGF0aW9uJTJDVXNlciUyMEd1aWRlcyUyQ09wZW5BUEklMkNTY2FsYXIlMkNGZWF0dXJlJTIwRmxhZ3MlMkNOZXh0LmpzJTJDUmVhY3QlMkNUeXBlU2NyaXB0JTJDTm9kZS5qcyUyQ1NRTCUyQ1Bvc3RncmVzJTJDVmVyY2VsJTJDU3VwYWJhc2UlMkNDdWN1bWJlciUyQ0dvb2dsZSUyMENsb3VkJTIwUGxhdGZvcm0=" data-listing-file-modified-sort="1791178133938" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
-<a href="../../../samples/technical-writing/personal/guestbook/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-y2k Guestbook
-</h5>
-<div class="card-subtitle listing-subtitle">
-Technical Writing
-</div>
-<div class="card-text listing-description delink">
-To support installation and usage of my guestbook application, I created comprehensive documentation in MDX, including an API reference implemented with Scalar.
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No Matches Found</div>
-</div>
-
+<p>Integrate custom functions into your Google Sheets.</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 
 
 </section>
@@ -2099,15 +1803,9 @@ To support installation and usage of my guestbook application, I created compreh
     }
   });
   </script>
-<nav class="page-navigation column-body" aria-label="Page">
-  <div class="nav-page nav-page-previous">
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../../../samples/content-engineering/personal/index.html" class="pagination-link" aria-label="Content Engineering">
-        <span class="nav-page-text">Content Engineering</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

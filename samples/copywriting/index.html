@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.11.5">
+<meta name="generator" content="quarto-1.11.6">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -41,18 +41,19 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-11d350dff1962c4b5ccd67639fc79ccc.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bd0f6b19ad8437980ad0cd7d7c14ee51.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-11d350dff1962c4b5ccd67639fc79ccc.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-af8b5491cdc33476d473beceb28705d4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-90d3a2189a08747cfc660bd9b2e9f06b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-af8b5491cdc33476d473beceb28705d4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-2d3f7336fda89c73ca37a9cbdf4699dc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-c0c3f7c9113077194510a888f38228e0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-2d3f7336fda89c73ca37a9cbdf4699dc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-bb307872747ef06070b5515c93ee7967.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-5a0ed42a14751c57e122640d57c2d910.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-bb307872747ef06070b5515c93ee7967.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/timeline-0.1.0/timeline.js"></script>
 <link href="../../site_libs/quarto-contrib/timeline-0.1.0/timeline.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/tachyons-4.12.0/tachyons.css" rel="stylesheet">
@@ -272,13 +273,19 @@ window.Quarto = {
       manageTransitions('#quarto-margin-sidebar .nav-link', true);
       // Switch the toggles
       setColorSchemeToggle(alternate)
-      // Hack to workaround the fact that safari doesn't
-      // properly recolor the scrollbar when toggling (#1455)
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455).
+    // Not run on load: stylesheets are set before first paint there, and
+    // scrolling would undo the scroll to a URL fragment (#14973).
+    // The one pixel nudge keeps the reader where they were.
+    const refreshSafariScrollbar = () => {
       if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
         manageTransitions("body", false);
-        window.scrollTo(0, 1);
+        const scrollY = window.scrollY;
+        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
         setTimeout(() => {
-          window.scrollTo(0, 0);
+          window.scrollTo(0, scrollY);
           manageTransitions("body", true);
         }, 40);
       }
@@ -372,6 +379,7 @@ window.Quarto = {
       // Read the current dark / light value
       let toAlternate = !hasAlternateSentinel();
       toggleColorMode(toAlternate);
+      refreshSafariScrollbar();
       setStyleSentinel(toAlternate);
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
@@ -593,7 +601,7 @@ window.Quarto = {
 <p>Check out some blog posts I wrote on our product offering and industry that shine some insight into my writing style:</p>
 <div id="listing-validmind-copywriting" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="QmxvZyUyQ0FydGlmaWNpYWwlMjBJbnRlbGxpZ2VuY2UlMjAoQUkpJTJDRVUlMjBBSSUyMEFjdCUyQ0FJJTIwUmlzayUyQ01vZGVsJTIwUmlzayUyME1hbmFnZW1lbnQlMkNSaXNrJTIwR292ZXJuYW5jZSUyQ1ZhbGlkTWluZA==" data-listing-file-modified-sort="1791178133936" data-listing-reading-time-sort="6" data-listing-word-count-sort="1079">
+<div class="g-col-1" data-index="0" data-categories="QmxvZyUyQ0FydGlmaWNpYWwlMjBJbnRlbGxpZ2VuY2UlMjAoQUkpJTJDRVUlMjBBSSUyMEFjdCUyQ0FJJTIwUmlzayUyQ01vZGVsJTIwUmlzayUyME1hbmFnZW1lbnQlMkNSaXNrJTIwR292ZXJuYW5jZSUyQ1ZhbGlkTWluZA==" data-listing-file-modified-sort="1792627854109" data-listing-reading-time-sort="6" data-listing-word-count-sort="1079">
 <a href="../../samples/copywriting/validmind/honor-the-human.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -609,7 +617,7 @@ I owned this blog post from start to finish.
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="QmxvZyUyQ0FydGlmaWNpYWwlMjBJbnRlbGxpZ2VuY2UlMjAoQUkpJTJDQUklMjBSaXNrJTJDTW9kZWwlMjBSaXNrJTIwTWFuYWdlbWVudCUyQ1Jpc2slMjBHb3Zlcm5hbmNlJTJDVmFsaWRNaW5k" data-listing-file-modified-sort="1791178133936" data-listing-reading-time-sort="7" data-listing-word-count-sort="1298">
+<div class="g-col-1" data-index="1" data-categories="QmxvZyUyQ0FydGlmaWNpYWwlMjBJbnRlbGxpZ2VuY2UlMjAoQUkpJTJDQUklMjBSaXNrJTJDTW9kZWwlMjBSaXNrJTIwTWFuYWdlbWVudCUyQ1Jpc2slMjBHb3Zlcm5hbmNlJTJDVmFsaWRNaW5k" data-listing-file-modified-sort="1792627854110" data-listing-reading-time-sort="7" data-listing-word-count-sort="1298">
 <a href="../../samples/copywriting/validmind/reduce-culture-risk.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -625,7 +633,7 @@ I owned this blog post from start to finish.
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="QmxvZyUyQ0FydGlmaWNpYWwlMjBJbnRlbGxpZ2VuY2UlMjAoQUkpJTJDR2VuZXJhdGl2ZSUyMEFJJTJDTGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscyUyQ0FJJTIwUmlzayUyQ1Jpc2slMjBHb3Zlcm5hbmNlJTJDT3Blbi1Tb3VyY2UlMkNWYWxpZE1pbmQ=" data-listing-file-modified-sort="1791178133936" data-listing-reading-time-sort="3" data-listing-word-count-sort="576">
+<div class="g-col-1" data-index="2" data-categories="QmxvZyUyQ0FydGlmaWNpYWwlMjBJbnRlbGxpZ2VuY2UlMjAoQUkpJTJDR2VuZXJhdGl2ZSUyMEFJJTJDTGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscyUyQ0FJJTIwUmlzayUyQ1Jpc2slMjBHb3Zlcm5hbmNlJTJDT3Blbi1Tb3VyY2UlMkNWYWxpZE1pbmQ=" data-listing-file-modified-sort="1792627854110" data-listing-reading-time-sort="3" data-listing-word-count-sort="576">
 <a href="../../samples/copywriting/validmind/osff-takeaways.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -654,7 +662,7 @@ I owned this blog post from start to finish.
 <p>Below is the very first article I wrote for SaaSquatch. While it feels a bit rough now years later, it still showcases my consistent author voice:</p>
 <div id="listing-saasquatch-copywriting" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-2">
-<div class="g-col-1" data-index="0" data-categories="RmVhdHVyZSUyMEhpZ2hsaWdodHMlMkNSZWZlcnJhbHMlMjAlMjYlMjBBdHRyaWJ1dGlvbnMlMkNlQ29tbWVyY2UlMkNNYXJrZXRpbmclMjBUZWNobm9sb2d5JTJDU2FhU3F1YXRjaA==" data-listing-file-modified-sort="1791178133935" data-listing-reading-time-sort="5" data-listing-word-count-sort="860">
+<div class="g-col-1" data-index="0" data-categories="RmVhdHVyZSUyMEhpZ2hsaWdodHMlMkNSZWZlcnJhbHMlMjAlMjYlMjBBdHRyaWJ1dGlvbnMlMkNlQ29tbWVyY2UlMkNNYXJrZXRpbmclMjBUZWNobm9sb2d5JTJDU2FhU3F1YXRjaA==" data-listing-file-modified-sort="1792627854109" data-listing-reading-time-sort="5" data-listing-word-count-sort="860">
 <a href="../../samples/copywriting/saasquatch/growth-automation.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -2058,6 +2066,9 @@ I owned this feature highlight post from start to finish.
       }
     }
   });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
   </script>
 </div> <!-- /content -->
 <footer class="footer">

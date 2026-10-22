@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.11.5">
+<meta name="generator" content="quarto-1.11.6">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Build user activity registry with Google Sheets API – Portfolio</title>
+<title>Build API documentation with Scalar – Portfolio</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,37 +26,73 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<link href="../../../assets/headshot.png" rel="icon" type="image/png">
-<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-11d350dff1962c4b5ccd67639fc79ccc.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bd0f6b19ad8437980ad0cd7d7c14ee51.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-11d350dff1962c4b5ccd67639fc79ccc.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-2d3f7336fda89c73ca37a9cbdf4699dc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-c0c3f7c9113077194510a888f38228e0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-2d3f7336fda89c73ca37a9cbdf4699dc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
-<script src="../../../site_libs/quarto-contrib/timeline-0.1.0/timeline.js"></script>
-<link href="../../../site_libs/quarto-contrib/timeline-0.1.0/timeline.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-contrib/tachyons-4.12.0/tachyons.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-contrib/tachyons-4.12.0/quarto-resets.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<link href="../../../../assets/headshot.png" rel="icon" type="image/png">
+<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-af8b5491cdc33476d473beceb28705d4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-90d3a2189a08747cfc660bd9b2e9f06b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-af8b5491cdc33476d473beceb28705d4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-bb307872747ef06070b5515c93ee7967.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-dark-5a0ed42a14751c57e122640d57c2d910.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-bb307872747ef06070b5515c93ee7967.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../../site_libs/quarto-contrib/timeline-0.1.0/timeline.js"></script>
+<link href="../../../../site_libs/quarto-contrib/timeline-0.1.0/timeline.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-contrib/tachyons-4.12.0/tachyons.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-contrib/tachyons-4.12.0/quarto-resets.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -182,13 +218,19 @@ ul.task-list li input[type="checkbox"] {
       manageTransitions('#quarto-margin-sidebar .nav-link', true);
       // Switch the toggles
       setColorSchemeToggle(alternate)
-      // Hack to workaround the fact that safari doesn't
-      // properly recolor the scrollbar when toggling (#1455)
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455).
+    // Not run on load: stylesheets are set before first paint there, and
+    // scrolling would undo the scroll to a URL fragment (#14973).
+    // The one pixel nudge keeps the reader where they were.
+    const refreshSafariScrollbar = () => {
       if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
         manageTransitions("body", false);
-        window.scrollTo(0, 1);
+        const scrollY = window.scrollY;
+        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
         setTimeout(() => {
-          window.scrollTo(0, 0);
+          window.scrollTo(0, scrollY);
           manageTransitions("body", true);
         }, 40);
       }
@@ -282,6 +324,7 @@ ul.task-list li input[type="checkbox"] {
       // Read the current dark / light value
       let toAlternate = !hasAlternateSentinel();
       toggleColorMode(toAlternate);
+      refreshSafariScrollbar();
       setStyleSentinel(toAlternate);
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
@@ -299,7 +342,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../../index.html">
+    <a class="navbar-brand" href="../../../../index.html">
     <span class="navbar-title">Portfolio</span>
     </a>
   </div>
@@ -310,15 +353,15 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../samples/content-engineering/index.html"> 
+    <a class="nav-link" href="../../../../samples/content-engineering/index.html"> 
 <span class="menu-text">Content Engineering</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../samples/technical-writing/index.html"> 
+    <a class="nav-link" href="../../../../samples/technical-writing/index.html"> 
 <span class="menu-text">Technical Writing</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../samples/copywriting/index.html"> 
+    <a class="nav-link" href="../../../../samples/copywriting/index.html"> 
 <span class="menu-text">Copywriting</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -327,11 +370,11 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-all-samples">    
         <li>
-    <a class="dropdown-item" href="../../../samples/index.html">
+    <a class="dropdown-item" href="../../../../samples/index.html">
  <span class="dropdown-text">Filter by Criteria</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../samples/organizations/index.html">
+    <a class="dropdown-item" href="../../../../samples/organizations/index.html">
  <span class="dropdown-text">Collated by Organization</span></a>
   </li>  
     </ul>
@@ -339,7 +382,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../cv.html"> 
+    <a class="nav-link" href="../../../../cv.html"> 
 <span class="menu-text"><em>curriculum vitae</em></span></a>
   </li>  
   <li class="nav-item">
@@ -370,26 +413,38 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">Table of Contents</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#a-spec-file-that-has-to-stay-in-step" id="toc-a-spec-file-that-has-to-stay-in-step" class="nav-link" data-scroll-target="#a-spec-file-that-has-to-stay-in-step">A spec file that has to stay in step</a>
+  <ul>
+  <li><a href="#scalar" id="toc-scalar" class="nav-link" data-scroll-target="#scalar">Scalar</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content" tabindex="-1">
+<main class="content page-columns page-full column-page-left" id="quarto-document-content" tabindex="-1">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Build user activity registry with Google Sheets API</h1>
+<h1 class="title">Build API documentation with Scalar</h1>
 <p class="subtitle lead">Developer Advocacy</p>
   <div class="quarto-categories">
     <div class="quarto-category">Developer Advocacy</div>
     <div class="quarto-category">Integrations</div>
+    <div class="quarto-category">Scalar</div>
+    <div class="quarto-category">OpenAPI</div>
   </div>
   </div>
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -401,7 +456,81 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Implement OpenAPI Specification documentation with Scalar.</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>The Data API already publishes a description of every table. The hard part is showing that description as a page someone can read and try, without keeping a second copy of the API in a file that goes stale.</p>
+</section>
+<section id="a-spec-file-that-has-to-stay-in-step" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="a-spec-file-that-has-to-stay-in-step">A spec file that has to stay in step</h2>
+<p>The usual way to publish API docs is to write an OpenAPI file by hand, then render it with a documentation tool. Every new table, column, or permission means editing that file to match the database. Miss one edit and the page describes an API you no longer have.</p>
+<p>For example, the guestbook docs need functionality to:</p>
+<ul>
+<li><strong>Show the live tables:</strong> List the calls the database actually exposes.</li>
+<li><strong>Try a request:</strong> Send a call at the reader’s own Supabase project.</li>
+<li><strong>Sit in the docs:</strong> Use the same page as the rest of the guides, not a separate product.</li>
+</ul>
+<p>So you keep a spec file, a renderer, and a rule that says the file must be updated whenever <code>schema.sql</code> changes. The file is the copy you have to keep in step.</p>
+<section id="scalar" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="scalar">Scalar</h3>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong><a href="https://github.com/scalar/scalar" target="_blank">Scalar</a></strong> renders an API reference from an OpenAPI document. The guestbook does not author that document. It fetches the one PostgREST already serves and hands it to Scalar.</p>
+<p>The rendered page is the <a href="https://y2k-guestbook.vercel.app/docs/api" target="_blank">API library</a>. The tables in it are the ones in <a href="../../../../samples/developer-advocacy/personal/supabase/index.html">Build applications with Supabase</a>.</p>
+</div>
+</div>
+</div>
+<p>Scalar eliminates the hand-written spec. <code>loadDatabaseOpenApi</code> asks the Data API for its own description, and <code>DocsApiReferenceView</code> mounts Scalar on that result.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset page-columns page-full">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Fetch the live spec</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Mount Scalar</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Point Send at a project</a></li></ul>
+<div class="tab-content page-columns page-full">
+<div id="tabset-1-1" class="tab-pane active page-columns page-full" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p><code>fetchOpenApiPair</code> in <code>src/lib/docs/loadDatabaseOpenApi.ts</code><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> requests <code>{project}/rest/v1/</code> and asks for the OpenAPI document. The response is reused for about a minute:</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;<strong><i class="fa-brands fa-github" aria-label="github"></i> beck-chan/guestbook:</strong> <a href="https://github.com/beck-chan/guestbook/blob/main/src/lib/docs/loadDatabaseOpenApi.ts" target="_blank">src/lib/docs/loadDatabaseOpenApi.ts</a></p></div></div><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> response <span class="op">=</span> <span class="cf">await</span> <span class="fu">fetch</span>(<span class="fu">restRoot</span>(url)<span class="op">,</span> {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  headers<span class="op">:</span> {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    apikey<span class="op">:</span> key<span class="op">,</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    Authorization<span class="op">:</span> <span class="vs">`Bearer </span><span class="sc">${</span>key<span class="sc">}</span><span class="vs">`</span><span class="op">,</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    Accept<span class="op">:</span> <span class="st">"application/openapi+json"</span><span class="op">,</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  next<span class="op">:</span> { revalidate<span class="op">:</span> <span class="dv">60</span> }<span class="op">,</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The fetch uses the server key so admin tables and functions appear in the catalog. That key stays on the server. The page then stamps the title and the two ways to authenticate, an <code>apikey</code> header and a bearer token:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>normalized<span class="op">.</span><span class="at">components</span><span class="op">.</span><span class="at">securitySchemes</span> <span class="op">=</span> {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">...</span>normalized<span class="op">.</span><span class="at">components</span><span class="op">.</span><span class="at">securitySchemes</span><span class="op">,</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  apikey<span class="op">:</span> API_KEY_SCHEME<span class="op">,</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  bearerAuth<span class="op">:</span> BEARER_SCHEME<span class="op">,</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-1-2" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><code>DocsApiReferenceView</code> loads the Scalar browser bundle and calls <code>createApiReference</code> with that document.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> <code>content: spec</code> is the integration. The rest of the options are how the reference sits in the docs:</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;<strong><i class="fa-brands fa-github" aria-label="github"></i> beck-chan/guestbook:</strong> <a href="https://github.com/beck-chan/guestbook/blob/main/src/app/docs/_components/DocsApiReferenceView.tsx" target="_blank">src/app/docs/_components/DocsApiReferenceView.tsx</a></p></div></div><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>instance <span class="op">=</span> Scalar<span class="op">.</span><span class="fu">createApiReference</span>(hostRef<span class="op">.</span><span class="at">current</span><span class="op">,</span> {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">...</span><span class="fu">createScalarReferenceConfig</span>()<span class="op">,</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  content<span class="op">:</span> spec<span class="op">,</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>createScalarReferenceConfig</code> in <code>src/lib/docs/scalarConfig.ts</code><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> turns Scalar’s own theme off, hides the models list, and starts with the tags collapsed. Guestbook CSS takes the place of Scalar’s theme:</p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;<strong><i class="fa-brands fa-github" aria-label="github"></i> beck-chan/guestbook:</strong> <a href="https://github.com/beck-chan/guestbook/blob/main/src/lib/docs/scalarConfig.ts" target="_blank">src/lib/docs/scalarConfig.ts</a></p></div></div><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>hideModels<span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>defaultOpenAllTags<span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>customCss<span class="op">:</span> SCALAR_CUSTOM_CSS<span class="op">,</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-1-3" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>On the public build, Test Request is turned on. The visitor’s project id becomes the server Scalar calls, so Send does not hit the example database.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;<strong><i class="fa-brands fa-github" aria-label="github"></i> beck-chan/guestbook:</strong> <a href="https://github.com/beck-chan/guestbook/blob/main/src/app/docs/_components/DocsApiReferenceView.tsx" target="_blank">src/app/docs/_components/DocsApiReferenceView.tsx</a></p></div></div><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">...</span>(flags<span class="op">.</span><span class="at">public</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">?</span> { servers<span class="op">:</span> <span class="fu">publicApiServers</span>(appliedRef) }</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">:</span> flags<span class="op">.</span><span class="at">apiTest</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">?</span> { servers<span class="op">:</span> <span class="fu">publicApiServers</span>(<span class="fu">envSupabaseProjectRef</span>()) }</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">:</span> {})<span class="op">,</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>onBeforeRequest</code> in the same config runs <code>applyRememberedAuth</code>, which puts the saved anon key and the admin token on the outgoing request.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> Focusing one Authentication tab does not drop the other.</p>
+<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;<strong><i class="fa-brands fa-github" aria-label="github"></i> beck-chan/guestbook:</strong> <a href="https://github.com/beck-chan/guestbook/blob/main/src/lib/docs/scalarApiKey.ts" target="_blank">src/lib/docs/scalarApiKey.ts</a></p></div></div></div>
+</div>
+</div>
 
+
+</section>
+</section>
 
 
 </main> <!-- /main -->
@@ -1783,6 +1912,9 @@ ul.task-list li input[type="checkbox"] {
       }
     }
   });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
   </script>
 </div> <!-- /content -->
 <footer class="footer">

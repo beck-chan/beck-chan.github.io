@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.11.5">
+<meta name="generator" content="quarto-1.11.6">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Implement visitor hit counter with PostHog – Portfolio</title>
+<title>Beck Chan – Portfolio</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -29,34 +29,44 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<link href="../../../assets/headshot.png" rel="icon" type="image/png">
-<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-11d350dff1962c4b5ccd67639fc79ccc.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bd0f6b19ad8437980ad0cd7d7c14ee51.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-11d350dff1962c4b5ccd67639fc79ccc.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-2d3f7336fda89c73ca37a9cbdf4699dc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-c0c3f7c9113077194510a888f38228e0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-2d3f7336fda89c73ca37a9cbdf4699dc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
-<script src="../../../site_libs/quarto-contrib/timeline-0.1.0/timeline.js"></script>
-<link href="../../../site_libs/quarto-contrib/timeline-0.1.0/timeline.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-contrib/tachyons-4.12.0/tachyons.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-contrib/tachyons-4.12.0/quarto-resets.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../samples/content-engineering/personal/guestbook/index.html" rel="next">
+<link href="../assets/headshot.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-af8b5491cdc33476d473beceb28705d4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-90d3a2189a08747cfc660bd9b2e9f06b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-af8b5491cdc33476d473beceb28705d4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-bb307872747ef06070b5515c93ee7967.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-5a0ed42a14751c57e122640d57c2d910.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-bb307872747ef06070b5515c93ee7967.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/timeline-0.1.0/timeline.js"></script>
+<link href="../site_libs/quarto-contrib/timeline-0.1.0/timeline.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/tachyons-4.12.0/tachyons.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/tachyons-4.12.0/quarto-resets.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/iframe-1.1.1/iframe.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/category-filter-1.0.1/category-filter.js"></script>
+<link href="../site_libs/quarto-contrib/category-filter-1.0.1/category-filter.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -83,6 +93,175 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-guestbook-citations .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-subtitle","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-guestbook-citations'] = new List('listing-guestbook-citations', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-guestbook .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-guestbook'] = new List('listing-guestbook', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-validmind-content .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-validmind-content'] = new List('listing-validmind-content', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-validmind-technical .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-validmind-technical'] = new List('listing-validmind-technical', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-atryum-technical .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-atryum-technical'] = new List('listing-atryum-technical', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-atryum-content .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-atryum-content'] = new List('listing-atryum-content', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <style>
   /* First paint: take notes out of the box entirely. visibility/opacity
      still lets overflow:visible margin notes paint over the TOC. */
@@ -126,10 +305,39 @@ ul.task-list li input[type="checkbox"] {
     })
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
-<body class="nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar docked nav-fixed slimcontent quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -182,13 +390,19 @@ ul.task-list li input[type="checkbox"] {
       manageTransitions('#quarto-margin-sidebar .nav-link', true);
       // Switch the toggles
       setColorSchemeToggle(alternate)
-      // Hack to workaround the fact that safari doesn't
-      // properly recolor the scrollbar when toggling (#1455)
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455).
+    // Not run on load: stylesheets are set before first paint there, and
+    // scrolling would undo the scroll to a URL fragment (#14973).
+    // The one pixel nudge keeps the reader where they were.
+    const refreshSafariScrollbar = () => {
       if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
         manageTransitions("body", false);
-        window.scrollTo(0, 1);
+        const scrollY = window.scrollY;
+        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
         setTimeout(() => {
-          window.scrollTo(0, 0);
+          window.scrollTo(0, scrollY);
           manageTransitions("body", true);
         }, 40);
       }
@@ -282,6 +496,7 @@ ul.task-list li input[type="checkbox"] {
       // Read the current dark / light value
       let toAlternate = !hasAlternateSentinel();
       toggleColorMode(toAlternate);
+      refreshSafariScrollbar();
       setStyleSentinel(toAlternate);
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
@@ -299,7 +514,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Portfolio</span>
     </a>
   </div>
@@ -310,15 +525,15 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../samples/content-engineering/index.html"> 
+    <a class="nav-link" href="../samples/content-engineering/index.html"> 
 <span class="menu-text">Content Engineering</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../samples/technical-writing/index.html"> 
+    <a class="nav-link" href="../samples/technical-writing/index.html"> 
 <span class="menu-text">Technical Writing</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../samples/copywriting/index.html"> 
+    <a class="nav-link" href="../samples/copywriting/index.html"> 
 <span class="menu-text">Copywriting</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -327,11 +542,11 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-all-samples">    
         <li>
-    <a class="dropdown-item" href="../../../samples/index.html">
+    <a class="dropdown-item" href="../samples/index.html">
  <span class="dropdown-text">Filter by Criteria</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../samples/organizations/index.html">
+    <a class="dropdown-item" href="../samples/organizations/index.html">
  <span class="dropdown-text">Collated by Organization</span></a>
   </li>  
     </ul>
@@ -339,7 +554,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../cv.html"> 
+    <a class="nav-link" href="../cv.html"> 
 <span class="menu-text"><em>curriculum vitae</em></span></a>
   </li>  
   <li class="nav-item">
@@ -365,31 +580,158 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../applications/supabase.html">Supabase</a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto" aria-label="Section">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../applications/supabase.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Supabase</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true" aria-label="Toggle section: Supabase">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../samples/content-engineering/personal/guestbook/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">y2k Guestbook</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section: y2k Guestbook">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://beck-chan.vercel.app/docs/docs-build" class="sidebar-item-text sidebar-link" target="_blank">
+ <span class="menu-text">Documentation Build</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://beck-chan.vercel.app/docs/bot-build" class="sidebar-item-text sidebar-link" target="_blank">
+ <span class="menu-text">Chatbot Build</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://beck-chan.vercel.app/docs/book-build" class="sidebar-item-text sidebar-link" target="_blank">
+ <span class="menu-text">Guestbook Build</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../samples/developer-advocacy/personal/supabase/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Developer Advocacy</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true">
+ <span class="menu-text">Other Samples</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../samples/organizations/validmind.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text" id="quarto-sidebar-section-2-label">ValidMind</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section: ValidMind">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
+      </div>
+      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../samples/content-engineering/validmind/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Content Engineering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../samples/technical-writing/validmind/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Technical Writing</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../samples/organizations/atryum.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text" id="quarto-sidebar-section-3-label">Atryum</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section: Atryum">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
+      </div>
+      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../samples/content-engineering/atryum/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Content Engineering</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../samples/technical-writing/atryum/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Technical Writing</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
     </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">Table of Contents</h2>
+   
+  <ul>
+  <li><a href="#built-with-supabase" id="toc-built-with-supabase" class="nav-link active" data-scroll-target="#built-with-supabase">Built with Supabase</a></li>
+  <li><a href="#other-samples" id="toc-other-samples" class="nav-link" data-scroll-target="#other-samples">Other Samples</a>
+  <ul>
+  <li><a href="#validmind" id="toc-validmind" class="nav-link" data-scroll-target="#validmind">ValidMind</a>
+  <ul>
+  <li><a href="#atryum" id="toc-atryum" class="nav-link" data-scroll-target="#atryum">Atryum</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(16)</span></div><div class="category" data-category="QWdlbnQlMjBTa2lsbHM=">Agent Skills <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QmFja2VuZCUyMGFzJTIwYSUyMFNlcnZpY2U=">Backend as a Service <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Qm9vdHN0cmFwJTIwQ1NT">Bootstrap CSS <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Q0klMkZDRCUyMFdvcmtmbG93cw==">CI/CD Workflows <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Q29udGVudCUyMEVuYWJsZW1lbnQ=">Content Enablement <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q3Vyc29yJTIwQ29kZQ==">Cursor Code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RGV2ZWxvcGVyJTIwQ29udGVudA==">Developer Content <span class="quarto-category-count">(3)</span></div><div class="category" data-category="RmVhdHVyZSUyMERvY3VtZW50YXRpb24=">Feature Documentation <span class="quarto-category-count">(5)</span></div><div class="category" data-category="RmVhdHVyZSUyMEZsYWdz">Feature Flags <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RnJvbnRlbmQlMjBEZXZlbG9wbWVudA==">Frontend Development <span class="quarto-category-count">(5)</span></div><div class="category" data-category="R29vZ2xlJTIwQ2xvdWQlMjBQbGF0Zm9ybQ==">Google Cloud Platform <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SFRNTA==">HTML <span class="quarto-category-count">(5)</span></div><div class="category" data-category="SW5zdHJ1Y3Rpb25hbCUyMERlc2lnbg==">Instructional Design <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SW50ZWdyYXRpb25z">Integrations <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SnVweXRlciUyME5vdGVib29rcw==">Jupyter Notebooks <span class="quarto-category-count">(3)</span></div><div class="category" data-category="TGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscw==">Large Language Models <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TGl0ZXJhdGUlMjBQcm9ncmFtbWluZw==">Literate Programming <span class="quarto-category-count">(3)</span></div><div class="category" data-category="TW9kZWwlMjBDb250ZXh0JTIwUHJvdG9jb2wlMjBTZXJ2ZXJz">Model Context Protocol Servers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TmV4dC5qcw==">Next.js <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Tm9kZS5qcw==">Node.js <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UG9zdGdyZXM=">Postgres <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UG9zdEhvZw==">PostHog <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHl0aG9u">Python <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHl0aG9uJTIwTGlicmFyeQ==">Python Library <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UXVhcnRv">Quarto <span class="quarto-category-count">(4)</span></div><div class="category" data-category="UmVhY3Q=">React <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVsZWFzZSUyME5vdGVz">Release Notes <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmV2ZWFsLmpz">Reveal.js <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UnVzdA==">Rust <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U1FM">SQL <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U3VwYWJhc2U=">Supabase <span class="quarto-category-count">(2)</span></div><div class="category" data-category="VGFpbHdpbmQlMjBDU1M=">Tailwind CSS <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VHJhaW5pbmclMjAlMjYlMjBPbmJvYXJkaW5n">Training &amp; Onboarding <span class="quarto-category-count">(4)</span></div><div class="category" data-category="VHlwZVNjcmlwdA==">TypeScript <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VXNlJTIwQ2FzZSUyMFR1dG9yaWFscw==">Use Case Tutorials <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VXNlciUyMEd1aWRlcw==">User Guides <span class="quarto-category-count">(5)</span></div><div class="category" data-category="VmVyY2Vs">Vercel <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content" tabindex="-1">
+<main class="content page-columns page-full column-body" id="quarto-document-content" tabindex="-1">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Implement visitor hit counter with PostHog</h1>
-<p class="subtitle lead">Developer Advocacy</p>
-  <div class="quarto-categories">
-    <div class="quarto-category">Developer Advocacy</div>
-    <div class="quarto-category">Integrations</div>
-  </div>
-  </div>
+<h1 class="title">Beck Chan</h1>
+<p class="subtitle lead">For Supabase</p>
+</div>
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-body">
 
     
   
@@ -401,7 +743,436 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="flex flex-wrap justify-around">
+<div class="w-100-m w-20-l tc flex items-center justify-center">
+<p><a href="../assets/headshot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="../assets/headshot.png" class="pfp img-fluid" style="width:80.0%"></a></p>
+</div>
+<div class="w-100-m w-80-l">
+<blockquote class="blockquote">
+<p>I’m <strong>Beck</strong>, poet with a passion for process — helping you empower users by designing and building solutions built to scale.</p>
+<p>I’ve designed, implemented, and managed everything from <strong>content</strong>, <strong>support</strong>, <strong>training</strong>, and <strong>onboarding</strong> architecture for organizations from startups to enterprises.</p>
+<p>My methods bridge the gap between product design and user experience, whether that’s advocating for users during early stage development planning, serving as de facto alpha tester and bug fixer extraordinaire, or producing top-quality content that gets users excited about features.</p>
+</blockquote>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-around mb4 cta-bar">
+<div class="w-30-l tc">
+<p><a href="https://github.com/beck-chan" class="button cta" target="_blank"><i class="fa-brands fa-github" aria-label="github"></i> beck-chan</a></p>
+</div>
+<div class="w-30-l tc">
+<p><a href="https://linkedin.com/in/beck-chan" class="button cta" target="_blank"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i> beck-chan</a></p>
+</div>
+<div class="w-40-l tc">
+<p><a href="mailto:beckchan.tech@gmail.com" class="button cta" target="_blank"><i class="fa-solid fa-envelope" aria-label="envelope"></i> beckchan.tech@gmail.com</a></p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div class="hidden-mobile">
+<p>Use <span class="smallcaps">filter by category</span> in the right-hand sidebar to narrow down samples by criteria. Select a tab to view samples by group.</p>
+</div>
+<div class="hidden-desktop">
+<p>Use <span class="smallcaps">filter by category</span> below to narrow down samples by criteria. Select a tab to view samples by group.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="category-filter hidden-desktop">
+  <label class="category-filter__label" for="category-filter-select">
+    <span class="category-filter__label-text smallcaps">filter by category</span>
+  </label>
+  <select id="category-filter-select" class="category-filter__select" aria-label="Filter by category">
+    <option value="">All</option>
+  </select>
+</div>
+<p><span id="supabase"></span></p>
+<section id="built-with-supabase" class="level2">
+<h2 class="anchored" data-anchor-id="built-with-supabase">Built with Supabase</h2>
+<p>I was so excited to join the Supabase team, I designed and built a mobile-responsive Next.js application styled with Tailwind CSS and a backend powered by Supabase, featuring:</p>
+<ul>
+<li>Admin functionality for comment management and customization, dashboard gated via Google OAuth 2.0.</li>
+<li>Built-in rate limiting and profanity filtering, and admin notifications powered by Supabase Edge Functions.</li>
+<li>Docs in MDX with Gemini chatbot, API reference implemented with Scalar.</li>
+</ul>
+<figure class="iframe-embed figure iframe-embed--align-center iframe-embed--valign-center iframe-embed--new-window" style="--iframe-zoom: 0.5; --iframe-width: 100%; --iframe-height: 560px;">
+  <div class="iframe-embed__chrome pics">
+    <div class="iframe-embed__frame">
+      <iframe src="https://beck-chan.vercel.app/" title="y2k Guestbook" loading="lazy"></iframe>
+    </div>
+    <a class="iframe-embed__open" href="https://beck-chan.vercel.app/" target="_blank" rel="noopener noreferrer" title="Open y2k Guestbook" aria-label="Open y2k Guestbook">
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+    </a>
+  </div>
+  <figcaption>y2k Guestbook</figcaption>
+</figure>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Content</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Citations</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div id="listing-guestbook" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-2">
+<div class="g-col-1" data-index="0" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ0ZlYXR1cmUlMjBEb2N1bWVudGF0aW9uJTJDVXNlciUyMEd1aWRlcyUyQ05leHQuanMlMkNSZWFjdCUyQ1R5cGVTY3JpcHQlMkNOb2RlLmpzJTJDU1FMJTJDUG9zdGdyZXMlMkNUYWlsd2luZCUyMENTUyUyQ1Bvc3RIb2clMkNWZXJjZWwlMkNTdXBhYmFzZSUyQ0dvb2dsZSUyMENsb3VkJTIwUGxhdGZvcm0lMkNGZWF0dXJlJTIwRmxhZ3M=" data-listing-file-modified-sort="1792627854038" data-listing-reading-time-sort="3" data-listing-word-count-sort="456">
+<a href="../samples/content-engineering/personal/guestbook/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+y2k Guestbook
+</h5>
+<div class="card-subtitle listing-subtitle">
+Supabase
+</div>
+<div class="card-text listing-description delink">
+<p>Nostalgic for the days of Geocities, anonymous guestbooks, and Adobe Flash animation websites, I used Supabase to build a modernized version with a poetic twist.</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="U3VwYWJhc2UlMkNCYWNrZW5kJTIwYXMlMjBhJTIwU2VydmljZSUyQ0Zyb250ZW5kJTIwRGV2ZWxvcG1lbnQlMkNOZXh0Lmpz" data-listing-file-modified-sort="1792627854110" data-listing-reading-time-sort="18" data-listing-word-count-sort="3485">
+<a href="../samples/developer-advocacy/personal/supabase/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Developer Advocacy
+</h5>
+<div class="card-subtitle listing-subtitle">
+Supabase
+</div>
+<div class="card-text listing-description delink">
+<p>I wrote a developer advocacy-type article to pair with my custom application, breaking down the capabilities of Supabase that impressed me.</p>
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No Matches Found</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div id="listing-guestbook-citations" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0">
+<a href="https://beck-chan.vercel.app/docs/docs-build" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Documentation Build
+</h5>
+<div class="card-subtitle listing-subtitle">
+y2k Guestbook Docs
+</div>
+<div class="card-text listing-description delink">
+<p>Learn how I built the documentation for my guestbook, including details on the API reference implemented with Scalar and how search and LLM-ingestion is supported.</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1">
+<a href="https://beck-chan.vercel.app/docs/bot-build" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Chatbot Build
+</h5>
+<div class="card-subtitle listing-subtitle">
+y2k Guestbook Docs
+</div>
+<div class="card-text listing-description delink">
+<p>Learn how I built the chatbot for the documentation, using Supabase’s <code>pgvector</code> extension and Gemini API.</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2">
+<a href="https://beck-chan.vercel.app/docs/book-build" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Guestbook Build
+</h5>
+<div class="card-subtitle listing-subtitle">
+y2k Guestbook Docs
+</div>
+<div class="card-text listing-description delink">
+<p>Learn how I built the guestbook, including details on admin authentication gated by Google OAuth 2.0 and notifications powered by Supabase Edge Functions.</p>
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No Matches Found</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="other-samples" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="other-samples">Other Samples</h2>
+<section id="validmind" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="validmind">ValidMind</h3>
+<p>I was the sole <strong>Senior Technical Writer</strong> for <a href="validmind.ai" target="_blank">ValidMind</a>, a generative artificial intelligence financial services startup, where I employed docs-as-code methodologies alongside software engineers delivering documentation as part of product in the same development ecosystem, transforming a minimal set of user guide drafts into a fully idealized and comprehensive knowledge base.</p>
 
+<div class="no-row-height column-margin column-container"><div class="">
+<p><a href="../samples/organizations/validmind.html" class="button cta">All ValidMind Samples</a></p>
+</div></div><div class="tabset-margin-container"></div><div class="panel-tabset page-columns page-full">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Content Engineering</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Technical Writing</a></li></ul>
+<div class="tab-content page-columns page-full">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<blockquote class="blockquote">
+<p>Delivering content as an integrated and integral part of product.</p>
+<p>Docs-as-code goes beyond just producing documentation in the same development ecosystem as features — thinking of content as product that’s part of product, a dedication to intuitive content architecture on top of immaculate user resources, and wrapping content and feature storytelling into the definition of done.</p>
+</blockquote>
+<p>At ValidMind, I delivered documentation not just as complete product, but designed and implemented extensible documentation architecture:</p>
+<div id="listing-validmind-content" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-2">
+<div class="g-col-1" data-index="0" data-categories="UXVhcnRvJTJDRnJvbnRlbmQlMjBEZXZlbG9wbWVudCUyQ0hUTUwlMkNCb290c3RyYXAlMjBDU1M=" data-listing-file-modified-sort="1792627854107" data-listing-reading-time-sort="3" data-listing-word-count-sort="581">
+<a href="../samples/content-engineering/validmind/redesign.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+ValidMind Documentation Redesign
+</h5>
+<div class="card-subtitle listing-subtitle">
+Content Engineering
+</div>
+<div class="card-text listing-description delink">
+I transformed ValidMind’s documentation from a sparsely populated and poorly organized site with no brand identity to a comprehensive and user-friendly experience with a clean, modern, and mobile-responsive design.
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ0ZlYXR1cmUlMjBEb2N1bWVudGF0aW9uJTJDVXNlciUyMEd1aWRlcyUyQ0p1cHl0ZXIlMjBOb3RlYm9va3MlMkNMaXRlcmF0ZSUyMFByb2dyYW1taW5nJTJDUXVhcnRvJTJDRnJvbnRlbmQlMjBEZXZlbG9wbWVudCUyQ0hUTUwlMkNCb290c3RyYXAlMjBDU1M=" data-listing-file-modified-sort="1792627854107" data-listing-reading-time-sort="4" data-listing-word-count-sort="691">
+<a href="../samples/content-engineering/validmind/library.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+ValidMind Developer Library
+</h5>
+<div class="card-subtitle listing-subtitle">
+Content Engineering
+</div>
+<div class="card-text listing-description delink">
+I transformed our disorganized developer resources into a comprehensive reference with a clean, modern, and mobile-responsive design.
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="SnVweXRlciUyME5vdGVib29rcyUyQ0xpdGVyYXRlJTIwUHJvZ3JhbW1pbmclMkNUcmFpbmluZyUyMCUyNiUyME9uYm9hcmRpbmclMkNJbnN0cnVjdGlvbmFsJTIwRGVzaWduJTJDUXVhcnRvJTJDQ0klMkZDRCUyMFdvcmtmbG93cyUyQ0Zyb250ZW5kJTIwRGV2ZWxvcG1lbnQlMkNSZXZlYWwuanMlMkNIVE1MJTJDQm9vdHN0cmFwJTIwQ1NT" data-listing-file-modified-sort="1792627854106" data-listing-reading-time-sort="11" data-listing-word-count-sort="2121">
+<a href="../samples/content-engineering/validmind/academy.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+ValidMind Training Academy
+</h5>
+<div class="card-subtitle listing-subtitle">
+Content Engineering
+</div>
+<div class="card-text listing-description delink">
+I transformed ValidMind’s rudimentary training resources into a comprehensive learning academy to empower users to maximize their use of the product.
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="VHJhaW5pbmclMjAlMjYlMjBPbmJvYXJkaW5nJTJDSW5zdHJ1Y3Rpb25hbCUyMERlc2lnbiUyQ1F1YXJ0byUyQ0Zyb250ZW5kJTIwRGV2ZWxvcG1lbnQlMkNIVE1MJTJDQm9vdHN0cmFwJTIwQ1NT" data-listing-file-modified-sort="1792627854107" data-listing-reading-time-sort="3" data-listing-word-count-sort="495">
+<a href="../samples/content-engineering/validmind/quickstarts.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+ValidMind Quickstart Guides
+</h5>
+<div class="card-subtitle listing-subtitle">
+Content Engineering
+</div>
+<div class="card-text listing-description delink">
+I transformed ValidMind’s cluttered and ill-defined quickstart experience with gaps in resources to a clean and comprehensive onboarding journey with clear learning outcomes that showcased the value of our product through interaction.
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No Matches Found</div>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<blockquote class="blockquote">
+<p>Engendering empowered users through effective guidance content.</p>
+<p>Along with a love of gratuitous alliteration, I truly enjoy authoring user guidance content. That’s because I believe that great guidance content empowers users, and empowered users get excited about product.</p>
+</blockquote>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Links below will take you to static versions of the content as last edited by Beck.</p>
+</div>
+</div>
+</div>
+<p>As I authored the bulk of 53% of user content out of many contributors,<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> most of ValidMind’s documentation saw my influence at some point. I’ve selected some of my best work to showcase below:</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Citation: <a href="https://github.com/validbeck/validmind-docs/graphs/contributors?from=8%2F24%2F2024&amp;selectedMetric=additions" target="_blank"><i class="fa-brands fa-github" aria-label="github"></i> <code>validmind/documentation</code> statistic archive</a></p>
+<div class="mobile">
+<p><br> <img src="../samples/technical-writing/validmind/beck-contributions.png" class="pics img-fluid" alt="Statistics snapshot from validmind/documentation"></p>
+</div>
+</div></div><div id="listing-validmind-technical" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ1VzZSUyMENhc2UlMjBUdXRvcmlhbHMlMkNGZWF0dXJlJTIwRG9jdW1lbnRhdGlvbiUyQ1VzZXIlMjBHdWlkZXMlMkNKdXB5dGVyJTIwTm90ZWJvb2tzJTJDTGl0ZXJhdGUlMjBQcm9ncmFtbWluZyUyQ1B5dGhvbiUyMExpYnJhcnk=" data-listing-file-modified-sort="1792627854116" data-listing-reading-time-sort="1" data-listing-word-count-sort="43">
+<a href="../samples/technical-writing/validmind/jupyter-notebooks.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+ValidMind Jupyter Notebooks
+</h5>
+<div class="card-subtitle listing-subtitle">
+Developer Content
+</div>
+<div class="card-text listing-description delink">
+Jupyter Notebook use case demonstrations written for ValidMind’s Python library.
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVz" data-listing-file-modified-sort="1792627854116" data-listing-reading-time-sort="1" data-listing-word-count-sort="58">
+<a href="../samples/technical-writing/validmind/user-guides.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+ValidMind User Guides
+</h5>
+<div class="card-subtitle listing-subtitle">
+Feature Documentation
+</div>
+<div class="card-text listing-description delink">
+User guides produced as documentation and reference for ValidMind’s core features.
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="UHl0aG9uJTIwTGlicmFyeSUyQ0NvbnRlbnQlMjBFbmFibGVtZW50JTJDUmVsZWFzZSUyME5vdGVzJTJDQ3Vyc29yJTIwQ29kZSUyQ0FnZW50JTIwU2tpbGxzJTJDTGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscyUyQ0NJJTJGQ0QlMjBXb3JrZmxvd3M=" data-listing-file-modified-sort="1792627854116" data-listing-reading-time-sort="1" data-listing-word-count-sort="70">
+<a href="../samples/technical-writing/validmind/enablement.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+ValidMind Enablement Content
+</h5>
+<div class="card-subtitle listing-subtitle">
+Content Creation
+</div>
+<div class="card-text listing-description delink">
+Content produced to enable other creators to contribute to ValidMind’s open-source.
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No Matches Found</div>
+</div>
+</div>
+</div>
+</div>
+<section id="atryum" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="atryum">Atryum</h4>
+<p>Atryum is an open-source agentic orchestration tool developed by ValidMind. As ValidMind’s sole <strong>Senior Technical Writer</strong>, I was responsible for almost all of the documentation for Atryum.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset page-columns page-full">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Content Engineering</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Technical Writing</a></li></ul>
+<div class="tab-content page-columns page-full">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<blockquote class="blockquote">
+<p>Delivering content as an integrated and integral part of product.</p>
+<p>Docs-as-code goes beyond just producing documentation in the same development ecosystem as features — thinking of content as product that’s part of product, a dedication to intuitive content architecture on top of immaculate user resources, and wrapping content and feature storytelling into the definition of done.</p>
+</blockquote>
+<div id="listing-atryum-content" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-2">
+<div class="g-col-1" data-index="0" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVzJTJDVHJhaW5pbmclMjAlMjYlMjBPbmJvYXJkaW5nJTJDUHl0aG9uJTJDUnVzdCUyQ0hUTUw=" data-listing-file-modified-sort="1792627854038" data-listing-reading-time-sort="2" data-listing-word-count-sort="259">
+<a href="../samples/content-engineering/atryum/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Atryum Documentation
+</h5>
+<div class="card-subtitle listing-subtitle">
+Content Engineering
+</div>
+<div class="card-text listing-description delink">
+Along with authoring approximately 95% of the content for Atryum, I also designed and implemented the static documentation website authoring flow.
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No Matches Found</div>
+</div>
+</div>
+<div id="tabset-3-2" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<blockquote class="blockquote">
+<p>Engendering empowered users through effective guidance content.</p>
+<p>Along with a love of gratuitous alliteration, I truly enjoy authoring user guidance content. That’s because I believe that great guidance content empowers users, and empowered users get excited about product.</p>
+</blockquote>
+<p>I authored approximately 95% of the content for Atryum,<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> including the samples selected below:</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;Citation: <a href="https://github.com/validbeck/atryum/tree/main/website" target="_blank"><i class="fa-brands fa-github" aria-label="github"></i> Archive of <code>validmind/atryum/website</code> (documentation)</a></p></div></div><div id="listing-atryum-technical" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="SW50ZWdyYXRpb25zJTJDTGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscyUyQ01vZGVsJTIwQ29udGV4dCUyMFByb3RvY29sJTIwU2VydmVycw==" data-listing-file-modified-sort="1792627854111" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
+<a href="../samples/technical-writing/atryum/integrations.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Atryum Integrations
+</h5>
+<div class="card-subtitle listing-subtitle">
+Feature Documentation
+</div>
+<div class="card-text listing-description delink">
+<p>User guides written for Atryum integrations.</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1792627854111" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
+<a href="../samples/technical-writing/atryum/user-guides.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Atryum User Guides
+</h5>
+<div class="card-subtitle listing-subtitle">
+Feature Documentation
+</div>
+<div class="card-text listing-description delink">
+<p>User guides written for core Atryum functionality.</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="VHJhaW5pbmclMjAlMjYlMjBPbmJvYXJkaW5n" data-listing-file-modified-sort="1792627854111" data-listing-reading-time-sort="1" data-listing-word-count-sort="18">
+<a href="../samples/technical-writing/atryum/quickstart.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Atryum Quickstart
+</h5>
+<div class="card-subtitle listing-subtitle">
+Tutorial
+</div>
+<div class="card-text listing-description delink">
+<p>Quickstart and installation guide for Atryum.</p>
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No Matches Found</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+</section>
+</section>
+</section>
 
 
 </main> <!-- /main -->
@@ -1784,6 +2555,18 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation column-body" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../samples/content-engineering/personal/guestbook/index.html" class="pagination-link" aria-label="y2k Guestbook">
+        <span class="nav-page-text">y2k Guestbook</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1814,6 +2597,38 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

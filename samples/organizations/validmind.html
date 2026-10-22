@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.11.5">
+<meta name="generator" content="quarto-1.11.6">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -43,18 +43,19 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-11d350dff1962c4b5ccd67639fc79ccc.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bd0f6b19ad8437980ad0cd7d7c14ee51.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-11d350dff1962c4b5ccd67639fc79ccc.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-af8b5491cdc33476d473beceb28705d4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-90d3a2189a08747cfc660bd9b2e9f06b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-af8b5491cdc33476d473beceb28705d4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-2d3f7336fda89c73ca37a9cbdf4699dc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-c0c3f7c9113077194510a888f38228e0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-2d3f7336fda89c73ca37a9cbdf4699dc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-bb307872747ef06070b5515c93ee7967.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-5a0ed42a14751c57e122640d57c2d910.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-bb307872747ef06070b5515c93ee7967.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/timeline-0.1.0/timeline.js"></script>
 <link href="../../site_libs/quarto-contrib/timeline-0.1.0/timeline.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/tachyons-4.12.0/tachyons.css" rel="stylesheet">
@@ -358,13 +359,19 @@ window.Quarto = {
       manageTransitions('#quarto-margin-sidebar .nav-link', true);
       // Switch the toggles
       setColorSchemeToggle(alternate)
-      // Hack to workaround the fact that safari doesn't
-      // properly recolor the scrollbar when toggling (#1455)
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455).
+    // Not run on load: stylesheets are set before first paint there, and
+    // scrolling would undo the scroll to a URL fragment (#14973).
+    // The one pixel nudge keeps the reader where they were.
+    const refreshSafariScrollbar = () => {
       if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
         manageTransitions("body", false);
-        window.scrollTo(0, 1);
+        const scrollY = window.scrollY;
+        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
         setTimeout(() => {
-          window.scrollTo(0, 0);
+          window.scrollTo(0, scrollY);
           manageTransitions("body", true);
         }, 40);
       }
@@ -458,6 +465,7 @@ window.Quarto = {
       // Read the current dark / light value
       let toAlternate = !hasAlternateSentinel();
       toggleColorMode(toAlternate);
+      refreshSafariScrollbar();
       setStyleSentinel(toAlternate);
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
@@ -567,7 +575,7 @@ window.Quarto = {
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../samples/organizations/personal/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../samples/organizations/personal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text" id="quarto-sidebar-section-1-label">Personal</span></a>
             <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section: Personal">
               <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
@@ -784,7 +792,7 @@ window.Quarto = {
 <p>At ValidMind, I delivered documentation not just as complete product, but designed and implemented extensible documentation architecture:</p>
 <div id="listing-validmind-content" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-2">
-<div class="g-col-1" data-index="0" data-categories="VHJhaW5pbmclMjAlMjYlMjBPbmJvYXJkaW5nJTJDSW5zdHJ1Y3Rpb25hbCUyMERlc2lnbiUyQ1F1YXJ0byUyQ0Zyb250ZW5kJTIwRGV2ZWxvcG1lbnQlMkNIVE1MJTJDQm9vdHN0cmFwJTIwQ1NT" data-listing-file-modified-sort="1791178133934" data-listing-reading-time-sort="3" data-listing-word-count-sort="495">
+<div class="g-col-1" data-index="0" data-categories="VHJhaW5pbmclMjAlMjYlMjBPbmJvYXJkaW5nJTJDSW5zdHJ1Y3Rpb25hbCUyMERlc2lnbiUyQ1F1YXJ0byUyQ0Zyb250ZW5kJTIwRGV2ZWxvcG1lbnQlMkNIVE1MJTJDQm9vdHN0cmFwJTIwQ1NT" data-listing-file-modified-sort="1792627854107" data-listing-reading-time-sort="3" data-listing-word-count-sort="495">
 <a href="../../samples/content-engineering/validmind/quickstarts.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -800,7 +808,7 @@ I transformed ValidMind’s cluttered and ill-defined quickstart experience with
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ0ZlYXR1cmUlMjBEb2N1bWVudGF0aW9uJTJDVXNlciUyMEd1aWRlcyUyQ0p1cHl0ZXIlMjBOb3RlYm9va3MlMkNMaXRlcmF0ZSUyMFByb2dyYW1taW5nJTJDUXVhcnRvJTJDRnJvbnRlbmQlMjBEZXZlbG9wbWVudCUyQ0hUTUwlMkNCb290c3RyYXAlMjBDU1M=" data-listing-file-modified-sort="1791178133934" data-listing-reading-time-sort="4" data-listing-word-count-sort="691">
+<div class="g-col-1" data-index="1" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ0ZlYXR1cmUlMjBEb2N1bWVudGF0aW9uJTJDVXNlciUyMEd1aWRlcyUyQ0p1cHl0ZXIlMjBOb3RlYm9va3MlMkNMaXRlcmF0ZSUyMFByb2dyYW1taW5nJTJDUXVhcnRvJTJDRnJvbnRlbmQlMjBEZXZlbG9wbWVudCUyQ0hUTUwlMkNCb290c3RyYXAlMjBDU1M=" data-listing-file-modified-sort="1792627854107" data-listing-reading-time-sort="4" data-listing-word-count-sort="691">
 <a href="../../samples/content-engineering/validmind/library.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -816,7 +824,7 @@ I transformed our disorganized developer resources into a comprehensive referenc
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="SnVweXRlciUyME5vdGVib29rcyUyQ0xpdGVyYXRlJTIwUHJvZ3JhbW1pbmclMkNUcmFpbmluZyUyMCUyNiUyME9uYm9hcmRpbmclMkNJbnN0cnVjdGlvbmFsJTIwRGVzaWduJTJDUXVhcnRvJTJDQ0klMkZDRCUyMFdvcmtmbG93cyUyQ0Zyb250ZW5kJTIwRGV2ZWxvcG1lbnQlMkNSZXZlYWwuanMlMkNIVE1MJTJDQm9vdHN0cmFwJTIwQ1NT" data-listing-file-modified-sort="1791178133933" data-listing-reading-time-sort="11" data-listing-word-count-sort="2121">
+<div class="g-col-1" data-index="2" data-categories="SnVweXRlciUyME5vdGVib29rcyUyQ0xpdGVyYXRlJTIwUHJvZ3JhbW1pbmclMkNUcmFpbmluZyUyMCUyNiUyME9uYm9hcmRpbmclMkNJbnN0cnVjdGlvbmFsJTIwRGVzaWduJTJDUXVhcnRvJTJDQ0klMkZDRCUyMFdvcmtmbG93cyUyQ0Zyb250ZW5kJTIwRGV2ZWxvcG1lbnQlMkNSZXZlYWwuanMlMkNIVE1MJTJDQm9vdHN0cmFwJTIwQ1NT" data-listing-file-modified-sort="1792627854106" data-listing-reading-time-sort="11" data-listing-word-count-sort="2121">
 <a href="../../samples/content-engineering/validmind/academy.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -832,7 +840,7 @@ I transformed ValidMind’s rudimentary training resources into a comprehensive 
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="Q29udGVudCUyMEVuYWJsZW1lbnQlMkNVc2VyJTIwR3VpZGVzJTJDUmVsZWFzZSUyME5vdGVzJTJDQ3Vyc29yJTIwQ29kZSUyQ0FnZW50JTIwU2tpbGxzJTJDTGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscyUyQ0ludGVncmF0aW9ucyUyQ0NJJTJGQ0QlMjBXb3JrZmxvd3M=" data-listing-file-modified-sort="1791178133935" data-listing-reading-time-sort="3" data-listing-word-count-sort="487">
+<div class="g-col-1" data-index="3" data-categories="Q29udGVudCUyMEVuYWJsZW1lbnQlMkNVc2VyJTIwR3VpZGVzJTJDUmVsZWFzZSUyME5vdGVzJTJDQ3Vyc29yJTIwQ29kZSUyQ0FnZW50JTIwU2tpbGxzJTJDTGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscyUyQ0ludGVncmF0aW9ucyUyQ0NJJTJGQ0QlMjBXb3JrZmxvd3M=" data-listing-file-modified-sort="1792627854109" data-listing-reading-time-sort="3" data-listing-word-count-sort="487">
 <a href="../../samples/content-engineering/validmind/releases.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -848,7 +856,7 @@ I automated our fragmented and manual release notes process using Python scripts
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="UXVhcnRvJTJDRnJvbnRlbmQlMjBEZXZlbG9wbWVudCUyQ0hUTUwlMkNCb290c3RyYXAlMjBDU1M=" data-listing-file-modified-sort="1791178133934" data-listing-reading-time-sort="3" data-listing-word-count-sort="581">
+<div class="g-col-1" data-index="4" data-categories="UXVhcnRvJTJDRnJvbnRlbmQlMjBEZXZlbG9wbWVudCUyQ0hUTUwlMkNCb290c3RyYXAlMjBDU1M=" data-listing-file-modified-sort="1792627854107" data-listing-reading-time-sort="3" data-listing-word-count-sort="581">
 <a href="../../samples/content-engineering/validmind/redesign.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -872,7 +880,7 @@ I transformed ValidMind’s documentation from a sparsely populated and poorly o
 <p>Atryum is an open-source agentic orchestration tool developed by ValidMind. As ValidMind’s sole <strong>Senior Technical Writer</strong>, I was responsible for almost all of the documentation for Atryum.</p>
 <div id="listing-atryum-content" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-2">
-<div class="g-col-1" data-index="0" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVzJTJDVHJhaW5pbmclMjAlMjYlMjBPbmJvYXJkaW5nJTJDUHl0aG9uJTJDUnVzdCUyQ0hUTUw=" data-listing-file-modified-sort="1791178133868" data-listing-reading-time-sort="2" data-listing-word-count-sort="259">
+<div class="g-col-1" data-index="0" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVzJTJDVHJhaW5pbmclMjAlMjYlMjBPbmJvYXJkaW5nJTJDUHl0aG9uJTJDUnVzdCUyQ0hUTUw=" data-listing-file-modified-sort="1792627854038" data-listing-reading-time-sort="2" data-listing-word-count-sort="259">
 <a href="../../samples/content-engineering/atryum/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -906,7 +914,7 @@ Along with authoring approximately 95% of the content for Atryum, I also designe
 </div>
 </div></div><div id="listing-validmind-technical" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ1VzZSUyMENhc2UlMjBUdXRvcmlhbHMlMkNGZWF0dXJlJTIwRG9jdW1lbnRhdGlvbiUyQ1VzZXIlMjBHdWlkZXMlMkNKdXB5dGVyJTIwTm90ZWJvb2tzJTJDTGl0ZXJhdGUlMjBQcm9ncmFtbWluZyUyQ1B5dGhvbiUyMExpYnJhcnk=" data-listing-file-modified-sort="1791178133942" data-listing-reading-time-sort="1" data-listing-word-count-sort="43">
+<div class="g-col-1" data-index="0" data-categories="RGV2ZWxvcGVyJTIwQ29udGVudCUyQ1VzZSUyMENhc2UlMjBUdXRvcmlhbHMlMkNGZWF0dXJlJTIwRG9jdW1lbnRhdGlvbiUyQ1VzZXIlMjBHdWlkZXMlMkNKdXB5dGVyJTIwTm90ZWJvb2tzJTJDTGl0ZXJhdGUlMjBQcm9ncmFtbWluZyUyQ1B5dGhvbiUyMExpYnJhcnk=" data-listing-file-modified-sort="1792627854116" data-listing-reading-time-sort="1" data-listing-word-count-sort="43">
 <a href="../../samples/technical-writing/validmind/jupyter-notebooks.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -922,7 +930,7 @@ Jupyter Notebook use case demonstrations written for ValidMind’s Python librar
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="VXNlciUyMEd1aWRlcyUyQ1RyYWluaW5nJTIwJTI2JTIwT25ib2FyZGluZw==" data-listing-file-modified-sort="1791178133942" data-listing-reading-time-sort="1" data-listing-word-count-sort="55">
+<div class="g-col-1" data-index="1" data-categories="VXNlciUyMEd1aWRlcyUyQ1RyYWluaW5nJTIwJTI2JTIwT25ib2FyZGluZw==" data-listing-file-modified-sort="1792627854116" data-listing-reading-time-sort="1" data-listing-word-count-sort="55">
 <a href="../../samples/technical-writing/validmind/training.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -938,7 +946,7 @@ Comprehensive interactive training curriculums developed to onboard users onto V
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVz" data-listing-file-modified-sort="1791178133942" data-listing-reading-time-sort="1" data-listing-word-count-sort="58">
+<div class="g-col-1" data-index="2" data-categories="RmVhdHVyZSUyMERvY3VtZW50YXRpb24lMkNVc2VyJTIwR3VpZGVz" data-listing-file-modified-sort="1792627854116" data-listing-reading-time-sort="1" data-listing-word-count-sort="58">
 <a href="../../samples/technical-writing/validmind/user-guides.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -954,7 +962,7 @@ User guides produced as documentation and reference for ValidMind’s core featu
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="VXNlciUyMEd1aWRlcyUyQ1RyYWluaW5nJTIwJTI2JTIwT25ib2FyZGluZw==" data-listing-file-modified-sort="1791178133942" data-listing-reading-time-sort="1" data-listing-word-count-sort="57">
+<div class="g-col-1" data-index="3" data-categories="VXNlciUyMEd1aWRlcyUyQ1RyYWluaW5nJTIwJTI2JTIwT25ib2FyZGluZw==" data-listing-file-modified-sort="1792627854116" data-listing-reading-time-sort="1" data-listing-word-count-sort="57">
 <a href="../../samples/technical-writing/validmind/quickstarts.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -970,7 +978,7 @@ Intuitive quickstart guides developed to onboard users onto ValidMind.
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="UHl0aG9uJTIwTGlicmFyeSUyQ0NvbnRlbnQlMjBFbmFibGVtZW50JTJDUmVsZWFzZSUyME5vdGVzJTJDQ3Vyc29yJTIwQ29kZSUyQ0FnZW50JTIwU2tpbGxzJTJDTGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscyUyQ0NJJTJGQ0QlMjBXb3JrZmxvd3M=" data-listing-file-modified-sort="1791178133942" data-listing-reading-time-sort="1" data-listing-word-count-sort="70">
+<div class="g-col-1" data-index="4" data-categories="UHl0aG9uJTIwTGlicmFyeSUyQ0NvbnRlbnQlMjBFbmFibGVtZW50JTJDUmVsZWFzZSUyME5vdGVzJTJDQ3Vyc29yJTIwQ29kZSUyQ0FnZW50JTIwU2tpbGxzJTJDTGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscyUyQ0NJJTJGQ0QlMjBXb3JrZmxvd3M=" data-listing-file-modified-sort="1792627854116" data-listing-reading-time-sort="1" data-listing-word-count-sort="70">
 <a href="../../samples/technical-writing/validmind/enablement.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -995,7 +1003,7 @@ Content produced to enable other creators to contribute to ValidMind’s open-so
 <p>I authored approximately 95% of the content for Atryum,<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> including the samples selected below:</p>
 <div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;Citation: <a href="https://github.com/validbeck/atryum/tree/main/website" target="_blank"><i class="fa-brands fa-github" aria-label="github"></i> Archive of <code>validmind/atryum/website</code> (documentation)</a></p></div></div><div id="listing-atryum-technical" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="SW50ZWdyYXRpb25zJTJDTGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscyUyQ01vZGVsJTIwQ29udGV4dCUyMFByb3RvY29sJTIwU2VydmVycw==" data-listing-file-modified-sort="1791178133938" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
+<div class="g-col-1" data-index="0" data-categories="SW50ZWdyYXRpb25zJTJDTGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscyUyQ01vZGVsJTIwQ29udGV4dCUyMFByb3RvY29sJTIwU2VydmVycw==" data-listing-file-modified-sort="1792627854111" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
 <a href="../../samples/technical-writing/atryum/integrations.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -1011,7 +1019,7 @@ Feature Documentation
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1791178133938" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1792627854111" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
 <a href="../../samples/technical-writing/atryum/user-guides.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -1027,7 +1035,7 @@ Feature Documentation
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="VHJhaW5pbmclMjAlMjYlMjBPbmJvYXJkaW5n" data-listing-file-modified-sort="1791178133938" data-listing-reading-time-sort="1" data-listing-word-count-sort="18">
+<div class="g-col-1" data-index="2" data-categories="VHJhaW5pbmclMjAlMjYlMjBPbmJvYXJkaW5n" data-listing-file-modified-sort="1792627854111" data-listing-reading-time-sort="1" data-listing-word-count-sort="18">
 <a href="../../samples/technical-writing/atryum/quickstart.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -1057,7 +1065,7 @@ Tutorial
 <p>Check out some blog posts I wrote on our product offering and industry that shine some insight into my writing style:</p>
 <div id="listing-validmind-copywriting" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="QmxvZyUyQ0FydGlmaWNpYWwlMjBJbnRlbGxpZ2VuY2UlMjAoQUkpJTJDRVUlMjBBSSUyMEFjdCUyQ0FJJTIwUmlzayUyQ01vZGVsJTIwUmlzayUyME1hbmFnZW1lbnQlMkNSaXNrJTIwR292ZXJuYW5jZSUyQ1ZhbGlkTWluZA==" data-listing-file-modified-sort="1791178133936" data-listing-reading-time-sort="6" data-listing-word-count-sort="1079">
+<div class="g-col-1" data-index="0" data-categories="QmxvZyUyQ0FydGlmaWNpYWwlMjBJbnRlbGxpZ2VuY2UlMjAoQUkpJTJDRVUlMjBBSSUyMEFjdCUyQ0FJJTIwUmlzayUyQ01vZGVsJTIwUmlzayUyME1hbmFnZW1lbnQlMkNSaXNrJTIwR292ZXJuYW5jZSUyQ1ZhbGlkTWluZA==" data-listing-file-modified-sort="1792627854109" data-listing-reading-time-sort="6" data-listing-word-count-sort="1079">
 <a href="../../samples/copywriting/validmind/honor-the-human.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -1073,7 +1081,7 @@ I owned this blog post from start to finish.
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="QmxvZyUyQ0FydGlmaWNpYWwlMjBJbnRlbGxpZ2VuY2UlMjAoQUkpJTJDQUklMjBSaXNrJTJDTW9kZWwlMjBSaXNrJTIwTWFuYWdlbWVudCUyQ1Jpc2slMjBHb3Zlcm5hbmNlJTJDVmFsaWRNaW5k" data-listing-file-modified-sort="1791178133936" data-listing-reading-time-sort="7" data-listing-word-count-sort="1298">
+<div class="g-col-1" data-index="1" data-categories="QmxvZyUyQ0FydGlmaWNpYWwlMjBJbnRlbGxpZ2VuY2UlMjAoQUkpJTJDQUklMjBSaXNrJTJDTW9kZWwlMjBSaXNrJTIwTWFuYWdlbWVudCUyQ1Jpc2slMjBHb3Zlcm5hbmNlJTJDVmFsaWRNaW5k" data-listing-file-modified-sort="1792627854110" data-listing-reading-time-sort="7" data-listing-word-count-sort="1298">
 <a href="../../samples/copywriting/validmind/reduce-culture-risk.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -1089,7 +1097,7 @@ I owned this blog post from start to finish.
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="QmxvZyUyQ0FydGlmaWNpYWwlMjBJbnRlbGxpZ2VuY2UlMjAoQUkpJTJDR2VuZXJhdGl2ZSUyMEFJJTJDTGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscyUyQ0FJJTIwUmlzayUyQ1Jpc2slMjBHb3Zlcm5hbmNlJTJDT3Blbi1Tb3VyY2UlMkNWYWxpZE1pbmQ=" data-listing-file-modified-sort="1791178133936" data-listing-reading-time-sort="3" data-listing-word-count-sort="576">
+<div class="g-col-1" data-index="2" data-categories="QmxvZyUyQ0FydGlmaWNpYWwlMjBJbnRlbGxpZ2VuY2UlMjAoQUkpJTJDR2VuZXJhdGl2ZSUyMEFJJTJDTGFyZ2UlMjBMYW5ndWFnZSUyME1vZGVscyUyQ0FJJTIwUmlzayUyQ1Jpc2slMjBHb3Zlcm5hbmNlJTJDT3Blbi1Tb3VyY2UlMkNWYWxpZE1pbmQ=" data-listing-file-modified-sort="1792627854110" data-listing-reading-time-sort="3" data-listing-word-count-sort="576">
 <a href="../../samples/copywriting/validmind/osff-takeaways.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -2493,6 +2501,9 @@ I owned this blog post from start to finish.
       }
     }
   });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
   </script>
 <nav class="page-navigation column-body" aria-label="Page">
   <div class="nav-page nav-page-previous">
