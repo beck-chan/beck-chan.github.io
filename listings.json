@@ -190,10 +190,11 @@
     ]
   },
   {
-    "listing": "/applications/supabase.html",
+    "listing": "/applications/supabase/index.html",
     "items": [
       "/samples/content-engineering/personal/guestbook/index.html",
       "/samples/developer-advocacy/personal/supabase/index.html",
+      "/samples/content-engineering/personal/career-chive/index.html",
       "/samples/content-engineering/validmind/redesign.html",
       "/samples/content-engineering/validmind/library.html",
       "/samples/content-engineering/validmind/academy.html",
