@@ -667,14 +667,52 @@
     ]
   },
   {
-    "objectID": "samples/technical-writing/personal/guestbook/guides.html",
-    "href": "samples/technical-writing/personal/guestbook/guides.html",
-    "title": "y2k Guestbook User Guides",
+    "objectID": "samples/technical-writing/personal/guestbook/index.html",
+    "href": "samples/technical-writing/personal/guestbook/index.html",
+    "title": "y2k Guestbook",
     "section": "",
-    "text": "Some of the general user guides I created for my y2k Guestbook application.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEnable Notifications\n\n\nUser Guides\n\n\nGuide walking users through enabling administrator notifications using Supabase Edge Functions and Gmail API.\n\n\n\n\n\n\n\n\n\nManage Admin Auth\n\n\nUser Guides\n\n\nGuide on how to invite and revoke administrator access to the y2k Guestbook using a command packaged with the application.\n\n\n\n\n\n\n\n\n\nAdd Analytics\n\n\nUser Guides\n\n\nGuide walking users through how to enable the packaged hit counter and web tracking powered by PostHog.\n\n\n\n\n\n\n\n\n\nPrerequisites\n\n\nUser Guides\n\n\nGuide walking users through initial setup required by the application in Supabase and Google OAuth 2.0.\n\n\n\n\n\nNo Matches Found",
+    "text": "To support installation and usage of my guestbook application, I created comprehensive documentation in MDX, including an API reference implemented with Scalar.\nI designed and built a retro-inspired, mobile-responsive Next.js guestbook application styled with Tailwind CSS and a backend powered by Supabase, complete with comprehensive documentation in MDX, including an API reference implemented with Scalar.",
     "crumbs": [
       "Content Engineering",
-      "Personal / y2k Guestbook",
+      "Personal",
+      "y2k Guestbook"
+    ]
+  },
+  {
+    "objectID": "samples/technical-writing/personal/guestbook/index.html#citation",
+    "href": "samples/technical-writing/personal/guestbook/index.html#citation",
+    "title": "y2k Guestbook",
+    "section": "Citation",
+    "text": "Citation",
+    "crumbs": [
+      "Content Engineering",
+      "Personal",
+      "y2k Guestbook"
+    ]
+  },
+  {
+    "objectID": "samples/technical-writing/personal/guestbook/developer.html",
+    "href": "samples/technical-writing/personal/guestbook/developer.html",
+    "title": "y2k Guestbook Developer Guides",
+    "section": "",
+    "text": "Developer-focused guides I created for my y2k Guestbook application.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAPI Library\n\n\nDeveloper Guides\n\n\nAPI Library reference featuring a custom Scalar explorer implementation where users can input their own credentials to test the API.\n\n\n\n\n\n\n\n\n\nCucumber Tests\n\n\nDeveloper Guides\n\n\nCucumber testing guide, including sample Gherkin .feature files and step definitions users can run to test their own installations with Playwright.\n\n\n\n\n\n\n\n\n\nInstall with npm\n\n\nDeveloper Guides\n\n\nEnd-to-end installation guide for integrating the y2k Guestbook package into your own Next.js application using Node Package Manager (npm).\n\n\n\n\n\nNo Matches Found",
+    "crumbs": [
+      "Content Engineering",
+      "Personal",
+      "y2k Guestbook",
+      "Developer Guides"
+    ]
+  },
+  {
+    "objectID": "samples/technical-writing/personal/career-chive/guides.html",
+    "href": "samples/technical-writing/personal/career-chive/guides.html",
+    "title": "CareerChive User Guides",
+    "section": "",
+    "text": "A couple general user guides I created for my CareerChive application.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEnable CareerChive Chatbot\n\n\nUser Guides\n\n\nGuide walking users through enabling the integrated user-assistance chatbot powered by Google Gemini.\n\n\n\n\n\n\n\n\n\nPrerequisites\n\n\nUser Guides\n\n\nGuide walking users through initial setup required by the application in Supabase and Cloudflare R2.\n\n\n\n\n\nNo Matches Found",
+    "crumbs": [
+      "Content Engineering",
+      "Personal",
+      "CareerChive",
       "User Guides"
     ]
   },
@@ -694,7 +732,7 @@
     "href": "samples/technical-writing/index.html#personal",
     "title": "Technical Writing",
     "section": "Personal",
-    "text": "Personal\nI designed and built a retro-inspired, mobile-responsive Next.js guestbook application styled with Tailwind CSS and a backend powered by Supabase, complete with comprehensive documentation in MDX, including an API reference implemented with Scalar.\n\n\n\n\n\n\n\ny2k Guestbook Developer Guides\n\n\nTechnical Writing\n\n\n\n\n\n\n\n\n\n\n\n\ny2k Guestbook User Guides\n\n\nTechnical Writing\n\n\n\n\n\n\n\n\nNo Matches Found",
+    "text": "Personal\nDocumentation designed and produced to support the development and use of my personal projects.\n\n\n\n\n\n\n\nCareerChive\n\n\nTechnical Writing\n\n\n\n\n\n\n\n\n\n\n\n\ny2k Guestbook\n\n\nTechnical Writing\n\n\n\n\n\n\n\n\nNo Matches Found",
     "crumbs": [
       "Content Engineering",
       "Technical Writing"
@@ -1177,83 +1215,71 @@
     "href": "samples/content-engineering/personal/index.html",
     "title": "Personal",
     "section": "",
-    "text": "Some behind-the-scenes insights into how I built this portfolio site and other projects, created to showcase my abilities as a content architect.\n\n\n\n\n\n\n\ny2k Guestbook\n\n\nContent Engineering\n\n\n\n\n\n\n\n\n\n\n\n\nPortfolio\n\n\nContent Engineering\n\n\n\n\n\n\n\n\nNo Matches Found",
+    "text": "Some behind-the-scenes insights into how I built this portfolio site and other projects, created to showcase my abilities as a content architect.\n\n\n\n\n\n\n\nCareerChive\n\n\nContent Engineering\n\n\n\n\n\n\n\n\n\n\n\n\ny2k Guestbook\n\n\nContent Engineering\n\n\n\n\n\n\n\n\n\n\n\n\nPortfolio\n\n\nContent Engineering\n\n\n\n\n\n\n\n\nNo Matches Found",
     "crumbs": [
       "Content Engineering",
       "Personal"
     ]
   },
   {
-    "objectID": "samples/content-engineering/index.html",
-    "href": "samples/content-engineering/index.html",
-    "title": "Content Engineering",
+    "objectID": "samples/content-engineering/personal/career-chive/index.html",
+    "href": "samples/content-engineering/personal/career-chive/index.html",
+    "title": "CareerChive",
     "section": "",
-    "text": "Delivering content as an integrated and integral part of product.\nDocs-as-code goes beyond just producing documentation in the same development ecosystem as features — thinking of content as product that’s part of product, a dedication to intuitive content architecture on top of immaculate user resources, and wrapping content and feature storytelling into the definition of done.",
+    "text": "I designed and built a mobile-responsive Next.js archival application with a backend powered by Supabase and file storage managed via Cloudflare R2, complete with comprehensive documentation in MDX, including an API reference implemented with Scalar.\nI designed and built a mobile-responsive Next.js application with a backend and cron jobs powered by Supabase, featuring:",
     "crumbs": [
-      "Content Engineering"
+      "Content Engineering",
+      "Personal",
+      "CareerChive"
     ]
   },
   {
-    "objectID": "samples/content-engineering/index.html#personal",
-    "href": "samples/content-engineering/index.html#personal",
-    "title": "Content Engineering",
-    "section": "Personal",
-    "text": "Personal\nSome behind-the-scenes insights into how I built this portfolio site and other projects, created to showcase my abilities as a content architect.\n\n\n\n\n\n\n\ny2k Guestbook\n\n\nContent Engineering\n\n\n\n\n\n\n\n\n\n\n\n\nPortfolio\n\n\nContent Engineering\n\n\n\n\n\n\n\n\nNo Matches Found",
+    "objectID": "samples/content-engineering/personal/career-chive/index.html#concept",
+    "href": "samples/content-engineering/personal/career-chive/index.html#concept",
+    "title": "CareerChive",
+    "section": "Concept",
+    "text": "Concept\nI built CareerChive after using many, many other productivity tool suites to log my daily notes and completed work. No matter what option I chose, the customization process was cumbersome, and manually creating daily entries was tedious. Even after extensive configuration the interfaces did not seem to allow me to capture exactly what I wanted in an intuitive manner, or display analytics in a way that was useful to me in one centralized place.\n\n\n\n\n\n\nThe below embedded demo iframes are interactive mockups, and are not connected to a live backend deployment.\n\n\n\n\n\n  \n    \n      \n    \n  \n  A Sample Daily Log in CareerChive in Mobile View\n\n\n\n  \n    \n      \n    \n  \n  Sample Overview Analytics in CareerChive in Mobile View\n\n\n\n  \n    \n      \n    \n  \n  Sample Search in CareerChive in Mobile View\n\n\nArchiveOverviewSearch\n\n\n\nFor each organization you track with CareerChive, you can auto-generate new daily entries for you to fill in. Each day allows you to:\n\nTrack attendance and reasons for being absent.\nLog completed work and supporting artifacts by each individual item via drag-and-drop editors.\nEnter rich text notes and comments.\nRate how you felt that day at work. 😠 🙁 😐 🙂 😄\n\n\n  \n    \n      \n    \n  \n  A Sample Daily Log in CareerChive\n\n\n\n\nAfter you’ve entered some daily logs, you can then glean insights about your logging habits, attendance, work you’ve completed, and mood ratings over time:\n\n  \n    \n      \n    \n  \n  Sample Overview Analytics in CareerChive\n\n\n\n\nAfter you’ve entered some daily logs, you can then search your daily logs by keyword and ask the assistant ChiveBot for information about your logs:\n\n  \n    \n      \n    \n  \n  Sample Search in CareerChive",
     "crumbs": [
-      "Content Engineering"
+      "Content Engineering",
+      "Personal",
+      "CareerChive"
     ]
   },
   {
-    "objectID": "samples/content-engineering/index.html#validmind",
-    "href": "samples/content-engineering/index.html#validmind",
-    "title": "Content Engineering",
-    "section": "ValidMind",
-    "text": "ValidMind\nI was the sole Senior Technical Writer for ValidMind, a generative artificial intelligence financial services startup, where I employed docs-as-code methodologies alongside software engineers delivering documentation as part of product in the same development ecosystem, transforming a minimal set of user guide drafts into a fully idealized and comprehensive knowledge base.\nAt ValidMind, I delivered documentation not just as complete product, but designed and implemented extensible documentation architecture:\n\n\n\n\n\n\n\nValidMind Developer Library\n\n\nContent Engineering\n\n\n\n\n\n\n\n\n\n\n\n\nValidMind Release Notes\n\n\nContent Engineering\n\n\n\n\n\n\n\n\n\n\n\n\nValidMind Training Academy\n\n\nContent Engineering\n\n\n\n\n\n\n\n\n\n\n\n\nValidMind Quickstart Guides\n\n\nContent Engineering\n\n\n\n\n\n\n\n\n\n\n\n\nValidMind Documentation Redesign\n\n\nContent Engineering\n\n\n\n\n\n\n\n\nNo Matches Found\n\n\nAtryum\nAtryum is an open-source agentic orchestration tool developed by ValidMind. As ValidMind’s sole Senior Technical Writer, I was responsible for almost all of the documentation for Atryum.\n\n\n\n\n\n\n\nAtryum Documentation\n\n\nContent Engineering\n\n\n\n\n\n\n\n\nNo Matches Found\n\n\n\n\n\n\n\nYou can learn more about my involvement with ValidMind and Atryum’s documentation and the impact I had on user guidance content under Technical Writing.",
+    "objectID": "samples/content-engineering/personal/career-chive/index.html#documentation",
+    "href": "samples/content-engineering/personal/career-chive/index.html#documentation",
+    "title": "CareerChive",
+    "section": "Documentation",
+    "text": "Documentation\nDocumentation guides include search functionality and a full API library reference implemented with Scalar:\n\nDocumentation LandingAPI Library\n\n\n\n  \n    \n      \n    \n    \n      \n    \n  \n  CareerChive Docs\n\n\n\n\n  \n    \n      \n    \n    \n      \n    \n  \n  CareerChive API Library\n\n\n\n\n\nDocs Chatbot\nIn addition to the core user guides, I built a chatbot that answers questions about CareerChive’s docs. The chatbot uses Supabase’s pgvector extension to store the embeddings of the documentation, and the Gemini API to answer questions:\n\n\n\nDocumentation Chatbot Powered by pgvector\n\n\n\n\n Try Chatbot Yourself!",
     "crumbs": [
-      "Content Engineering"
+      "Content Engineering",
+      "Personal",
+      "CareerChive"
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Beck Chan",
-    "section": "",
-    "text": "I’m Beck, poet with a passion for process — helping you empower users by designing and building solutions built to scale.\nI’ve designed, implemented, and managed everything from content, support, training, and onboarding architecture for organizations from startups to enterprises.\nMy methods bridge the gap between product design and user experience, whether that’s advocating for users during early stage development planning, serving as de facto alpha tester and bug fixer extraordinaire, or producing top-quality content that gets users excited about features."
+    "objectID": "samples/content-engineering/personal/career-chive/index.html#feature-flags",
+    "href": "samples/content-engineering/personal/career-chive/index.html#feature-flags",
+    "title": "CareerChive",
+    "section": "Feature Flags",
+    "text": "Feature Flags\nUsing feature flags implemented within CareerChive, users can toggle different features of the application on or off, such as gating archive access behind an administrative user for cloud deployment:\n\n  \n    \n      \n    \n    \n      \n    \n  \n  Gated Application Login Page",
+    "crumbs": [
+      "Content Engineering",
+      "Personal",
+      "CareerChive"
+    ]
   },
   {
-    "objectID": "index.html#samples",
-    "href": "index.html#samples",
-    "title": "Beck Chan",
-    "section": "Samples",
-    "text": "Samples\n\n\n\n\n\n\n\nContent Engineering\n\n\n\n\n\n\n\n\n\n\n\n\nTechnical Writing\n\n\n\n\n\n\n\n\n\n\n\n\nCopywriting\n\n\n\n\n\n\n\n\nNo Matches Found"
-  },
-  {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "curriculum vitae",
-    "section": "",
-    "text": "ValidMind, Inc\n\nImproved documentation and training through quality auditing and comprehensive redesigns using Quarto.\nAuthored 53% of user guidance content, including Jupyter Notebook samples for models and agentic systems.\nContributed to CI/CD infrastructure, open-source code libraries and software frontend built on TypeScript.\nOwned Agile feature development from design to release supported by storytelling alongside SWEs in GitHub.\nDesigned, standardized, and implemented processes built to scale to close gaps and reduce team workload.\nSpearheaded the implementation of an extensible custom Zendesk solution.\nBridged gap between product design and user experience, verifying feature functionality and applying bug fixes.\n\n\n\n\n\n\nSaaSquatch by impact.com\n\nCreated exhaustive documentation, feedback metrics, and learning curriculums to onboard and train new agents.\nEmpowered users to understand and maximize the use of products by auditing and overhauling documentation.\nExecuted migration of evolving support processes to Freshdesk, resulting in a team 100% CSAT satisfaction rate.\nPioneered comprehensive reporting solutions, maintaining systematic report history to identify long-term trends.\n\n\n\n\nSaaSquatch by impact.com\n\nDesigned and led solo migration of support processes to Zendesk built to scale, increasing efficiency by 74%.\nProactively identified opportunities for customer growth and product improvements during ticket management.\nManaged team escalations from complex technical cases, ensuring delivery of solutions to customers.\nProvided advanced technical support for web and mobile SDKs built on JavaScript, REST API, and GraphQL API.\n\n\n\n\nSaaSquatch by impact.com\n\nProactively created and maintained public documentation, focusing on accuracy, accessibility, and extensibility.\nStreamlined workload by 51% through improvement of implementation processes and onboarding strategies.\nProduced tangible results for customers by collaborating cross-functionally to deliver custom features.\nDesigned and executed solutions for custom JavaScript, REST API, and GraphQL API software installations.\n\n\n\n\n\n\nDevelus Systems Inc. for Complia Health\n\nLed creation of a knowledge base to empower team members with extensive training and reference materials.\nCreated a mentorship and feedback program, strengthening team cohesion.\nTriaged, escalated, and owned resolution of product bugs for custom installations using Zendesk.\n\n\n\n\nAbeBooks.com, Amazon subsidiary\n\nExceeded target metric expectations at 160% while providing technical support in a fast-paced call center.\nInitiated improvements to best practices and processes, including documentation for team knowledge base.\n\n\n\n\nHudson’s Bay Optical\n\nMultitasked in a fast-paced sales environment to administer and facilitate the sale of prescription glasses.\nManaged patient charts, sales reports, office inventory and stock orders.\n\n\n\n\nInner Harbour Optometry\n\nManaged confidential medical charts while performing optometric testing and customer support.\nImproved patient re-call system to increase business revenue.\n\n\n\n\nSylvan Learning, Inc.\n\nCoached and assisted students on the classroom floor and in 1-on-1 lessons.\nCreated lesson plans and personalized curriculums tailored to individual student needs.\n\n\n\n\n\n\nTechnical Writing\n\nDocs-as-code engineering\nMDX\nQuarto publishing\nJupyter Notebooks\nScalar\nMDX\nContentful\nMarkdown\n\nIntegration & API Architecture\n\nOpenAPI\nScalar\nRest API\nGraphQL API\nJSONata\nPostman\n\nLanguages & Libraries\n\nNode.js\nTypeScript\nJavaScript\nTailwind CSS\nBootstrap CSS\nHTML5\nCSS3\nPython\nLua\nRust\n\nData & Cloud Infrastructure\n\nGitHub\nPostgreSQL\nSupabase\nDocker\nNetlify\nVercel\nCI/CD workflows\n\nEnterprise Operations & Automation\n\nSalesforce\nZendesk\nFreshdesk\nHubSpot\nZapier\nIntercom\nFront\n\nAgile Project Management\n\nJira\nConfluence\nShortcut\nAsana\nNotion\nGoogle Workspace\nMicrosoft 365\n\nAI & Agentic Workflows\n\nCursor\nClaude\nGitHub Copilot\nChatGPT\nGemini\n\nIntegrations\n\nPayPal\nRecurly\nStripe\nBranch\nAppsFlyer"
-  },
-  {
-    "objectID": "cv.html#work-experience",
-    "href": "cv.html#work-experience",
-    "title": "curriculum vitae",
-    "section": "",
-    "text": "ValidMind, Inc\n\nImproved documentation and training through quality auditing and comprehensive redesigns using Quarto.\nAuthored 53% of user guidance content, including Jupyter Notebook samples for models and agentic systems.\nContributed to CI/CD infrastructure, open-source code libraries and software frontend built on TypeScript.\nOwned Agile feature development from design to release supported by storytelling alongside SWEs in GitHub.\nDesigned, standardized, and implemented processes built to scale to close gaps and reduce team workload.\nSpearheaded the implementation of an extensible custom Zendesk solution.\nBridged gap between product design and user experience, verifying feature functionality and applying bug fixes.\n\n\n\n\n\n\nSaaSquatch by impact.com\n\nCreated exhaustive documentation, feedback metrics, and learning curriculums to onboard and train new agents.\nEmpowered users to understand and maximize the use of products by auditing and overhauling documentation.\nExecuted migration of evolving support processes to Freshdesk, resulting in a team 100% CSAT satisfaction rate.\nPioneered comprehensive reporting solutions, maintaining systematic report history to identify long-term trends.\n\n\n\n\nSaaSquatch by impact.com\n\nDesigned and led solo migration of support processes to Zendesk built to scale, increasing efficiency by 74%.\nProactively identified opportunities for customer growth and product improvements during ticket management.\nManaged team escalations from complex technical cases, ensuring delivery of solutions to customers.\nProvided advanced technical support for web and mobile SDKs built on JavaScript, REST API, and GraphQL API.\n\n\n\n\nSaaSquatch by impact.com\n\nProactively created and maintained public documentation, focusing on accuracy, accessibility, and extensibility.\nStreamlined workload by 51% through improvement of implementation processes and onboarding strategies.\nProduced tangible results for customers by collaborating cross-functionally to deliver custom features.\nDesigned and executed solutions for custom JavaScript, REST API, and GraphQL API software installations.\n\n\n\n\n\n\nDevelus Systems Inc. for Complia Health\n\nLed creation of a knowledge base to empower team members with extensive training and reference materials.\nCreated a mentorship and feedback program, strengthening team cohesion.\nTriaged, escalated, and owned resolution of product bugs for custom installations using Zendesk.\n\n\n\n\nAbeBooks.com, Amazon subsidiary\n\nExceeded target metric expectations at 160% while providing technical support in a fast-paced call center.\nInitiated improvements to best practices and processes, including documentation for team knowledge base.\n\n\n\n\nHudson’s Bay Optical\n\nMultitasked in a fast-paced sales environment to administer and facilitate the sale of prescription glasses.\nManaged patient charts, sales reports, office inventory and stock orders.\n\n\n\n\nInner Harbour Optometry\n\nManaged confidential medical charts while performing optometric testing and customer support.\nImproved patient re-call system to increase business revenue.\n\n\n\n\nSylvan Learning, Inc.\n\nCoached and assisted students on the classroom floor and in 1-on-1 lessons.\nCreated lesson plans and personalized curriculums tailored to individual student needs.\n\n\n\n\n\n\nTechnical Writing\n\nDocs-as-code engineering\nMDX\nQuarto publishing\nJupyter Notebooks\nScalar\nMDX\nContentful\nMarkdown\n\nIntegration & API Architecture\n\nOpenAPI\nScalar\nRest API\nGraphQL API\nJSONata\nPostman\n\nLanguages & Libraries\n\nNode.js\nTypeScript\nJavaScript\nTailwind CSS\nBootstrap CSS\nHTML5\nCSS3\nPython\nLua\nRust\n\nData & Cloud Infrastructure\n\nGitHub\nPostgreSQL\nSupabase\nDocker\nNetlify\nVercel\nCI/CD workflows\n\nEnterprise Operations & Automation\n\nSalesforce\nZendesk\nFreshdesk\nHubSpot\nZapier\nIntercom\nFront\n\nAgile Project Management\n\nJira\nConfluence\nShortcut\nAsana\nNotion\nGoogle Workspace\nMicrosoft 365\n\nAI & Agentic Workflows\n\nCursor\nClaude\nGitHub Copilot\nChatGPT\nGemini\n\nIntegrations\n\nPayPal\nRecurly\nStripe\nBranch\nAppsFlyer"
-  },
-  {
-    "objectID": "cv.html#education",
-    "href": "cv.html#education",
-    "title": "curriculum vitae",
-    "section": "Education",
-    "text": "Education\n\n\nLighthouse Labs\nIntro to Front-End with JavaScript\n\n\nUniversity of Victoria\ncum laude\nBachelor of Arts, English Literature & Japanese Studies"
-  },
-  {
-    "objectID": "cv.html#projects",
-    "href": "cv.html#projects",
-    "title": "curriculum vitae",
-    "section": "Projects",
-    "text": "Projects\n\n\ny2k Guestbook\nhttps://beck-chan.vercel.app\n\nMobile-responsive frontend built on Next.js and Tailwind CSS, integrated Supabase edge functions and backend.\nBuilt-in rate limiting and profanity filtering. Admin functionality for comment management and customization.\nDocs in MDX with Gemini chatbot, API reference implemented with Scalar. Admin gating via Google OAuth 2.0.\n\nContent Engineering: y2k Guestbook\n\n\nPersonal Portfolio\nhttps://beck-chan.github.io\n\nMobile-responsive build using Quarto, deployed to GitHub Pages and Netlify via GitHub CI/CD Workflows.\nCustom themes and styling using Bootstrap. Custom functionality added with JavaScript and Lua.\nLocal deployment fallbacks via Justfile in Rust.\n\nContent Engineering: Portfolio"
+    "objectID": "samples/content-engineering/personal/career-chive/index.html#citations",
+    "href": "samples/content-engineering/personal/career-chive/index.html#citations",
+    "title": "CareerChive",
+    "section": "Citations",
+    "text": "Citations\nLearn more about how I built the CareerChive application and the accompanying documentation:\n\n\n\n\n\n\n\n\n beck-chan: careerchive-docs",
+    "crumbs": [
+      "Content Engineering",
+      "Personal",
+      "CareerChive"
+    ]
   },
   {
     "objectID": "samples/content-engineering/atryum/index.html",
@@ -1311,6 +1337,78 @@
     ]
   },
   {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "curriculum vitae",
+    "section": "",
+    "text": "ValidMind, Inc\n\nImproved documentation and training through quality auditing and comprehensive redesigns using Quarto.\nAuthored 53% of user guidance content, including Jupyter Notebook samples for models and agentic systems.\nContributed to CI/CD infrastructure, open-source code libraries and software frontend built on TypeScript.\nOwned Agile feature development from design to release supported by storytelling alongside SWEs in GitHub.\nDesigned, standardized, and implemented processes built to scale to close gaps and reduce team workload.\nSpearheaded the implementation of an extensible custom Zendesk solution.\nBridged gap between product design and user experience, verifying feature functionality and applying bug fixes.\n\n\n\n\n\n\nSaaSquatch by impact.com\n\nCreated exhaustive documentation, feedback metrics, and learning curriculums to onboard and train new agents.\nEmpowered users to understand and maximize the use of products by auditing and overhauling documentation.\nExecuted migration of evolving support processes to Freshdesk, resulting in a team 100% CSAT satisfaction rate.\nPioneered comprehensive reporting solutions, maintaining systematic report history to identify long-term trends.\n\n\n\n\nSaaSquatch by impact.com\n\nDesigned and led solo migration of support processes to Zendesk built to scale, increasing efficiency by 74%.\nProactively identified opportunities for customer growth and product improvements during ticket management.\nManaged team escalations from complex technical cases, ensuring delivery of solutions to customers.\nProvided advanced technical support for web and mobile SDKs built on JavaScript, REST API, and GraphQL API.\n\n\n\n\nSaaSquatch by impact.com\n\nProactively created and maintained public documentation, focusing on accuracy, accessibility, and extensibility.\nStreamlined workload by 51% through improvement of implementation processes and onboarding strategies.\nProduced tangible results for customers by collaborating cross-functionally to deliver custom features.\nDesigned and executed solutions for custom JavaScript, REST API, and GraphQL API software installations.\n\n\n\n\n\n\nDevelus Systems Inc. for Complia Health\n\nLed creation of a knowledge base to empower team members with extensive training and reference materials.\nCreated a mentorship and feedback program, strengthening team cohesion.\nTriaged, escalated, and owned resolution of product bugs for custom installations using Zendesk.\n\n\n\n\nAbeBooks.com, Amazon subsidiary\n\nExceeded target metric expectations at 160% while providing technical support in a fast-paced call center.\nInitiated improvements to best practices and processes, including documentation for team knowledge base.\n\n\n\n\nHudson’s Bay Optical\n\nMultitasked in a fast-paced sales environment to administer and facilitate the sale of prescription glasses.\nManaged patient charts, sales reports, office inventory and stock orders.\n\n\n\n\nInner Harbour Optometry\n\nManaged confidential medical charts while performing optometric testing and customer support.\nImproved patient re-call system to increase business revenue.\n\n\n\n\nSylvan Learning, Inc.\n\nCoached and assisted students on the classroom floor and in 1-on-1 lessons.\nCreated lesson plans and personalized curriculums tailored to individual student needs.\n\n\n\n\n\n\nTechnical Writing\n\nDocs-as-code engineering\nMDX\nQuarto publishing\nJupyter Notebooks\nScalar\nMDX\nContentful\nMarkdown\n\nIntegration & API Architecture\n\nOpenAPI\nScalar\nRest API\nGraphQL API\nJSONata\nPostman\n\nLanguages & Libraries\n\nNode.js\nTypeScript\nJavaScript\nTailwind CSS\nBootstrap CSS\nHTML5\nCSS3\nPython\nLua\nRust\n\nData & Cloud Infrastructure\n\nGitHub\nPostgreSQL\nSupabase\nDocker\nNetlify\nVercel\nCI/CD workflows\n\nEnterprise Operations & Automation\n\nSalesforce\nZendesk\nFreshdesk\nHubSpot\nZapier\nIntercom\nFront\n\nAgile Project Management\n\nJira\nConfluence\nShortcut\nAsana\nNotion\nGoogle Workspace\nMicrosoft 365\n\nAI & Agentic Workflows\n\nCursor\nClaude\nGitHub Copilot\nChatGPT\nGemini\n\nIntegrations\n\nPayPal\nRecurly\nStripe\nBranch\nAppsFlyer"
+  },
+  {
+    "objectID": "cv.html#work-experience",
+    "href": "cv.html#work-experience",
+    "title": "curriculum vitae",
+    "section": "",
+    "text": "ValidMind, Inc\n\nImproved documentation and training through quality auditing and comprehensive redesigns using Quarto.\nAuthored 53% of user guidance content, including Jupyter Notebook samples for models and agentic systems.\nContributed to CI/CD infrastructure, open-source code libraries and software frontend built on TypeScript.\nOwned Agile feature development from design to release supported by storytelling alongside SWEs in GitHub.\nDesigned, standardized, and implemented processes built to scale to close gaps and reduce team workload.\nSpearheaded the implementation of an extensible custom Zendesk solution.\nBridged gap between product design and user experience, verifying feature functionality and applying bug fixes.\n\n\n\n\n\n\nSaaSquatch by impact.com\n\nCreated exhaustive documentation, feedback metrics, and learning curriculums to onboard and train new agents.\nEmpowered users to understand and maximize the use of products by auditing and overhauling documentation.\nExecuted migration of evolving support processes to Freshdesk, resulting in a team 100% CSAT satisfaction rate.\nPioneered comprehensive reporting solutions, maintaining systematic report history to identify long-term trends.\n\n\n\n\nSaaSquatch by impact.com\n\nDesigned and led solo migration of support processes to Zendesk built to scale, increasing efficiency by 74%.\nProactively identified opportunities for customer growth and product improvements during ticket management.\nManaged team escalations from complex technical cases, ensuring delivery of solutions to customers.\nProvided advanced technical support for web and mobile SDKs built on JavaScript, REST API, and GraphQL API.\n\n\n\n\nSaaSquatch by impact.com\n\nProactively created and maintained public documentation, focusing on accuracy, accessibility, and extensibility.\nStreamlined workload by 51% through improvement of implementation processes and onboarding strategies.\nProduced tangible results for customers by collaborating cross-functionally to deliver custom features.\nDesigned and executed solutions for custom JavaScript, REST API, and GraphQL API software installations.\n\n\n\n\n\n\nDevelus Systems Inc. for Complia Health\n\nLed creation of a knowledge base to empower team members with extensive training and reference materials.\nCreated a mentorship and feedback program, strengthening team cohesion.\nTriaged, escalated, and owned resolution of product bugs for custom installations using Zendesk.\n\n\n\n\nAbeBooks.com, Amazon subsidiary\n\nExceeded target metric expectations at 160% while providing technical support in a fast-paced call center.\nInitiated improvements to best practices and processes, including documentation for team knowledge base.\n\n\n\n\nHudson’s Bay Optical\n\nMultitasked in a fast-paced sales environment to administer and facilitate the sale of prescription glasses.\nManaged patient charts, sales reports, office inventory and stock orders.\n\n\n\n\nInner Harbour Optometry\n\nManaged confidential medical charts while performing optometric testing and customer support.\nImproved patient re-call system to increase business revenue.\n\n\n\n\nSylvan Learning, Inc.\n\nCoached and assisted students on the classroom floor and in 1-on-1 lessons.\nCreated lesson plans and personalized curriculums tailored to individual student needs.\n\n\n\n\n\n\nTechnical Writing\n\nDocs-as-code engineering\nMDX\nQuarto publishing\nJupyter Notebooks\nScalar\nMDX\nContentful\nMarkdown\n\nIntegration & API Architecture\n\nOpenAPI\nScalar\nRest API\nGraphQL API\nJSONata\nPostman\n\nLanguages & Libraries\n\nNode.js\nTypeScript\nJavaScript\nTailwind CSS\nBootstrap CSS\nHTML5\nCSS3\nPython\nLua\nRust\n\nData & Cloud Infrastructure\n\nGitHub\nPostgreSQL\nSupabase\nDocker\nNetlify\nVercel\nCI/CD workflows\n\nEnterprise Operations & Automation\n\nSalesforce\nZendesk\nFreshdesk\nHubSpot\nZapier\nIntercom\nFront\n\nAgile Project Management\n\nJira\nConfluence\nShortcut\nAsana\nNotion\nGoogle Workspace\nMicrosoft 365\n\nAI & Agentic Workflows\n\nCursor\nClaude\nGitHub Copilot\nChatGPT\nGemini\n\nIntegrations\n\nPayPal\nRecurly\nStripe\nBranch\nAppsFlyer"
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "curriculum vitae",
+    "section": "Education",
+    "text": "Education\n\n\nLighthouse Labs\nIntro to Front-End with JavaScript\n\n\nUniversity of Victoria\ncum laude\nBachelor of Arts, English Literature & Japanese Studies"
+  },
+  {
+    "objectID": "cv.html#projects",
+    "href": "cv.html#projects",
+    "title": "curriculum vitae",
+    "section": "Projects",
+    "text": "Projects\n\n\nCareerChive\nhttps://career-chive.vercel.app\n\nMobile-responsive frontend built on Next.js and Tailwind CSS, integrated Supabase backend and cron jobs.\nAttachment storage powered by Cloudflare R2. Password protection with built-in login attempt limiting.\nAdvanced search functionality with embedded AI assistant powered by Gemini. Docs in MDX and Scalar.\n\nContent Engineering: CareerChive\n\n\ny2k Guestbook\nhttps://beck-chan.vercel.app\n\nMobile-responsive frontend built on Next.js and Tailwind CSS, integrated Supabase edge functions and backend.\nBuilt-in rate limiting and profanity filtering. Admin functionality for comment management and customization.\nDocs in MDX with Gemini chatbot, API reference implemented with Scalar. Admin gating via Google OAuth 2.0.\n\nContent Engineering: y2k Guestbook\n\n\nPersonal Portfolio\nhttps://beck-chan.github.io\n\nMobile-responsive build using Quarto, deployed to GitHub Pages and Netlify via GitHub CI/CD Workflows.\nCustom themes and styling using Bootstrap. Custom functionality added with JavaScript and Lua.\nLocal deployment fallbacks via Justfile in Rust.\n\nContent Engineering: Portfolio"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Beck Chan",
+    "section": "",
+    "text": "I’m Beck, poet with a passion for process — helping you empower users by designing and building solutions built to scale.\nI’ve designed, implemented, and managed everything from content, support, training, and onboarding architecture for organizations from startups to enterprises.\nMy methods bridge the gap between product design and user experience, whether that’s advocating for users during early stage development planning, serving as de facto alpha tester and bug fixer extraordinaire, or producing top-quality content that gets users excited about features."
+  },
+  {
+    "objectID": "index.html#samples",
+    "href": "index.html#samples",
+    "title": "Beck Chan",
+    "section": "Samples",
+    "text": "Samples\n\n\n\n\n\n\n\nContent Engineering\n\n\n\n\n\n\n\n\n\n\n\n\nTechnical Writing\n\n\n\n\n\n\n\n\n\n\n\n\nCopywriting\n\n\n\n\n\n\n\n\nNo Matches Found"
+  },
+  {
+    "objectID": "samples/content-engineering/index.html",
+    "href": "samples/content-engineering/index.html",
+    "title": "Content Engineering",
+    "section": "",
+    "text": "Delivering content as an integrated and integral part of product.\nDocs-as-code goes beyond just producing documentation in the same development ecosystem as features — thinking of content as product that’s part of product, a dedication to intuitive content architecture on top of immaculate user resources, and wrapping content and feature storytelling into the definition of done.",
+    "crumbs": [
+      "Content Engineering"
+    ]
+  },
+  {
+    "objectID": "samples/content-engineering/index.html#personal",
+    "href": "samples/content-engineering/index.html#personal",
+    "title": "Content Engineering",
+    "section": "Personal",
+    "text": "Personal\nSome behind-the-scenes insights into how I built this portfolio site and other projects, created to showcase my abilities as a content architect.\n\n\n\n\n\n\n\nCareerChive\n\n\nContent Engineering\n\n\n\n\n\n\n\n\n\n\n\n\ny2k Guestbook\n\n\nContent Engineering\n\n\n\n\n\n\n\n\n\n\n\n\nPortfolio\n\n\nContent Engineering\n\n\n\n\n\n\n\n\nNo Matches Found",
+    "crumbs": [
+      "Content Engineering"
+    ]
+  },
+  {
+    "objectID": "samples/content-engineering/index.html#validmind",
+    "href": "samples/content-engineering/index.html#validmind",
+    "title": "Content Engineering",
+    "section": "ValidMind",
+    "text": "ValidMind\nI was the sole Senior Technical Writer for ValidMind, a generative artificial intelligence financial services startup, where I employed docs-as-code methodologies alongside software engineers delivering documentation as part of product in the same development ecosystem, transforming a minimal set of user guide drafts into a fully idealized and comprehensive knowledge base.\nAt ValidMind, I delivered documentation not just as complete product, but designed and implemented extensible documentation architecture:\n\n\n\n\n\n\n\nValidMind Developer Library\n\n\nContent Engineering\n\n\n\n\n\n\n\n\n\n\n\n\nValidMind Release Notes\n\n\nContent Engineering\n\n\n\n\n\n\n\n\n\n\n\n\nValidMind Training Academy\n\n\nContent Engineering\n\n\n\n\n\n\n\n\n\n\n\n\nValidMind Quickstart Guides\n\n\nContent Engineering\n\n\n\n\n\n\n\n\n\n\n\n\nValidMind Documentation Redesign\n\n\nContent Engineering\n\n\n\n\n\n\n\n\nNo Matches Found\n\n\nAtryum\nAtryum is an open-source agentic orchestration tool developed by ValidMind. As ValidMind’s sole Senior Technical Writer, I was responsible for almost all of the documentation for Atryum.\n\n\n\n\n\n\n\nAtryum Documentation\n\n\nContent Engineering\n\n\n\n\n\n\n\n\nNo Matches Found\n\n\n\n\n\n\n\nYou can learn more about my involvement with ValidMind and Atryum’s documentation and the impact I had on user guidance content under Technical Writing.",
+    "crumbs": [
+      "Content Engineering"
+    ]
+  },
+  {
     "objectID": "samples/content-engineering/personal/guestbook/index.html",
     "href": "samples/content-engineering/personal/guestbook/index.html",
     "title": "y2k Guestbook",
@@ -1339,7 +1437,7 @@
     "href": "samples/content-engineering/personal/guestbook/index.html#documentation",
     "title": "y2k Guestbook",
     "section": "Documentation",
-    "text": "Documentation\nDocumentation guides include search functionality, and the API reference features an interactive explorer where users can input their own credentials to test the API when their applications are fully installed:\n\nDocumentation LandingAPI Library\n\n\n\n  \n    \n      \n    \n    \n      \n    \n  \n  y2k Guestbook Docs\n\n\n\n\n  \n    \n      \n    \n    \n      \n    \n  \n  y2k Guestbook API Library\n\n\n\n\nAlongside the interactive API library, I built a chatbot powered by Gemini that can answer questions about the documentation:\n\nLive ChatbotProof-of-Concept Chatbot\n\n\nThe live chatbot uses Supabase’s pgvector extension to store the embeddings of the documentation, and the Gemini API to answer questions:\n\n\n\nLive Chatbot Powered by pgvector\n\n\n\n\nMy initial, more complex proof-of-concept chatbot used a local Elasticsearch instance served via Docker and the Gemini API to answer questions about the documentation:\n\n  \n    \n      \n    \n    \n      \n    \n  \n  Proof-of-Concept Chatbot Built with Elasticsearch\n\n\n\n\n\n\n Try Chatbot Yourself!",
+    "text": "Documentation\nDocumentation guides include search functionality, and the API reference features an interactive explorer where users can input their own credentials to test the API when their applications are fully installed:\n\nDocumentation LandingAPI Library\n\n\n\n  \n    \n      \n    \n    \n      \n    \n  \n  y2k Guestbook Docs\n\n\n\n\n  \n    \n      \n    \n    \n      \n    \n  \n  y2k Guestbook API Library\n\n\n\n\n\nDocs Chatbot\nAlongside the interactive API library, I built a chatbot powered by Gemini that answers questions about the guestbook’s docs:\n\nLive ChatbotProof-of-Concept Chatbot\n\n\nThe live chatbot uses Supabase’s pgvector extension to store the embeddings of the documentation, and the Gemini API to answer questions:\n\n\n\nLive Chatbot Powered by pgvector\n\n\n\n\nMy initial, more complex proof-of-concept chatbot used a local Elasticsearch instance served via Docker and the Gemini API to answer questions about the documentation:\n\n  \n    \n      \n    \n    \n      \n    \n  \n  Proof-of-Concept Chatbot Built with Elasticsearch\n\n\n\n\n\n\n Try Chatbot Yourself!",
     "crumbs": [
       "Content Engineering",
       "Personal",
@@ -1692,37 +1790,86 @@
     ]
   },
   {
-    "objectID": "samples/technical-writing/personal/guestbook/developer.html",
-    "href": "samples/technical-writing/personal/guestbook/developer.html",
-    "title": "y2k Guestbook Developer Guides",
+    "objectID": "samples/technical-writing/personal/career-chive/developer.html",
+    "href": "samples/technical-writing/personal/career-chive/developer.html",
+    "title": "CareerChive Developer Guides",
     "section": "",
-    "text": "Developer-focused guides I created for my y2k Guestbook application.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAPI Library\n\n\nDeveloper Guides\n\n\nAPI Library reference featuring a custom Scalar explorer implementation where users can input their own credentials to test the API.\n\n\n\n\n\n\n\n\n\nCucumber Tests\n\n\nDeveloper Guides\n\n\nCucumber testing guide, including sample Gherkin .feature files and step definitions users can run to test their own installations with Playwright.\n\n\n\n\n\n\n\n\n\nInstall with npm\n\n\nDeveloper Guides\n\n\nEnd-to-end installation guide for integrating the y2k Guestbook package into your own Next.js application using Node Package Manager (npm).\n\n\n\n\n\nNo Matches Found",
+    "text": "Developer-focused guides I created for my CareerChive application.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAPI Library\n\n\nDeveloper Guides\n\n\nAPI Library reference featuring a custom Scalar explorer implementation.\n\n\n\n\n\n\n\n\n\nInstall with npm\n\n\nDeveloper Guides\n\n\nEnd-to-end installation guide for integrating the CareerChive package into your own Next.js application using Node Package Manager (npm).\n\n\n\n\n\nNo Matches Found",
     "crumbs": [
       "Content Engineering",
-      "Personal / y2k Guestbook",
+      "Personal",
+      "CareerChive",
       "Developer Guides"
     ]
   },
   {
-    "objectID": "samples/technical-writing/personal/guestbook/index.html",
-    "href": "samples/technical-writing/personal/guestbook/index.html",
-    "title": "y2k Guestbook",
+    "objectID": "samples/technical-writing/personal/career-chive/index.html",
+    "href": "samples/technical-writing/personal/career-chive/index.html",
+    "title": "CareerChive",
     "section": "",
-    "text": "To support installation and usage of my guestbook application, I created comprehensive documentation in MDX, including an API reference implemented with Scalar.\nI designed and built a retro-inspired, mobile-responsive Next.js guestbook application styled with Tailwind CSS and a backend powered by Supabase, complete with comprehensive documentation in MDX, including an API reference implemented with Scalar.",
+    "text": "To support installation and usage of my archival application, I created comprehensive documentation in MDX, including an API reference implemented with Scalar.\nI designed and built a mobile-responsive Next.js archival application with a backend powered by Supabase and file storage managed via Cloudflare R2, complete with comprehensive documentation in MDX, including an API reference implemented with Scalar.",
     "crumbs": [
       "Content Engineering",
-      "Personal / y2k Guestbook"
+      "Personal",
+      "CareerChive"
     ]
   },
   {
-    "objectID": "samples/technical-writing/personal/guestbook/index.html#citation",
-    "href": "samples/technical-writing/personal/guestbook/index.html#citation",
-    "title": "y2k Guestbook",
+    "objectID": "samples/technical-writing/personal/career-chive/index.html#citation",
+    "href": "samples/technical-writing/personal/career-chive/index.html#citation",
+    "title": "CareerChive",
     "section": "Citation",
     "text": "Citation",
     "crumbs": [
       "Content Engineering",
-      "Personal / y2k Guestbook"
+      "Personal",
+      "CareerChive"
+    ]
+  },
+  {
+    "objectID": "samples/technical-writing/personal/guestbook/guides.html",
+    "href": "samples/technical-writing/personal/guestbook/guides.html",
+    "title": "y2k Guestbook User Guides",
+    "section": "",
+    "text": "Some of the general user guides I created for my y2k Guestbook application.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEnable Notifications\n\n\nUser Guides\n\n\nGuide walking users through enabling administrator notifications using Supabase Edge Functions and Gmail API.\n\n\n\n\n\n\n\n\n\nManage Admin Auth\n\n\nUser Guides\n\n\nGuide on how to invite and revoke administrator access to the y2k Guestbook using a command packaged with the application.\n\n\n\n\n\n\n\n\n\nAdd Analytics\n\n\nUser Guides\n\n\nGuide walking users through how to enable the packaged hit counter and web tracking powered by PostHog.\n\n\n\n\n\n\n\n\n\nPrerequisites\n\n\nUser Guides\n\n\nGuide walking users through initial setup required by the application in Supabase and Google OAuth 2.0.\n\n\n\n\n\nNo Matches Found",
+    "crumbs": [
+      "Content Engineering",
+      "Personal",
+      "y2k Guestbook",
+      "User Guides"
+    ]
+  },
+  {
+    "objectID": "samples/technical-writing/personal/index.html",
+    "href": "samples/technical-writing/personal/index.html",
+    "title": "Personal",
+    "section": "",
+    "text": "Documentation designed and produced to support the development and use of my personal projects.",
+    "crumbs": [
+      "Content Engineering",
+      "Personal"
+    ]
+  },
+  {
+    "objectID": "samples/technical-writing/personal/index.html#careerchive",
+    "href": "samples/technical-writing/personal/index.html#careerchive",
+    "title": "Personal",
+    "section": "CareerChive",
+    "text": "CareerChive\nI designed and built a mobile-responsive Next.js archival application with a backend powered by Supabase and file storage managed via Cloudflare R2, complete with comprehensive documentation in MDX, including an API reference implemented with Scalar.\n\n\n\n\n\n\n\nCareerChive Developer Guides\n\n\nTechnical Writing\n\n\n\n\n\n\n\n\n\n\n\n\nCareerChive User Guides\n\n\nTechnical Writing\n\n\n\n\n\n\n\n\nNo Matches Found",
+    "crumbs": [
+      "Content Engineering",
+      "Personal"
+    ]
+  },
+  {
+    "objectID": "samples/technical-writing/personal/index.html#y2k-guestbook",
+    "href": "samples/technical-writing/personal/index.html#y2k-guestbook",
+    "title": "Personal",
+    "section": "y2k Guestbook",
+    "text": "y2k Guestbook\nI designed and built a retro-inspired, mobile-responsive Next.js guestbook application styled with Tailwind CSS and a backend powered by Supabase, complete with comprehensive documentation in MDX, including an API reference implemented with Scalar.\n\n\n\n\n\n\n\ny2k Guestbook Developer Guides\n\n\nTechnical Writing\n\n\n\n\n\n\n\n\n\n\n\n\ny2k Guestbook User Guides\n\n\nTechnical Writing\n\n\n\n\n\n\n\n\nNo Matches Found",
+    "crumbs": [
+      "Content Engineering",
+      "Personal"
     ]
   },
   {

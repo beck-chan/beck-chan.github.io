@@ -36,7 +36,19 @@
     ]
   },
   {
-    "listing": "/samples/technical-writing/personal/guestbook/guides.html",
+    "listing": "/samples/technical-writing/personal/guestbook/index.html",
+    "items": [
+      "/samples/technical-writing/personal/guestbook/developer.html",
+      "/samples/technical-writing/personal/guestbook/guides.html",
+      "/samples/content-engineering/personal/guestbook/index.html"
+    ]
+  },
+  {
+    "listing": "/samples/technical-writing/personal/guestbook/developer.html",
+    "items": []
+  },
+  {
+    "listing": "/samples/technical-writing/personal/career-chive/guides.html",
     "items": []
   },
   {
@@ -50,8 +62,8 @@
       "/samples/technical-writing/atryum/integrations.html",
       "/samples/technical-writing/atryum/user-guides.html",
       "/samples/technical-writing/atryum/quickstart.html",
-      "/samples/technical-writing/personal/guestbook/developer.html",
-      "/samples/technical-writing/personal/guestbook/guides.html",
+      "/samples/technical-writing/personal/career-chive/index.html",
+      "/samples/technical-writing/personal/guestbook/index.html",
       "/samples/technical-writing/saasquatch/integrations/index.html",
       "/samples/technical-writing/saasquatch/sdk/index.html",
       "/samples/technical-writing/saasquatch/user-guides/index.html"
@@ -86,8 +98,8 @@
   {
     "listing": "/samples/index.html",
     "items": [
-      "/samples/technical-writing/personal/guestbook/developer.html",
-      "/samples/technical-writing/personal/guestbook/guides.html",
+      "/samples/technical-writing/personal/career-chive/index.html",
+      "/samples/technical-writing/personal/guestbook/index.html",
       "/samples/technical-writing/validmind/jupyter-notebooks.html",
       "/samples/technical-writing/validmind/training.html",
       "/samples/technical-writing/validmind/user-guides.html",
@@ -109,6 +121,7 @@
       "/samples/technical-writing/saasquatch/integrations/index.html",
       "/samples/technical-writing/saasquatch/sdk/index.html",
       "/samples/technical-writing/saasquatch/user-guides/index.html",
+      "/samples/content-engineering/personal/career-chive/index.html",
       "/samples/content-engineering/personal/guestbook/index.html",
       "/samples/content-engineering/personal/portfolio/index.html"
     ]
@@ -161,29 +174,19 @@
   {
     "listing": "/samples/content-engineering/personal/index.html",
     "items": [
+      "/samples/content-engineering/personal/career-chive/index.html",
       "/samples/content-engineering/personal/guestbook/index.html",
       "/samples/content-engineering/personal/portfolio/index.html"
     ]
   },
   {
-    "listing": "/samples/content-engineering/index.html",
-    "items": [
-      "/samples/content-engineering/validmind/library.html",
-      "/samples/content-engineering/validmind/releases.html",
-      "/samples/content-engineering/validmind/academy.html",
-      "/samples/content-engineering/validmind/quickstarts.html",
-      "/samples/content-engineering/validmind/redesign.html",
-      "/samples/content-engineering/atryum/index.html",
-      "/samples/content-engineering/personal/guestbook/index.html",
-      "/samples/content-engineering/personal/portfolio/index.html"
-    ]
+    "listing": "/samples/content-engineering/personal/career-chive/index.html",
+    "items": []
   },
   {
-    "listing": "/index.html",
+    "listing": "/samples/content-engineering/atryum/index.html",
     "items": [
-      "/samples/content-engineering/index.html",
-      "/samples/technical-writing/index.html",
-      "/samples/copywriting/index.html"
+      "/samples/technical-writing/atryum/index.html"
     ]
   },
   {
@@ -205,9 +208,25 @@
     ]
   },
   {
-    "listing": "/samples/content-engineering/atryum/index.html",
+    "listing": "/index.html",
     "items": [
-      "/samples/technical-writing/atryum/index.html"
+      "/samples/content-engineering/index.html",
+      "/samples/technical-writing/index.html",
+      "/samples/copywriting/index.html"
+    ]
+  },
+  {
+    "listing": "/samples/content-engineering/index.html",
+    "items": [
+      "/samples/content-engineering/validmind/library.html",
+      "/samples/content-engineering/validmind/releases.html",
+      "/samples/content-engineering/validmind/academy.html",
+      "/samples/content-engineering/validmind/quickstarts.html",
+      "/samples/content-engineering/validmind/redesign.html",
+      "/samples/content-engineering/atryum/index.html",
+      "/samples/content-engineering/personal/career-chive/index.html",
+      "/samples/content-engineering/personal/guestbook/index.html",
+      "/samples/content-engineering/personal/portfolio/index.html"
     ]
   },
   {
@@ -263,14 +282,11 @@
   {
     "listing": "/samples/organizations/personal.html",
     "items": [
+      "/samples/content-engineering/personal/career-chive/index.html",
       "/samples/content-engineering/personal/guestbook/index.html",
       "/samples/content-engineering/personal/portfolio/index.html",
-      "/samples/technical-writing/personal/guestbook/index.html",
-      "/samples/developer-advocacy/personal/supabase/index.html",
-      "/samples/developer-advocacy/personal/cucumber/index.html",
-      "/samples/developer-advocacy/personal/api/index.html",
-      "/samples/developer-advocacy/personal/posthog/index.html",
-      "/samples/developer-advocacy/personal/google-sheets/index.html"
+      "/samples/technical-writing/personal/career-chive/index.html",
+      "/samples/technical-writing/personal/guestbook/index.html"
     ]
   },
   {
@@ -304,15 +320,28 @@
     "items": []
   },
   {
-    "listing": "/samples/technical-writing/personal/guestbook/developer.html",
+    "listing": "/samples/technical-writing/personal/career-chive/developer.html",
     "items": []
   },
   {
-    "listing": "/samples/technical-writing/personal/guestbook/index.html",
+    "listing": "/samples/technical-writing/personal/career-chive/index.html",
     "items": [
+      "/samples/technical-writing/personal/career-chive/developer.html",
+      "/samples/technical-writing/personal/career-chive/guides.html",
+      "/samples/content-engineering/personal/career-chive/index.html"
+    ]
+  },
+  {
+    "listing": "/samples/technical-writing/personal/guestbook/guides.html",
+    "items": []
+  },
+  {
+    "listing": "/samples/technical-writing/personal/index.html",
+    "items": [
+      "/samples/technical-writing/personal/career-chive/developer.html",
+      "/samples/technical-writing/personal/career-chive/guides.html",
       "/samples/technical-writing/personal/guestbook/developer.html",
-      "/samples/technical-writing/personal/guestbook/guides.html",
-      "/samples/content-engineering/personal/guestbook/index.html"
+      "/samples/technical-writing/personal/guestbook/guides.html"
     ]
   },
   {
